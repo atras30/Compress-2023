@@ -12,6 +12,7 @@
     @yield("styles")
 </head>
 <body>
+    @include('sweetalert::alert')
     @yield("contents")
     @yield("scripts")
 </body>

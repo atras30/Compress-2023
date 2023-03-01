@@ -8,11 +8,17 @@
 @section('contents')
   <div class="container">
     <h1 class="text-center">Data Pendaftaran Mahasiswa</h1>
+    <div class="my-3">
+      <button class="btn btn-success">Download Excel</button>
+    </div>
     <table id="example" class="table table-striped" style="width:100%">
       <thead>
         <tr>
           <th>Name</th>
           <th>Nim</th>
+          <th>Divisi 1</th>
+          <th>Divisi 2</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -20,6 +26,9 @@
           <tr>
             <td>{{ $user->fullname }}</td>
             <td>{{ $user->nim }}</td>
+            <td>{{ $user->divisi1 }}</td>
+            <td>{{ $user->divisi2 }}</td>
+            <td><button class="btn btn-primary">View More</button></td>
           </tr>
         @endforeach
       </tbody>
@@ -27,6 +36,9 @@
         <tr>
           <th>Name</th>
           <th>Nim</th>
+          <th>Divisi 1</th>
+          <th>Divisi 2</th>
+          <th>Action</th>
         </tr>
       </tfoot>
     </table>

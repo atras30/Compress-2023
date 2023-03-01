@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FormController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('/admin')->group(function () {
     Route::get('/login', [AdminController::class, "login"]);
@@ -25,6 +25,5 @@ Route::prefix('/admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, "dashboard"]);
 });
 
-
-
-Route::get('/form', [FormController::class, "form"]);
+Route::get('/form', [FormController::class, "form"])->name('form');
+Route::post('/form', [FormController::class, "formValidate"])->name('recruitment.validate');

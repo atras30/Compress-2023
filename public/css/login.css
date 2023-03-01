@@ -1,0 +1,74 @@
+
+body{
+  background-color: #f4f3fb;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.center-div{
+  position: absolute;
+  text-align: center;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-control{
+  border-radius: 500px;
+}
+
+.btn-submit{
+  border-radius: 500px;
+  background-color: #5c6bc0;
+  border: 1px solid #374073;
+}
+
+.btn-submit:hover{
+  background-color: #414c8c;
+}
+
+.logo-tv{
+  width: 200px;
+}
+
+.error-text{
+  font-size: 12px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.makasih{
+  background-image: url("../images/bg-oprec.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ig-link{
+  color: #dc8383;
+  text-decoration: none;
+  text-shadow:
+    0 0 7px #dc8383,
+    0 0 10px #dc8383,
+    0 0 21px #dc8383,
+    0 0 42px #bc3c3c,
+    0 0 82px #bc3c3c,
+    0 0 92px #bc3c3c,
+    0 0 102px #bc3c3c,
+    0 0 151px #bc3c3c;
+}
+
+.ig-link:hover{
+  color: #ee96b4 ;
+  text-shadow:
+    0 0 7px #ee96b4,
+    0 0 10px #ee96b4,
+    0 0 21px #ee96b4,
+    0 0 42px #d16464,
+    0 0 82px #d16464,
+    0 0 92px #d16464,
+    0 0 102px #d16464,
+    0 0 151px #d16464;
+}
