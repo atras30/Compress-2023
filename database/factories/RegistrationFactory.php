@@ -19,7 +19,23 @@ class RegistrationFactory extends Factory
     {
         return [
             "fullname" => fake()->name(),
-            "nim" => Str::random(11)
+            "nickname" => Str::random(11),
+            "nim" => Str::random(11),
+            "angkatan" => '2020',
+            "prodi" => "Informatika",
+            "tanggallahir" => fake()->date(),
+            "email" => fake()->email(),
+            "noHp" => random_int(10,100000000000),
+            "idLine" => Str::random(11),
+            "instagram" => Str::random(11),
+            "divisi1" => "Website",
+            "divisi2" => "Acara",
+            "alasandiv1" => "P",
+            "alasandiv2" => "P",
+            "pengalaman" => "P",
+            "kesibukan" => "P",
+            "alasan-masuk-commpress" => "P",
+            "portofolio" => "P",
         ];
     }
 }

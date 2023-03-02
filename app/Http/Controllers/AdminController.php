@@ -35,6 +35,16 @@ class AdminController extends Controller
         ])->onlyInput('email');
     }
 
+    public function logout(Request $request){
+        Auth::guard('web')->logout();
+
+        request()->session()->invalidate();
+
+        request()->session()->regenerateToken();
+
+        return redirect(route('loginAdmin'));
+    }
+
     function dashboard()
     {
         return view('admin.dashboard', [
@@ -45,6 +55,6 @@ class AdminController extends Controller
 
     public function export() 
     {
-        return Excel::download(new recruitmentExport, 'recruitment.xlsx')->withHeadings();
+        return Excel::download(new recruitmentExport, 'recruitment.xlsx');
     }
 }

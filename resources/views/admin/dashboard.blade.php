@@ -10,6 +10,10 @@
     <h1 class="text-center">Data Pendaftaran Mahasiswa</h1>
     <div class="my-3">
       <a href="{{ route('export') }}" class="btn btn-success">Download Excel</a>
+      <form action="{{ route('logout') }}" method="POST">
+          @csrf
+          <button type="submit" class="btn btn-danger">Logout</button>
+      </form>
     </div>
     <table id="example" class="table table-striped" style="width:100%">
       <thead>
