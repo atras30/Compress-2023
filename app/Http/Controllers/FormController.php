@@ -9,7 +9,9 @@ use App\Models\Registration;
 class FormController extends Controller
 {
     public function form(){
-        return view('formRecruitment');
+        return view('formRecruitment',[
+            'title' => "Form Recruitment",
+        ]);
     }
     
     public function formValidate(Request $request){

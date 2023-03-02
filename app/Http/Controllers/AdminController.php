@@ -10,7 +10,9 @@ class AdminController extends Controller
 {
     function login()
     {
-        return view('admin.login');
+        return view('admin.login', [
+            'title' => "Login Admin",
+        ]);
     }
 
     function verifyLogin(Request $request)
@@ -34,6 +36,7 @@ class AdminController extends Controller
     function dashboard()
     {
         return view('admin.dashboard', [
+            'title' => "Registration",
             "registeredUsers" => Registration::all()
         ]);
     }

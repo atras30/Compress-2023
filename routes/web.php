@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DivisiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('/admin')->group(function () {
     Route::get('/login', [AdminController::class, "login"]);
@@ -27,3 +28,5 @@ Route::prefix('/admin')->group(function () {
 
 Route::get('/form', [FormController::class, "form"])->name('form');
 Route::post('/form', [FormController::class, "formValidate"])->name('recruitment.validate');
+
+Route::get('/divisi', [DivisiController::class, "index"])->name('divisi');
