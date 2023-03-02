@@ -24,6 +24,7 @@ Route::prefix('/admin')->group(function () {
     Route::post("/login", [AdminController::class, "verifyLogin"]);
 
     Route::get('/dashboard', [AdminController::class, "dashboard"]);
+    Route::get('/export', [AdminController::class, "export"])->name('export');
 });
 
 Route::get('/form', [FormController::class, "form"])->name('form');

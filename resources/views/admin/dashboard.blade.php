@@ -9,7 +9,7 @@
   <div class="container">
     <h1 class="text-center">Data Pendaftaran Mahasiswa</h1>
     <div class="my-3">
-      <button class="btn btn-success">Download Excel</button>
+      <a href="{{ route('export') }}" class="btn btn-success">Download Excel</a>
     </div>
     <table id="example" class="table table-striped" style="width:100%">
       <thead>

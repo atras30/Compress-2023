@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Registration;
+use App\Exports\recruitmentExport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AdminController extends Controller
 {
@@ -39,5 +41,10 @@ class AdminController extends Controller
             'title' => "Registration",
             "registeredUsers" => Registration::all()
         ]);
+    }
+
+    public function export() 
+    {
+        return Excel::download(new recruitmentExport, 'recruitment.xlsx')->withHeadings();
     }
 }
