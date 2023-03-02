@@ -1,12 +1,11 @@
-
-body{
+body {
   background-color: #f4f3fb;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-.center-div{
+.center-div {
   position: absolute;
   text-align: center;
   width: 50%;
@@ -15,38 +14,38 @@ body{
   transform: translate(-50%, -50%);
 }
 
-.form-control{
+.form-control {
   border-radius: 500px;
 }
 
-.btn-submit{
+.btn-submit {
   border-radius: 500px;
   background-color: #5c6bc0;
   border: 1px solid #374073;
 }
 
-.btn-submit:hover{
+.btn-submit:hover {
   background-color: #414c8c;
 }
 
-.logo-tv{
+.logo-tv {
   width: 200px;
 }
 
-.error-text{
+.error-text {
   font-size: 12px;
   color: red;
   margin-bottom: 10px;
 }
 
-.makasih{
+.makasih {
   background-image: url("../images/bg-oprec.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.ig-link{
+.ig-link {
   color: #dc8383;
   text-decoration: none;
   text-shadow:
@@ -60,8 +59,8 @@ body{
     0 0 151px #bc3c3c;
 }
 
-.ig-link:hover{
-  color: #ee96b4 ;
+.ig-link:hover {
+  color: #ee96b4;
   text-shadow:
     0 0 7px #ee96b4,
     0 0 10px #ee96b4,
