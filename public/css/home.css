@@ -10,14 +10,6 @@ body {
     font-family: 'Tilt Warp', cursive;
 }
 
-.maintit {
-    display: flex;
-    height: 100vh;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.maintit h1 {
+.content h1 {
     font-size: 10vh;
 }
