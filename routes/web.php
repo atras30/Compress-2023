@@ -20,13 +20,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('/admin')->group(function () {
-    Route::get('/login', [AdminController::class, "login"]);
-    Route::post("/login", [AdminController::class, "verifyLogin"]);
+    Route::get('/login', [AdminController::class, "login"])->middleware('guest')->name('loginAdmin');
+    Route::post('/login', [AdminController::class, "verifyLogin"])->middleware('guest');
+    Route::post('/logout', [AdminController::class, "logout"])->name('logout');
 
+<<<<<<< HEAD
     Route::get('/dashboard', [AdminController::class, "dashboard"]);
     Route::get('/dashboard/{id}', [AdminController::class, "viewmore"])->name('viewmore');
     Route::get('/export', [AdminController::class, "export"])->name('export');
     
+=======
+    Route::get('/dashboard', [AdminController::class, "dashboard"])->middleware('auth');
+    Route::get('/export', [AdminController::class, "export"])->middleware('auth')->name('export');
+>>>>>>> 7cc630d28d489c4f84dbc554ec2cc69f419dd831
 });
 
 Route::get('/form', [FormController::class, "form"])->name('form');
