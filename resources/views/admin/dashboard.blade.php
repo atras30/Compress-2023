@@ -28,7 +28,7 @@
             <td>{{ $user->nim }}</td>
             <td>{{ $user->divisi1 }}</td>
             <td>{{ $user->divisi2 }}</td>
-            <td><button class="btn btn-primary">View More</button></td>
+            <td><a id="btn-view" class="btn btn-primary" data-id="{{$user->id}}" href="dashboard/{{$user->id}}" >View More</a></td>
           </tr>
         @endforeach
       </tbody>

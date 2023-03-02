@@ -43,8 +43,17 @@ class AdminController extends Controller
         ]);
     }
 
+    function viewmore($id){
+        return view('admin.viewmore-user', [
+            'title' => "User Information",
+            "User" => Registration::find($id)
+        ]);
+    }
+
     public function export() 
     {
-        return Excel::download(new recruitmentExport, 'recruitment.xlsx')->withHeadings();
+        return Excel::download(new recruitmentExport, 'recruitment.xlsx');
     }
+
+
 }

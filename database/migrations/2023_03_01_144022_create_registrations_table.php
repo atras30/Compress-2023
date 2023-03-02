@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('idLine')->nullable()->unique();
             $table->string('instagram')->nullable()->unique();
             $table->string('divisi1')->nullable();
-            $table->string('divisi2')->nullable();
             $table->string('alasandiv1')->nullable();
+            $table->string('divisi2')->nullable();
             $table->string('alasandiv2')->nullable();
             $table->string('pengalaman')->nullable();
             $table->string('kesibukan')->nullable();
