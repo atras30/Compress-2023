@@ -35,7 +35,7 @@ class RegistrationFactory extends Factory
             "alasandiv2" => fake()->sentences(2, true),
             "pengalaman" => fake()->sentences(5, true),
             "kesibukan" => fake()->sentences(3, true),
-            "alasan-masuk-commpress" => fake()->sentences(3, true),
+            "alasan_masuk_commpress" => fake()->sentences(3, true),
             "portofolio" => fake()->sentence(),
         ];
     }

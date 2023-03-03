@@ -29,7 +29,7 @@ return new class extends Migration
             $table->text('alasandiv2');
             $table->text('pengalaman');
             $table->text('kesibukan');
-            $table->text('alasan-masuk-commpress');
+            $table->text('alasan_masuk_commpress');
             $table->text('portofolio');
 
             $table->timestamps();
