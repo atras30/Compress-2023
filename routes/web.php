@@ -20,14 +20,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('/admin')->group(function () {
-    Route::get('/login', [AdminController::class, "login"])->middleware('guest')->name('loginAdmin');
-    Route::post('/login', [AdminController::class, "verifyLogin"])->middleware('guest');
-    Route::post('/logout', [AdminController::class, "logout"])->name('logout');
+    // Authenticated Admins
+    Route::middleware("auth")->group(function () {
+        Route::get('/dashboard', [AdminController::class, "dashboard"]);
+        Route::get('/dashboard/{id}', [AdminController::class, "viewmore"])->name('viewmore');
+        Route::get('/export', [AdminController::class, "export"])->name('export');
+        Route::post('/logout', [AdminController::class, "logout"])->name('logout');
+    });
 
-    Route::get('/dashboard', [AdminController::class, "dashboard"]);
-    Route::get('/dashboard/{id}', [AdminController::class, "viewmore"])->name('viewmore');
-    Route::get('/export', [AdminController::class, "export"])->name('export');
-    
+    // Guests
+    Route::middleware("guest")->group(function () {
+        Route::get('/login', [AdminController::class, "login"])->name('loginAdmin');
+        Route::post('/login', [AdminController::class, "verifyLogin"]);
+    });
 });
 
 Route::get('/form', [FormController::class, "form"])->name('form');

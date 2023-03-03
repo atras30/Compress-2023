@@ -35,14 +35,15 @@ class AdminController extends Controller
         ])->onlyInput('email');
     }
 
-    public function logout(Request $request){
-        Auth::guard('web')->logout();
+    public function logout(Request $request)
+    {
+        Auth::logout();
 
-        request()->session()->invalidate();
+        $request->session()->invalidate();
 
-        request()->session()->regenerateToken();
+        $request->session()->regenerateToken();
 
-        return redirect(route('home'));
+        return redirect('/');
     }
 
     function dashboard()
@@ -53,17 +54,16 @@ class AdminController extends Controller
         ]);
     }
 
-    function viewmore($id){
+    function viewmore($id)
+    {
         return view('admin.viewmore-user', [
             'title' => "User Information",
             "User" => Registration::find($id)
         ]);
     }
 
-    public function export() 
+    public function export()
     {
         return Excel::download(new recruitmentExport, 'recruitment.xlsx');
     }
-
-
 }
