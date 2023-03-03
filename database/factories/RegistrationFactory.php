@@ -26,7 +26,7 @@ class RegistrationFactory extends Factory
             "prodi" => "Informatika",
             "tanggallahir" => fake()->date(),
             "email" => fake()->email(),
-            "noHp" => random_int(10, 100000000000),
+            "noHp" => fake()->phoneNumber(),
             "idLine" => fake()->userName(),
             "instagram" => Str::random(11),
             "divisi1" => Divisi::all()->random()->nama,
