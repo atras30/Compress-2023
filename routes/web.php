@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('/admin')->group(function () {
+    // Route /admin doang, bakalan redirect ke /admin/login
+    Route::get("/", fn () => redirect("/admin/login"));
+
     // Authenticated Admins
     Route::middleware("auth")->group(function () {
         Route::get('/dashboard', [AdminController::class, "dashboard"]);
