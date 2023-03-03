@@ -60,6 +60,10 @@
             <td>{{$User->alasandiv2}}</td>
             </tr>
             <tr>
+            <th>Alasan Masuk Commpress</th>
+            <td>{{$User->alasan_masuk_commpress}}</td>
+            </tr>
+            <tr>
             <th>Pengalaman</th>
             <td>{{$User->pengalaman}}</td>
             </tr>
@@ -67,7 +71,6 @@
             <th>Kesibukan</th>
             <td>{{$User->kesibukan}}</td>
             </tr>
-            
             <tr>
             <th>Portofolio</th>
             <td>{{$User->portofolio}}</td>
