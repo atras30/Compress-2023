@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\sendEmail;
 use App\Models\Registration;
 
 class FormController extends Controller
@@ -37,6 +39,14 @@ class FormController extends Controller
         ]);
 
         Registration::create($validReq);
+
+        $mailData = [
+            'title' => 'Pendaftaran Commpress 2023',
+            'body' => 'Terima Kasih telah mendaftar Commpress 2023
+                        Stay Tune terus media sosial kitaa!!',
+        ];
+        
+        Mail::to($request->email)->send(new sendEmail($mailData));
         
         Alert::html('Thankyou!', 'You\'ve Successfully Registered.<br> Please wait for further information <br> <small>Stay tune on our instagram <a href="https://www.instagram.com/commpressumn">@commpressumn</a></small>', 'success');
 
