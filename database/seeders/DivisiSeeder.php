@@ -51,7 +51,7 @@ class DivisiSeeder extends Seeder
             'nama' => 'Fresh Money',
             'deskripsi' => '
             <ul>
-                <li>Bertanggung jawab atas pendaan COMMPRESS 2023.</li>
+                <li>Bertanggung jawab atas pendanaan COMMPRESS 2023.</li>
                 <li>Mengumpulkan pendanaan untuk keberlangsungan COMMPRESS 2023.</li>
                 <li>Menjaga dan mengatur pendanaan COMMPRESS 2023.</li>
             </ul>
