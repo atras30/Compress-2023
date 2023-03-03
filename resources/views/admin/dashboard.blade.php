@@ -8,11 +8,11 @@
 @section('contents')
   <div class="container">
     <h1 class="text-center">Data Pendaftaran Mahasiswa</h1>
-    <div class="my-3">
-      <a href="{{ route('export') }}" class="btn btn-success">Download Excel</a>
+    <div class="my-3 d-flex justify-content-end align-items-center gap-3">
+      <a href="{{ route('export') }}" class="btn shadow-sm btn-success">Download Excel</a>
       <form action="{{ route('logout') }}" method="POST">
-          @csrf
-          <button type="submit" class="btn btn-danger">Logout</button>
+        @csrf
+        <button type="submit" class="btn shadow-sm btn-danger">Logout</button>
       </form>
     </div>
     <table id="example" class="table table-striped" style="width:100%">
@@ -32,7 +32,7 @@
             <td>{{ $user->nim }}</td>
             <td>{{ $user->divisi1 }}</td>
             <td>{{ $user->divisi2 }}</td>
-            <td><a id="btn-view" class="btn btn-primary" data-id="{{$user->id}}" href="dashboard/{{$user->id}}" >View More</a></td>
+            <td><a id="btn-view" class="btn btn-primary" data-id="{{ $user->id }}" href="dashboard/{{ $user->id }}">View More</a></td>
           </tr>
         @endforeach
       </tbody>
