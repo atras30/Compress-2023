@@ -21,8 +21,8 @@ class RegistrationFactory extends Factory
         return [
             "fullname" => fake()->name(),
             "nickname" => fake()->userName(),
-            "nim" => Str::random(11),
-            "angkatan" => '2020',
+            "nim" => "000000" . fake()->randomNumber(5, true),
+            "angkatan" => collect(["2020", "2021", "2022"])->random(),
             "prodi" => "Informatika",
             "tanggallahir" => fake()->date(),
             "email" => fake()->email(),
@@ -31,11 +31,11 @@ class RegistrationFactory extends Factory
             "instagram" => Str::random(11),
             "divisi1" => Divisi::all()->random()->nama,
             "divisi2" => Divisi::all()->random()->nama,
-            "alasandiv1" => fake()->sentences(2, true),
-            "alasandiv2" => fake()->sentences(2, true),
-            "pengalaman" => fake()->sentences(5, true),
-            "kesibukan" => fake()->sentences(3, true),
-            "alasan_masuk_commpress" => fake()->sentences(3, true),
+            "alasandiv1" => fake()->sentences(1, true),
+            "alasandiv2" => fake()->sentences(1, true),
+            "pengalaman" => fake()->sentences(1, true),
+            "kesibukan" => fake()->sentences(1, true),
+            "alasan_masuk_commpress" => fake()->sentences(1, true),
             "portofolio" => fake()->sentence(),
         ];
     }
