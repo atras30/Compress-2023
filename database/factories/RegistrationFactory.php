@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Divisi;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -19,23 +20,23 @@ class RegistrationFactory extends Factory
     {
         return [
             "fullname" => fake()->name(),
-            "nickname" => Str::random(11),
+            "nickname" => fake()->userName(),
             "nim" => Str::random(11),
             "angkatan" => '2020',
             "prodi" => "Informatika",
             "tanggallahir" => fake()->date(),
             "email" => fake()->email(),
-            "noHp" => random_int(10,100000000000),
-            "idLine" => Str::random(11),
+            "noHp" => random_int(10, 100000000000),
+            "idLine" => fake()->userName(),
             "instagram" => Str::random(11),
-            "divisi1" => "Website",
-            "divisi2" => "Acara",
-            "alasandiv1" => "P",
-            "alasandiv2" => "P",
-            "pengalaman" => "P",
-            "kesibukan" => "P",
-            "alasan-masuk-commpress" => "P",
-            "portofolio" => "P",
+            "divisi1" => Divisi::all()->random()->nama,
+            "divisi2" => Divisi::all()->random()->nama,
+            "alasandiv1" => fake()->sentences(2, true),
+            "alasandiv2" => fake()->sentences(2, true),
+            "pengalaman" => fake()->sentences(5, true),
+            "kesibukan" => fake()->sentences(3, true),
+            "alasan-masuk-commpress" => fake()->sentences(3, true),
+            "portofolio" => fake()->sentence(),
         ];
     }
 }
