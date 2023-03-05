@@ -1,0 +1,26 @@
+.main {
+    background-image: url("../images/formbg.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+}
+
+.container-form {
+    background-color: rgba(255, 235, 205, 0.837);
+    padding: 40px 50px;
+    border-radius: 23px;
+    box-shadow: -1px -1px 18px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px -1px 18px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px -1px 18px 0px rgba(0,0,0,0.75);
+}
+
+.terms {
+    background-color: rgb(255, 235, 205);
+    border-radius: 23px;
+    box-shadow: -1px -1px 18px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px -1px 18px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px -1px 18px 0px rgba(0,0,0,0.75);
+}
