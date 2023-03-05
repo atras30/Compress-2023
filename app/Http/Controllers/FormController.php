@@ -34,14 +34,13 @@ class FormController extends Controller
             'alasandiv2' => 'required',
             'pengalaman' => 'required',
             'kesibukan' => 'required',
-            'alasan-masuk-commpress' => 'required',
+            'alasan_masuk_commpress' => 'required',
             'portofolio' => 'required',
         ]);
 
         Registration::create($validReq);
 
         $mailData = [
-            'title' => 'Pendaftaran Commpress 2023',
             'body' => 'Terima Kasih telah mendaftar Commpress 2023
                         Stay Tune terus media sosial kitaa!!',
         ];

@@ -14,7 +14,7 @@
   </a>
   <div class="container">
     <div class="starter-template">
-      <h1 class="pt-2 judul">COMPRESS 2023's DIVISIONS</h1>
+      <h1 class="pt-2 judul">COMMPRESS 2023's DIVISIONS</h1>
       <div class="row">
         @foreach ($divisis as $divisi)
           <div class="col-sm-4">

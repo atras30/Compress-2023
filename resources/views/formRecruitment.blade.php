@@ -53,7 +53,7 @@
         </div>
         <div class="mb-2 ">
           <label for="nim">NIM</label>
-          <input type="text" name="nim" class="form-control" value={{ @old('nim') }}>
+          <input type="text" name="nim" placeholder="ex: 00000012345" class="form-control" value={{ @old('nim') }}>
           @error('nim')
             <div class="error-text">
               {{ $message }}
@@ -211,8 +211,8 @@
           @enderror
         </div>
         <div class="mb-2 ">
-          <label for="alasan-masuk-commpress">Mengapa kamu mendaftar di COMMPRESS 2023?</label>
-          <textarea type="text" name="alasan-masuk-commpress" class="form-control" rows="3">{{ old('alasan-masuk-commpress') }}</textarea>
+          <label for="alasan_masuk_commpress">Mengapa kamu mendaftar di COMMPRESS 2023?</label>
+          <textarea type="text" name="alasan_masuk_commpress" class="form-control" rows="3">{{ old('alasan_masuk_commpress') }}</textarea>
           @error('alasan-masuk-commpress')
             <div class="error-text">
               {{ $message }}
@@ -221,6 +221,7 @@
         </div>
         <div class="mb-2 ">
           <label for="portofolio">Bagi kamu yang memilih Tim Visual & Dokumentasi (Foto, Video, dan Editor), silakan mengirimkan tautan portofolio kamu yaa!</label><br>
+          <small>Tautan berupa link drive</small><br>
           <small>Bagi kamu yang mendaftar di luar kedua divisi di atas, harap mengisi dengan "-".</small>
           <div class="terms p-3 my-4">
             <p>KETENTUAN PORTOFOLIO</p>
