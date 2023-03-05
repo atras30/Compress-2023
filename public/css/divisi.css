@@ -1,0 +1,247 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url('../images/divisi-bg.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .container{
+    margin-top: 25dvw;
+  }
+
+  .starter-template {
+    padding: 0px 15px 80px;
+    text-align: center;
+  }
+
+  .judul{
+    font-size: 4dvw;
+    font-weight: 700;
+    color: black;
+    text-shadow: 1px 2px 3px black;
+  }
+
+  @media screen and (max-width: 1200px) {
+    body{
+        background-position: top;
+    }
+    .judul{
+      font-size: 6dvw;
+    }
+    .container{
+      margin-top: 35dvw;
+    }
+  }
+
+  @media screen and (max-width: 900px){
+    .container{
+      margin-top: 45dvw;
+    }
+  }
+  @media screen and (max-width: 700px){
+    .container{
+      margin-top: 55dvw;
+    }
+  }
+  @media screen and (max-width: 575px){
+    body{
+        background-position: unset;
+    }
+    .judul{
+      font-size: 10dvw;
+    }
+  }
+
+  /* Back Button */
+  .cta {
+    position: absolute;
+    top: 2dvh;
+    left: 1dvw;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    text-decoration: none;
+  }
+
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+
+  .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: white;
+  }
+
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: white;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transform: scale(-1, 1);
+    transition: all 0.3s ease;
+  }
+
+  .cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+  }
+
+  /* .cta:hover svg {
+  transform: translateX(0);
+  } */
+
+  .cta:active {
+  transform: scale(0.95);
+  }
+
+  /* Cards */
+
+  span.lower-text {
+    color: #ffc300;
+    font-size: 25px;
+    display: block;
+  }
+
+  .hover-div {
+    padding: 20px 20px;
+    text-align: center;
+    min-height: 350px;
+    border-radius: 1dvw;
+  }
+
+  .hover-div {
+    border-top: 1px solid #f8f8f8;
+    background: #f8f8f8e7;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin: 10px 0px;
+  }
+
+  .hover-div:hover {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+    box-shadow: 0 22px 43px rgba(0, 0, 0, 0.32);
+    background: #f8f8f8f4;
+    cursor: pointer;
+    border-radius: 25px;
+  }
+
+  .tdivisi{
+    height: 6dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* regis button */
+  button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+   }
+   
+   .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       hsl(340deg 100% 16%) 0%,
+       hsl(340deg 100% 32%) 8%,
+       hsl(340deg 100% 32%) 92%,
+       hsl(340deg 100% 16%) 100%
+     );
+   }
+   
+   .front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   button:hover {
+    filter: brightness(110%);
+   }
+   
+   button:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   button:focus:not(:focus-visible) {
+    outline: none;
+   }

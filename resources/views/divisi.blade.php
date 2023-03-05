@@ -1,67 +1,39 @@
 @extends('layout.user.master_layout')
 
 @section('styles')
-  <style>
-    body {
-      font-family: 'Lato', sans-serif;
-      padding-top: 50px;
-    }
-
-    .starter-template {
-      padding: 0px 15px 80px;
-      text-align: center;
-    }
-
-    span.lower-text {
-      color: #ffc300;
-      font-size: 25px;
-      display: block;
-    }
-
-    .hover-div {
-      padding: 20px 20px;
-      text-align: center;
-      min-height: 350px;
-    }
-
-    .hover-div {
-      border-top: 1px solid #f8f8f8;
-      background: #f8f8f8;
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
-      margin: 10px 0px;
-    }
-
-    .hover-div:hover {
-      -webkit-transform: translateY(-20px);
-      -ms-transform: translateY(-20px);
-      transform: translateY(-20px);
-      box-shadow: 0 22px 43px rgba(0, 0, 0, 0.32);
-      cursor: pointer;
-      border-radius: 5px;
-    }
-  </style>
+<link href="{{ asset('css/divisi.css') }}" rel="stylesheet"/>
 @endsection
 
 @section('contents')
+  <a href="{{ route('home') }}" class="cta mb-4">
+      <svg viewBox="0 0 13 10" height="10px" width="15px" class="backarw">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+      <span>Back</span>
+  </a>
   <div class="container">
-    <a href="{{ route('home') }}" class="btn btn-primary mb-4">&laquo; Back</a>
     <div class="starter-template">
-      <h1>INI HALAMAN DIVISI...</h1>
+      <h1 class="pt-2 judul">COMPRESS 2023's DIVISIONS</h1>
       <div class="row">
         @foreach ($divisis as $divisi)
           <div class="col-sm-4">
             <section class="hover-div" style="height:300px !important; overflow-y: auto">
               <div class="hover-div_inner">
-                <h3>{{ $divisi->nama }}</h3>
-                <div class="text-start">{!! $divisi->deskripsi !!}</div>
+                <h3 class="tdivisi fw-bold">{{ $divisi->nama }}</h3>
+                <div class="text-start pt-1">{!! $divisi->deskripsi !!}</div>
               </div>
             </section>
           </div>
         @endforeach
       </div>
-      <a href="{{ route('form') }}" class="btn btn-primary">Go To Form Registrasi</a>
+      <a href="{{ route('form') }}">
+        <button class="mt-3">
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front text"> Go to Form Registration</span>
+        </button>
+      </a>
     </div>
   </div>
 @endsection
