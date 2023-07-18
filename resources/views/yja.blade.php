@@ -5,46 +5,26 @@
 
 @section('contents')
 <div class="container">
-    <div class="sec1">
-        <h1>ROAD TO YOUNG JOURNALIST AWARD</h1>
-        <p>Media promosi acara Young Journalist Award dan dokumentasi beberapa persiapan acara 
-            COMMPRESS 2023 yang dikemas menjadi video dengan 3 episode.</p>
-    </div>
-    <div class="sec2">
-        <div class="row">
-            <div class="col">
-                <h3>EPS.1</h3>
-                <div id="data"></div>
-                <input type="hidden" id="eps1" value="{{  $eps1 }}">
-            </div>
-            <div class="col">
-                <h3>EPS.2</h3>
-                <div id="data"></div>
-                <input type="hidden" id="eps2" value="{{  $eps2 }}">
-            </div>
-            <div class="col">
-                <h3>EPS.3</h3>
-                <div id="data"></div>
-                <input type="hidden" id="eps3" value="{{  $eps3 }}">
-            </div>
-        </div>
-    </div>
+    <h1 class="d-flex justify-content-center align-items-center">YOUNG JOURNALIST AWARD</h1>
+    <p>Young Journalist Award (YJA) hadir sebagai puncak sekaligus penutup rangkaian acara COMMPRESS. 
+        Acara terakhir ini dihadirkan sebagai bentuk apresiasi atas kontribusi peserta COMMPRESS 2023 dan 
+        Ruang Indi(e)penden 2023. Pada acara puncak ini, COMMPRESS 2023 akan memberikan apresiasi peserta 
+        dengan memberikan hadiah kepada para pemenang lomba dan karya terbaik. Tidak lupa, COMMPRESS 2023 menyajikan 
+        penampilan guest star sebagai penutup rangkaian acara Young Journalist Award COMMPRESS 2023.</p>
+    <div class="d-flex justify-content-center align-items-center"id="data"></div>
+ 
+    <input type="hidden" id="time" value="{{  $time }}">
 </div>
+    
 @endsection
 
 @section('scripts')
-    <script>
+<script>
         function func() {
-            var dateValue1 = document.getElementById("eps1").value;
-            var dateValue2 = document.getElementById("eps2").value;
-            var dateValue3 = document.getElementById("eps3").value;
-
+            var dateValue = document.getElementById("time").value;
     
             var date = Math.abs((new Date().getTime() / 1000).toFixed(0));
-            var date2 = Math.abs((new Date(dateValue1).getTime() / 1000).toFixed(0));
-            var date3 = Math.abs((new Date(dateValue2).getTime() / 1000).toFixed(0));
-            var date4 = Math.abs((new Date(dateValue3).getTime() / 1000).toFixed(0));
-            
+            var date2 = Math.abs((new Date(dateValue).getTime() / 1000).toFixed(0));
     
             var diff = date2 - date;
     
@@ -92,3 +72,4 @@
         var interval = setInterval(func, 1000);
     </script>
 @endsection
+
