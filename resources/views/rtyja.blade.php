@@ -2,6 +2,15 @@
 
 @section('styles')
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    @font-face {
+      font-family: 'Bazinga';
+      font-style: normal;
+      font-weight: 400;
+      src: url('fonts/Bazinga-Regular.ttf');
+    }
+
     .dark {
       background-color: #fbd019;
     }
@@ -26,31 +35,49 @@
       height: 2rem;
     }
 
-    .w-max-3 {
-      width: 3rem;
+    .bar {
+      width: 3.5rem;
+    }
+
+    .polkadot {
+      opacity: .5;
+    }
+
+    .font-bazinga {
+      font-family: Bazinga;
+      text-shadow: 1px -2px 0 #000, 2px 4px 0 #000, 3px 6px 0 #000;
+      -webkit-text-stroke: 2px #000;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
     }
   </style>
 @endsection
 
 @section('contents')
   <div class="main-content mh-85vh position-relative dark">
-    <section class="h-100">
-      {{-- Background Assets --}}
-      <img class="position-absolute start-0 w-100 h-2" src="{{ asset('/images/road-to-yja/base/top-bottom.png') }}" alt="top">
-      <img class="position-absolute start-0 h-100 w-max-3" src="{{ asset('/images/road-to-yja/base/left.png') }}" alt="left outer">
-      <img class="position-absolute start-0 h-100 w-max-3" src="{{ asset('/images/road-to-yja/base/right.png') }}" alt="left inner">
-      <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/road-to-yja/base/top-bottom.png') }}" alt="bottom">
+    <img class="position-absolute object-fit-cover w-100 h-100 polkadot" src="{{ asset('/images/road-to-yja/background/white-polkadot.png') }}" alt="White polkadot">
+    {{-- Background Assets --}}
+    <img class="position-absolute start-0 w-100 h-2" src="{{ asset('/images/road-to-yja/base/top-bottom.png') }}" alt="top">
+    <img class="position-absolute start-0 h-100 bar" src="{{ asset('/images/road-to-yja/base/left.png') }}" alt="left outer">
+    <img class="position-absolute start-0 h-100 bar" src="{{ asset('/images/road-to-yja/base/right.png') }}" alt="left inner">
+    <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/road-to-yja/base/top-bottom.png') }}" alt="bottom">
 
+
+    <div class="position-relative">
       {{-- Title --}}
       <section class="text-center ptop-5">
-        <div class="hero-title px-5 mb-4">
-          <h1>ROAD TO</h1>
-          <h1>YOUNG JOURNALIST AWARD</h1>
+        <div class="hero-title px-5 mb-5 font-bazinga text-white">
+          <div>ROAD TO</div>
+          <div>YOUNG JOURNALIST AWARD</div>
         </div>
-        <p class="px-5 mb-5 fw-bold">
-          Media promosi acara Young Journalist Award dan dokumentasi beberapa persiapan acara
-          COMMPRESS 2023 yang dikemas menjadi video dengan 3 episode.
-        </p>
+
+        <div class="px-5 fw-bold mb-5 text-black">
+            <div>Media promosi acara Young Journalist Award dan dokumentasi beberapa persiapan acara
+                COMMPRESS 2023</div>
+            <div>yang dikemas menjadi video dengan 3 episode.</div>
+        </div>
       </section>
 
       {{-- Episodes --}}
@@ -78,8 +105,9 @@
             <p id="episode-3-time-diff" class="position-absolute start-50 top-50 translate-middle px-4 w-100 text-center fw-bold fs-4"></p>
           </div>
         </div>
+    </div>
 
-      </section>
+
     </section>
   </div>
 @endsection
