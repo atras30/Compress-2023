@@ -40,7 +40,7 @@
     }
 
     .polkadot {
-      opacity: .5;
+      opacity: .25;
     }
 
     .font-bazinga {
