@@ -56,7 +56,7 @@
 @endsection
 
 @section('contents')
-  <div class="main-content mh-85vh position-relative dark">
+  <div class="main-content mh-85vh position-relative dark pb-3">
     <img class="position-absolute object-fit-cover w-100 h-100 polkadot" src="{{ asset('/images/road-to-yja/background/white-polkadot.png') }}" alt="White polkadot">
     {{-- Background Assets --}}
     <img class="position-absolute start-0 w-100 h-2" src="{{ asset('/images/road-to-yja/base/top-bottom.png') }}" alt="top">
@@ -81,7 +81,7 @@
       </section>
 
       {{-- Episodes --}}
-      <section class="d-flex justify-content-evenly align-items-center flex-column flex-lg-row gap-4 mb-5 pb-5">
+      <section class="d-flex justify-content-evenly align-items-center flex-column flex-lg-row gap-4 pb-5">
         <div class="flex-item">
           <h3 class="text-center font-bazinga">EPISODE 1</h3>
           <div class="position-relative">
