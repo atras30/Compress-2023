@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class RTYJAController extends Controller
 {
     public function rtyja(){
-        $eps1 = "2023-07-20 00:00:00";
+        $eps1 = "2023-07-19 17:30:00";
         $eps2 = "2023-12-10 23:39:45";
         $eps3 = "2023-09-10 23:39:23";
 

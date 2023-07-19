@@ -28,10 +28,11 @@ Route::get("/time/diff", function (Request $request) {
 
     $parsedDates = [];
     foreach ($startDates as $startDate) {
-        $days = $startDate->diffInDays(Carbon::now());
-        $hour = $startDate->diffInHours(Carbon::now()) % 24;
-        $minute = $startDate->diffInMinutes(Carbon::now()) % 60;
-        $second = $startDate->diffInSeconds(Carbon::now()) % 60;
+        $days = $startDate > Carbon::now() ? $startDate->diffInDays(Carbon::now()) : 0;
+        $hour = $startDate > Carbon::now() ? $startDate->diffInHours(Carbon::now()) % 24 : 0;
+        $minute = $startDate > Carbon::now() ? $startDate->diffInMinutes(Carbon::now()) % 60 : 0;
+        $second = $startDate > Carbon::now() ? $startDate->diffInSeconds(Carbon::now()) % 60 : 0;
+
         $parsedDate =    sprintf('%02d Days, %02d:%02d:%02d', $days, $hour, $minute, $second);
         $parsedDates[] = $parsedDate;
     }
