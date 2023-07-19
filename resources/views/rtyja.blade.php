@@ -45,12 +45,12 @@
 
     .font-bazinga {
       font-family: Bazinga;
-      text-shadow: 1px -2px 0 #000, 2px 4px 0 #000, 3px 6px 0 #000;
-      -webkit-text-stroke: 2px #000;
     }
 
     .hero-title {
       font-size: 3.5rem;
+      text-shadow: 1px -2px 0 #000, 2px 4px 0 #000, 3px 6px 0 #000;
+      -webkit-text-stroke: 2px #000;
     }
   </style>
 @endsection
@@ -83,7 +83,7 @@
       {{-- Episodes --}}
       <section class="d-flex justify-content-evenly align-items-center flex-column flex-lg-row gap-4 mb-5 pb-5">
         <div class="flex-item">
-          <h3 class="text-center">EPISODE 1</h3>
+          <h3 class="text-center font-bazinga">EPISODE 1</h3>
           <div class="position-relative">
             <img class="mw-100" src="{{ asset('/images/components/buttons/button-container.png') }}" alt="Button Container">
             <p id="episode-1-time-diff" class="position-absolute start-50 top-50 translate-middle px-4 w-100 text-center fw-bold fs-4"></p>
@@ -91,7 +91,7 @@
         </div>
 
         <div class="flex-item">
-          <h3 class="text-center">EPISODE 2</h3>
+          <h3 class="text-center font-bazinga">EPISODE 2</h3>
           <div class="position-relative">
             <img class="mw-100" src="{{ asset('/images/components/buttons/button-container.png') }}" alt="Button Container">
             <p id="episode-2-time-diff" class="position-absolute start-50 top-50 translate-middle px-4 w-100 text-center fw-bold fs-4"></p>
@@ -99,7 +99,7 @@
         </div>
 
         <div class="flex-item">
-          <h3 class="text-center">EPISODE 3</h3>
+          <h3 class="text-center font-bazinga">EPISODE 3</h3>
           <div class="position-relative">
             <img class="mw-100" src="{{ asset('/images/components/buttons/button-container.png') }}" alt="Button Container">
             <p id="episode-3-time-diff" class="position-absolute start-50 top-50 translate-middle px-4 w-100 text-center fw-bold fs-4"></p>
