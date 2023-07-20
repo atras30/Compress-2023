@@ -20,7 +20,7 @@
 
 <body>
   @include('sweetalert::alert')
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BB181B;">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BB181B; z-index: 5;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
