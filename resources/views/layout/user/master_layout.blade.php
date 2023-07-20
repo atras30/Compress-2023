@@ -15,36 +15,45 @@
     .h-line-left {
       border-left: #000 2px solid;
     }
+
+    .nav-item{
+      margin: 1vh 1vw;
+    }
   </style>
 </head>
 
 <body>
   @include('sweetalert::alert')
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BB181B; z-index: 5;">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BB181B; z-index: 5; width:100vw;">
+    <div class="container-fluid d-flex justify-content-between">
       <a class="navbar-brand" href="#">
-        <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
+        <img src="./images/home/components/logo.png" alt="" width="64" height="64">
       </a>
-      <ul class="nav nav-pills nav-fill justify-content-end">
-        <li class="nav-item">
-          <a class="btn btn-light" aria-current="page" href="{{ route('workshop') }}">Workshop</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-light" href="{{ route('ruangindependen') }}">Ruang Indi(e)penden</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="btn btn-light dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Young Journalist Award
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="{{ route('rtyja') }}">Road To Young Journalist Award</a></li>
-            <li><a class="dropdown-item" href="{{ route('yja') }}">Young Journalist Award</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-light" href="#">Contact Us</a>
-        </li>
-      </ul>
+      <button class="navbar-toggler border border-dark" style="background-color: #d75a5c;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="btn btn-light border border-dark rounded-pill px-4" aria-current="page" href="{{ route('workshop') }}">Workshop</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-light border border-dark rounded-pill px-4" href="{{ route('ruangindependen') }}">Ruang Indi(e)penden</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="btn btn-light border border-dark rounded-pill px-4 dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Young Journalist Award
+            </a>
+            <ul class="dropdown-menu border border-dark" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="{{ route('rtyja') }}">Road To Young Journalist Award</a></li>
+              <li><a class="dropdown-item" href="{{ route('yja') }}">Young Journalist Award</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-light border border-dark rounded-pill px-4" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
   @yield('contents')
