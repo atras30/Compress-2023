@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Registration;
+use App\Models\Form;
 use App\Exports\recruitmentExport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -50,17 +50,17 @@ class AdminController extends Controller
     {
         return view('admin.dashboard', [
             'title' => "Registration",
-            "registeredUsers" => Registration::all()
+            "registeredUsers" => Form::all()
         ]);
     }
 
-    function viewmore($id)
-    {
-        return view('admin.viewmore-user', [
-            'title' => "User Information",
-            "User" => Registration::find($id)
-        ]);
-    }
+    // function viewmore($id)
+    // {
+    //     return view('admin.viewmore-user', [
+    //         'title' => "User Information",
+    //         "User" => Form::find($id)
+    //     ]);
+    // }
 
     public function export()
     {

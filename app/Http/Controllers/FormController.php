@@ -49,6 +49,6 @@ class FormController extends Controller
         
         Alert::html('Thankyou!', 'You\'ve Successfully Registered.<br> Please wait for further information <br> <small>Stay tune on our instagram <a href="https://www.instagram.com/commpressumn">@commpressumn</a></small>', 'success');
 
-        return redirect('/');
+        return redirect('/terimakasih');
     }
 }

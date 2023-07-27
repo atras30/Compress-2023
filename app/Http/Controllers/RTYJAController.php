@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class RTYJAController extends Controller
 {
     public function rtyja(){
-        $eps1 = "2023-07-19 17:30:00";
-        $eps2 = "2023-12-10 23:39:45";
-        $eps3 = "2023-09-10 23:39:23";
+        $eps1 = Carbon::create(2023, 9, 27, 00, 00, 00, 'Asia/Jakarta');
+        $eps2 = Carbon::create(2023, 9, 28, 00, 00, 00, 'Asia/Jakarta');
+        $eps3 = Carbon::create(2023, 9, 29, 00, 00, 00, 'Asia/Jakarta');
 
         return view('rtyja',[
             'title' => "RTYJA Commpress",

@@ -43,13 +43,30 @@ Route::prefix('/admin')->group(function () {
     });
 });
 
+Route::prefix('/ruangindependen')->group(function () {
+    Route::get('/', [RuangIndependenController::class, "ruangindependen"])->name('ruangindependen');
+    Route::prefix(('/daftar'))->group(function(){
+        Route::get('', [RuangIndependenController::class, "daftarruangindependen"])->name('daftarruangindependen');
+
+        Route::get('/mobile-journalism', [RuangIndependenController::class, "mobile_journalism"])->name('mobile_journalism');
+        Route::post('/mobile-journalism', [RuangIndependenController::class, "formValidateMOJO"])->name('validateMOJO');
+
+        Route::get('/long-form-article', [RuangIndependenController::class, "long_form_article"])->name('long_form_article');
+        Route::post('/long-form-article', [RuangIndependenController::class, "formValidateLFA"])->name('validateLFA');
+
+        Route::get('/news-infographic', [RuangIndependenController::class, "news_infographic"])->name('news_infographic');
+        Route::post('/news-infographic', [RuangIndependenController::class, "formValidateNI"])->name('validateNI');
+
+        Route::get('/terimakasih', [RuangIndependenController::class, "akhirruangindependen"])->name('akhirruangindependen');
+    });
+});
+
 Route::get('/form', [FormController::class, "form"])->name('form');
 Route::post('/form', [FormController::class, "formValidate"])->name('recruitment.validate');
 
 Route::get('/divisi', [DivisiController::class, "index"])->name('divisi');
 
 Route::get('/workshop', [WorkshopController::class, "workshop"])->name('workshop');
-Route::get('/ruangindependen', [RuangIndependenController::class, "ruangindependen"])->name('ruangindependen');
 Route::get('/yja', [YJAController::class, "yja"])->name("yja");
 Route::get('/rtyja', [RTYJAController::class, "rtyja"])->name("rtyja");
 

@@ -19,30 +19,47 @@
       <thead>
         <tr>
           <th>Name</th>
-          <th>Nim</th>
-          <th>Divisi 1</th>
-          <th>Divisi 2</th>
-          <th>Action</th>
+          <th>Asal Universitas</th>
+          <th>NIM</th>
+          <th>Email</th>
+          <th>Line/Whatsapp</th>
+          <th>Jenis Karya</th>
+          <th>Bukti Bayar</th>
+          <th>Instagram</th>
+          <th>Link Karya IG</th>
+          <th>Hasil Karya PDF</th>
         </tr>
       </thead>
       <tbody>
         @foreach ($registeredUsers as $user)
           <tr>
-            <td>{{ $user->fullname }}</td>
+            <td>{{ $user->namalengkap }}</td>
+            <td>{{ $user->universitas }}</td>
             <td>{{ $user->nim }}</td>
-            <td>{{ $user->divisi1 }}</td>
-            <td>{{ $user->divisi2 }}</td>
-            <td><a id="btn-view" class="btn btn-primary" data-id="{{ $user->id }}" href="dashboard/{{ $user->id }}">View More</a></td>
+            <td>{{ $user->email }}</td>
+            <td>{{ $user->medsos }}</td>
+            <td>{{ $user->type }}</td>
+            <td>{{ $user->bukti }}</td>
+            <td>{{ $user->instagram }}</td>
+            <td>{{ $user->linkkaryaig }}</td>
+            <td>{{ $user->pathfilehasilkarya }}</td>
+
+            <!--<td><a id="btn-view" class="btn btn-primary" data-id="{{ $user->id }}" href="dashboard/{{ $user->id }}">View More</a></td>-->
           </tr>
         @endforeach
       </tbody>
       <tfoot>
-        <tr>
+      <tr>
           <th>Name</th>
-          <th>Nim</th>
-          <th>Divisi 1</th>
-          <th>Divisi 2</th>
-          <th>Action</th>
+          <th>Asal Universitas</th>
+          <th>NIM</th>
+          <th>Email</th>
+          <th>Line/Whatsapp</th>
+          <th>Jenis Karya</th>
+          <th>Bukti Bayar</th>
+          <th>Instagram</th>
+          <th>Link Karya IG</th>
+          <th>Hasil Karya PDF</th>
         </tr>
       </tfoot>
     </table>

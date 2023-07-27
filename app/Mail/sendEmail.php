@@ -26,7 +26,7 @@ class sendEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Pendaftaran Commpress 2023',
+            subject: 'Registrasi Karya',
         );
     }
 

@@ -12,13 +12,28 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   @yield('styles')
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    @font-face {
+        font-family: 'Bazinga';
+        font-style: normal;
+        font-weight: 400;
+        src: url('fonts/Bazinga-Regular.ttf');
+    }
+
     .h-line-left {
       border-left: #000 2px solid;
     }
 
     .nav-item{
+      font-family: Bazinga;
       margin: 1vh 1vw;
     }
+
+    .pleft-3{
+      margin-left: 3rem;
+    }
+    
   </style>
 </head>
 
@@ -26,8 +41,8 @@
   @include('sweetalert::alert')
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BB181B; z-index: 5; width:100vw;">
     <div class="container-fluid d-flex justify-content-between">
-      <a class="navbar-brand" href="#">
-        <img src="./images/home/components/logo.png" alt="" width="64" height="64">
+      <a class="d-flex navbar-brand" href="{{ route('home') }}">
+        <img class="pleft-3" src="/images/home/components/logo.png" alt="Logo" width="64" height="64">
       </a>
       <button class="navbar-toggler border border-dark" style="background-color: #d75a5c;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -35,13 +50,13 @@
       <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="btn btn-light border border-dark rounded-pill px-4" aria-current="page" href="{{ route('workshop') }}">Workshop</a>
+            <a class="btn btn-light border border-dark rounded-pill px-4 fs-5" aria-current="page" href="{{ route('workshop') }}">Workshop</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-light border border-dark rounded-pill px-4" href="{{ route('ruangindependen') }}">Ruang Indi(e)penden</a>
+            <a class="btn btn-light border border-dark rounded-pill px-4 fs-5" href="{{ route('ruangindependen') }}">Ruang Indi(e)penden</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="btn btn-light border border-dark rounded-pill px-4 dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="btn btn-light border border-dark rounded-pill px-4 dropdown-toggle fs-5" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Young Journalist Award
             </a>
             <ul class="dropdown-menu border border-dark" aria-labelledby="navbarScrollingDropdown">
@@ -50,7 +65,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="btn btn-light border border-dark rounded-pill px-4" href="#">Contact Us</a>
+            <a class="btn btn-light border border-dark rounded-pill px-4 fs-5" href="#footer">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -60,7 +75,7 @@
   @yield('scripts')
   <div>
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-white" style="background-color: #BB181B">
+    <footer id="footer" class="text-center text-lg-start text-white" style="background-color: #BB181B">
       <!-- Grid container -->
       <div class="container-fluid p-4 pb-5">
         <!-- Section: Links -->
@@ -70,11 +85,10 @@
             <div>GET READY FOR BIGGER CHANGE!</div>
             <div class="mb-4">- COMMPRESS 2023 -</div>
             <div>
-                <img style="width: 1.9rem;" src="{{asset('/images/components/misc/circle.png')}}" alt="">
-                <img style="width: 1.9rem;" src="{{asset('/images/components/misc/circle.png')}}" alt="">
-                <img style="width: 1.9rem;" src="{{asset('/images/components/misc/circle.png')}}" alt="">
-                <img style="width: 1.9rem;" src="{{asset('/images/components/misc/circle.png')}}" alt="">
-                <img style="width: 1.9rem;" src="{{asset('/images/components/misc/circle.png')}}" alt="">
+                <a href="https://www.instagram.com/commpressumn/"><img style="width: 4rem;" src="{{asset('/images/logos/instagram.svg')}}" alt=""></a>
+                <a href="https://www.instagram.com/ruang.indiependen/"><img style="width: 4rem;" src="{{asset('/images/logos/instagram.svg')}}" alt=""></a>
+                <a href="https://www.tiktok.com/@commpressumn"><img style="width: 3rem;" src="{{asset('/images/logos/tiktok.png')}}" alt=""></a>
+                <a href="https://www.linkedin.com/company/commpress-umn/mycompany/"><img style="width: 3rem;" src="{{asset('/images/logos/linkedin.png')}}" alt=""></a>
             </div>
           </div>
           <div class="h-line-left d-none d-md-block"></div>

@@ -105,18 +105,15 @@
             <p id="time-remaining" class="position-absolute start-50 top-50 translate-middle px-4 w-100 text-center fw-bold fs-2"></p>
           </div>
       </div>
-
-
-      </section>
+        </section>
     </div>
 
     <div class="position-relative background-purple pb-5 mh-85vh d-flex justify-content-center align-items-center">
       <img class="position-absolute object-fit-cover w-100 h-100" src="{{ asset('/images/yja/background/motive-1.png') }}" alt="Flakes">
       <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/road-to-yja/base/top-bottom.png') }}" alt="bottom">
 
-      <div class="position-relative text-center fs-2 fw-bold text-black">
-        FOTO ON PROGRESS DARI DOKUM
-      </div>
+      <img src="{{ asset('/images/yja/fotorecap.png') }}" alt="bottom" style="margin-top:5rem; margin-bottom:5rem; height:45rem;">
+
     </div>
   </div>
 @endsection
