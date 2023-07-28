@@ -1802,209 +1802,223 @@ div.my-heart > img.my-heart__unique5 {
   bottom: var(--tw-size-0);
   z-index: 50;
 }
+
+.textCommpress{
+  font-size: 20px !important;
+}
+
+@media (min-width: 1024px) {
+  .textCommpress{
+    font-size: 40px !important;
+  }
+}
+
+.screennn{
+  width: 100%;
+  overflow-x: hidden;
+}
   </style>
 @endsection
 
 @section('contents')
-  <div class="w-full overflow-w-hidden">
-    
-  </div>
-  <div class="main-content first-section position-relative yellow">
-    <section class="h-100">
-      <div class="mh-100">
-        <img class="position-absolute overflow-hidden cloud-1" src="{{ asset('images/home/components/awan-kiri-atas.png') }}" alt="cloud-1">
-        <img class="position-absolute overflow-hidden cloud-2" src="{{ asset('images/home/components/awan-kiri-bawah.png') }}" alt="cloud-2">
-        <img class="position-absolute overflow-hidden cloud-3" src="{{ asset('images/home/components/awan-kanan-atas.png') }}" alt="cloud-3">
-        <img class="position-absolute overflow-hidden cloud-4" src="{{ asset('images/home/components/awan-kanan-bawah.png') }}" alt="cloud-4">
-      </div>
-      <img class="position-absolute start-0 w-100 h-100 sun-bg" src="{{ asset('images/home/bg/sun-bg.png') }}" alt="pattern">
-      <img class="position-absolute start-0 w-100 h-2rem bar" src="{{ asset('/images/workshop/base/Top.png') }}" alt="top">
-      <img class="position-absolute bottom-0 w-100 h-2rem bar" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
-    </section>
+  <div class="screennn">
+    <div class="main-content first-section position-relative yellow">
+      <section class="h-100">
+        <div class="mh-100">
+          <img class="position-absolute overflow-hidden cloud-1" src="{{ asset('images/home/components/awan-kiri-atas.png') }}" alt="cloud-1">
+          <img class="position-absolute overflow-hidden cloud-2" src="{{ asset('images/home/components/awan-kiri-bawah.png') }}" alt="cloud-2">
+          <img class="position-absolute overflow-hidden cloud-3" src="{{ asset('images/home/components/awan-kanan-atas.png') }}" alt="cloud-3">
+          <img class="position-absolute overflow-hidden cloud-4" src="{{ asset('images/home/components/awan-kanan-bawah.png') }}" alt="cloud-4">
+        </div>
+        <img class="position-absolute start-0 w-100 h-100 sun-bg" src="{{ asset('images/home/bg/sun-bg.png') }}" alt="pattern">
+        <img class="position-absolute start-0 w-100 h-2rem bar" src="{{ asset('/images/workshop/base/Top.png') }}" alt="top">
+        <img class="position-absolute bottom-0 w-100 h-2rem bar" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
+      </section>
 
-    <section class="position-relative ptop-5 pbot-5 mw-100 mx-3">
-      <div class="d-flex flex-column flex-md-row align-items-stretch fw-bold gap-5 justify-content-center">
-        <img class="img-fluid align-self-center logo" src="{{ asset('/images/home/components/logo.png') }}" alt="Logo">
-        <div class=" align-self-center">
-          <div class="hero-title px-5 mb-4">
-            <h1 class="text-white fs-4rem text-center">COMMPRESS</h1>
-          </div>
-          <div class="mx-3 title-content fw-bold fs-5 text-content">
-            <p class="px-5 mb-3 text-black text-justify">COMMPRESS merupakan kegiatan tahunan Program Studi Jurnalistik Universitas Multimedia Nusantara (UMN). COMMPRESS merupakan istilah dari gabungan dua kata dalam bahasa Inggris: “communication” dan “press”. COMMPRESS memiliki makna “compress” yang berarti “memampatkan”. Dengan begitu, secara umum COMMPRESS hadir sebagai wadah yang memampatkan karya-karya jurnalistik mahasiswa/i.</p><br>
+      <section class="position-relative ptop-5 pbot-5 mw-100 mx-3">
+        <div class="d-flex flex-column flex-md-row align-items-stretch fw-bold gap-5 justify-content-center">
+          <img class="img-fluid align-self-center logo" src="{{ asset('/images/home/components/logo.png') }}" alt="Logo">
+          <div class=" align-self-center">
+            <div class="hero-title px-5 mb-4">
+              <h1 class="text-white fs-4rem text-center">COMMPRESS</h1>
+            </div>
+            <div class="mx-3 title-content fw-bold fs-5 text-content">
+              <p class="px-5 mb-3 text-black text-justify">COMMPRESS merupakan kegiatan tahunan Program Studi Jurnalistik Universitas Multimedia Nusantara (UMN). COMMPRESS merupakan istilah dari gabungan dua kata dalam bahasa Inggris: “communication” dan “press”. COMMPRESS memiliki makna “compress” yang berarti “memampatkan”. Dengan begitu, secara umum COMMPRESS hadir sebagai wadah yang memampatkan karya-karya jurnalistik mahasiswa/i.</p><br>
 
-            <p class="px-5 mb-5 text-black text-justify">COMMPRESS pertama kali diselenggarakan pada 2012 dan telah dilaksanakan tiap tahun hingga saat ini. COMMPRESS dibentuk sebagai tempat bagi mahasiswa untuk menyalurkan minat dan bakat mereka dalam dunia jurnalistik. Oleh karena itu, fokus COMMPRESS mengacu pada bidang jurnalistik. Setiap tahun, COMMPRESS menarik pengunjung dan peserta dari berbagai kalangan jurnalistik dan nonjurnalistik.</p>
+              <p class="px-5 mb-5 text-black text-justify">COMMPRESS pertama kali diselenggarakan pada 2012 dan telah dilaksanakan tiap tahun hingga saat ini. COMMPRESS dibentuk sebagai tempat bagi mahasiswa untuk menyalurkan minat dan bakat mereka dalam dunia jurnalistik. Oleh karena itu, fokus COMMPRESS mengacu pada bidang jurnalistik. Setiap tahun, COMMPRESS menarik pengunjung dan peserta dari berbagai kalangan jurnalistik dan nonjurnalistik.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-
-  <div class="my-alert__unique9 my-alert">
-    <div class="my-alert__unique5">
-      <div class="my-alert__unique1">
-        <img src="{{ asset('/images/home/bg/kotakR.svg') }}" alt="bottom">
-      </div>
-      <div class="my-alert__unique2">
-        <img src="{{ asset('/images/home/bg/kotakL.svg') }}" alt="bottom">
-      </div>
+      </section>
     </div>
-    <div class="my-alert__unique5">
-      <div class="my-alert__unique3">
-        <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">DAMPAK INTERNAL</h1>
-        <ul style="font-family: 'Inter', sans-serif;">
-          <li>Meningkatkan awareness tentang Jurnalistik kepada mahasiswa UMN,</li>
-          <li>Mengasah kemampuan dan keterampilan mahasiswa UMN terhadap kerja Jurnalistik,</li>
-          <li>Memperkenalkan kemajuan teknologi di bidang Jurnalistik kepada mahasiswa UMN,</li>
-          <li>Memperkenalkan Komik Jurnalistik dalam bentuk digital,</li>
-          <li>Menambah pengetahuan dan pengalaman mahasiswa tentang kerja jurnalistik</li>
-        </ul>
-      </div>
-      <div class="my-alert__unique4">
-        <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">DAMPAK EKSTERNAL</h1>
-        <ul style="font-family: 'Inter', sans-serif;">
-          <li>Memperkenalkan UMN kepada pihak eksternal secara lebih luas,</li>
-          <li>Memperkenalkan karya jurnalistik mahasiswa/i UMN kepada pihak eksternal,</li>
-          <li>Memperkenalkan Program Studi Jurnalistik kepada pihak eksternal,</li>
-          <li>Memperkenalkan COMMPRESS UMN kepada pihak eksternal, tidak hanya siswa dan mahasiswa, tetapi juga perusahaan media jurnalisme yang ikut terlibat kerja sama,</li>
-          <li>Mendorong minat mahasiswa/i Indonesia dalam bidang jurnalistik melalui workshop dan lomba bertemakan jurnalistik.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="my-alert__unique6">
-      <div class="my-alert__unique7">
-        <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">DAMPAK INTERNAL</h1>
-        <ul style="font-family: 'Inter', sans-serif;">
-          <li>Meningkatkan awareness tentang Jurnalistik kepada mahasiswa UMN,</li>
-          <li>Mengasah kemampuan dan keterampilan mahasiswa UMN terhadap kerja Jurnalistik,</li>
-          <li>Memperkenalkan kemajuan teknologi di bidang Jurnalistik kepada mahasiswa UMN,</li>
-          <li>Memperkenalkan Komik Jurnalistik dalam bentuk digital,</li>
-          <li>Menambah pengetahuan dan pengalaman mahasiswa tentang kerja jurnalistik</li>
-        </ul>
-      </div>
-      <div class="my-alert__unique8">
-        <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">DAMPAK EKSTERNAL</h1>
-        <ul style="font-family: 'Inter', sans-serif;">
-          <li>Memperkenalkan UMN kepada pihak eksternal secara lebih luas,</li>
-          <li>Memperkenalkan karya jurnalistik mahasiswa/i UMN kepada pihak eksternal,</li>
-          <li>Memperkenalkan Program Studi Jurnalistik kepada pihak eksternal,</li>
-          <li>Memperkenalkan COMMPRESS UMN kepada pihak eksternal, tidak hanya siswa dan mahasiswa, tetapi juga perusahaan media jurnalisme yang ikut terlibat kerja sama,</li>
-          <li>Mendorong minat mahasiswa/i Indonesia dalam bidang jurnalistik melalui workshop dan lomba bertemakan jurnalistik.</li>
-        </ul>
-      </div>
-    </div>
-    <img src="{{ asset('/images/home/bg/bgsplit.png') }}" alt="bottom" class="my-alert__unique15">
-  </div>
 
-  <div class="my-heart">
-    <div>
+    <div class="my-alert__unique9 my-alert">
+      <div class="my-alert__unique5">
+        <div class="my-alert__unique1">
+          <img src="{{ asset('/images/home/bg/kotakR.svg') }}" alt="bottom">
+        </div>
+        <div class="my-alert__unique2">
+          <img src="{{ asset('/images/home/bg/kotakL.svg') }}" alt="bottom">
+        </div>
+      </div>
+      <div class="my-alert__unique5">
+        <div class="my-alert__unique3">
+          <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">DAMPAK INTERNAL</h1>
+          <ul style="font-family: 'Inter', sans-serif;">
+            <li>Meningkatkan awareness tentang Jurnalistik kepada mahasiswa UMN,</li>
+            <li>Mengasah kemampuan dan keterampilan mahasiswa UMN terhadap kerja Jurnalistik,</li>
+            <li>Memperkenalkan kemajuan teknologi di bidang Jurnalistik kepada mahasiswa UMN,</li>
+            <li>Memperkenalkan Komik Jurnalistik dalam bentuk digital,</li>
+            <li>Menambah pengetahuan dan pengalaman mahasiswa tentang kerja jurnalistik</li>
+          </ul>
+        </div>
+        <div class="my-alert__unique4">
+          <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">DAMPAK EKSTERNAL</h1>
+          <ul style="font-family: 'Inter', sans-serif;">
+            <li>Memperkenalkan UMN kepada pihak eksternal secara lebih luas,</li>
+            <li>Memperkenalkan karya jurnalistik mahasiswa/i UMN kepada pihak eksternal,</li>
+            <li>Memperkenalkan Program Studi Jurnalistik kepada pihak eksternal,</li>
+            <li>Memperkenalkan COMMPRESS UMN kepada pihak eksternal, tidak hanya siswa dan mahasiswa, tetapi juga perusahaan media jurnalisme yang ikut terlibat kerja sama,</li>
+            <li>Mendorong minat mahasiswa/i Indonesia dalam bidang jurnalistik melalui workshop dan lomba bertemakan jurnalistik.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="my-alert__unique6">
+        <div class="my-alert__unique7">
+          <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">DAMPAK INTERNAL</h1>
+          <ul style="font-family: 'Inter', sans-serif;">
+            <li>Meningkatkan awareness tentang Jurnalistik kepada mahasiswa UMN,</li>
+            <li>Mengasah kemampuan dan keterampilan mahasiswa UMN terhadap kerja Jurnalistik,</li>
+            <li>Memperkenalkan kemajuan teknologi di bidang Jurnalistik kepada mahasiswa UMN,</li>
+            <li>Memperkenalkan Komik Jurnalistik dalam bentuk digital,</li>
+            <li>Menambah pengetahuan dan pengalaman mahasiswa tentang kerja jurnalistik</li>
+          </ul>
+        </div>
+        <div class="my-alert__unique8">
+          <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">DAMPAK EKSTERNAL</h1>
+          <ul style="font-family: 'Inter', sans-serif;">
+            <li>Memperkenalkan UMN kepada pihak eksternal secara lebih luas,</li>
+            <li>Memperkenalkan karya jurnalistik mahasiswa/i UMN kepada pihak eksternal,</li>
+            <li>Memperkenalkan Program Studi Jurnalistik kepada pihak eksternal,</li>
+            <li>Memperkenalkan COMMPRESS UMN kepada pihak eksternal, tidak hanya siswa dan mahasiswa, tetapi juga perusahaan media jurnalisme yang ikut terlibat kerja sama,</li>
+            <li>Mendorong minat mahasiswa/i Indonesia dalam bidang jurnalistik melalui workshop dan lomba bertemakan jurnalistik.</li>
+          </ul>
+        </div>
+      </div>
+      <img src="{{ asset('/images/home/bg/bgsplit.png') }}" alt="bottom" class="my-alert__unique15">
+    </div>
 
+    <div class="my-heart">
       <div>
-        <img src="{{ asset('/images/home/components/modernisasi-logo.png') }}" alt="Logo">
-        <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;" class="my-heart__unique1">COMMPRESS 2023:</h1>
-        <h1 class="my-heart__unique2" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">MODERNISASI MEDIA</h1>
-        <p>Kerja jurnalistik hadir di tengah-tengah masyarakat sebagai penyambung informasi dari satu pihak ke pihak lain. Jurnalisme berdiri secara independen menegakkan tonggak imparsialisme. Tahun ke tahun, jurnalisme bergerak mengikuti perkembangan zaman yang ada dengan mempertahankan nilai etikanya. Perkembangan tersebut pun sampai pada tahun ini, dimana dunia berdampingan erat dengan kemajuan teknologi dan modernisasi. Atas perkembangan itu lahirlah istilah yang kini dikenal dengan modernisasi media. Dengan demikian, perkembangan yang ada patut diketahui bahwa jurnalisme tegak lurus berbaur dengan kemajuan yang ada dengan tetap berpegang pada etika dan sisi independennya.&nbsp;Atas dasar tersebut, terguguslah COMMPRESS 2023 dengan tema “Modernisasi Media”.</p>
+
+        <div>
+          <img src="{{ asset('/images/home/components/modernisasi-logo.png') }}" alt="Logo">
+          <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;" class="my-heart__unique1">COMMPRESS 2023:</h1>
+          <h1 class="my-heart__unique2" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">MODERNISASI MEDIA</h1>
+          <p class="textCommpress">Kerja jurnalistik hadir di tengah-tengah masyarakat sebagai penyambung informasi dari satu pihak ke pihak lain. Jurnalisme berdiri secara independen menegakkan tonggak imparsialisme. Tahun ke tahun, jurnalisme bergerak mengikuti perkembangan zaman yang ada dengan mempertahankan nilai etikanya. Perkembangan tersebut pun sampai pada tahun ini, dimana dunia berdampingan erat dengan kemajuan teknologi dan modernisasi. Atas perkembangan itu lahirlah istilah yang kini dikenal dengan modernisasi media. Dengan demikian, perkembangan yang ada patut diketahui bahwa jurnalisme tegak lurus berbaur dengan kemajuan yang ada dengan tetap berpegang pada etika dan sisi independennya.&nbsp;Atas dasar tersebut, terguguslah COMMPRESS 2023 dengan tema “Modernisasi Media”.</p>
+        </div>
       </div>
+      
+      <img src="{{ asset('/images/home/components/flat-bar.png') }}" alt="top" class="my-heart__unique3">
+      <img class="my-heart__unique4" src="{{ asset('/images/home/bg/bgmodernisasi.png') }}" alt="bg">
+      <img class="my-heart__unique5" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
     </div>
     
-    <img src="{{ asset('/images/home/components/flat-bar.png') }}" alt="top" class="my-heart__unique3">
-    <img class="my-heart__unique4" src="{{ asset('/images/home/bg/bgmodernisasi.png') }}" alt="bg">
-    <img class="my-heart__unique5" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
-  </div>
-  
-  <div class="my-love">
-    <div>
-      <img src="{{ asset('/images/home/components/awan-tagline.png') }}" alt="bottom">
+    <div class="my-love">
       <div>
-        <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">"GET READY FOR BIGGER CHANGE!"</h1>
-        <p>COMMPRESS 2023 bertekad melalui tagline yang diusung yaitu “Get ready for bigger change!” yang diartikan sebagai kesiapan diri dalam menghadapi perubahan dan modernisasi yang besar. Kesiapan ini juga diimbangi dengan wawasan diri yang baik sebagai alat untuk menghadapi modernisasi tersebut. Hal tersebut demikian supaya modernisasi dapat dimanfaatkan secara maksimal sebagai wadah pemberi perubahan yang lebih maju dalam bidang jurnalisme.&nbsp;</p>
+        <img src="{{ asset('/images/home/components/awan-tagline.png') }}" alt="bottom">
+        <div>
+          <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">"GET READY FOR BIGGER CHANGE!"</h1>
+          <p class="textCommpress">COMMPRESS 2023 bertekad melalui tagline yang diusung yaitu “Get ready for bigger change!” yang diartikan sebagai kesiapan diri dalam menghadapi perubahan dan modernisasi yang besar. Kesiapan ini juga diimbangi dengan wawasan diri yang baik sebagai alat untuk menghadapi modernisasi tersebut. Hal tersebut demikian supaya modernisasi dapat dimanfaatkan secara maksimal sebagai wadah pemberi perubahan yang lebih maju dalam bidang jurnalisme.&nbsp;</p>
+        </div>
       </div>
+      <img src="{{ asset('/images/home/components/cowok-tagline.png') }}" alt="bottom" class="my-love__unique1">
+      <img class="my-love__unique2" src="{{ asset('/images/home/components/cewek-tagline.png') }}" alt="bottom">
+      
+      <img class="my-love__unique3" src="{{ asset('/images/home/bg/bgtagline.png') }}" alt="bg">
+      <img class="my-love__unique4" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
     </div>
-    <img src="{{ asset('/images/home/components/cowok-tagline.png') }}" alt="bottom" class="my-love__unique1">
-    <img class="my-love__unique2" src="{{ asset('/images/home/components/cewek-tagline.png') }}" alt="bottom">
-    
-    <img class="my-love__unique3" src="{{ asset('/images/home/bg/bgtagline.png') }}" alt="bg">
-    <img class="my-love__unique4" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
-  </div>
 
-  <div class="my-alert__unique10 my-alert">
-    <div class="my-alert__unique11">
-      <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;" class="my-alert__unique20">LATEST ACTIVITIES!</h1>
-      <div class="my-alert__unique12">
-        <a href="https://www.instagram.com/p/Cu9LeiBMQwf/"><img src="{{ asset('/images/home/components/IG3.png') }}"></a>
-        <a href="https://www.instagram.com/p/CrDb_qbLlUI/"><img src="{{ asset('/images/home/components/IG1.png') }}"></a>
-        <a href="https://www.instagram.com/p/CssrBpZtZls/"><img src="{{ asset('/images/home/components/IG2.png') }}"></a>
+    <div class="my-alert__unique10 my-alert">
+      <div class="my-alert__unique11">
+        <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;" class="my-alert__unique20">LATEST ACTIVITIES!</h1>
+        <div class="my-alert__unique12">
+          <a href="https://www.instagram.com/p/Cu9LeiBMQwf/"><img src="{{ asset('/images/home/components/IG3.png') }}"></a>
+          <a href="https://www.instagram.com/p/CrDb_qbLlUI/"><img src="{{ asset('/images/home/components/IG1.png') }}"></a>
+          <a href="https://www.instagram.com/p/CssrBpZtZls/"><img src="{{ asset('/images/home/components/IG2.png') }}"></a>
+        </div>
       </div>
-    </div>
-    <div class="my-alert__unique13">
-      <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;" class="my-alert__unique20">LATEST ACTIVITIES!</h1>
-      <div class="my-alert__unique14">
-        <a href="https://www.instagram.com/p/Cu9LeiBMQwf/"><img src="{{ asset('/images/home/components/IG3.png') }}"></a>
-        <a href="https://www.instagram.com/p/CrDb_qbLlUI/"><img src="{{ asset('/images/home/components/IG1.png') }}"></a>
-        <a href="https://www.instagram.com/p/CssrBpZtZls/"><img src="{{ asset('/images/home/components/IG2.png') }}"></a>
+      <div class="my-alert__unique13">
+        <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;" class="my-alert__unique20">LATEST ACTIVITIES!</h1>
+        <div class="my-alert__unique14">
+          <a href="https://www.instagram.com/p/Cu9LeiBMQwf/"><img src="{{ asset('/images/home/components/IG3.png') }}"></a>
+          <a href="https://www.instagram.com/p/CrDb_qbLlUI/"><img src="{{ asset('/images/home/components/IG1.png') }}"></a>
+          <a href="https://www.instagram.com/p/CssrBpZtZls/"><img src="{{ asset('/images/home/components/IG2.png') }}"></a>
+        </div>
       </div>
+      <img class="my-alert__unique16" src="{{ asset('/images/home/bg/bgactivity.png') }}" alt="bg">
+      <img class="my-alert__unique17" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
     </div>
-    <img class="my-alert__unique16" src="{{ asset('/images/home/bg/bgactivity.png') }}" alt="bg">
-    <img class="my-alert__unique17" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
-  </div>
-  
-  <div class="my-alert__unique18 my-alert">
-    <div class="my-alert__unique19">
-      <h1 class="my-alert__unique21" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">TIMELINE</h1>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl1.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl2.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl3.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl4.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl5.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl6.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl7.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl8.png') }}">
-      </a>
+    
+    <div class="my-alert__unique18 my-alert">
+      <div class="my-alert__unique19">
+        <h1 class="my-alert__unique21" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">TIMELINE</h1>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl1.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl2.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl3.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl4.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl5.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl6.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl7.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl8.png') }}">
+        </a>
+      </div>
+      <div class="my-alert__unique22">
+        <h1 class="my-alert__unique23" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">TIMELINE</h1>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl1.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl2.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl3.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl4.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl5.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl6.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl7.png') }}">
+        </a>
+        <a href="">
+          <img src="{{ asset('/images/home/components/tl8.png') }}">
+        </a>
+      </div>
+      <img class="my-alert__unique24" src="{{ asset('/images/home/bg/Frame.png') }}">
+      <img class="my-alert__unique25" src="{{ asset('/images/home/components/petirL.png') }}">
+      <img class="my-alert__unique26" src="{{ asset('/images/home/components/petirR.png') }}">
     </div>
-    <div class="my-alert__unique22">
-      <h1 class="my-alert__unique23" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">TIMELINE</h1>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl1.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl2.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl3.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl4.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl5.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl6.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl7.png') }}">
-      </a>
-      <a href="">
-        <img src="{{ asset('/images/home/components/tl8.png') }}">
-      </a>
-    </div>
-    <img class="my-alert__unique24" src="{{ asset('/images/home/bg/Frame.png') }}">
-    <img class="my-alert__unique25" src="{{ asset('/images/home/components/petirL.png') }}">
-    <img class="my-alert__unique26" src="{{ asset('/images/home/components/petirR.png') }}">
   </div>
 @endsection
 

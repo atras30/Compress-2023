@@ -39,7 +39,7 @@
 
 <body>
   @include('sweetalert::alert')
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BB181B; z-index: 5; width:100vw;">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BB181B; z-index: 5; width:100%;">
     <div class="container-fluid d-flex justify-content-between">
       <a class="d-flex navbar-brand" href="{{ route('home') }}">
         <img class="pleft-3" src="/images/home/components/logo.png" alt="Logo" width="64" height="64">
