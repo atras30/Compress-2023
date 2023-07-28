@@ -30,6 +30,8 @@
 
     .first-section {
       min-height: 40rem;
+      max-width: 100%;
+      position: relative;
     }
 
     .mh-100vh {
@@ -42,6 +44,10 @@
 
     .ptop-5 {
       padding-top: 5rem;
+    }
+
+    .pbot-5 {
+      padding-bottom: 5rem;
     }
 
     .h-2rem {
@@ -141,12 +147,17 @@
     }
 
     .logo {
-      width: 110%;
-      height: 110%;
-      max-width: 70vw;
+      width: 80%;
+      height: 80%;
+      max-width: 50vw;
       padding-left: 5%;
 
     }
+
+    .text-content {
+      z-index: 100;
+    }
+
   </style>
 @endsection
 
@@ -167,14 +178,14 @@
       <img class="position-absolute bottom-0 w-100 h-2rem bar" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
     </section>
 
-    <section class="position-relative ptop-5 mw-100 mx-3">
+    <section class="position-relative ptop-5 pbot-5 mw-100 mx-3">
       <div class="d-flex flex-column flex-md-row align-items-stretch fw-bold gap-5 justify-content-center">
         <img class="img-fluid align-self-center logo" src="{{ asset('/images/home/components/logo.png') }}" alt="Logo">
         <div class=" align-self-center">
           <div class="hero-title px-5 mb-4">
             <h1 class="text-white fs-4rem text-center">COMMPRESS</h1>
           </div>
-          <div class="mx-3 title-content fw-bold fs-5">
+          <div class="mx-3 title-content fw-bold fs-5 text-content">
             <p class="px-5 mb-3 text-black text-justify">COMMPRESS merupakan kegiatan tahunan Program Studi Jurnalistik Universitas Multimedia Nusantara (UMN). COMMPRESS merupakan istilah dari gabungan dua kata dalam bahasa Inggris: “communication” dan “press”. COMMPRESS memiliki makna “compress” yang berarti “memampatkan”. Dengan begitu, secara umum COMMPRESS hadir sebagai wadah yang memampatkan karya-karya jurnalistik mahasiswa/i.</p><br>
 
             <p class="px-5 mb-5 text-black text-justify">COMMPRESS pertama kali diselenggarakan pada 2012 dan telah dilaksanakan tiap tahun hingga saat ini. COMMPRESS dibentuk sebagai tempat bagi mahasiswa untuk menyalurkan minat dan bakat mereka dalam dunia jurnalistik. Oleh karena itu, fokus COMMPRESS mengacu pada bidang jurnalistik. Setiap tahun, COMMPRESS menarik pengunjung dan peserta dari berbagai kalangan jurnalistik dan nonjurnalistik.</p>
@@ -219,6 +230,37 @@
   </div>
 
   <div class="min-h-[150vh] w-full relative">
+    <div class="flex flex-col items-center justify-center w-full h-full absolute">
+
+      <div class="flex flex-col md:flew-col w-[80%] h-full z-50 absolute justify-center items-center gap-6 lg:gap-12 ">
+        <img class="w-2/6" src="{{ asset('/images/home/components/modernisasi-logo.png') }}" alt="Logo">
+        <h1 class="text-white text-5xl lg:text-9xl drop-shadow-[0_4px_4px_rgba(0,0,0,1)]" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">COMMPRESS 2023:</h1>
+        <h1 class="text-yellow-400 text-5xl lg:text-9xl drop-shadow-[0_4px_4px_rgba(0,0,0,1)]" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">MODERNISASI MEDIA</h1>
+        <p class="text-white text-lg lg:text-4xl text-center">Kerja jurnalistik hadir di tengah-tengah masyarakat sebagai penyambung informasi dari satu pihak ke pihak lain. Jurnalisme berdiri secara independen menegakkan tonggak imparsialisme. Tahun ke tahun, jurnalisme bergerak mengikuti perkembangan zaman yang ada dengan mempertahankan nilai etikanya. Perkembangan tersebut pun sampai pada tahun ini, dimana dunia berdampingan erat dengan kemajuan teknologi dan modernisasi. Atas perkembangan itu lahirlah istilah yang kini dikenal dengan modernisasi media. Dengan demikian, perkembangan yang ada patut diketahui bahwa jurnalisme tegak lurus berbaur dengan kemajuan yang ada dengan tetap berpegang pada etika dan sisi independennya. Atas dasar tersebut, terguguslah COMMPRESS 2023 dengan tema “Modernisasi Media”.</p>
+      </div>
+    </div>
+    
+    <img class="w-full absolute top-0 z-50" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="top">
+    <img class="h-[150vh] w-full absolute bottom-0 z-40" src="{{ asset('/images/home/bg/bgmodernisasi.png') }}" alt="bg">
+    <img class="w-full absolute bottom-0 z-50" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
+  </div>
+  
+  <div class="min-h-[120vh] w-full relative">
+    <div class="flex flex-col items-center justify-center w-full absolute top-1/3">
+      <img class="w-full lg:w-[90%] absolute z-40 inset-y-auto" src="{{ asset('/images/home/components/awan-tagline.png') }}" alt="bottom">
+      <div class="flex flex-col md:flew-col w-[80%] h-full z-50 absolute justify-center items-center gap-6 lg:gap-12 ">
+        <h1 class="text-yellow-400 text-5xl lg:text-9xl drop-shadow-[0_4px_4px_rgba(0,0,0,1)]" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">"GET READY FOR BIGGER CHANGE!"</h1>
+        <p class="text-black text-lg md:text-xl lg:text-5xl text-center">COMMPRESS 2023 bertekad melalui tagline yang diusung yaitu “Get ready for bigger change!” yang diartikan sebagai kesiapan diri dalam menghadapi perubahan dan modernisasi yang besar. Kesiapan ini juga diimbangi dengan wawasan diri yang baik sebagai alat untuk menghadapi modernisasi tersebut. Hal tersebut demikian supaya modernisasi dapat dimanfaatkan secara maksimal sebagai wadah pemberi perubahan yang lebih maju dalam bidang jurnalisme. </p>
+      </div>
+    </div>
+    <img class="w-1/3 md:w-1/4 lg:w-[28%] absolute z-40 bottom-0 start-1/4 md:start-[20%]" src="{{ asset('/images/home/components/cowok-tagline.png') }}" alt="bottom">
+    <img class="w-1/3 md:w-1/4 lg:w-[28%] absolute z-40 bottom-0 end-1/4 md:end-[20%]" src="{{ asset('/images/home/components/cewek-tagline.png') }}" alt="bottom">
+    
+    <img class="h-[120vh] w-full absolute -top-2 bottom-0 z-30" src="{{ asset('/images/home/bg/bgtagline.png') }}" alt="bg">
+    <img class="w-full absolute bottom-0 z-50" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
+  </div>
+
+  <div class="min-h-[150vh] w-full relative">
     <div class="flex flex-col w-full h-full z-50 absolute justify-center items-center gap-12">
       <h1 class="text-white text-4xl drop-shadow-[0_4px_4px_rgba(0,0,0,1)]" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">LATEST ACTIVITIES!</h1>
       <div class="flex flex-col md:flex-row justify-center items-center gap-4">
@@ -228,8 +270,7 @@
         
       </div>
     </div>
-    <img class="w-full absolute top-0 z-50" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="top">
-    <img class="h-[150vh] w-full absolute bottom-0 z-40" src="{{ asset('/images/home/bg/bgactivity.png') }}" alt="bg">
+    <img class="h-[150vh] w-full absolute -top-2 bottom-0 z-40" src="{{ asset('/images/home/bg/bgactivity.png') }}" alt="bg">
     <img class="w-full absolute bottom-0 z-50" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
   </div>
   
