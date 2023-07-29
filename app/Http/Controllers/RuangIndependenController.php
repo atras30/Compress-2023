@@ -37,7 +37,7 @@ class RuangIndependenController extends Controller
             'namalengkap' => 'required',
             'universitas' => 'required',
             'nim' => 'required',
-            'email' => 'required',
+            'email' => ['required','email:dns'],
             'medsos' => 'required',
             'bukti' => 'required',
             'instagram' => 'required',
@@ -45,9 +45,12 @@ class RuangIndependenController extends Controller
         ]);
         
         $validReq['type']='Mobile Journalism';
+
         $extension = $request->file('bukti')->getClientOriginalExtension();
-        $newName = $request->namalengkap.'_BuktiBayar_MOJO.'.$extension;
+        $newName = $request->namalengkap.'_BuktiBayar_MOJO_'.now()->timestamp.'.'.$extension;
         $request->file('bukti')->storeAs($request->namalengkap, $newName);
+        $validReq['bukti']=$newName;
+
         Form::create($validReq);
 
         $mailData = [
@@ -74,7 +77,7 @@ class RuangIndependenController extends Controller
             'namalengkap' => 'required',
             'universitas' => 'required',
             'nim' => 'required',
-            'email' => 'required',
+            'email' => ['required','email:dns'],
             'medsos' => 'required',
             'bukti' => 'required',
             'pathfilehasilkarya' => 'required',
@@ -84,11 +87,14 @@ class RuangIndependenController extends Controller
         $extensionbuktibayar = $request->file('bukti')->getClientOriginalExtension();
         $pdfname = $request->file('pathfilehasilkarya')->getClientOriginalName();
         
-        $buktibayar = $request->namalengkap.'_BuktiBayar_LFA_.'.$extensionbuktibayar;
-        $filepdf = $pdfname;        
+        $buktibayar = $request->namalengkap.'_BuktiBayar_LFA_'.now()->timestamp.'.'.$extensionbuktibayar;
+        $filepdf = now()->timestamp.'_'.$pdfname;        
         
         $request->file('pathfilehasilkarya')->storeAs($request->namalengkap, $filepdf);
         $request->file('bukti')->storeAs($request->namalengkap, $buktibayar);
+        
+        $validReq['bukti']=$buktibayar;
+        $validReq['pathfilehasilkarya']=$filepdf;
 
         Form::create($validReq);
 
@@ -116,7 +122,7 @@ class RuangIndependenController extends Controller
             'namalengkap' => 'required',
             'universitas' => 'required',
             'nim' => 'required',
-            'email' => 'required',
+            'email' => ['required','email:dns'],
             'medsos' => 'required',
             'bukti' => 'required',
             'pathfilehasilkarya' => 'required',
@@ -126,11 +132,14 @@ class RuangIndependenController extends Controller
         $extensionbuktibayar = $request->file('bukti')->getClientOriginalExtension();
         $pdfname = $request->file('pathfilehasilkarya')->getClientOriginalName();
         
-        $buktibayar = $request->namalengkap.'_BuktiBayar_NI_.'.$extensionbuktibayar;
-        $filepdf = $pdfname;        
+        $buktibayar = $request->namalengkap.'_BuktiBayar_NI_'.now()->timestamp.'.'.$extensionbuktibayar;
+        $filepdf = now()->timestamp.'_'.$pdfname;        
         
         $request->file('pathfilehasilkarya')->storeAs($request->namalengkap, $filepdf);
         $request->file('bukti')->storeAs($request->namalengkap, $buktibayar);
+
+        $validReq['bukti']=$buktibayar;
+        $validReq['pathfilehasilkarya']=$filepdf;
 
         Form::create($validReq);
 

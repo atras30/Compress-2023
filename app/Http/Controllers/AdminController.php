@@ -64,6 +64,6 @@ class AdminController extends Controller
 
     public function export()
     {
-        return Excel::download(new recruitmentExport, 'recruitment.xlsx');
+        return Excel::download(new recruitmentExport, 'PendaftarLomba.xlsx');
     }
 }

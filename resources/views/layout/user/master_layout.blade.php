@@ -93,6 +93,10 @@
           </div>
           <div class="h-line-left d-none d-md-block"></div>
           <div class="d-flex align-items-center flex-column justify-content-center">
+            <div class="d-inline-block mb-1 pb-1">
+              <img class="img-fluid align-self-center" style="max-width: 8.5rem; max-height: 8.5rem;" src="{{ asset('/images/logos/logoUMN2.png') }}" alt="Logo">
+              <img class="img-fluid align-self-center" style="max-width: 8.5rem; max-height: 8.5rem;" src="{{ asset('/images/logos/LogoUMN.png') }}" alt="Logo">
+            </div>
             <div>Universitas Multimedia Nusantara</div>
             <div>Jl. Scientia Boulevard, Gading Serpong,Tangerang, Banten, 15810</div>
           </div>
