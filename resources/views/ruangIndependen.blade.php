@@ -54,7 +54,8 @@
     }
 
     .title-description {
-      max-width: 70rem;
+      font-family: 'Inter', sans-serif;
+      max-width: 60rem;
     }
 
 </style>
