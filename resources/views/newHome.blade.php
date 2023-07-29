@@ -1,6 +1,6 @@
 @extends('layout.user.master_layout')
 
-@section('styles')
+@section('styles')  
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
@@ -628,7 +628,7 @@ div.my-alert > img.my-alert__unique26 {
   --tw-screen-sm: 640px;
   --tw-screen-md: 768px;
   --tw-screen-lg: 1024px;
-  --tw-screen-xl: 1280px;
+  --tw-screen-xl: 2000px;
   --tw-screen-2xl: 1536px;
   --tw-color-inherit: inherit;
   --tw-color-current: currentColor;
@@ -1680,7 +1680,7 @@ div.my-heart {
   position: relative;
 }
 
-div.my-heart > div {
+div.my-heart > div.ini-my-heart-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1688,6 +1688,17 @@ div.my-heart > div {
   width: 100%;
   height: 100%;
   position: absolute;
+  opacity:0;
+}
+
+div.my-heart > div.ini-my-heart-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  /* opacity: 0; */
 }
 
 div.my-heart > div > div {
@@ -1701,14 +1712,21 @@ div.my-heart > div > div {
   }
 }
 
-div.my-heart > div > div {
+div.my-heart > div > div.my-heart-dalem-1 {
   width: 80%;
   height: 100%;
   z-index: 50;
   position: absolute;
   justify-content: center;
   align-items: center;
-  gap: var(--tw-size-6);
+}
+
+div.my-heart > div > div.my-heart-dalem-2 {
+  width: 80%;
+  height: 100%;
+  z-index: 50;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 1024px) {
@@ -1817,6 +1835,530 @@ div.my-heart > img.my-heart__unique5 {
   width: 100%;
   overflow-x: hidden;
 }
+div.ini-anton {
+  min-height: 150vh;
+  width: 100%;
+  position: relative;
+}
+
+div.ini-anton > div.ini-anton__unique3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+div.ini-anton > div > div.ini-anton__unique5 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  div.ini-anton > div > div.ini-anton__unique5 {
+    /* Unknown class .flew-col */
+  }
+}
+
+div.ini-anton > div > div.ini-anton__unique5 {
+  width: 80%;
+  height: 100%;
+  z-index: 50;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  gap: var(--tw-size-6);
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton > div > div.ini-anton__unique5 {
+    gap: var(--tw-size-12);
+  }
+}
+
+div.ini-anton > div > div > img {
+  width: 33.333333%;
+}
+
+div.ini-anton > div > div > h1.ini-anton__unique1 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
+  font-size: var(--tw-font-size-5xl);
+  line-height: var(--tw-line-height-none);
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton > div > div > h1.ini-anton__unique1 {
+    font-size: var(--tw-font-size-9xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+div.ini-anton > div > div > h1.ini-anton__unique1 {
+  --tw-drop-shadow: drop-shadow(0 4px 4px rgba(0, 0, 0, 1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+div.ini-anton > div > div > h1.ini-anton__unique2 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-yellow-400) / var(--tw-text-opacity));
+  font-size: var(--tw-font-size-5xl);
+  line-height: var(--tw-line-height-none);
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton > div > div > h1.ini-anton__unique2 {
+    font-size: var(--tw-font-size-9xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+div.ini-anton > div > div > h1.ini-anton__unique2 {
+  --tw-drop-shadow: drop-shadow(0 4px 4px rgba(0, 0, 0, 1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+div.ini-anton > div > div > p.ini-anton__unique9 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
+  font-size: var(--tw-font-size-lg);
+  line-height: var(--tw-line-height-7);
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton > div > div > p.ini-anton__unique9 {
+    font-size: var(--tw-font-size-4xl);
+    line-height: var(--tw-line-height-10);
+  }
+}
+
+div.ini-anton > div > div > p.ini-anton__unique9 {
+  text-align: center;
+}
+
+div.ini-anton > div.ini-anton__unique4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+div.ini-anton > div > div.ini-anton__unique6 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  div.ini-anton > div > div.ini-anton__unique6 {
+    flex-direction: column;
+  }
+}
+
+div.ini-anton > div > div.ini-anton__unique6 {
+  width: 80%;
+  height: 100%;
+  z-index: 50;
+  justify-content: center;
+  align-items: center;
+  gap: var(--tw-size-6);
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton > div > div.ini-anton__unique6 {
+    gap: var(--tw-size-12);
+  }
+}
+
+div.ini-anton > div > div.ini-anton__unique6 {
+  opacity: 0;
+}
+
+div.ini-anton > div > div > h1.ini-anton__unique7 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
+  font-size: var(--tw-font-size-5xl);
+  line-height: var(--tw-line-height-none);
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton > div > div > h1.ini-anton__unique7 {
+    font-size: var(--tw-font-size-9xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+div.ini-anton > div > div > h1.ini-anton__unique7 {
+  --tw-drop-shadow: drop-shadow(0 4px 4px rgba(0, 0, 0, 1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+div.ini-anton > div > div > h1.ini-anton__unique8 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-yellow-400) / var(--tw-text-opacity));
+  font-size: var(--tw-font-size-5xl);
+  line-height: var(--tw-line-height-none);
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton > div > div > h1.ini-anton__unique8 {
+    font-size: var(--tw-font-size-9xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+div.ini-anton > div > div > h1.ini-anton__unique8 {
+  --tw-drop-shadow: drop-shadow(0 4px 4px rgba(0, 0, 0, 1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+div.ini-anton > div > div > p.ini-anton__unique10 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
+  font-size: var(--tw-font-size-lg);
+  line-height: var(--tw-line-height-7);
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton > div > div > p.ini-anton__unique10 {
+    font-size: var(--tw-font-size-4xl);
+    line-height: var(--tw-line-height-10);
+  }
+}
+
+div.ini-anton > div > div > p.ini-anton__unique10 {
+  text-align: center;
+  margin-bottom: var(--tw-size-48);
+}
+
+div.ini-anton > img.ini-anton__unique11 {
+  width: 100%;
+  position: absolute;
+  top: var(--tw-size-0);
+  z-index: 50;
+}
+
+div.ini-anton > img.ini-anton__unique12 {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: var(--tw-size-0);
+  z-index: 40;
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+div.ini-anton > img.ini-anton__unique13 {
+  width: 100%;
+  position: absolute;
+  bottom: var(--tw-size-0);
+  z-index: 50;
+}
+div.ini-anton-bawah {
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+}
+
+div.ini-anton-bawah > div.ini-anton-bawah__unique1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 33.333333%;
+}
+
+div.ini-anton-bawah > div > img.ini-anton-bawah__unique3 {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton-bawah > div > img.ini-anton-bawah__unique3 {
+    width: 90%;
+  }
+}
+
+div.ini-anton-bawah > div > img.ini-anton-bawah__unique3 {
+  height: var(--tw-size-96);
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > div > img.ini-anton-bawah__unique3 {
+    height: auto;
+  }
+}
+
+div.ini-anton-bawah > div > img.ini-anton-bawah__unique3 {
+  position: absolute;
+  z-index: 40;
+}
+
+div.ini-anton-bawah > div > div.ini-anton-bawah__unique5 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > div > div.ini-anton-bawah__unique5 {
+    /* Unknown class .flew-col */
+  }
+}
+
+div.ini-anton-bawah > div > div.ini-anton-bawah__unique5 {
+  width: 80%;
+  height: 100%;
+  z-index: 50;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  gap: var(--tw-size-2);
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > div > div.ini-anton-bawah__unique5 {
+    gap: var(--tw-size-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton-bawah > div > div.ini-anton-bawah__unique5 {
+    gap: var(--tw-size-12);
+  }
+}
+
+div.ini-anton-bawah > div > div > h1 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-yellow-400) / var(--tw-text-opacity));
+  font-size: var(--tw-font-size-base);
+  line-height: var(--tw-line-height-6);
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > div > div > h1 {
+    font-size: var(--tw-font-size-5xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+@media (min-width: 2000px) {
+  div.ini-anton-bawah > div > div > h1 {
+    font-size: var(--tw-font-size-9xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+div.ini-anton-bawah > div > div > h1 {
+  --tw-drop-shadow: drop-shadow(0 4px 4px rgba(0, 0, 0, 1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+div.ini-anton-bawah > div > div > p.ini-anton-bawah__unique7 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-black) / var(--tw-text-opacity));
+  font-size: var(--tw-font-size-xs);
+  line-height: var(--tw-line-height-4);
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > div > div > p.ini-anton-bawah__unique7 {
+    font-size: var(--tw-font-size-lg);
+    line-height: var(--tw-line-height-7);
+  }
+}
+
+@media (min-width: 2000px) {
+  div.ini-anton-bawah > div > div > p.ini-anton-bawah__unique7 {
+    font-size: var(--tw-font-size-5xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+div.ini-anton-bawah > div > div > p.ini-anton-bawah__unique7 {
+  text-align: center;
+}
+
+div.ini-anton-bawah > div.ini-anton-bawah__unique2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  opacity: 0;
+  top: 33.333333%;
+}
+
+div.ini-anton-bawah > div > img.ini-anton-bawah__unique4 {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton-bawah > div > img.ini-anton-bawah__unique4 {
+    width: 90%;
+  }
+}
+
+div.ini-anton-bawah > div > img.ini-anton-bawah__unique4 {
+  height: var(--tw-size-96);
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > div > img.ini-anton-bawah__unique4 {
+    height: auto;
+  }
+}
+
+div.ini-anton-bawah > div > img.ini-anton-bawah__unique4 {
+  opacity: 0;
+  z-index: 40;
+}
+
+div.ini-anton-bawah > div > div.ini-anton-bawah__unique6 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > div > div.ini-anton-bawah__unique6 {
+    /* Unknown class .flew-col */
+  }
+}
+
+div.ini-anton-bawah > div > div.ini-anton-bawah__unique6 {
+  width: 80%;
+  height: 100%;
+  z-index: 50;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  gap: var(--tw-size-2);
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > div > div.ini-anton-bawah__unique6 {
+    gap: var(--tw-size-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton-bawah > div > div.ini-anton-bawah__unique6 {
+    gap: var(--tw-size-12);
+  }
+}
+
+div.ini-anton-bawah > div > div > p.ini-anton-bawah__unique8 {
+  --tw-text-opacity: 1;
+  color: rgb(var(--tw-color-black) / var(--tw-text-opacity));
+  font-size: var(--tw-font-size-sm);
+  line-height: var(--tw-line-height-5);
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > div > div > p.ini-anton-bawah__unique8 {
+    font-size: var(--tw-font-size-lg);
+    line-height: var(--tw-line-height-7);
+  }
+}
+
+@media (min-width: 2000px) {
+  div.ini-anton-bawah > div > div > p.ini-anton-bawah__unique8 {
+    font-size: var(--tw-font-size-5xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+div.ini-anton-bawah > div > div > p.ini-anton-bawah__unique8 {
+  text-align: center;
+}
+
+div.ini-anton-bawah > img.ini-anton-bawah__unique9 {
+  width: 33.333333%;
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > img.ini-anton-bawah__unique9 {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton-bawah > img.ini-anton-bawah__unique9 {
+    width: 28%;
+  }
+}
+
+div.ini-anton-bawah > img.ini-anton-bawah__unique9 {
+  position: absolute;
+  z-index: 40;
+  bottom: var(--tw-size-0);
+  left: 25%;
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > img.ini-anton-bawah__unique9 {
+    left: 20%;
+  }
+}
+
+div.ini-anton-bawah > img.ini-anton-bawah__unique10 {
+  width: 33.333333%;
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > img.ini-anton-bawah__unique10 {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1024px) {
+  div.ini-anton-bawah > img.ini-anton-bawah__unique10 {
+    width: 28%;
+  }
+}
+
+div.ini-anton-bawah > img.ini-anton-bawah__unique10 {
+  position: absolute;
+  z-index: 40;
+  bottom: var(--tw-size-0);
+  right: 25%;
+}
+
+@media (min-width: 768px) {
+  div.ini-anton-bawah > img.ini-anton-bawah__unique10 {
+    right: 20%;
+  }
+}
+
+div.ini-anton-bawah > img.ini-anton-bawah__unique11 {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  top: calc(var(--tw-size-2) * -1);
+  bottom: var(--tw-size-0);
+  z-index: 30;
+}
+
+div.ini-anton-bawah > img.ini-anton-bawah__unique12 {
+  width: 100%;
+  position: absolute;
+  bottom: var(--tw-size-0);
+  z-index: 50;
+}
   </style>
 @endsection
 
@@ -1908,35 +2450,53 @@ div.my-heart > img.my-heart__unique5 {
       <img src="{{ asset('/images/home/bg/bgsplit.png') }}" alt="bottom" class="my-alert__unique15">
     </div>
 
-    <div class="my-heart">
-      <div>
-
-        <div>
+    <div class="ini-anton">
+      <div class="ini-anton__unique3">
+  
+        <div class="ini-anton__unique5">
           <img src="{{ asset('/images/home/components/modernisasi-logo.png') }}" alt="Logo">
-          <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;" class="my-heart__unique1">COMMPRESS 2023:</h1>
-          <h1 class="my-heart__unique2" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">MODERNISASI MEDIA</h1>
-          <p class="textCommpress">Kerja jurnalistik hadir di tengah-tengah masyarakat sebagai penyambung informasi dari satu pihak ke pihak lain. Jurnalisme berdiri secara independen menegakkan tonggak imparsialisme. Tahun ke tahun, jurnalisme bergerak mengikuti perkembangan zaman yang ada dengan mempertahankan nilai etikanya. Perkembangan tersebut pun sampai pada tahun ini, dimana dunia berdampingan erat dengan kemajuan teknologi dan modernisasi. Atas perkembangan itu lahirlah istilah yang kini dikenal dengan modernisasi media. Dengan demikian, perkembangan yang ada patut diketahui bahwa jurnalisme tegak lurus berbaur dengan kemajuan yang ada dengan tetap berpegang pada etika dan sisi independennya.&nbsp;Atas dasar tersebut, terguguslah COMMPRESS 2023 dengan tema “Modernisasi Media”.</p>
+          <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;" class="ini-anton__unique1">COMMPRESS 2023:</h1>
+          <h1 class="ini-anton__unique2" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">MODERNISASI MEDIA</h1>
+          <p class="ini-anton__unique9">Kerja jurnalistik hadir di tengah-tengah masyarakat sebagai penyambung informasi dari satu pihak ke pihak lain. Jurnalisme berdiri secara independen menegakkan tonggak imparsialisme. Tahun ke tahun, jurnalisme bergerak mengikuti perkembangan zaman yang ada dengan mempertahankan nilai etikanya. Perkembangan tersebut pun sampai pada tahun ini, dimana dunia berdampingan erat dengan kemajuan teknologi dan modernisasi. Atas perkembangan itu lahirlah istilah yang kini dikenal dengan modernisasi media. Dengan demikian, perkembangan yang ada patut diketahui bahwa jurnalisme tegak lurus berbaur dengan kemajuan yang ada dengan tetap berpegang pada etika dan sisi independennya.&nbsp;Atas dasar tersebut, terguguslah COMMPRESS 2023 dengan tema “Modernisasi Media”.</p>
+        </div>
+      </div>
+      <div class="ini-anton__unique4">
+  
+        <div class="ini-anton__unique6">
+          <img src="{{ asset('/images/home/components/modernisasi-logo.png') }}" alt="Logo">
+          <h1 class="ini-anton__unique7" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">COMMPRESS 2023:</h1>
+          <h1 class="ini-anton__unique8" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">MODERNISASI MEDIA</h1>
+          <p class="ini-anton__unique10">Kerja jurnalistik hadir di tengah-tengah masyarakat sebagai penyambung informasi dari satu pihak ke pihak lain. Jurnalisme berdiri secara independen menegakkan tonggak imparsialisme. Tahun ke tahun, jurnalisme bergerak mengikuti perkembangan zaman yang ada dengan mempertahankan nilai etikanya. Perkembangan tersebut pun sampai pada tahun ini, dimana dunia berdampingan erat dengan kemajuan teknologi dan modernisasi. Atas perkembangan itu lahirlah istilah yang kini dikenal dengan modernisasi media. Dengan demikian, perkembangan yang ada patut diketahui bahwa jurnalisme tegak lurus berbaur dengan kemajuan yang ada dengan tetap berpegang pada etika dan sisi independennya.&nbsp;Atas dasar tersebut, terguguslah COMMPRESS 2023 dengan tema “Modernisasi Media”.</p>
         </div>
       </div>
       
-      <img src="{{ asset('/images/home/components/flat-bar.png') }}" alt="top" class="my-heart__unique3">
-      <img class="my-heart__unique4" src="{{ asset('/images/home/bg/bgmodernisasi.png') }}" alt="bg">
-      <img class="my-heart__unique5" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
+      <img src="{{ asset('/images/home/components/flat-bar.png') }}" alt="top" class="ini-anton__unique11">
+      <img class="ini-anton__unique12" src="{{ asset('/images/home/bg/bgmodernisasi.png') }}" alt="bg">
+      <img class="ini-anton__unique13" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
     </div>
     
-    <div class="my-love">
-      <div>
-        <img src="{{ asset('/images/home/components/awan-tagline.png') }}" alt="bottom">
-        <div>
+    <div class="ini-anton-bawah">
+      <div class="ini-anton-bawah__unique1">
+        <img src="{{ asset('/images/home/components/awan-tagline.png') }}" alt="bottom" class="ini-anton-bawah__unique3">
+        <div class="ini-anton-bawah__unique5">
           <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">"GET READY FOR BIGGER CHANGE!"</h1>
-          <p class="textCommpress">COMMPRESS 2023 bertekad melalui tagline yang diusung yaitu “Get ready for bigger change!” yang diartikan sebagai kesiapan diri dalam menghadapi perubahan dan modernisasi yang besar. Kesiapan ini juga diimbangi dengan wawasan diri yang baik sebagai alat untuk menghadapi modernisasi tersebut. Hal tersebut demikian supaya modernisasi dapat dimanfaatkan secara maksimal sebagai wadah pemberi perubahan yang lebih maju dalam bidang jurnalisme.&nbsp;</p>
+          <p class="ini-anton-bawah__unique7">COMMPRESS 2023 bertekad melalui tagline yang diusung yaitu “Get ready for bigger change!” yang diartikan sebagai kesiapan diri dalam menghadapi perubahan dan modernisasi yang besar. Kesiapan ini juga diimbangi dengan wawasan diri yang baik sebagai alat untuk menghadapi modernisasi tersebut. Hal tersebut demikian supaya modernisasi dapat dimanfaatkan secara maksimal sebagai wadah pemberi perubahan yang lebih maju dalam bidang jurnalisme.&nbsp;</p>
         </div>
       </div>
-      <img src="{{ asset('/images/home/components/cowok-tagline.png') }}" alt="bottom" class="my-love__unique1">
-      <img class="my-love__unique2" src="{{ asset('/images/home/components/cewek-tagline.png') }}" alt="bottom">
+
+      <div class="ini-anton-bawah__unique2">
+        <img class="ini-anton-bawah__unique4" src="{{ asset('/images/home/components/awan-tagline.png') }}" alt="bottom">
+        <div class="ini-anton-bawah__unique6">
+          <h1 style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">"GET READY FOR BIGGER CHANGE!"</h1>
+          <p class="ini-anton-bawah__unique8">COMMPRESS 2023 bertekad melalui tagline yang diusung yaitu “Get ready for bigger change!” yang diartikan sebagai kesiapan diri dalam menghadapi perubahan dan modernisasi yang besar. Kesiapan ini juga diimbangi dengan wawasan diri yang baik sebagai alat untuk menghadapi modernisasi tersebut. Hal tersebut demikian supaya modernisasi dapat dimanfaatkan secara maksimal sebagai wadah pemberi perubahan yang lebih maju dalam bidang jurnalisme.&nbsp;</p>
+        </div>
+      </div>
+
+      <img src="{{ asset('/images/home/components/cowok-tagline.png') }}" alt="bottom" class="ini-anton-bawah__unique9">
+      <img class="ini-anton-bawah__unique10" src="{{ asset('/images/home/components/cewek-tagline.png') }}" alt="bottom">
       
-      <img class="my-love__unique3" src="{{ asset('/images/home/bg/bgtagline.png') }}" alt="bg">
-      <img class="my-love__unique4" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
+      <img class="ini-anton-bawah__unique11" src="{{ asset('/images/home/bg/bgtagline.png') }}" alt="bg">
+      <img class="ini-anton-bawah__unique12" src="{{ asset('/images/home/components/flat-bar.png') }}" alt="bottom">
     </div>
 
     <div class="my-alert__unique10 my-alert">
