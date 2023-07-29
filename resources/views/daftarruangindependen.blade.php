@@ -10,7 +10,22 @@
         font-weight: 400;
         src: url('/fonts/Bazinga-Regular.ttf');
     }
+    @media (max-width: 639px) {
+      .hero-title2{
+        font-size: 3rem!important;
+      }
 
+      .hero-title {
+        font-size: 1.5rem!important;
+      } 
+    }
+
+    @media (max-width: 1000px) {
+      .btn-bar{
+
+      }
+    }
+    
     .font-bazinga {
       font-family: Bazinga;
       text-shadow: 1px -2px 0 #000, 2px 4px 0 #000, 3px 6px 0 #000;
@@ -99,15 +114,15 @@
                 <section class="d-flex flex-column flex-lg-row pleft-2 gap-4 mb-5 pb-5">
                     <div class="flex-item position-relative" style="max-width: 70%">
                         <a id="btn-daftar" href="{{ route('mobile_journalism') }}"><img class="mw-100" src="{{ asset('/images/components/buttons/button-rounded.png') }}" alt="Button Rounded">
-                        <p class="position-absolute start-50 top-50 font-bazinga-daftar translate-middle fs-4 fw-bold text-black text-decoration-none" style="white-space: nowrap;">Mobile Journalism</p></a>
+                        <p class="position-absolute start-50 top-50 font-bazinga-daftar btn-bar translate-middle fs-4 fw-bold text-black text-decoration-none" style="white-space: nowrap;">Mobile Journalism</p></a>
                     </div>
                     <div class="flex-item position-relative" style="max-width: 70%">
                         <a id="btn-daftar" href="{{ route('long_form_article') }}"><img class="mw-100" src="{{ asset('/images/components/buttons/button-rounded.png') }}" alt="Button Rounded">
-                        <p class="position-absolute start-50 top-50 font-bazinga-daftar translate-middle fs-4 fw-bold text-black text-decoration-none" style="white-space: nowrap;">Long Form Article</p></a>
+                        <p class="position-absolute start-50 top-50 font-bazinga-daftar btn-bar translate-middle fs-4 fw-bold text-black text-decoration-none" style="white-space: nowrap;">Long Form Article</p></a>
                     </div>
                     <div class="flex-item position-relative" style="max-width: 70%">
                         <a id="btn-daftar" href="{{ route('news_infographic') }}"><img class="mw-100" src="{{ asset('/images/components/buttons/button-rounded.png') }}" alt="Button Rounded">
-                        <p class="position-absolute start-50 top-50 font-bazinga-daftar translate-middle fs-4 fw-bold text-black text-decoration-none" style="white-space: nowrap;">News Infographic</p></a>
+                        <p class="position-absolute start-50 top-50 font-bazinga-daftar btn-bar translate-middle fs-4 fw-bold text-black text-decoration-none" style="white-space: nowrap;">News Infographic</p></a>
                     </div>
                 </section>
         </div>

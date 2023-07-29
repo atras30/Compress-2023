@@ -10,6 +10,22 @@
         font-weight: 400;
         src: url('fonts/Bazinga-Regular.ttf');
     }
+    
+    @media (max-width: 1000px) {
+      .hero-title{
+        font-size: 3rem!important;
+      }
+
+      .hero-title2 {
+        font-size: 1.5rem!important;
+      } 
+
+      .title-description {
+        font-family: 'Inter', sans-serif;
+        max-width: 20rem!important;
+        font-size:10pt;
+      }
+    }
 
     .font-bazinga {
       font-family: Bazinga;
@@ -108,7 +124,7 @@
           <section class="d-flex justify-content-evenly align-items-center mb-5" style="margin-top:5rem;">
             <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotoatas.png') }}" style="z-index: 10; border: 4px solid black"/>
           </section>
-          <section class="d-flex flex-column flex-lg-row gap-5" style="margin-bottom:5rem;">
+          <section class="d-flex flex-column flex-xl-row gap-5" style="margin-bottom:5rem;">
             <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotokiri.png') }}" style="z-index: 10; border: 4px solid black"/>
             <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotokanan.png') }}" style="z-index: 10; border: 4px solid black"/>
           </section>

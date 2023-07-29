@@ -212,7 +212,7 @@
           </div>
           <div class="mb-4">
               <label class="judul-list text-white"for="nim">NIM</label><br>
-              <input type="text" name="nim" class="form-control" value={{ @old('nim') }}>
+              <input type="text" name="nim" placeholder="contoh: 00000012345" class="form-control" value={{ @old('nim') }}>
               <small class="fs-6 fs-bold text-white">Khusus Mahasiswa Universitas Multimedia Nusantara.<br>
               Isi '-' Jika Bukan Mahasiswa Universitas Multimedia Nusantara</small>
               @error('nim')

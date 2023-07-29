@@ -40,12 +40,10 @@
             <td>{{ $user->email }}</td>
             <td>{{ $user->medsos }}</td>
             <td>{{ $user->type }}</td>
-            <td><img width=100px; src="{{asset('/storage/'.$user->namalengkap.'/'.$user->bukti)}}"></td>
+            <td><a target="_blank" id="btn-view" class="btn btn-primary" data-id="{{ $user->id }}" href="dashboard/{{ $user->id }}/bukti">View Bukti Bayar</a></td>
             <td>{{ $user->instagram }}</td>
             <td>{{ $user->linkkaryaig }}</td>
-            <td>{{ $user->pathfilehasilkarya }}</td>
-
-            <!--<td><a id="btn-view" class="btn btn-primary" data-id="{{ $user->id }}" href="dashboard/{{ $user->id }}">View More</a></td>-->
+            <td><a target="_blank" id="btn-view" class="btn btn-primary" data-id="{{ $user->id }}" href="dashboard/{{ $user->id }}/pdf">View PDF</a></td>
           </tr>
         @endforeach
       </tbody>

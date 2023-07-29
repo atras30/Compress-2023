@@ -54,13 +54,21 @@ class AdminController extends Controller
         ]);
     }
 
-    // function viewmore($id)
-    // {
-    //     return view('admin.viewmore-user', [
-    //         'title' => "User Information",
-    //         "User" => Form::find($id)
-    //     ]);
-    // }
+    function viewmorePDF($id)
+    {
+        return view('admin.viewmore-userPDF', [
+            'title' => "User Information",
+            "User" => Form::find($id)
+        ]);
+    }
+
+    function viewmoreBukti($id)
+    {
+        return view('admin.viewmore-userBukti', [
+            'title' => "User Information",
+            "User" => Form::find($id)
+        ]);
+    }
 
     public function export()
     {

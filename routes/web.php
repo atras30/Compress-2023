@@ -31,7 +31,8 @@ Route::prefix('/admin')->group(function () {
     // Authenticated Admins
     Route::middleware("auth")->group(function () {
         Route::get('/dashboard', [AdminController::class, "dashboard"]);
-        Route::get('/dashboard/{id}', [AdminController::class, "viewmore"])->name('viewmore');
+        Route::get('/dashboard/{id}/pdf', [AdminController::class, "viewmorePDF"])->name('viewmorePDF');
+        Route::get('/dashboard/{id}/bukti', [AdminController::class, "viewmoreBukti"])->name('viewmoreBukti');
         Route::get('/export', [AdminController::class, "export"])->name('export');
         Route::post('/logout', [AdminController::class, "logout"])->name('logout');
     });

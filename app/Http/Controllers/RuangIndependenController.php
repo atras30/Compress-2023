@@ -48,7 +48,7 @@ class RuangIndependenController extends Controller
 
         $extension = $request->file('bukti')->getClientOriginalExtension();
         $newName = $request->namalengkap.'_BuktiBayar_MOJO_'.now()->timestamp.'.'.$extension;
-        $request->file('bukti')->storeAs($request->namalengkap, $newName);
+        $request->file('bukti')->storeAs('pendaftar',$newName);
         $validReq['bukti']=$newName;
 
         Form::create($validReq);
@@ -90,8 +90,8 @@ class RuangIndependenController extends Controller
         $buktibayar = $request->namalengkap.'_BuktiBayar_LFA_'.now()->timestamp.'.'.$extensionbuktibayar;
         $filepdf = now()->timestamp.'_'.$pdfname;        
         
-        $request->file('pathfilehasilkarya')->storeAs($request->namalengkap, $filepdf);
-        $request->file('bukti')->storeAs($request->namalengkap, $buktibayar);
+        $request->file('pathfilehasilkarya')->storeAs('pendaftar', $filepdf);
+        $request->file('bukti')->storeAs('pendaftar', $buktibayar);
         
         $validReq['bukti']=$buktibayar;
         $validReq['pathfilehasilkarya']=$filepdf;
@@ -135,8 +135,8 @@ class RuangIndependenController extends Controller
         $buktibayar = $request->namalengkap.'_BuktiBayar_NI_'.now()->timestamp.'.'.$extensionbuktibayar;
         $filepdf = now()->timestamp.'_'.$pdfname;        
         
-        $request->file('pathfilehasilkarya')->storeAs($request->namalengkap, $filepdf);
-        $request->file('bukti')->storeAs($request->namalengkap, $buktibayar);
+        $request->file('pathfilehasilkarya')->storeAs('pendaftar', $filepdf);
+        $request->file('bukti')->storeAs('pendaftar', $buktibayar);
 
         $validReq['bukti']=$buktibayar;
         $validReq['pathfilehasilkarya']=$filepdf;
