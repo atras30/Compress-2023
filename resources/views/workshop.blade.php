@@ -78,7 +78,7 @@
 
         .title-content{
             font-family: 'Inter', sans-serif;
-            font-weight: 400;
+            max-width: 80rem;
         }
 
         .fs-4rem{
@@ -90,7 +90,7 @@
         }
 
         .base-top-left{
-            left: 2rem;
+            left: 2.4rem;
         }
 
         .w-max-95vw{
@@ -121,13 +121,13 @@
             <div class="hero-title px-5 mb-4">
                 <h1 class="text-white fs-4rem">WORKSHOP</h1>
             </div>
-            <div class="text-center mx-3 title-content">
-                <p class="px-5 mb-3 text-white">Workshop akan menjadi kegiatan awal atau pembuka acara COMMPRESS 2023 yang akan digelar secara luring atau on site. 
+            <div class="text-center mx-3 title-content mx-auto">
+                <p class="px-5 fw-semibold mb-3 text-white">Workshop akan menjadi kegiatan awal atau pembuka acara COMMPRESS 2023 yang akan digelar secara luring atau on site. 
                     Dengan memaparkan materi dan praktik langsung, diharapkan workshop dapat memberikan informasi dan pengalaman mengolah 
                     konten jurnalistik sesuai dengan kaidahnya kepada peserta workshop COMMPRESS 2023. Hasil dari praktik langsung workshop 
                     COMMPRESS 2023 akan dipamerkan sebagai bentuk apresiasi sekaligus dinilai oleh para pengunjung pameran.</p><br>
 
-                <p class="px-5 mb-5 text-white">Mengangkat tema besar modernisasi media, COMMPRESS 2023 akan menyajikan acara yang menunjukkan beragamnya karya 
+                <p class="px-5 fw-semibold mb-5 text-white">Mengangkat tema besar modernisasi media, COMMPRESS 2023 akan menyajikan acara yang menunjukkan beragamnya karya 
                     jurnalistik seturut berkembangnya teknologi dan zaman, salah satunya adalah komik jurnalistik digital. 
                     Maka dari itu, workshop akan mengangkat topik komik jurnalistik digital yang nantinya akan menghadirkan dua 
                     pembicara yang sudah diakui kompetensi dan kredibilitasnya pada bidang terkait.</p>

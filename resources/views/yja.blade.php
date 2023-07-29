@@ -59,6 +59,7 @@
 
     .title-description {
       max-width: 65rem;
+      font-family: 'Inter', sans-serif;
     }
   </style>
 @endsection

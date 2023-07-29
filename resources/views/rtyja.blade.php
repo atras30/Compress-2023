@@ -52,6 +52,10 @@
       text-shadow: 1px -2px 0 #000, 2px 4px 0 #000, 3px 6px 0 #000;
       -webkit-text-stroke: 2px #000;
     }
+
+    .title-description{
+      font-family: 'Inter', sans-serif;
+    }
   </style>
 @endsection
 
@@ -73,7 +77,7 @@
           <div>YOUNG JOURNALIST AWARD</div>
         </div>
 
-        <div class="px-5 fw-bold mb-5 text-black">
+        <div class="px-5 fw-bold mb-5 text-black title-description">
             <div>Media promosi acara Young Journalist Award dan dokumentasi beberapa persiapan acara
                 COMMPRESS 2023</div>
             <div>yang dikemas menjadi video dengan 3 episode.</div>

@@ -7,8 +7,9 @@
 
 @section('contents')
   <div class="container">
-    <h1 class="text-center">Data Pendaftaran Mahasiswa</h1>
+    <h1 class="text-center">Data Pendaftar Lomba</h1>
     <div class="my-3 d-flex justify-content-end align-items-center gap-3">
+      <a href="{{ route('home') }}" class="btn shadow-sm btn-primary">Home</a>
       <a href="{{ route('export') }}" class="btn shadow-sm btn-success">Download Excel</a>
       <form action="{{ route('logout') }}" method="POST">
         @csrf
@@ -39,7 +40,7 @@
             <td>{{ $user->email }}</td>
             <td>{{ $user->medsos }}</td>
             <td>{{ $user->type }}</td>
-            <td>{{ $user->bukti }}</td>
+            <td><img width=100px; src="{{asset('/storage/'.$user->namalengkap.'/'.$user->bukti)}}"></td>
             <td>{{ $user->instagram }}</td>
             <td>{{ $user->linkkaryaig }}</td>
             <td>{{ $user->pathfilehasilkarya }}</td>
