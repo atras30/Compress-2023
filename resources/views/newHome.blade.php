@@ -1,7 +1,6 @@
 @extends('layout.user.master_layout')
 
 @section('styles')  
-<script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
