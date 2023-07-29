@@ -84,9 +84,9 @@
                 </div>
 
                 <div class="px-5 fw-semibold mb-5 text-white title-description text-center mx-auto">
-                        Pameran Jurnalistik Ruang Indi(e)penden adalah wadah yang dihadirkan COMMPRESS untuk jurnalis muda memamerkan karya terbaik mereka. 
+                        Pameran Jurnalistik Ruang Indi(e)penden adalah wadah yang dihadirkan COMMPRESS untuk jurnalis muda memamerkan karya terbaik mereka.
                         Lebih dari 500+ karya akan dikurasi dan hasilnya akan dipamerkan.<br><br>
-                        Tahun ini, pameran Ruang Indi(e)penden mengangkat tema sekaligus tagline “Dari Jurnalis Muda” yang artinya 
+                        Tahun ini, pameran Ruang Indi(e)penden mengangkat tema sekaligus tagline “Dari Jurnalis Muda” yang artinya
                         keseluruhan karya yang akan dipamerkan merupakan hasil karya anak muda setingkat mahasiswa.
                 </div>
                 </section>
@@ -106,13 +106,13 @@
 
         <div class="position-relative text-center fs-2 fw-bold text-black">
           <section class="d-flex justify-content-evenly align-items-center mb-5" style="margin-top:5rem;">
-            <img src="{{ asset('/images/ruangindependen/fotoatas.png') }}"></img>
+            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotoatas.png') }}" style="z-index: 10; border: 4px solid black"/>
           </section>
           <section class="d-flex flex-column flex-lg-row gap-5" style="margin-bottom:5rem;">
-            <img src="{{ asset('/images/ruangindependen/fotokiri.png') }}"></img>
-            <img src="{{ asset('/images/ruangindependen/fotokanan.png') }}"></img>
+            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotokiri.png') }}" style="z-index: 10; border: 4px solid black"/>
+            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotokanan.png') }}" style="z-index: 10; border: 4px solid black"/>
           </section>
-        </div>  
+        </div>
     </div>
 </div>
 @endsection
@@ -135,7 +135,7 @@
             document.getElementById("btn-daftar").href = "{{route('daftarruangindependen')}}";
         }
         });
-        
+
     }
 
     fetchData();
@@ -143,6 +143,6 @@
     setInterval(() => {
       fetchData();
     }, 1000);
-    
+
   </script>
 @endsection
