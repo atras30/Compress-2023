@@ -113,7 +113,9 @@
       <img class="position-absolute object-fit-cover w-100 h-100" src="{{ asset('/images/yja/background/motive-1.png') }}" alt="Flakes">
       <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/road-to-yja/base/top-bottom.png') }}" alt="bottom">
 
-      <img src="{{ asset('/images/yja/fotorecap.png') }}" alt="bottom" style="margin-top:5rem; margin-bottom:5rem; height:45rem;">
+      <div class="mx-4" style="z-index: 10;">
+          <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/yja/fotorecap.png') }}" alt="bottom" style="margin-top:5rem; margin-bottom:5rem; border: 4px solid black">
+      </div>
 
     </div>
   </div>
