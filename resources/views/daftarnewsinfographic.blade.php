@@ -11,6 +11,61 @@
         src: url('/fonts/Bazinga-Regular.ttf');
     }
 
+    @media (max-width: 769px) {
+      .title5{
+        font-size:2.5rem!important;
+      }
+
+      .title6{
+        font-size:4rem!important;
+      }
+
+      .hero-title {
+        font-size: 4.5rem!important;
+      }
+
+      .hero-title2 {
+        font-size: 2.5rem!important;
+      }
+
+      .hero-title3 {
+        font-size: 2rem!important;
+      }
+
+      .hero-title4 {
+        font-size: 1.5rem!important;
+      }
+
+      .list{
+        font-size:1rem!important;
+      }
+
+      .list2{
+        font-size:1rem!important;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .title5{
+        font-size:2.5rem!important;
+      }
+
+      .title6{
+        font-size:3rem!important;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .title5{
+        font-size:2rem!important;
+        margin-top:1.5rem!important;
+      }
+
+      .title6{
+        font-size:2.5rem!important;
+      }
+    }
+
     .font-bazinga {
       font-family: Bazinga;
       text-shadow: 1px -2px 0 #000, 2px 4px 0 #000, 3px 6px 0 #000;
@@ -189,10 +244,10 @@
           <div class="position-relative text-center">
               <img class="mw-100" style="width:54rem; padding-bottom:3rem;"src="{{ asset('/images/daftar-ruangindependen/news-infographic/bg-judul.png')}}"></img>
               <div class="position-absolute top-50 start-50 translate-middle fs-2 fw-bold text-black text-length">
-                <div class="px-5 font-bazinga text-info" style="font-size:4rem;">
+                <div class="px-5 font-bazinga text-info title5" style="font-size:4rem;">
                     SUBMIT KARYA:
                 </div>
-                <div class="px-5 mb-5 font-bazinga text-warning" style="font-size:5rem;">
+                <div class="px-5 mb-5 font-bazinga text-warning title6" style="font-size:5rem;">
                     News Infographic
                 </div>
               </div>

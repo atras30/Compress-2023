@@ -20,11 +20,49 @@
       } 
     }
 
-    @media (max-width: 1000px) {
-      .btn-bar{
+    @media (max-width: 1141px) {
+      .hero-title3 {
+        font-size: 4rem!important;
+      }
 
+      .hero-title4 {
+        font-size: 2rem!important;
+      }
+
+      .list{
+          max-width: 40rem!important;
+          font-size:15pt!important;
+          
       }
     }
+
+    @media (max-width: 812px) {
+      .hero-title3 {
+        font-size: 3rem!important;
+      }
+
+      .hero-title4 {
+        font-size: 1.5rem!important;
+      }
+
+      .list{
+          max-width: 30rem!important;
+          font-size:12pt!important;
+      }
+    }
+
+    @media (max-width: 990px) {
+      .btn-bar{
+        left:95pt!important;
+      }
+    }
+
+    @media (max-width: 414px) {
+      .btn-bar{
+        left:90pt!important;
+      }
+    }
+
     
     .font-bazinga {
       font-family: Bazinga;
