@@ -84,7 +84,7 @@
           <div class="text-center align-self-center fs-5">
             <div>GET READY FOR BIGGER CHANGE!</div>
             <div class="mb-4">- COMMPRESS 2023 -</div>
-            <div>
+            <div class="d-inline-flex">
                 <a href="https://www.instagram.com/commpressumn/"><img style="width: 4rem;" src="{{asset('/images/logos/instagram.svg')}}" alt=""></a>
                 <a href="https://www.instagram.com/ruang.indiependen/"><img style="width: 4rem;" src="{{asset('/images/logos/instagram.svg')}}" alt=""></a>
                 <a href="https://www.tiktok.com/@commpressumn"><img style="width: 3rem;" src="{{asset('/images/logos/tiktok.png')}}" alt=""></a>
@@ -93,7 +93,7 @@
           </div>
           <div class="h-line-left d-none d-md-block"></div>
           <div class="d-flex align-items-center flex-column justify-content-center">
-            <div class="d-inline-block mb-1 pb-1">
+            <div class="d-inline-flex mb-1 pb-1">
               <img class="img-fluid align-self-center" style="max-width: 8.5rem; max-height: 8.5rem;" src="{{ asset('/images/logos/logoUMN2.png') }}" alt="Logo">
               <img class="img-fluid align-self-center" style="max-width: 8.5rem; max-height: 8.5rem;" src="{{ asset('/images/logos/LogoUMN.png') }}" alt="Logo">
             </div>

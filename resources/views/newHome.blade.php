@@ -1940,6 +1940,7 @@ div.ini-anton > div > div > p.ini-anton__unique9 {
 
 div.ini-anton > div > div > p.ini-anton__unique9 {
   text-align: center;
+  font-size:1.2rem;
 }
 
 div.ini-anton > div.ini-anton__unique4 {
@@ -2523,55 +2524,55 @@ div.ini-anton-bawah > img.ini-anton-bawah__unique12 {
     <div class="my-alert__unique18 my-alert">
       <div class="my-alert__unique19">
         <h1 class="my-alert__unique21" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">TIMELINE</h1>
-        <a href="">
+        <a href="{{route('ruangindependen')}}">
           <img src="{{ asset('/images/home/components/tl1.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('workshop')}}">
           <img src="{{ asset('/images/home/components/tl2.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('workshop')}}">
           <img src="{{ asset('/images/home/components/tl3.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('ruangindependen')}}">
           <img src="{{ asset('/images/home/components/tl4.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('rtyja')}}">
           <img src="{{ asset('/images/home/components/tl5.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('rtyja')}}">
           <img src="{{ asset('/images/home/components/tl6.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('rtyja')}}">
           <img src="{{ asset('/images/home/components/tl7.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('yja')}}">
           <img src="{{ asset('/images/home/components/tl8.png') }}">
         </a>
       </div>
       <div class="my-alert__unique22">
         <h1 class="my-alert__unique23" style="font-family: Bazinga; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">TIMELINE</h1>
-        <a href="">
+        <a href="{{route('ruangindependen')}}">
           <img src="{{ asset('/images/home/components/tl1.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('workshop')}}">
           <img src="{{ asset('/images/home/components/tl2.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('workshop')}}">
           <img src="{{ asset('/images/home/components/tl3.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('ruangindependen')}}">
           <img src="{{ asset('/images/home/components/tl4.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('rtyja')}}">
           <img src="{{ asset('/images/home/components/tl5.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('rtyja')}}">
           <img src="{{ asset('/images/home/components/tl6.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('rtyja')}}">
           <img src="{{ asset('/images/home/components/tl7.png') }}">
         </a>
-        <a href="">
+        <a href="{{route('yja')}}">
           <img src="{{ asset('/images/home/components/tl8.png') }}">
         </a>
       </div>
