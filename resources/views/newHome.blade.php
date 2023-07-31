@@ -1891,6 +1891,13 @@ div.ini-anton > div > div > h1.ini-anton__unique1 {
 
 @media (min-width: 1024px) {
   div.ini-anton > div > div > h1.ini-anton__unique1 {
+    font-size: var(--tw-font-size-8xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+@media (min-width: 1440px) {
+  div.ini-anton > div > div > h1.ini-anton__unique1 {
     font-size: var(--tw-font-size-9xl);
     line-height: var(--tw-line-height-none);
   }
@@ -1912,6 +1919,13 @@ div.ini-anton > div > div > h1.ini-anton__unique2 {
 
 @media (min-width: 1024px) {
   div.ini-anton > div > div > h1.ini-anton__unique2 {
+    font-size: var(--tw-font-size-8xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+@media (min-width: 1440px) {
+  div.ini-anton > div > div > h1.ini-anton__unique2 {
     font-size: var(--tw-font-size-9xl);
     line-height: var(--tw-line-height-none);
   }
@@ -1925,22 +1939,28 @@ div.ini-anton > div > div > h1.ini-anton__unique2 {
 }
 
 div.ini-anton > div > div > p.ini-anton__unique9 {
+  text-align: center;
+  font-size:1.2rem;
+}
+div.ini-anton > div > div > p.ini-anton__unique9 {
   --tw-text-opacity: 1;
   color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
-  font-size: var(--tw-font-size-lg);
+  font-size: var(--tw-font-size-xl);
   line-height: var(--tw-line-height-7);
 }
 
 @media (min-width: 1024px) {
   div.ini-anton > div > div > p.ini-anton__unique9 {
-    font-size: var(--tw-font-size-4xl);
+    font-size: var(--tw-font-size-2xl);
     line-height: var(--tw-line-height-10);
   }
 }
 
-div.ini-anton > div > div > p.ini-anton__unique9 {
-  text-align: center;
-  font-size:1.2rem;
+@media (min-width: 1440px) {
+  div.ini-anton > div > div > p.ini-anton__unique9 {
+    font-size: var(--tw-font-size-3xl);
+    line-height: var(--tw-line-height-10);
+  }
 }
 
 div.ini-anton > div.ini-anton__unique4 {
@@ -2148,16 +2168,30 @@ div.ini-anton-bawah > div > div > h1 {
   line-height: var(--tw-line-height-6);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   div.ini-anton-bawah > div > div > h1 {
-    font-size: var(--tw-font-size-5xl);
+    font-size: var(--tw-font-size-xl);
     line-height: var(--tw-line-height-none);
   }
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 768px) {
   div.ini-anton-bawah > div > div > h1 {
-    font-size: var(--tw-font-size-9xl);
+    font-size: var(--tw-font-size-2xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+@media (min-width: 960px) {
+  div.ini-anton-bawah > div > div > h1 {
+    font-size: var(--tw-font-size-4xl);
+    line-height: var(--tw-line-height-none);
+  }
+}
+
+@media (min-width: 1280px) {
+  div.ini-anton-bawah > div > div > h1 {
+    font-size: var(--tw-font-size-6xl);
     line-height: var(--tw-line-height-none);
   }
 }
@@ -2172,7 +2206,7 @@ div.ini-anton-bawah > div > div > h1 {
 div.ini-anton-bawah > div > div > p.ini-anton-bawah__unique7 {
   --tw-text-opacity: 1;
   color: rgb(var(--tw-color-black) / var(--tw-text-opacity));
-  font-size: var(--tw-font-size-xs);
+  font-size: var(--tw-font-size-sm);
   line-height: var(--tw-line-height-4);
 }
 
@@ -2183,9 +2217,9 @@ div.ini-anton-bawah > div > div > p.ini-anton-bawah__unique7 {
   }
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1280px) {
   div.ini-anton-bawah > div > div > p.ini-anton-bawah__unique7 {
-    font-size: var(--tw-font-size-5xl);
+    font-size: var(--tw-font-size-3xl);
     line-height: var(--tw-line-height-none);
   }
 }
