@@ -51,7 +51,7 @@
       <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="btn btn-light border border-dark rounded-pill px-4 fs-5" aria-current="page" href="{{ route('workshop') }}">Talkshow</a>
+            <a class="btn btn-light border border-dark rounded-pill px-4 fs-5" aria-current="page" href="{{ route('talkshow') }}">Talkshow</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-light border border-dark rounded-pill px-4 fs-5" href="{{ route('ruangindependen') }}">Ruang Indi(e)penden</a>

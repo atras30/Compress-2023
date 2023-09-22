@@ -8,6 +8,7 @@ use App\Http\Controllers\EmailController;
 use App\Http\Controllers\RTYJAController;
 use App\Http\Controllers\RuangIndependenController;
 use App\Http\Controllers\WorkshopController;
+use App\Http\Controllers\TalkshowController;
 use App\Http\Controllers\YJAController;
 use Illuminate\Support\Facades\Route;
 
@@ -68,6 +69,19 @@ Route::post('/form', [FormController::class, "formValidate"])->name('recruitment
 Route::get('/divisi', [DivisiController::class, "index"])->name('divisi');
 
 Route::get('/workshop', [WorkshopController::class, "workshop"])->name('workshop');
+
+Route::prefix('/talkshow')->group(function(){
+    Route::get('/', [TalkshowController::class, "talkshow"])->name('talkshow');
+    Route::get('/before', [TalkshowController::class, "before"])->name('before');
+
+    Route::prefix(('/daftar'))->group(function(){
+        Route::get('/', [TalkshowController::class, "daftarTalkshow"])->name('daftarTalkshow');
+        Route::post('/', [TalkshowController::class, "formValidateTalkshow"])->name('validateTalkshow');
+
+        Route::get('/terimakasih', [TalkshowController::class, "thankyouform"])->name('thankyouform');
+    });
+});
+
 Route::get('/yja', [YJAController::class, "yja"])->name("yja");
 Route::get('/rtyja', [RTYJAController::class, "rtyja"])->name("rtyja");
 
