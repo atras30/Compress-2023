@@ -27,6 +27,13 @@
       }
     }
 
+    @media(max-width: 1100px){
+      .textfoto{
+        width:400px;
+      }
+    }
+
+
     .font-bazinga {
       font-family: Bazinga;
       text-shadow: 1px -2px 0 #000, 2px 4px 0 #000, 3px 6px 0 #000;
@@ -71,7 +78,7 @@
 
     .title-description {
       font-family: 'Inter', sans-serif;
-      max-width: 60rem;
+      max-width: 70rem;
     }
 
 </style>
@@ -99,7 +106,7 @@
                     RUANG INDI(E)PENDEN
                 </div>
 
-                <div class="px-5 fw-semibold mb-5 text-white title-description text-center mx-auto">
+                <div class="px-5 fw-semibold mb-5 text-white title-description text-center mx-auto fs-5">
                         Pameran Jurnalistik Ruang Indi(e)penden adalah wadah yang dihadirkan COMMPRESS untuk jurnalis muda memamerkan karya terbaik mereka.
                         Lebih dari 500+ karya akan dikurasi dan hasilnya akan dipamerkan.<br><br>
                         Tahun ini, pameran Ruang Indi(e)penden mengangkat tema sekaligus tagline “Dari Jurnalis Muda” yang artinya
@@ -120,13 +127,15 @@
         <img class="position-absolute object-fit-cover w-100 h-100 flakes" src="{{ asset('/images/ruangindependen/background/flakes.png') }}" alt="Flakes">
         <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangindependen/base/bar-bottom-white.svg') }}" alt="bottom">
 
-        <div class="position-relative text-center fs-2 fw-bold text-black">
-          <section class="d-flex justify-content-evenly align-items-center mb-5" style="margin-top:5rem;">
-            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotoatas.png') }}" style="z-index: 10; border: 4px solid black"/>
+        <div class="text-center fs-2 fw-bold text-black position-relative">
+          <section class="d-flex justify-content-evenly align-items-center mb-5" style="margin-top:10rem;">
+            <img class="img-thumbnail img-fluid p-3 position-relative" src="{{ asset('/images/ruangindependen/fotoatas.png') }}" style="z-index: 2; border: 4px solid black"/>
+            <img class="textfoto position-absolute top-0 start-0" style="z-index: 3; margin-top:2rem; margin-left:6rem;" src="{{ asset('/images/ruangindependen/textRI.png') }}" alt="bottom">
+
           </section>
           <section class="d-flex flex-column flex-xl-row gap-5" style="margin-bottom:5rem;">
-            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotokiri.png') }}" style="z-index: 10; border: 4px solid black"/>
-            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotokanan.png') }}" style="z-index: 10; border: 4px solid black"/>
+            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotokiri.png') }}" style="z-index: 2; border: 4px solid black"/>
+            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotokanan.png') }}" style="z-index: 2; border: 4px solid black"/>
           </section>
         </div>
     </div>

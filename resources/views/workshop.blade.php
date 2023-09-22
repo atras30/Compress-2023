@@ -9,6 +9,38 @@
             font-weight: 400;
             src: url('fonts/Bazinga-Regular.ttf');
         }
+
+        @media(max-width:520px){
+            .fotokanan{
+                margin-top:5rem!important;
+            }
+        }
+
+        @media(max-width:1050px){
+            .textatas{
+                margin-top:3.5rem!important;
+            }
+            .textbawah{
+                margin-top:8rem!important;
+            }
+        }
+
+        @media(max-width:642px){
+            .textatas{
+                margin-top:5rem!important;
+                margin-left:2rem!important;
+            }
+            .textbawah{
+                margin-top:5rem!important;
+                margin-left:1rem!important;
+            }
+        }
+
+        @media(max-width:495px){
+            .textatas{
+                margin-left:2rem!important;
+            }
+        }
         .purple {
             background-color: #745AA1;
         }
@@ -38,7 +70,7 @@
         }
 
         .ptop-5 {
-            padding-top: 5rem;
+            padding-top: 10rem;
         }
 
         .h-2 {
@@ -118,26 +150,21 @@
         </section>
 
         <section class="position-relative text-center ptop-5 mw-100 mx-3">
-            <div class="hero-title px-5 mb-4">
-                <h1 class="text-white fs-4rem">WORKSHOP</h1>
+            <div class="hero-title px-5 mb-5">
+                <h1 class="text-white fs-4rem">TALKSHOW</h1>
             </div>
             <div class="text-center mx-3 title-content mx-auto">
-                <p class="px-5 fw-semibold mb-3 text-white">Workshop akan menjadi kegiatan awal atau pembuka acara COMMPRESS 2023 yang akan digelar secara luring atau on site. 
-                    Dengan memaparkan materi dan praktik langsung, diharapkan workshop dapat memberikan informasi dan pengalaman mengolah 
-                    konten jurnalistik sesuai dengan kaidahnya kepada peserta workshop COMMPRESS 2023. Hasil dari praktik langsung workshop 
-                    COMMPRESS 2023 akan dipamerkan sebagai bentuk apresiasi sekaligus dinilai oleh para pengunjung pameran.</p><br>
+                <p class="px-5 fw-semibold mb-5 text-white fs-5">Talkshow menjadi kegiatan pembuka acara COMMPRESS 2023 yang akan digelar secara luring. Pembahasan bertemakan Pemilihan Umum 2024 
+                    dan proses pengecekan informasi pada masa Pemilu menjadi titik berat dalam acara ini sebab akan diulas bersama dengan narasumber pilihan yang kredibel. 
+                    Bersamaan dengan itu, Talkshow juga akan mengumumkan para pemenang lomba jurnalistik COMMPRESS 2023 sebelum karyanya dipamerkan di pameran Ruang Indi(e)penden.</p><br>
 
-                <p class="px-5 fw-semibold mb-5 text-white">Mengangkat tema besar modernisasi media, COMMPRESS 2023 akan menyajikan acara yang menunjukkan beragamnya karya 
-                    jurnalistik seturut berkembangnya teknologi dan zaman, salah satunya adalah komik jurnalistik digital. 
-                    Maka dari itu, workshop akan mengangkat topik komik jurnalistik digital yang nantinya akan menghadirkan dua 
-                    pembicara yang sudah diakui kompetensi dan kredibilitasnya pada bidang terkait.</p>
             </div>
         </section>
 
         <div class="d-flex justify-content-center px-5 pb-5">
             <div class="position-relative">
-                <img class="w-max-50 w-100" src="{{ asset('/images/workshop/base/button.png') }}" alt="left inner">
-                <p class="position-absolute timer start-50 top-50 translate-middle px-4 w-100 text-center fw-bold fs-3" id="data"></p>
+                <a id="btn-daftar" href="#"><img class="w-max-50 w-100" src="{{ asset('/images/workshop/base/button.png') }}" alt="left inner">
+                <p class="position-absolute timer start-50 top-50 translate-middle px-4 w-100 text-center fw-bold fs-2 text-black text-decoration-none" id="data"></p></a>
             </div>
         </div>
     </div>
@@ -146,9 +173,23 @@
         <section class="h-100">
               <img class="position-absolute bottom-0 start-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
         </section>
-        <section class="position-relative text-center ptop-5 mw-100">
-            <div class="px-5 mb-4">
-                <h1 class="fw-bold fs-4">FOTO ON PROGRESS DARI DOKUM</h1>
+        <section class="position-relative">
+            <div class="px-5 mw-100">
+                <div class="row">
+                    <div class="col"style="">
+                        <div class="row">
+                            <img class="" style="width:700px" src="{{ asset('/images/workshop/fotokiriatas.png') }}" alt="bottom">
+                        </div>
+                        <div class="row pt-5">
+                            <img class="position-relative" style="width:700px z-index:1;" src="{{ asset('/images/workshop/fotokiribawah.png') }}" alt="bottom">
+                            <img class="textbawah position-absolute" style="z-index:2; width:40%; margin-top:12rem;margin-left:4rem;" src="{{ asset('/images/workshop/textbawah.png') }}" alt="bottom">
+                        </div>
+                    </div>
+                    <div class="col" style="mind-width:100rem;">
+                        <img class="textatas position-absolute" style="z-index:2; width:25%; margin-left:4rem;" src="{{ asset('/images/workshop/textatas.png') }}" alt="bottom">
+                        <img class="fotokanan position-relative" style="z-index:1; width:100%; margin-top:150px; margin-left:20px;" src="{{ asset('/images/workshop/fotokanan.png') }}" alt="bottom">
+                    </div>
+                </div>
             </div>
         </section>
     </div>
@@ -168,6 +209,10 @@
             .then(response => response.json())
             .then(response => {
             document.getElementById("data").textContent = response.parsedDates[0];
+            if(document.getElementById("data").textContent.match("00 Days, 00:00:00")){
+                document.getElementById("data").innerHTML = "To Be Announce";
+                document.getElementById("btn-daftar").href = "#";
+            }
             });
         }
 

@@ -12,7 +12,7 @@ use Carbon\Carbon;
 class RuangIndependenController extends Controller
 {
     public function ruangindependen(){
-        $time = Carbon::create(2023, 7, 25, 22, 03, 00, 'Asia/Jakarta');
+        $time = Carbon::create(2023, 9, 25, 00, 00, 00, 'Asia/Jakarta');
         return view('ruangIndependen',[
             'title' => "Ruang Independen Commpress",
             'time' => $time

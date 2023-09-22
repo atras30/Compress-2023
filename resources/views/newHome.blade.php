@@ -2564,19 +2564,19 @@ div.ini-anton-bawah > img.ini-anton-bawah__unique12 {
         <a href="{{route('workshop')}}">
           <img src="{{ asset('/images/home/components/tl2.png') }}">
         </a>
-        <a href="{{route('workshop')}}">
+        <a href="{{route('yja')}}">
           <img src="{{ asset('/images/home/components/tl3.png') }}">
         </a>
-        <a href="{{route('ruangindependen')}}">
+        <a href="{{route('workshop')}}">
           <img src="{{ asset('/images/home/components/tl4.png') }}">
         </a>
-        <a href="{{route('rtyja')}}">
+        <a href="{{route('ruangindependen')}}">
           <img src="{{ asset('/images/home/components/tl5.png') }}">
         </a>
-        <a href="{{route('rtyja')}}">
+        <a href="{{route('ruangindependen')}}">
           <img src="{{ asset('/images/home/components/tl6.png') }}">
         </a>
-        <a href="{{route('rtyja')}}">
+        <a href="{{route('ruangindependen')}}">
           <img src="{{ asset('/images/home/components/tl7.png') }}">
         </a>
         <a href="{{route('yja')}}">
@@ -2591,19 +2591,19 @@ div.ini-anton-bawah > img.ini-anton-bawah__unique12 {
         <a href="{{route('workshop')}}">
           <img src="{{ asset('/images/home/components/tl2.png') }}">
         </a>
-        <a href="{{route('workshop')}}">
+        <a href="{{route('yja')}}">
           <img src="{{ asset('/images/home/components/tl3.png') }}">
         </a>
-        <a href="{{route('ruangindependen')}}">
+        <a href="{{route('workshop')}}">
           <img src="{{ asset('/images/home/components/tl4.png') }}">
         </a>
-        <a href="{{route('rtyja')}}">
+        <a href="{{route('ruangindependen')}}">
           <img src="{{ asset('/images/home/components/tl5.png') }}">
         </a>
-        <a href="{{route('rtyja')}}">
+        <a href="{{route('ruangindependen')}}">
           <img src="{{ asset('/images/home/components/tl6.png') }}">
         </a>
-        <a href="{{route('rtyja')}}">
+        <a href="{{route('ruangindependen')}}">
           <img src="{{ asset('/images/home/components/tl7.png') }}">
         </a>
         <a href="{{route('yja')}}">

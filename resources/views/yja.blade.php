@@ -11,6 +11,27 @@
       src: url('fonts/Bazinga-Regular.ttf');
     }
 
+    @media(max-width: 1010px){
+      .textfoto{
+        width:500px!important;
+        margin-left:7rem!important;
+      }
+    }
+
+    @media(max-width: 820px){
+      .textfoto{
+        width:400px!important;
+        margin-bottom:10rem!important;
+      }
+    }
+
+    @media(max-width: 533px){
+      .textfoto{
+        width:300px!important;
+        margin-bottom:15rem!important;
+      }
+    }
+
     .dark {
       background-color: #3395a9;
     }
@@ -32,7 +53,7 @@
     }
 
     .ptop-5 {
-      padding-top: 5rem;
+      padding-top: 10rem;
     }
 
     .h-2 {
@@ -54,7 +75,7 @@
     }
 
     .hero-title {
-      font-size: 3.5rem;
+      font-size: 4rem;
     }
 
     .title-description {
@@ -87,23 +108,22 @@
         {{-- Title --}}
         <section class="text-center ptop-5">
           <div class="hero-title px-5 mb-5 font-bazinga text-white">
-            YOUNG JOURNALIST AWARD
+            WORKSHOP
           </div>
 
-          <div class="px-5 fw-semibold mb-5 text-white title-description text-center mx-auto">
-            Young Journalist Award (YJA) hadir sebagai puncak sekaligus penutup rangkaian acara COMMPRESS.
-            Acara terakhir ini dihadirkan sebagai bentuk apresiasi atas kontribusi peserta COMMPRESS 2023 dan
-            Ruang Indi(e)penden 2023. Pada acara puncak ini, COMMPRESS 2023 akan memberikan apresiasi peserta
-            dengan memberikan hadiah kepada para pemenang lomba dan karya terbaik. Tidak lupa, COMMPRESS 2023 menyajikan
-            penampilan guest star sebagai penutup rangkaian acara Young Journalist Award COMMPRESS 2023
+          <div class="px-5 fw-semibold mb-5 text-white title-description text-center mx-auto fs-5">
+          Workshop akan menjadi kegiatan penutup rangkaian acara COMMPRESS 2023. 
+          Pemaparan materi akan disertai praktek langsung peserta workshop. 
+          diharapkan workshop dapat memberikan informasi dan pengalaman mengolah konten 
+          jurnalistik sesuai dengan kaidahnya kepada peserta.
           </div>
         </section>
 
         {{-- Episodes --}}
         <section class="d-flex justify-content-evenly align-items-center flex-column flex-lg-row gap-4 mb-5 pb-5">
           <div class="flex-item position-relative" style="max-width: 70%">
-            <img class="mw-100" src="{{ asset('/images/components/buttons/button-container-2.png') }}" alt="Button Container">
-            <p id="time-remaining" class="position-absolute start-50 top-50 translate-middle px-4 w-100 text-center fw-bold fs-2"></p>
+            <a id="btn-daftar" href="#"><img class="mw-100" src="{{ asset('/images/components/buttons/button-container-2.png') }}" alt="Button Container">
+            <p id="time-remaining" class="position-absolute start-50 top-50 translate-middle px-4 w-100 text-center fw-bold fs-2 text-black text-decoration-none"></p></a>
           </div>
       </div>
         </section>
@@ -114,7 +134,9 @@
       <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/road-to-yja/base/top-bottom.png') }}" alt="bottom">
 
       <div class="mx-4" style="z-index: 10;">
-          <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/yja/fotorecap.png') }}" alt="bottom" style="margin-top:5rem; margin-bottom:5rem; border: 4px solid black">
+          <img class="img-thumbnail img-fluid p-5 position-relative" src="{{ asset('/images/yja/fotoWorkshop.png') }}" alt="bottom" style="margin-top:5rem; margin-bottom:5rem; border: 4px solid black">
+          <img class="textfoto position-absolute bottom-0 start-0" src="{{ asset('/images/yja/textfoto.png') }}" alt="bottom" style="z-index:11; width:600px; margin-bottom:8rem; margin-left:24rem;">
+
       </div>
 
     </div>
@@ -134,6 +156,10 @@
         .then(response => response.json())
         .then(response => {
           document.getElementById("time-remaining").textContent = response.parsedDates[0];
+          if(document.getElementById("time-remaining").textContent.match("00 Days, 00:00:00")){
+            document.getElementById("time-remaining").innerHTML = "To Be Announce";
+            document.getElementById("btn-daftar").href = "#";
+        }
         });
     }
 
