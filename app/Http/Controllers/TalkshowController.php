@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Models\Talkshow;
