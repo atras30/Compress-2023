@@ -11,6 +11,13 @@
         src: url('/fonts/Bazinga-Regular.ttf');
     }
     @media (max-width: 639px) {
+      .title5{
+        font-size:2.5rem!important;
+      }
+
+      .title6{
+        font-size:4rem!important;
+      }
       .hero-title2{
         font-size: 3rem!important;
       }
@@ -60,6 +67,17 @@
     @media (max-width: 414px) {
       .btn-bar{
         left:90pt!important;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .title5{
+        font-size:2rem!important;
+        margin-top:1.5rem!important;
+      }
+
+      .title6{
+        font-size:2.5rem!important;
       }
     }
 
@@ -164,7 +182,7 @@
                 </section>
                 <section class="d-flex flex-column flex-lg-row pleft-2 gap-4 mb-5 pb-5">
                     <div class="flex-item position-relative" style="max-width: 70%">
-                        <a id="btn-daftar" href="{{ route('mobile_journalism') }}"><img class="mw-100" src="{{ asset('/images/components/buttons/button-rounded.png') }}" alt="Button Rounded">
+                        <a id="btn-daftar" href="#formdaftar"><img class="mw-100" src="{{ asset('/images/components/buttons/button-rounded.png') }}" alt="Button Rounded">
                         <p class="position-absolute start-50 top-50 font-bazinga-daftar btn-bar translate-middle fs-4 fw-bold text-black text-decoration-none" style="white-space: nowrap;">Daftar</p></a>
                     </div>
                 </section>
@@ -185,15 +203,15 @@
                   <div class="px-5 mw-100">
                     <div class="row mb-5">
                         <div class="col mb-5 d-flex justify-content-center">
-                            <img style="z-index:1;" src="{{ asset('/images/talkshow/narasumber-frame.png') }}" alt="">
+                            <img class="p-3" style="z-index:1;" src="{{ asset('/images/talkshow/narasumber-frame.png') }}" alt="">
                         </div>
                     </div>
                     <div class="row">
                       <div class="col mb-5 d-flex justify-content-center">
-                          <img style="z-index:1;" src="{{ asset('/images/talkshow/narasumber-frame.png') }}" alt="">
+                          <img class="p-3" style="z-index:1;" src="{{ asset('/images/talkshow/narasumber-frame.png') }}" alt="">
                       </div>
                       <div class="col mb-5 d-flex justify-content-center">
-                          <img style="z-index:1;" src="{{ asset('/images/talkshow/narasumber-frame2.png') }}" alt="">
+                          <img class="p-3" style="z-index:1;" src="{{ asset('/images/talkshow/narasumber-frame2.png') }}" alt="">
                       </div>
                     </div>
                   </div>
@@ -202,7 +220,7 @@
         </div>
     </div>
     </div>
-    <div class="position-relative bg-red pb-5 mh-85vh">
+    <div class="position-relative bg-red pb-5 mh-85vh" id="formdaftar">
       <img class="position-absolute object-fit-cover w-100 h-100 motive2" src="{{ asset('/images/talkshow/regis-bg.png') }}" alt="motive">
       <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangindependen/base/bar-bottom-white.svg') }}" alt="bottom">
 
