@@ -68,7 +68,13 @@ Route::post('/form', [FormController::class, "formValidate"])->name('recruitment
 
 Route::get('/divisi', [DivisiController::class, "index"])->name('divisi');
 
-Route::get('/workshop', [WorkshopController::class, "workshop"])->name('workshop');
+Route::prefix("/workshop")->group(function() {
+    Route::get('/', [WorkshopController::class, "workshop"])->name('workshop');
+    Route::get('/registration', [WorkshopController::class, "registrationView"])->name('workshop.registration');
+    Route::post('/registration', [WorkshopController::class, "register"])->name('workshop.registration');
+});
+
+
 
 Route::prefix('/talkshow')->group(function(){
     Route::get('/', [TalkshowController::class, "talkshow"])->name('talkshow');
