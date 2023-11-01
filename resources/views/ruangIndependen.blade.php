@@ -87,14 +87,14 @@
 @section("contents")
 <div>
     <div class="main-content mh-85vh position-relative bg-purple pb-5">
-        <img class="position-absolute object-fit-cover w-100 h-100 flakes" src="{{ asset('/images/ruangindependen/background/bar-middle-transparant.svg') }}" alt="background motive">
+        <img class="position-absolute object-fit-cover w-100 h-100 flakes" src="{{ asset('/images/ruangIndependen/background/bar-middle-transparant.svg') }}" alt="background motive">
         {{-- Background Assets --}}
-        <img class="position-absolute start-0 h-100 bar" src="{{ asset('/images/ruangindependen/base/bar-left.svg') }}" alt="left outer">
-        <img class="position-absolute h-100 bar" style="left: 1%" src="{{ asset('/images/ruangindependen/base/bar-left-white.svg') }}" alt="left inner">
-        <img class="position-absolute end-0 h-100 bar" src="{{ asset('/images/ruangindependen/base/bar-right.svg') }}" alt="Right Outer">
-        <img class="position-absolute h-100 bar" style="right: 1%" src="{{ asset('/images/ruangindependen/base/bar-right-white.svg') }}" alt="Right Inner">
-        <img class="position-absolute start-0 w-100 h-2" src="{{ asset('/images/ruangindependen/base/bar-bottom-white.svg') }}" alt="top">
-        <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangindependen/base/bar-bottom-white.svg') }}" alt="bottom">
+        <img class="position-absolute start-0 h-100 bar" src="{{ asset('/images/ruangIndependen/base/bar-left.svg') }}" alt="left outer">
+        <img class="position-absolute h-100 bar" style="left: 1%" src="{{ asset('/images/ruangIndependen/base/bar-left-white.svg') }}" alt="left inner">
+        <img class="position-absolute end-0 h-100 bar" src="{{ asset('/images/ruangIndependen/base/bar-right.svg') }}" alt="Right Outer">
+        <img class="position-absolute h-100 bar" style="right: 1%" src="{{ asset('/images/ruangIndependen/base/bar-right-white.svg') }}" alt="Right Inner">
+        <img class="position-absolute start-0 w-100 h-2" src="{{ asset('/images/ruangIndependen/base/bar-bottom-white.svg') }}" alt="top">
+        <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangIndependen/base/bar-bottom-white.svg') }}" alt="bottom">
 
         <div class="position-relative">
                 {{-- Title --}}
@@ -124,18 +124,18 @@
         </div>
     </div>
     <div class="position-relative bg-red pb-5 mh-85vh d-flex justify-content-center align-items-center">
-        <img class="position-absolute object-fit-cover w-100 h-100 flakes" src="{{ asset('/images/ruangindependen/background/flakes.png') }}" alt="Flakes">
-        <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangindependen/base/bar-bottom-white.svg') }}" alt="bottom">
+        <img class="position-absolute object-fit-cover w-100 h-100 flakes" src="{{ asset('/images/ruangIndependen/background/flakes.png') }}" alt="Flakes">
+        <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangIndependen/base/bar-bottom-white.svg') }}" alt="bottom">
 
         <div class="text-center fs-2 fw-bold text-black position-relative">
           <section class="d-flex justify-content-evenly align-items-center mb-5" style="margin-top:10rem;">
-            <img class="img-thumbnail img-fluid p-3 position-relative" src="{{ asset('/images/ruangindependen/fotoatas.png') }}" style="z-index: 2; border: 4px solid black"/>
-            <img class="textfoto position-absolute top-0 start-0" style="z-index: 3; margin-top:2rem; margin-left:6rem;" src="{{ asset('/images/ruangindependen/textRI.png') }}" alt="bottom">
+            <img class="img-thumbnail img-fluid p-3 position-relative" src="{{ asset('/images/ruangIndependen/fotoatas.png') }}" style="z-index: 2; border: 4px solid black"/>
+            <img class="textfoto position-absolute top-0 start-0" style="z-index: 3; margin-top:2rem; margin-left:6rem;" src="{{ asset('/images/ruangIndependen/textRI.png') }}" alt="bottom">
 
           </section>
           <section class="d-flex flex-column flex-xl-row gap-5" style="margin-bottom:5rem;">
-            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotokiri.png') }}" style="z-index: 2; border: 4px solid black"/>
-            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangindependen/fotokanan.png') }}" style="z-index: 2; border: 4px solid black"/>
+            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangIndependen/fotokiri.png') }}" style="z-index: 2; border: 4px solid black"/>
+            <img class="img-thumbnail img-fluid p-3" src="{{ asset('/images/ruangIndependen/fotokanan.png') }}" style="z-index: 2; border: 4px solid black"/>
           </section>
         </div>
     </div>
@@ -156,8 +156,8 @@
         .then(response => {
           document.getElementById("time-remaining").textContent = response.parsedDates[0];
           if(document.getElementById("time-remaining").textContent.match("00 Days, 00:00:00")){
-            document.getElementById("time-remaining").innerHTML = "DAFTAR";
-            document.getElementById("btn-daftar").href = "{{route('daftarruangindependen')}}";
+            document.getElementById("time-remaining").innerHTML = "To Be Announce";
+            document.getElementById("btn-daftar").href = "#";
         }
         });
 

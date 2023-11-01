@@ -69,8 +69,8 @@
         <img class="position-absolute object-fit-cover w-100 h-100" src="{{ asset('/images/daftar-ruangindependen/bar-middle-transparant.png') }}" alt="background motive">
         {{-- Background Assets --}}
         <img class="position-absolute end-0 h-100 bar" src="{{ asset('/images/daftar-ruangindependen/kurator.png') }}" alt="Right Outer">
-        <img class="position-absolute start-0 w-100 h-2" src="{{ asset('/images/ruangindependen/base/bar-bottom-white.svg') }}" alt="top">
-        <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangindependen/base/bar-bottom-white.svg') }}" alt="bottom">
+        <img class="position-absolute start-0 w-100 h-2" src="{{ asset('/images/ruangIndependen/base/bar-bottom-white.svg') }}" alt="top">
+        <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangIndependen/base/bar-bottom-white.svg') }}" alt="bottom">
 
 
         <div class="position-relative">

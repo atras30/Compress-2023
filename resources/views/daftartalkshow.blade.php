@@ -73,13 +73,33 @@
     @media (max-width: 500px) {
       .title5{
         font-size:2rem!important;
-        margin-top:1.5rem!important;
       }
 
       .title6{
         font-size:2.5rem!important;
       }
     }
+
+    @media (max-width: 729px) {
+      .narsum1, .narsum2, .narsum3{
+        width:400px!important;
+      }
+    }
+
+    @media (max-width: 729px) {
+      .narsum1, .narsum3{
+        margin-left:55px!important;
+      }
+    }
+
+    @media (max-width: 414px) {
+      .narsum1, .narsum2, .narsum3{
+        width:300px!important;
+      }
+    }
+
+    
+
 
     
     .font-bazinga {
@@ -167,8 +187,8 @@
         <img class="position-absolute object-fit-cover w-100 h-100" src="{{ asset('/images/talkshow/spiral-daftar.png') }}" alt="background motive">
         {{-- Background Assets --}}
         <img class="position-absolute end-0 h-100 bar" src="{{ asset('/images/daftar-ruangindependen/kurator.png') }}" alt="Right Outer">
-        <img class="position-absolute start-0 w-100 h-2" src="{{ asset('/images/ruangindependen/base/bar-bottom-white.svg') }}" alt="top">
-        <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangindependen/base/bar-bottom-white.svg') }}" alt="bottom">
+        <img class="position-absolute start-0 w-100 h-2" src="{{ asset('/images/ruangIndependen/base/bar-bottom-white.svg') }}" alt="top">
+        <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangIndependen/base/bar-bottom-white.svg') }}" alt="bottom">
 
         <div class="position-relative">
                 {{-- Title --}}
@@ -191,7 +211,7 @@
     <div>
         <div class="main-content mh-85vh position-relative bg-yellow pb-5">
           <img class="position-absolute object-fit-cover w-100 h-100 flakes" src="{{ asset('/images/talkshow/glass-bg.png') }}" alt="background">
-            <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangindependen/base/bar-bottom-white.svg') }}" alt="bottom">
+            <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangIndependen/base/bar-bottom-white.svg') }}" alt="bottom">
 
             <div class="position-relative">
               <section class="ptop-5 mb-5">
@@ -203,15 +223,15 @@
                   <div class="px-5 mw-100">
                     <div class="row mb-5">
                         <div class="col mb-5 d-flex justify-content-center">
-                            <img class="p-3" style="z-index:1;" src="{{ asset('/images/talkshow/narasumber-frame.png') }}" alt="">
+                            <img class="p-3 narsum1" style="z-index:1; margin-right:70px; width:600px" src="{{ asset('/images/talkshow/narsum1.png') }}" alt="">
                         </div>
                     </div>
                     <div class="row">
                       <div class="col mb-5 d-flex justify-content-center">
-                          <img class="p-3" style="z-index:1;" src="{{ asset('/images/talkshow/narasumber-frame.png') }}" alt="">
+                          <img class="p-3 narsum2" style="z-index:1; width:600px" src="{{ asset('/images/talkshow/narsum2.png') }}" alt="">
                       </div>
                       <div class="col mb-5 d-flex justify-content-center">
-                          <img class="p-3" style="z-index:1;" src="{{ asset('/images/talkshow/narasumber-frame2.png') }}" alt="">
+                          <img class="p-3 narsum3" style="z-index:1; width:600px" src="{{ asset('/images/talkshow/narsum3.png') }}" alt="">
                       </div>
                     </div>
                   </div>
@@ -222,7 +242,7 @@
     </div>
     <div class="position-relative bg-red pb-5 mh-85vh" id="formdaftar">
       <img class="position-absolute object-fit-cover w-100 h-100 motive2" src="{{ asset('/images/talkshow/regis-bg.png') }}" alt="motive">
-      <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangindependen/base/bar-bottom-white.svg') }}" alt="bottom">
+      <img class="position-absolute bottom-0 w-100 h-2" style="z-index: 1" src="{{ asset('/images/ruangIndependen/base/bar-bottom-white.svg') }}" alt="bottom">
 
       <div class="position-relative">
       <section class="d-flex justify-content-center align-items-center flex-column ptop-7">
@@ -235,9 +255,6 @@
               <div class="px-5 font-bazinga text-warning title6" style="font-size:5rem;">
                   Talkshow
               </div>
-              <div class="px-5 mb-2 font-bazinga text-warning title6" style="font-size:5rem;">
-                  ....
-              </div>
             </div>
         </div>
       </section>
@@ -245,82 +262,81 @@
           @csrf
         <div class="mb-4">
           <label class="judul-list text-white"for="namalengkap">Nama Lengkap <span class="text-red"> * </span></label>
-          <input type="text" name="namalengkap" class="form-control" value={{ @old('namalengkap') }}>
+          <input type="text" name="namalengkap" class="form-control" value="{{ @old('namalengkap') }}">
           @error('namalengkap')
             <div class="error-text">
               {{ $message }}
             </div>
           @enderror
         </div>
-        <div class="mb-4">
-            <label class="judul-list text-white"for="universitas">Asal Universitas <span class="text-red"> * </span></label>
-            <input type="text" name="universitas" class="form-control" value={{ @old('universitas') }}>
-            @error('universitas')
-              <div class="error-text">
-                {{ $message }}
-              </div>
-            @enderror
-        </div>
-        <div class="mb-4">
-            <label class="judul-list text-white"for="nim">NIM <span class="text-red"> * </span></label><br>
-            <input type="text" name="nim" placeholder="contoh: 00000012345" class="form-control" value={{ @old('nim') }}>
-            <small class="fs-6 fs-bold text-white">Khusus Mahasiswa Universitas Multimedia Nusantara.<br>
-            Isi '-' Jika Bukan Mahasiswa Universitas Multimedia Nusantara</small>
-            @error('nim')
-              <div class="error-text">
-                {{ $message }}
-              </div>
-            @enderror
-        </div>
-        <div class="mb-4">
-          <label class="judul-list text-white"for="prodi">Program Studi <span class="text-red"> * </span></label><br>
-          <select name="prodi" class="form-control" value={{ @old('prodi') }}>
-              <option value="" disabled selected>Select an option</option>
-              <option value="jurnalistik">Jurnalistik</option>
-              <option value="informatika">Informatika</option>
-          </select>
-          @error('prodi')
-            <div class="error-text">
-              {{ $message }}
-            </div>
-          @enderror
-      </div>
-        <div class="row mb-4">
-          <div class="col">
-            <label class="judul-list text-white"for="email">Email <span class="text-red"> * </span></label>
-            <input type="text" name="email" class="form-control" value={{ @old('email') }}>
-            @error('email')
-              <div class="error-text">
-                {{ $message }}
-              </div>
-            @enderror
-          </div>
-          <div class="col">
-            <label class="judul-list text-white"for="medsos">Line atau Whatsapp <span class="text-red"> * </span></label>
-            <input type="text" name="medsos" class="form-control" value={{ @old('medsos') }}>
+          <div class="mb-4">
+            <label class="judul-list text-white"for="medsos">Nomer HP(WhatsApp) / Email<span class="text-red"> * </span></label>
+            <input type="text" name="medsos" class="form-control" value="{{ @old('medsos') }}">
             @error('medsos')
               <div class="error-text">
                 {{ $message }}
               </div>
             @enderror
           </div>
-        </div>
+      
         <div class="mb-4">
-          <label class="judul-list text-white"for="asal">Dari mana kamu tahu Seminar/Workshop COMMPRESS 2023?<span class="text-red"> * </span>
-          </label><br>
-          <select name="asal" class="form-control" value={{ @old('asal') }}>
+            <label class="judul-list text-white"for="universitas">Asal Universitas <span class="text-red"> * </span></label>
+            <select id="universitas" onchange="onSelectChange(this)" name="universitas" class="form-control" value="{{ @old('universitas') }}">
               <option value="" disabled selected>Select an option</option>
-              <option value="instagram">Instagram COMMPRESS UMN</option>
-              <option value="tiktok">TikTok COMPRESS UMN</option>
-              <option value="medpar">Sosial Media Milik Media Partner</option>
-              <option value="teman">Teman</option>
+              <option value="UMN">UMN</option>
+              <option value="Eksternal">Eksternal</option>
           </select>
-          @error('prodi')
+            @error('universitas')
+              <div class="error-text">
+                {{ $message }}
+              </div>
+            @enderror
+            <div class="mb-4 mt-4">
+              <label style='display: none' id="prodilabel" class="judul-list text-white"for="prodi">Program Studi <span class="text-red"> * </span></label><br>
+              <input style='display: none' type="text" id="prodiinput" name="prodi"  class="form-control" value="{{ @old('prodi') }}">
+              @error('prodi')
             <div class="error-text">
               {{ $message }}
             </div>
-          @enderror
-      </div>
+              @enderror
+            </div>
+            <div class="mb-4">
+              <label style='display: none'id="angkatanlabel"class="judul-list text-white"for="angkatan">Angkatan<span class="text-red"> * </span>
+              </label><br>
+              <select style='display: none' id="angkataninput"name="angkatan" class="form-control" value="{{ @old('angkatan') }}">
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="2023">2023</option>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="other">Other</option>
+              </select>
+              @error('angkatan')
+                <div class="error-text">
+                  {{ $message }}
+                </div>
+              @enderror
+            </div>
+            <div class="mb-4">
+                  <label style='display: none'id="nimlabel"class="judul-list text-white"for="nim">NIM <span class="text-red"> * </span></label><br>
+                  <input style='display: none' id="niminput"type="text" name="nim" placeholder="00000012345" class="form-control" value="{{ @old('nim') }}">
+                  @error('nim')
+                    <div class="error-text">
+                      {{ $message }}
+                    </div>
+                  @enderror
+            </div>
+            <div class="mb-4">
+                  <label style='display: none'id="emaillabel"class="judul-list text-white"for="email">Email Student<span class="text-red"> * </span></label>
+                  <input style='display: none' id="emailinput"type="text" placeholder="john.doe@student.umn.ac.id"name="email" class="form-control" value="{{ @old('email') }}">
+                  @error('email')
+                    <div class="error-text">
+                      {{ $message }}
+                    </div>
+                  @enderror
+              </div>
+          </div>
+        
 
         <button class="btn btn-light judul-list rounded text-black d-grid gap-2 col-3 mx-auto mb-5" type="submit">Kirim</button>
       </form>
@@ -330,5 +346,42 @@
 @endsection
 
 @section('scripts')
-    
+  <script>
+    function onSelectChange(e) {
+      const value = e.value;
+      const prodilabel = document.querySelector("#prodilabel");
+      const prodiinput = document.querySelector("#prodiinput");
+      const angkatanlabel = document.querySelector("#angkatanlabel");
+      const angkataninput = document.querySelector("#angkataninput");
+      const nimlabel = document.querySelector("#nimlabel");
+      const niminput = document.querySelector("#niminput");
+      const emaillabel = document.querySelector("#emaillabel");
+      const emailinput = document.querySelector("#emailinput");
+
+
+      if (value == "UMN") {
+        prodilabel.style.display = "inline";
+        prodiinput.style.display = "inline";
+        angkatanlabel.style.display = "inline";
+        angkataninput.style.display = "inline";
+        nimlabel.style.display = "inline";
+        niminput.style.display = "inline";
+        emaillabel.style.display = "inline";
+        emailinput.style.display = "inline";
+        console.log(prodiinput);
+      } else {
+        prodiinput.style.display = "none";
+        prodilabel.style.display = "none";
+        prodiinput.style.display = "none";
+        angkatanlabel.style.display = "none";
+        angkataninput.style.display = "none";
+        nimlabel.style.display = "none";
+        niminput.style.display = "none";
+        emaillabel.style.display = "none";
+        emailinput.style.display = "none";
+      }
+    }
+   
+  </script>
 @endsection
+

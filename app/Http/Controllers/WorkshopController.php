@@ -14,7 +14,7 @@ class WorkshopController extends Controller
     {
         $time = Carbon::create(2023, 9, 10, 00, 00, 30, 'Asia/Jakarta');
         return view('workshop', [
-            'title' => "Talkshow Commpress",
+            'title' => "Workshop Commpress",
             'time' => $time
         ]);
     }
@@ -31,18 +31,20 @@ class WorkshopController extends Controller
         $validator = Validator::make($request->all(), [
             'nama-lengkap' => "required",
             "asal-universitas" => "required",
-            "nim" => "required",
-            "program-studi" => "required",
-            "email" => "required",
+            "nim" => "required_if:asal-universitas,==,Universitas Multimedia Nusantara",
+            "program-studi" => "required_if:asal-universitas,==,Universitas Multimedia Nusantara",
+            "email" => "required_if:asal-universitas,==,Universitas Multimedia Nusantara",
+            "angkatan" => "required_if:asal-universitas,==,Universitas Multimedia Nusantara",
             "line-whatsapp" => "required",
             "know-commpress-from" => "required",
             "input-other" => "present",
             "alasan" => "required",
         ], [
-            "nama-lengkap.required" => "Nama lengka harus diisi.",
+            "nama-lengkap.required" => "Nama lengkap harus diisi.",
             "asal-universitas.required" => "Asal Universitas harus diisi.",
             "nim.required" => "NIM harus diisi.",
             "program-studi.required" => "Program Studi harus diisi.",
+            "angkatan.required" => "Angkatan harus diisi",
             "email.required" => "Email harus diisi",
             "email.rfc" => "Email harus merupakan email yang valid.",
             "email.dns" => "Email harus merupakan email yang valid.",
@@ -79,7 +81,9 @@ class WorkshopController extends Controller
             WorkshopRegistration::create([
                 "full_name" => $validated['nama-lengkap'],
                 "nim" => $validated['nim'],
+                'asal-universitas'=> $validated['asal-universitas'],
                 "major" => $validated['program-studi'],
+                "angkatan" => $validated["angkatan"],
                 "email" => $validated['email'],
                 "line_id_or_whatsapp_number" => $validated['line-whatsapp'],
                 "know_commpress_from" => $validated['know-commpress-from'],
@@ -87,7 +91,7 @@ class WorkshopController extends Controller
         } catch (\Exception $e) {
             Log::critical($e->getMessage());
         }
-
+        
         session()->flash("flash_message", "Yeay, Pendaftaran Workshop Sukses!");
         return to_route('workshop.registration');
     }

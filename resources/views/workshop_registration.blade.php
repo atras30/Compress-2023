@@ -8,7 +8,19 @@
       font-family: 'Bazinga';
       font-style: normal;
       font-weight: 400;
-      src: url('fonts/Bazinga-Regular.ttf');
+      src: url('/fonts/Bazinga-Regular.ttf');
+    }
+
+    @media (max-width: 990px) {
+      .btn-bar{
+        left:95pt!important;
+      }
+    }
+
+    @media (max-width: 414px) {
+      .btn-bar{
+        left:90pt!important;
+      }
     }
 
     .bg-red {
@@ -49,6 +61,12 @@
 
     .font-bazinga {
       font-family: Bazinga;
+      text-shadow: 1px -2px 0 #000, 2px 4px 0 #000, 3px 6px 0 #000;
+      -webkit-text-stroke: 2px #000
+    }
+
+    .font-bazinga-daftar {
+      font-family: Bazinga;
     }
 
     .hero-title {
@@ -79,27 +97,9 @@
       margin-bottom: 1rem;
     }
 
-    .input-form-workshop label {
-      color: white;
-      display: block;
-      margin-left: .9rem;
-      margin-bottom: .3rem;
-    }
-
-    .input-form-workshop input {
-      display: block;
-      width: 100%;
-      border: 4px solid black;
-      outline: none;
-      height: 2.5rem;
-    }
-
-    .input-form-workshop select {
-      display: block;
-      width: 100%;
-      border: 4px solid black;
-      outline: none;
-      height: 2.5rem;
+    .judul-list {
+      font-family: Bazinga;
+      font-size: 1.8rem;
     }
   </style>
 @endsection
@@ -115,10 +115,15 @@
     <img class="position-absolute end-0 object-fit-contain" style="height: calc(100% - 4rem); margin-top: 2rem;" src="{{ asset('images/workshop/registration/jurno-kurator.png') }}" alt="jurno-kurator-image">
 
     <div class="position-absolute w-100 h-100 fw-bold">
-      <div class="gap-1 d-flex flex-column justify-content-center h-100 mx-4 mx-md-5 fs-2">
-        <div class="text-white">WORKSHOP:</div>
-        <div class="text-warning">TBA</div>
-        <button class="my-2 btn btn-light border border-dark rounded-pill fw-bold" style="width: 150px">DAFTAR</button>
+      <div class="gap-1 d-flex flex-column justify-content-center h-100 mx-4 mx-md-5">
+        <div class="text-white font-bazinga" style="font-size:3.5rem;">WORKSHOP:</div>
+        <div class="text-warning font-bazinga" style="font-size:6.5rem">TBA</div>
+        <section class="d-flex flex-column flex-lg-row pleft-2 gap-4 mb-5 pb-5">
+            <div class="flex-item position-relative" style="max-width: 70%">
+                <a id="btn-daftar" href="#formdaftar"><img class="mw-100" src="{{ asset('/images/components/buttons/button-rounded.png') }}" alt="Button Rounded">
+                <p class="position-absolute start-50 top-50 font-bazinga-daftar btn-bar translate-middle fs-4 fw-bold text-black text-decoration-none" style="white-space: nowrap;">Daftar</p></a>
+            </div>
+        </section>
       </div>
     </div>
   </div>
@@ -165,63 +170,100 @@
     {{-- Background Assets --}}
     <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/road-to-yja/base/top-bottom.png') }}" alt="bottom">
 
-    <div class="w-100 h-100 fw-bold pt-5 mb-5 pb-5 position-relative">
+    <div class="w-100 h-100 fw-bold pt-5 mb-5 pb-5 position-relative" id="formdaftar">
       <div class="position-relative d-flex justify-content-center align-items-center flex-column">
         <img class="mw-100 px-4" style="width: 600px;" src="{{ asset('/images/workshop/registration/cloud-registrasi-workshop.png') }}" alt="">
-        <div class="fs-2 position-absolute start-50 top-50 translate-middle">
-          <div style="color: #3395a9">REGISTRASI:</div>
-          <div style="color: #ffea22">WORKSHOP</div>
+        <div class="position-absolute start-50 top-50 translate-middle">
+          <div class = "font-bazinga text-info" style="font-size:3rem;">REGISTRASI:</div>
+          <div class = "font-bazinga text-warning" style="font-size:4rem;">WORKSHOP</div>
         </div>
       </div>
 
-      <form id="form-registration" class="container" action="{{ route('workshop.registration') }}" method="POST">
+      <form id="form-registration"  class="px-5" action="{{ route('workshop.registration') }}" method="POST">
         @csrf
-        <div class="input-form-workshop">
-          <label for="nama-lengkap">Nama Lengkap</label>
-          <input placeholder="John Doe" class="rounded-pill px-3" type="text" name="nama-lengkap" id="nama-lengkap" value="{{ old('nama-lengkap') }}">
+        <div class="input-form-workshop mb-4">
+          <label for="nama-lengkap" class="judul-list text-white">Nama Lengkap</label>
+          <input placeholder="John Doe" class="form-control px-3" type="text" name="nama-lengkap" id="nama-lengkap" value="{{ old('nama-lengkap') }}">
           @error('nama-lengkap')
-            <div style="padding: .5rem;" class="alert alert-danger rounded-pill px-3">{{ $message }}</div>
+            <div style="padding: .5rem;" class="alert alert-danger form-control px-3">{{ $message }}</div>
           @enderror
         </div>
-        <div class="input-form-workshop">
-          <label for="asal-universitas">Asal Universitas</label>
-          <input placeholder="Universitas Multimedia Nusantara" class="rounded-pill px-3" type="text" name="asal-universitas" id="asal-universitas" value="{{ old('asal-universitas') }}">
-          @error('asal-universitas')
-            <div style="padding: .5rem;" class="alert alert-danger rounded-pill px-3">{{ $message }}</div>
-          @enderror
-        </div>
-        <div class="input-form-workshop">
-          <label for="nim">NIM</label>
-          <input placeholder="00000050597" class="rounded-pill px-3" type="text" name="nim" id="nim" value="{{ old('nim') }}">
-          @error('nim')
-            <div style="padding: .5rem;" class="alert alert-danger rounded-pill px-3">{{ $message }}</div>
-          @enderror
-        </div>
-        <div class="input-form-workshop">
-          <label for="program-studi">Program Studi</label>
-          <input placeholder="Informatika" class="rounded-pill px-3" type="text" name="program-studi" id="program-studi" value="{{ old('program-studi') }}">
-          @error('program-studi')
-            <div style="padding: .5rem;" class="alert alert-danger rounded-pill px-3">{{ $message }}</div>
-          @enderror
-        </div>
-        <div class="input-form-workshop">
-          <label for="email">Email</label>
-          <input placeholder="john.doe@student.umn.ac.id" class="rounded-pill px-3" type="email" name="email" id="email" value="{{ old('email') }}">
-          @error('email')
-            <div style="padding: .5rem;" class="alert alert-danger rounded-pill px-3">{{ $message }}</div>
-          @enderror
-        </div>
-        <div class="input-form-workshop">
-          <label for="line-whatsapp">Line / Whatsapp</label>
-          <input placeholder="08xx-xxxx-xxxx" class="rounded-pill px-3" type="text" name="line-whatsapp" id="line-whatsapp" value="{{ old('line-whatsapp') }}">
+        <div class="input-form-workshop mb-4">
+          <label for="line-whatsapp" class="judul-list text-white">Nomer HP (WhatsApp) / Email</label>
+          <input placeholder="08xx-xxxx-xxxx | john.doe@gmail.com" class="form-control px-3" type="text" name="line-whatsapp" id="line-whatsapp" value="{{ old('line-whatsapp') }}">
           @error('line-whatsapp')
-            <div style="padding: .5rem;" class="alert alert-danger rounded-pill px-3">{{ $message }}</div>
+            <div style="padding: .5rem;" class="alert alert-danger form-control px-3">{{ $message }}</div>
           @enderror
         </div>
-
-        <div class="input-form-workshop">
-          <label for="know-commpress-from">Dari mana kamu tahu Seminar/Workshop COMMPRESS 2023?</label>
-          <select onchange="onSelectChange(this)" name="know-commpress-from" id="know-commpress-from" class="form-select rounded-pill" aria-label="Default select example" value="">
+        <div class="input-form-workshop mb-4">
+          <label for="asal-universitas" class="judul-list text-white">Asal Universitas</label>
+          <select onchange="onSelectChange(this)" name="asal-universitas" id="asal-universitas" class="form-control px-3" value="{{ @old('asal-universitas') }}">
+              <option value="" disabled selected>Select an option</option>
+              <option @if(old('prodi') === 'Universitas Multimedia Nusantara') selected @endif value="Universitas Multimedia Nusantara">Universitas Multimedia Nusantara</option>
+              <option @if(old('prodi') === "Eksternal") selected @endif value="Eksternal">Eksternal</option>
+          </select>
+          @error('asal-universitas')
+            <div style="padding: .5rem;" class="alert alert-danger form-control px-3">{{ $message }}</div>
+          @enderror
+          <div class="input-form-workshop mb-4">
+            <label style="display: none" id="prodilabel" for="program-studi" class="judul-list text-white">Program Studi</label>
+            <select style="display: none" name="program-studi" id="program-studi" class="form-control px-3" value="{{ @old('program-studi') }}">
+                <option value="" disabled selected>Select an option</option>
+                <option @if(old('prodi') === 'Informatika') selected @endif value="Informatika">Informatika</option>
+                <option @if(old('prodi') === "Teknik Komputer") selected @endif value="Teknik Komputer">Teknik Komputer</option>
+                <option @if(old('prodi') === "Teknik Elektro") selected @endif value="Teknik Elektro">Teknik Elektro</option>
+                <option @if(old('prodi') === "Teknik Fisika") selected @endif value="Teknik Fisika">Teknik Fisika</option>
+                <option @if(old('prodi') === "Sistem Informasi") selected @endif value="Sistem Informasi">Sistem Informasi</option>
+                <option @if(old('prodi') === "Akuntansi") selected @endif value="Akuntansi">Akuntansi</option>
+                <option @if(old('prodi') === "Manajemen") selected @endif value="Manajemen">Manajemen</option>
+                <option @if(old('prodi') === "Perhotelan") selected @endif value="Perhotelan">Perhotelan</option>
+                <option @if(old('prodi') === "Komunikasi Strategis") selected @endif value="Komunikasi Strategis">Komunikasi Strategis</option>
+                <option @if(old('prodi') === "Jurnalistik") selected @endif value="Jurnalistik">Jurnalistik</option>
+                <option @if(old('prodi') === "Desain Komunikasi Visual") selected @endif value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+                <option @if(old('prodi') === "Arsitektur") selected @endif value="Arsitektur">Arsitektur</option>
+                <option @if(old('prodi') === "Film & Animasi") selected @endif value="Film & Animasi">Film & Animasi</option>
+            </select>
+            @error('program-studi')
+              <div style="padding: .5rem;" class="alert alert-danger form-control px-3">
+                {{ $message }}
+              </div>
+            @enderror
+          </div>
+          <div class="input-form-workshop mb-4">
+            <label style="display: none" id="nimlabel" for="nim" class="judul-list text-white">NIM</label>
+            <input style="display: none" placeholder="00000050597" class="form-control px-3" type="text" name="nim" id="nim" value="{{ old('nim') }}">
+            @error('nim')
+              <div style="padding: .5rem;" class="alert alert-danger form-control px-3">{{ $message }}</div>
+            @enderror
+          </div>
+          <div class="input-form-workshop mb-4">
+            <label style="display: none" id="angkatanlabel" for="angkatan" class="judul-list text-white">Angkatan</label>
+            <select style="display: none" name="angkatan" id="angkatan" class="form-control px-3" value="{{ @old('angkatan') }}">
+                <option value="" disabled selected>Select an option</option>
+                <option @if(old('prodi') === '2023') selected @endif value="2023">2023</option>
+                <option @if(old('prodi') === "2022") selected @endif value="2022">2022</option>
+                <option @if(old('prodi') === "2021") selected @endif value="2021">2021</option>
+                <option @if(old('prodi') === "2020") selected @endif value="2020">2020</option>
+                <option @if(old('prodi') === "2019") selected @endif value="2019">2019</option>
+                <option @if(old('prodi') === "Other") selected @endif value="Other">Other</option>
+            </select>
+            @error('angkatan')
+              <div style="padding: .5rem;" class="alert alert-danger form-control px-3">
+                {{ $message }}
+              </div>
+            @enderror
+          </div>
+          <div class="input-form-workshop mb-4">
+            <label style="display: none" id="emaillabel" for="email" class="judul-list text-white">Email Student</label>
+            <input style="display: none" placeholder="john.doe@student.umn.ac.id" class="form-control px-3" type="email" name="email" id="email" value="{{ old('email') }}">
+            @error('email')
+              <div style="padding: .5rem;" class="alert alert-danger form-control px-3">{{ $message }}</div>
+            @enderror
+          </div>
+        </div>
+        <div class="input-form-workshop mb-4">
+          <label for="know-commpress-from" class="judul-list text-white">Dari mana kamu tahu Seminar/Workshop COMMPRESS 2023?</label>
+          <select onchange="onSelectChange2(this)" name="know-commpress-from" id="know-commpress-from" class="form-select form-control" aria-label="Default select example" value="">
             <option value="">Klik untuk melihat opsi...</option>
             <option value="Instagram COMMPRESS UMN">Instagram COMMPRESS UMN</option>
             <option value="TikTok COMMPRESS UMN">TikTok COMMPRESS UMN</option>
@@ -230,24 +272,23 @@
             <option value="Lainnya">Lainnya</option>
           </select>
           @error('know-commpress-from')
-            <div style="padding: .5rem;" class="alert alert-danger rounded-pill px-3">{{ $message }}</div>
+            <div style="padding: .5rem;" class="alert alert-danger form-control px-3">{{ $message }}</div>
           @enderror
-          <input style="display: none" placeholder="Jadi... Tahu Darimana ?" class="rounded-pill px-3 w-50" type="text" id="input-other" name="input-other" value="{{ old('input-other') }}" />
+          <input style="display: none" placeholder="Jadi... Tahu Darimana ?" class="form-control px-3 w-50" type="text" id="input-other" name="input-other" value="{{ old('input-other') }}" />
           @error('input-other')
-            <div style="padding: .5rem;" class="alert alert-danger rounded-pill px-3">{{ $message }}</div>
+            <div style="padding: .5rem;" class="alert alert-danger form-control px-3">{{ $message }}</div>
           @enderror
         </div>
 
-        <div class="input-form-workshop">
-          <label for="alasan">Alasan mengikuti Seminar/Workshop COMMPRESS 2023</label>
-          <input placeholder="Karena sangat tertarik!" class="rounded-pill px-3" type="text" name="alasan" id="alasan" value="{{ old('alasan') }}">
+        <div class="input-form-workshop mb-4">
+          <label for="alasan" class="judul-list text-white">Alasan mengikuti Seminar/Workshop COMMPRESS 2023</label>
+          <input placeholder="Karena sangat tertarik!" class="form-control px-3" type="text" name="alasan" id="alasan" value="{{ old('alasan') }}">
           @error('alasan')
-            <div style="padding: .5rem;" class="alert alert-danger rounded-pill px-3">{{ $message }}</div>
+            <div style="padding: .5rem;" class="alert alert-danger form-control px-3">{{ $message }}</div>
           @enderror
         </div>
 
-        <button style="border: 2px solid black" class="btn btn-primary rounded-pill px-4">Submit!</button>
-
+        <button style="border: 2px solid black" class="btn btn-light judul-list rounded text-black d-grid gap-2 col-3 mx-auto mb-5">KIRIM</button>
       </form>
     </div>
   </div>
@@ -294,13 +335,63 @@
       });
     }
 
+   
+    
     function onSelectChange(e) {
       const value = e.value;
       const inputOther = document.querySelector("#input-other");
 
+      
+      const prodilabel = document.querySelector("#prodilabel");
+      const prodiinput = document.querySelector("#program-studi");
+      const angkatanlabel = document.querySelector("#angkatanlabel");
+      const angkataninput = document.querySelector("#angkatan");
+      const nimlabel = document.querySelector("#nimlabel");
+      const niminput = document.querySelector("#nim");
+      const emaillabel = document.querySelector("#emaillabel");
+      const emailinput = document.querySelector("#email");
+
+
+      if (value == "Universitas Multimedia Nusantara") {
+        prodilabel.style.display = "inline";
+        prodiinput.style.display = "inline";
+        angkatanlabel.style.display = "inline";
+        angkataninput.style.display = "inline";
+        nimlabel.style.display = "inline";
+        niminput.style.display = "inline";
+        emaillabel.style.display = "inline";
+        emailinput.style.display = "inline";
+        
+        
+      } else {
+        prodiinput.style.display = "none";
+        prodilabel.style.display = "none";
+        prodiinput.style.display = "none";
+        angkatanlabel.style.display = "none";
+        angkataninput.style.display = "none";
+        nimlabel.style.display = "none";
+        niminput.style.display = "none";
+        emaillabel.style.display = "none";
+        emailinput.style.display = "none";
+        
+      }
+    
+
       if (value == "Lainnya") {
         inputOther.style.display = "inline";
-        console.log(inputOther);
+        
+      } else {
+        inputOther.style.display = "none";
+      }
+    }
+
+    function onSelectChange2(e) {
+      const value = e.value;
+      const inputOther = document.querySelector("#input-other");
+    
+      if (value == "Lainnya") {
+        inputOther.style.display = "inline";
+        
       } else {
         inputOther.style.display = "none";
       }

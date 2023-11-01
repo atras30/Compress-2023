@@ -57,7 +57,7 @@
             <a class="btn btn-light border border-dark rounded-pill px-4 fs-5" href="{{ route('ruangindependen') }}">Ruang Indi(e)penden</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-light border border-dark rounded-pill px-4 fs-5" href="{{ route('yja') }}">Workshop</a>
+            <a class="btn btn-light border border-dark rounded-pill px-4 fs-5" href="{{ route('workshop') }}">Workshop</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-light border border-dark rounded-pill px-4 fs-5" href="#footer">Contact Us</a>

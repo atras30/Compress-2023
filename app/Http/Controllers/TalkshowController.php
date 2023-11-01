@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -32,27 +34,17 @@ class TalkshowController extends Controller
     }
 
     public function formValidateTalkshow(Request $request){
-        
         $validReq = $request->validate([
             'namalengkap' => 'required',
             'universitas' => 'required',
-            'nim' => 'required',
-            'prodi' => 'required',
-            'email' => ['required','email:dns'],
             'medsos' => 'required',
-            'asal' => 'required'
+            'nim' => 'required_if:universitas,==,UMN',
+            'prodi' => 'required_if:universitas,==,UMN',
+            'angkatan' => 'required_if:universitas,==,UMN',
+            'email' => ['required_if:universitas,==,UMN|email:dns'],
+            
         ]);
-
         Talkshow::create($validReq);
-
-        $mailData = [
-            'body' => 'Terima Kasih telah mendaftar talkshow.
-                        Stay Tune terus media sosial kitaa!!',
-        ];
-        
-        Mail::to($request->email)->send(new sendEmail($mailData));
-
-        Alert::html('Thankyou!', 'You\'ve Successfully Registered.<br> Please wait for further information <br> <small>Stay tune on our instagram <a href="https://www.instagram.com/commpressumn">@commpressumn</a></small>', 'success');
 
         return redirect('/talkshow/daftar/terimakasih');
     }

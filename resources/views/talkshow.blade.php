@@ -214,8 +214,8 @@
             .then(response => {
             document.getElementById("data").textContent = response.parsedDates[0];
             if(document.getElementById("data").textContent.match("00 Days, 00:00:00")){
-                document.getElementById("data").innerHTML = "To Be Announce";
-                document.getElementById("btn-daftar").href = "#";
+                document.getElementById("data").innerHTML = "DAFTAR";
+                document.getElementById("btn-daftar").href = "{{route('daftarTalkshow')}}";
             }
             });
         }

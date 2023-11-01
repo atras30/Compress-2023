@@ -12,4 +12,14 @@ class Talkshow extends Model
     protected $guarded = [
         'id'
     ];
+
+    protected $fillable = [
+        'namalengkap',
+        'email',
+        'universitas',
+        'medsos',
+        'nim',
+        'prodi',
+        'angkatan',
+    ];
 }
