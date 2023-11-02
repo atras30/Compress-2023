@@ -59,6 +59,8 @@ class WorkshopController extends Controller
                 ->withErrors($validator)
                 ->withInput();
 
+
+
         $validated = $validator->validated();
 
         //Error handling kalau field `tahu commpress dari: Lainnya` dan field `Lainnya` ga diisi.
@@ -71,10 +73,10 @@ class WorkshopController extends Controller
                 "input-other.required" => "Input `Lainnya` harus diisi."
             ]);
             if ($inputOtherValidator->fails())
-                return to_route("workshop.registration")
-                    ->with("isFormValidationError", true)
-                    ->withErrors($inputOtherValidator)
-                    ->withInput();
+            return to_route("workshop.registration")
+            ->with("isFormValidationError", true)
+            ->withErrors($inputOtherValidator)
+            ->withInput();
         }
 
         try {
@@ -82,17 +84,20 @@ class WorkshopController extends Controller
                 "full_name" => $validated['nama-lengkap'],
                 "nim" => $validated['nim'],
                 'asal-universitas'=> $validated['asal-universitas'],
-                "major" => $validated['program-studi'],
-                "angkatan" => $validated["angkatan"],
+                "major" => $validated['program-studi'] ?? null,
+                "angkatan" => $validated["angkatan"] ?? null,
                 "email" => $validated['email'],
                 "line_id_or_whatsapp_number" => $validated['line-whatsapp'],
                 "know_commpress_from" => $validated['know-commpress-from'],
             ]);
+
+            session()->flash("flash_message", "Yeay, Pendaftaran Workshop Sukses!");
         } catch (\Exception $e) {
             Log::critical($e->getMessage());
+            session()->flash("flash_message", "Error: ".$e->getMessage());
+            session()->flash("isFormValidationError", true);
         }
-        
-        session()->flash("flash_message", "Yeay, Pendaftaran Workshop Sukses!");
+
         return to_route('workshop.registration');
     }
 }

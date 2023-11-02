@@ -315,7 +315,7 @@
   <script defer>
     window.onload = function() {
       const formError = "{{ session('isFormValidationError') }}";
-      const flashMessage = "{{ session('flash_message') }}";
+      const flashMessage = `{!! session('flash_message') !!}`;
       if(flashMessage) showFlashMessage(flashMessage);
       if(formError) scrollIntoForm();
     }
@@ -335,13 +335,13 @@
       });
     }
 
-   
-    
+
+
     function onSelectChange(e) {
       const value = e.value;
       const inputOther = document.querySelector("#input-other");
 
-      
+
       const prodilabel = document.querySelector("#prodilabel");
       const prodiinput = document.querySelector("#program-studi");
       const angkatanlabel = document.querySelector("#angkatanlabel");
@@ -361,8 +361,8 @@
         niminput.style.display = "inline";
         emaillabel.style.display = "inline";
         emailinput.style.display = "inline";
-        
-        
+
+
       } else {
         prodiinput.style.display = "none";
         prodilabel.style.display = "none";
@@ -373,13 +373,13 @@
         niminput.style.display = "none";
         emaillabel.style.display = "none";
         emailinput.style.display = "none";
-        
+
       }
-    
+
 
       if (value == "Lainnya") {
         inputOther.style.display = "inline";
-        
+
       } else {
         inputOther.style.display = "none";
       }
@@ -388,10 +388,10 @@
     function onSelectChange2(e) {
       const value = e.value;
       const inputOther = document.querySelector("#input-other");
-    
+
       if (value == "Lainnya") {
         inputOther.style.display = "inline";
-        
+
       } else {
         inputOther.style.display = "none";
       }
