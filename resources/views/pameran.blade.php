@@ -361,7 +361,8 @@
             {{-- Episodes --}}
             <div id="carouselExampleControls" class="carousel" >
                 <div class="carousel-inner carousel-inner1 mb-5">
-                    <div class="carousel-item carousel-item1 active">
+                    
+                        <div class="carousel-item carousel-item1 active">
                         <div class="card">
                             <div class="img-wrapper">
                                 <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
@@ -374,6 +375,8 @@
                             </div>
                         </div>
                     </div>
+                    
+                    
                     <div class="carousel-item carousel-item1">
                         <div class="card">
                             <div class="img-wrapper">
@@ -635,31 +638,15 @@
             {{-- Episodes --}}
             <div id="carouselExample2" class="carousel">
                 <div class="carousel-inner carousel-inner3 gap-5" >
+                    @foreach($video_dokumenter as $video)
                     <div class="carousel-item carousel-item3 active"  >
-                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">Arfinna Erliencani</h2>
-                        <a href="https://multimedianusantara-my.sharepoint.com/personal/berto_basillisa_lecturer_umn_ac_id/_layouts/15/stream.aspx?id=%2Fpersonal%2Fberto%5Fbasillisa%5Flecturer%5Fumn%5Fac%5Fid%2FDocuments%2FDOCJOUR%2FBEST%20OF%206%2FKampung%20Batik%20Kembang%20Mayang%20%27Menanti%20Regenerasi%20Pembatik%20Muda%27%5FARFINNA%20ERLIENCANI%2Emp4&referrer=OneDriveForBusiness&referrerScenario=OpenFile" target="_blank"><img src="{{ asset('/images/ruangIndependen/pameran/batik.jpeg') }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>                        
-                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel" >"Kampung Batik Kembang Mayang 'Menanti Regenerasi Pembatik Muda'"</h3>
+                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{$video->nama_pembuat}}</h2>
+                        <a href="{{$video->link}}" target="_blank"><img src="{{ $video->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>                        
+                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel" >"{{$video->title}}"</h3>
                     </div>
-                    <div class="carousel-item carousel-item3" >
-                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">Zahra Zakiah</h2>
-                        <a href="https://multimedianusantara-my.sharepoint.com/personal/berto_basillisa_lecturer_umn_ac_id/_layouts/15/stream.aspx?id=%2Fpersonal%2Fberto%5Fbasillisa%5Flecturer%5Fumn%5Fac%5Fid%2FDocuments%2FDOCJOUR%2FBEST%20OF%206%2FKeterbatasan%20bukan%20penghalang%20untuk%20bekerja%20keras%5FZAHRA%20ZAKIAH%2Emov&referrer=OneDriveForBusiness&referrerScenario=OpenFile" target="_blank"><img src="{{ asset('/images/ruangIndependen/pameran/guru.jpeg') }}" class="d-block w-100 cover-artikel rounded" style="height:60%" alt="..."></a>
-                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"Keterbatasan bukan penghalang untuk bekerja keras"</h3>
-                    </div>
-                    <div class="carousel-item carousel-item3" >
-                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">Jessica Adriana</h2>
-                        <a href="https://multimedianusantara-my.sharepoint.com/personal/berto_basillisa_lecturer_umn_ac_id/_layouts/15/stream.aspx?id=%2Fpersonal%2Fberto%5Fbasillisa%5Flecturer%5Fumn%5Fac%5Fid%2FDocuments%2FDOCJOUR%2FBEST%20OF%206%2FOEN%20SIN%20YONG%5FMAESTRO%20LEGENDARIS%20TEH%20YAN%20%E2%80%98TERAKHIR%E2%80%99%C2%A0DI%C2%A0TANGERANG%5FJESSICA%20ADRIANA%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview" target="_blank"><img src="{{ asset('/images/ruangIndependen/pameran/teh yan.jpeg') }}" class="d-block w-100 cover-artikel rounded" style="height:60%" alt="..."></a>
-                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"Maestro Legendaris Teh Yan 'Terakhir' Di Tangerang"</h3>
-                    </div>
-                    <div class="carousel-item carousel-item3" >
-                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">Samuel Martinus</h2>
-                        <a href="https://multimedianusantara-my.sharepoint.com/personal/berto_basillisa_lecturer_umn_ac_id/_layouts/15/stream.aspx?id=%2Fpersonal%2Fberto%5Fbasillisa%5Flecturer%5Fumn%5Fac%5Fid%2FDocuments%2FDOCJOUR%2FBEST%20OF%206%2FTempat%20Bernaung%20Bagi%20Mereka%20yang%20Terlantar%5F00000042647%5FSAMUEL%20MARTINUS%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview" target="_blank" class=""><img src="{{ asset('/images/ruangIndependen/pameran/pantiasuhan.jpeg') }}" class="d-block w-100 cover-artikel rounded" style="height:60%" alt="..."></a>
-                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"Tempat Bernaung Bagi Mereka yang Terlantar"</h3>
-                    </div>
-                    <div class="carousel-item carousel-item3" >
-                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">Tannayu Hangno</h2>
-                        <a href="https://multimedianusantara-my.sharepoint.com/personal/berto_basillisa_lecturer_umn_ac_id/_layouts/15/stream.aspx?id=%2Fpersonal%2Fberto%5Fbasillisa%5Flecturer%5Fumn%5Fac%5Fid%2FDocuments%2FDOCJOUR%2FBEST%20OF%206%2FWayang%20Kristal%3B%20Langkah%20Kecil%20dari%20Sampah%5FTANNAYU%20HANGNO%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview" target="_blank" class=""><img src="{{ asset('/images/ruangIndependen/pameran/wayangkristal.jpeg') }}" class="d-block w-100 cover-artikel rounded" style="height:60%" alt="..."></a>
-                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"Wayang Kristal; Langkah Kecil dari Sampah"</h3>
-                    </div>
+                    @endforeach
+                    
+                    
                 </div>
                 <button class="carousel-control-prev carousel-control-prev3" style="top:40%!important;" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -690,31 +677,15 @@
             {{-- Episodes --}}
             <div id="carouselExample" class="carousel">
                 <div class="carousel-inner carousel-inner2 gap-5" >
+                @foreach($artikel_interaktif as $karya)
                     <div class="carousel-item carousel-item2 active"  >
-                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">ESTEFANY FORTUNA CHANDRA</h2>
-                        <a href="https://www.figma.com/proto/lLkpk0csvY9kJFzKEG5YZw/Untitled?node-id=2%3A2&scaling=sca" target="_blank"><img src="{{ asset('/images/ruangIndependen/pameran/coverhp1.png') }}" class="d-block w-100 cover-artikel" style="height:60%;" alt="..."></a>                        
-                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel" >"Kenapa Harus Viral Dulu-Amy Fitria"</h3>
+                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{$karya->nama_pembuat}}</h2>
+                        <a href="{{$karya->link}}" target="_blank"><img src="{{ $karya->image_path }}" class="d-block w-100 cover-artikel" style="height:60%;" alt="..."></a>                        
+                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel" >"{{$karya->title}}"</h3>
                     </div>
-                    <div class="carousel-item carousel-item2" >
-                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">ARFINA ERLIENCANI</h2>
-                        <a href="https://www.figma.com/proto/iJs1lTXBH6oz5iuU3MaxtN/Untitled?node-id=2%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A3&show-proto-sidebar=1" target="_blank"><img src="{{ asset('/images/ruangIndependen/pameran/coverhp2.png') }}" class="d-block w-100 cover-artikel" style="height:60%" alt="..."></a>
-                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"Menembus Batas: Berani Meraih Prestasi Dalam Keterbatasan Fisik - Helen Keller"</h3>
-                    </div>
-                    <div class="carousel-item carousel-item2" >
-                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">JOCELYN VALENCIA SISWANTO</h2>
-                        <a href="https://www.figma.com/proto/wRUOyxkVKSxraFtk66iHWz/Kisah-Perjuangan-Merry-Riana%3A-Sejuta-Mimpi%2C-Sejuta-Harapan?page-id=0%3A1&node-id=77%3A54&viewport=241%2C48%2C0.5&scaling=scale-down&starting-point-node-id=77%3A54" target="_blank"><img src="{{ asset('/images/ruangIndependen/pameran/coverhp3.png') }}" class="d-block w-100 cover-artikel" style="height:60%" alt="..."></a>
-                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"Kisah Perjuangan Merry Riana: Sejuta Mimpi, Sejuta Harapan"</h3>
-                    </div>
-                    <div class="carousel-item carousel-item2" >
-                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">TANNAYU HANGNO </h2>
-                        <a href="https://www.figma.com/proto/MOKITGulYK1ubR7ffoxB4N/Untitled?node-id=2%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2&show-proto-sidebar=1" target="_blank" class=""><img src="{{ asset('/images/ruangIndependen/pameran/coverhp4.png') }}" class="d-block w-100 cover-artikel" style="height:60%" alt="..."></a>
-                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"Pejuang Tanah adat - Petrus Asuy"</h3>
-                    </div>
-                    <div class="carousel-item carousel-item2" >
-                        <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">FIEBE VIRGINIA</h2>
-                        <a href="https://www.figma.com/proto/1rGHq71YjoCqtOlSSooXoR/Untitled?page-id=0%3A1&nodeid=13%3A12&viewport=241%2C48%2C0.5&scaling=scale-down&starting-point-nodeid=13%3A12&node-id=60%3A83&starting-point-node-id=13%3A12" target="_blank" class=""><img src="{{ asset('/images/ruangIndependen/pameran/coverhp5.png') }}" class="d-block w-100 cover-artikel" style="height:60%" alt="..."></a>
-                        <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"Seoul, Korea Selatan Bayi 16 Bulan Meninggal, Mengalami Kekerasan Oleh Ayah dan Ibu Angkatnya"</h3>
-                    </div>
+                @endforeach
+                    
+                    
                 </div>
                 <button class="carousel-control-prev carousel-control-prev2" style="top:40%!important;" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

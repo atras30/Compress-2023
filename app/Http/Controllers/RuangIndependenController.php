@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Art;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -20,8 +21,12 @@ class RuangIndependenController extends Controller
     }
 
     public function pameran(){
+        $artikelInteraktif = Art::where('tipe', 'artikel interaktif')->get();        
+        $videoDokumenter = Art::where('tipe', 'video dokumenter')->get();        
         return view('pameran',[
             'title' => "Pameran Commpress",
+            'artikel_interaktif' => $artikelInteraktif,
+            'video_dokumenter' => $videoDokumenter,
         ]);
     }
 

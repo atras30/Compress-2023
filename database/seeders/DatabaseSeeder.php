@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             DivisiSeeder::class,
             RegistrationSeeder::class,
+            KaryaSeeder::class,
+
         ]);
     }
 }
