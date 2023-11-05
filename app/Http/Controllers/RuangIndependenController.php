@@ -7,6 +7,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\sendEmail;
+use App\Models\ArtLike;
 use App\Models\Form;
 use Carbon\Carbon;
 
@@ -32,6 +33,33 @@ class RuangIndependenController extends Controller
         ]);
     }
 
+    public function getIp(){
+        foreach (array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'HTTP_X_FORWARDED', 'HTTP_X_CLUSTER_CLIENT_IP', 'HTTP_FORWARDED_FOR', 'HTTP_FORWARDED', 'REMOTE_ADDR') as $key){
+            if (array_key_exists($key, $_SERVER) === true){
+                foreach (explode(',', $_SERVER[$key]) as $ip){
+                    $ip = trim($ip); // just to be safe
+                    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) !== false){
+                        return $ip;
+                    }
+                }
+            }
+        }
+        return request()->ip(); // it will return the server IP if the client IP is not found using this method.
+    }
+
+    public function like(Request $request){
+        $art = Art::find($request->id);
+
+        try {
+            ArtLike::create([
+                'ip' => $this->getIp(),
+                'art_id' => $art->id
+            ]);
+        } catch(\Exception $e) {
+            throw new \Exception($e->getMessage());
+        }
+    }
+
     public function daftarruangindependen(){
         return view('daftarruangindependen', [
             'title' => "Daftar Ruang Independen"
@@ -43,9 +71,9 @@ class RuangIndependenController extends Controller
             'title' => "Daftar Mobile Journalism"
         ]);
     }
-    
+
     public function formValidateMOJO(Request $request){
-        
+
         $validReq = $request->validate([
             'namalengkap' => 'required',
             'universitas' => 'required',
@@ -56,7 +84,7 @@ class RuangIndependenController extends Controller
             'instagram' => 'required',
             'linkkaryaig' => 'required',
         ]);
-        
+
         $validReq['type']='Mobile Journalism';
 
         $extension = $request->file('bukti')->getClientOriginalExtension();
@@ -70,7 +98,7 @@ class RuangIndependenController extends Controller
             'body' => 'Terima Kasih telah mendaftarkan karyanya.
                         Stay Tune terus media sosial kitaa!!',
         ];
-        
+
         Mail::to($request->email)->send(new sendEmail($mailData));
 
         Alert::html('Thankyou!', 'You\'ve Successfully Registered.<br> Please wait for further information <br> <small>Stay tune on our instagram <a href="https://www.instagram.com/commpressumn">@commpressumn</a></small>', 'success');
@@ -85,7 +113,7 @@ class RuangIndependenController extends Controller
     }
 
     public function formValidateLFA(Request $request){
-        
+
         $validReq = $request->validate([
             'namalengkap' => 'required',
             'universitas' => 'required',
@@ -95,17 +123,17 @@ class RuangIndependenController extends Controller
             'bukti' => 'required',
             'pathfilehasilkarya' => 'required',
         ]);
-        
+
         $validReq['type']='Long-Form Article';
         $extensionbuktibayar = $request->file('bukti')->getClientOriginalExtension();
         $pdfname = $request->file('pathfilehasilkarya')->getClientOriginalName();
-        
+
         $buktibayar = $request->namalengkap.'_BuktiBayar_LFA_'.now()->timestamp.'.'.$extensionbuktibayar;
-        $filepdf = now()->timestamp.'_'.$pdfname;        
-        
+        $filepdf = now()->timestamp.'_'.$pdfname;
+
         $request->file('pathfilehasilkarya')->storeAs('pendaftar', $filepdf);
         $request->file('bukti')->storeAs('pendaftar', $buktibayar);
-        
+
         $validReq['bukti']=$buktibayar;
         $validReq['pathfilehasilkarya']=$filepdf;
 
@@ -115,7 +143,7 @@ class RuangIndependenController extends Controller
             'body' => 'Terima Kasih telah mendaftarkan karyanya.
                         Stay Tune terus media sosial kitaa!!',
         ];
-        
+
         Mail::to($request->email)->send(new sendEmail($mailData));
 
         Alert::html('Thankyou!', 'You\'ve Successfully Registered.<br> Please wait for further information <br> <small>Stay tune on our instagram <a href="https://www.instagram.com/commpressumn">@commpressumn</a></small>', 'success');
@@ -130,7 +158,7 @@ class RuangIndependenController extends Controller
     }
 
     public function formValidateNI(Request $request){
-        
+
         $validReq = $request->validate([
             'namalengkap' => 'required',
             'universitas' => 'required',
@@ -140,14 +168,14 @@ class RuangIndependenController extends Controller
             'bukti' => 'required',
             'pathfilehasilkarya' => 'required',
         ]);
-        
+
         $validReq['type']='News Infographic';
         $extensionbuktibayar = $request->file('bukti')->getClientOriginalExtension();
         $pdfname = $request->file('pathfilehasilkarya')->getClientOriginalName();
-        
+
         $buktibayar = $request->namalengkap.'_BuktiBayar_NI_'.now()->timestamp.'.'.$extensionbuktibayar;
-        $filepdf = now()->timestamp.'_'.$pdfname;        
-        
+        $filepdf = now()->timestamp.'_'.$pdfname;
+
         $request->file('pathfilehasilkarya')->storeAs('pendaftar', $filepdf);
         $request->file('bukti')->storeAs('pendaftar', $buktibayar);
 
@@ -160,7 +188,7 @@ class RuangIndependenController extends Controller
             'body' => 'Terima Kasih telah mendaftarkan karyanya.
                         Stay Tune terus media sosial kitaa!!',
         ];
-        
+
         Mail::to($request->email)->send(new sendEmail($mailData));
 
         Alert::html('Thankyou!', 'You\'ve Successfully Registered.<br> Please wait for further information <br> <small>Stay tune on our instagram <a href="https://www.instagram.com/commpressumn">@commpressumn</a></small>', 'success');
