@@ -15,6 +15,6 @@ class Art extends Model
     ];
 
     public function likes(): HasMany{
-        return $this->hasMany(ArtLikes::class);
+        return $this->hasMany(ArtLike::class);
     }
 }

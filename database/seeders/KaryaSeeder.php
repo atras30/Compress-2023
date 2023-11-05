@@ -80,7 +80,7 @@ class KaryaSeeder extends Seeder
         Art::create([
             "id" => "8",
             "image_path" => "/images/ruangIndependen/pameran/teh yan.jpeg",
-            "title" => "Maestro Legendaris Teh Yan ‘Terakhir’ Di Tangerang",
+            "title" => "Maestro Legendaris Teh Yan 'Terakhir' Di Tangerang",
             "nama_pembuat" => "Jessica Adriana",
             "link" => "https://multimedianusantara-my.sharepoint.com/personal/berto_basillisa_lecturer_umn_ac_id/_layouts/15/stream.aspx?id=%2Fpersonal%2Fberto%5Fbasillisa%5Flecturer%5Fumn%5Fac%5Fid%2FDocuments%2FDOCJOUR%2FBEST%20OF%206%2FOEN%20SIN%20YONG%5FMAESTRO%20LEGENDARIS%20TEH%20YAN%20%E2%80%98TERAKHIR%E2%80%99%C2%A0DI%C2%A0TANGERANG%5FJESSICA%20ADRIANA%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview",
             "tipe" => "video dokumenter",
@@ -90,7 +90,7 @@ class KaryaSeeder extends Seeder
             "id" => "9",
             "image_path" => "/images/ruangIndependen/pameran/pantiasuhan.jpeg",
             "title" => "Tempat Bernaung Bagi Mereka yang Terlantar",
-            "nama_pembuat" => "ASamuel Martinus",
+            "nama_pembuat" => "Samuel Martinus",
             "link" => "https://multimedianusantara-my.sharepoint.com/personal/berto_basillisa_lecturer_umn_ac_id/_layouts/15/stream.aspx?id=%2Fpersonal%2Fberto%5Fbasillisa%5Flecturer%5Fumn%5Fac%5Fid%2FDocuments%2FDOCJOUR%2FBEST%20OF%206%2FTempat%20Bernaung%20Bagi%20Mereka%20yang%20Terlantar%5F00000042647%5FSAMUEL%20MARTINUS%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview",
             "tipe" => "video dokumenter",
         ]);
