@@ -14,11 +14,12 @@ class WorkshopRegistration extends Model
     protected $fillable = [
         'full_name',
         'email',
-        'asal-universitas',
+        'asal_universitas',
         'line_id_or_whatsapp_number',
         'nim',
         'major',
         'angkatan',
         'know_commpress_from',
+        'alasan'
     ];
 }

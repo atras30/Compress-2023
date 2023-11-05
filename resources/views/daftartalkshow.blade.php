@@ -18,6 +18,11 @@
       .title6{
         font-size:4rem!important;
       }
+
+      .title7{
+        font-size:2rem!important;
+        width:40rem!important;
+      }
       .hero-title2{
         font-size: 3rem!important;
       }
@@ -77,6 +82,11 @@
 
       .title6{
         font-size:2.5rem!important;
+      }
+
+      .title7{
+        font-size:2rem!important;
+        width:30rem!important;
       }
     }
 
@@ -248,12 +258,15 @@
       <section class="d-flex justify-content-center align-items-center flex-column ptop-7">
         <div class="position-relative text-center">
             <img class="mw-100" style="width:54rem; padding-bottom:3rem;"src="{{ asset('/images/talkshow/registration-title-bg.png')}}"/>
-            <div class="position-absolute top-50 start-50 translate-middle fs-2 fw-bold text-black text-length">
+            <div class="position-absolute top-50 start-50 translate-middle fs-2 fw-bold text-black">
               <div class="px-5 font-bazinga text-info title5" style="font-size:4rem;">
                   Registrasi:
               </div>
               <div class="px-5 font-bazinga text-warning title6" style="font-size:5rem;">
                   Talkshow
+              </div>
+              <div class="px-5 font-bazinga text-warning title7" style="font-size:3rem; width:50rem;">
+                  "CERDAS MEMILIH: MENILIK INFORMASI, BIJAK BEREKSPRESI"
               </div>
             </div>
         </div>

@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::table('workshop_registrations', function (Blueprint $table) {
             $table->string('angkatan')->after('major')->nullable(true);
-            $table->string('asal-universitas')->after('full_name');
+            $table->string('alasan')->after('know_commpress_from')->nullable(true);
+            $table->string('asal_universitas')->after('full_name');
             $table->string('nim')->nullable(true)->change();
             $table->string('major')->nullable(true)->change();
             $table->string('email', 512)->nullable(true)->change();
@@ -27,7 +28,8 @@ return new class extends Migration
     {
         Schema::table('workshop_registrations', function (Blueprint $table) {
             $table->dropColumn('angkatan');
-            $table->dropColumn('asal-universitas');
+            $table->dropColumn('asal_universitas');
+            $table->dropColumn('alasan');
             $table->string('nim')->nullable(false)->change();
             $table->string('major')->nullable(false)->change();
             $table->string('email', 512)->nullable(false)->change();

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Form;
 use App\Exports\recruitmentExport;
+use App\Models\Talkshow;
+use App\Models\WorkshopRegistration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
@@ -50,7 +52,9 @@ class AdminController extends Controller
     {
         return view('admin.dashboard', [
             'title' => "Registration",
-            "registeredUsers" => Form::all()
+            "registeredTalkshow" => Talkshow::all(),
+            "registeredWorkshop" => WorkshopRegistration::all()
+
         ]);
     }
 

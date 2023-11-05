@@ -19,6 +19,12 @@ class RuangIndependenController extends Controller
         ]);
     }
 
+    public function pameran(){
+        return view('pameran',[
+            'title' => "Pameran Commpress",
+        ]);
+    }
+
     public function daftarruangindependen(){
         return view('daftarruangindependen', [
             'title' => "Daftar Ruang Independen"

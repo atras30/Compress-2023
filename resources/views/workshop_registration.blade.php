@@ -23,6 +23,22 @@
       }
     }
 
+    @media(max-width:450px){
+      .title1{
+        font-size:3rem!important;
+      }
+      .title2{
+        font-size:2rem!important;
+      }
+
+      .title3{
+        font-size:2rem!important;
+      }
+      .title4{
+        font-size:2.5rem!important;
+      }
+    }
+
     .bg-red {
       background-color: #BB181B;
     }
@@ -69,12 +85,6 @@
       font-family: Bazinga;
     }
 
-    .hero-title {
-      font-size: 3.5rem;
-      text-shadow: 1px -2px 0 #000, 2px 4px 0 #000, 3px 6px 0 #000;
-      -webkit-text-stroke: 2px #000;
-    }
-
     .title-description {
       font-family: 'Inter', sans-serif;
     }
@@ -116,8 +126,8 @@
 
     <div class="position-absolute w-100 h-100 fw-bold">
       <div class="gap-1 d-flex flex-column justify-content-center h-100 mx-4 mx-md-5">
-        <div class="text-white font-bazinga" style="font-size:3.5rem;">WORKSHOP:</div>
-        <div class="text-warning font-bazinga" style="font-size:6.5rem">TBA</div>
+        <div class="text-white font-bazinga title1" style="font-size:3.5rem;">WORKSHOP:</div>
+        <div class="text-warning font-bazinga title2" style="font-size:4.5rem; max-width:70rem;">"COMMMPRESS 2023: Kebebasan Pers Balutan Komik Jurnalistik"</div>
         <section class="d-flex flex-column flex-lg-row pleft-2 gap-4 mb-5 pb-5">
             <div class="flex-item position-relative" style="max-width: 70%">
                 <a id="btn-daftar" href="#formdaftar"><img class="mw-100" src="{{ asset('/images/components/buttons/button-rounded.png') }}" alt="Button Rounded">
@@ -136,29 +146,27 @@
     {{-- Background Assets --}}
     <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/road-to-yja/base/top-bottom.png') }}" alt="bottom">
 
-    <div class="w-100 h-100 fw-bold pt-5 mb-5 pb-5 position-relative">
+    <div class="w-100 h-100 fw-bold pt-5 pb-5 position-relative">
       <div class="speaker d-flex flex-column flex-xl-row justify-content-center h-100 mx-4 mx-md-5">
         <div class="flex-item d-flex justify-content-center align-items-center flex-column">
-          <h3 class="fw-bold">PEMBICARA I</h3>
+          <h1 class="fw-bold font-bazinga text-white">PEMBICARA I</h1>
           <div class="position-relative d-flex justify-content-center align-items-center">
-            <img style="max-width: 80%;" src="{{ asset('/images/workshop/registration/pembicara-1.png') }}" alt="pembicara-1">
-            <img class="position-absolute" style="max-width: 50%; bottom: -15%; left: -5%" src="{{ asset('/images/workshop/registration/floating-text-1.png') }}" alt="floating-text-1">
+            <img style="max-width: 80%; margin-left:5rem;" src="{{ asset('/images/workshop/registration/pembicara1.png') }}" alt="pembicara-1">
           </div>
         </div>
 
-        <div class="flex-item d-flex justify-content-center align-items-center flex-column">
-          <h3 class="fw-bold">PEMBICARA II</h3>
+        <div class="flex-item d-flex justify-content-center align-items-center flex-column mt-4">
+          <h1 class="fw-bold font-bazinga text-white">PEMBICARA II</h1>
           <div class="position-relative d-flex justify-content-center align-items-center">
-            <img style="max-width: 80%;" src="{{ asset('/images/workshop/registration/pembicara-2.png') }}" alt="pembicara-1">
-            <img class="position-absolute" style="max-width: 50%; bottom: -15%; right: 5%" src="{{ asset('/images/workshop/registration/floating-text-2.png') }}" alt="floating-text-2">
+            <img style="max-width: 80%; margin-right:5rem;" src="{{ asset('/images/workshop/registration/pembicara2.png') }}" alt="pembicara-2">
           </div>
         </div>
       </div>
     </div>
 
     <div class="description position-relative mb-5">
-      <div class="fs-2 text-center fw-bold">COMIC JOURNALISM</div>
-      <div class="mx-auto px-5" style="max-width: 55rem; text-align:justify;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur inventore dolorum, quidem voluptatum magni aliquid vero fuga totam recusandae, neque odio. Molestiae non incidunt distinctio suscipit amet sed similique aliquam cumque hic, possimus id dolore itaque facilis illum iste quisquam delectus ipsum nobis quam vel nam commodi autem tempore? Magnam corrupti expedita laborum, voluptate ducimus molestias incidunt temporibus, aperiam id quasi odio provident, accusantium excepturi veritatis nihil. Animi nemo fugit ipsum exercitationem quia distinctio, nihil expedita neque, reprehenderit, debitis quam!</div>
+      <h1 class="fs-1 text-center fw-bold font-bazinga text-white">COMIC JOURNALISM</h1>
+      <div class="fs-5 mx-auto px-5 mt-3 fw-bold text-black" style="max-width: 55rem; text-align:justify;">Jurnalisme komik (juga dikenal sebagai "berita komik" atau "jurnalisme grafis") adalah bentuk media yang menggabungkan elemen-elemen komik atau ilustrasi dengan jurnalisme untuk menyampaikan berita, isu sosial, atau laporan kejadian dunia nyata. Ini adalah cara kreatif dan visual untuk menyampaikan informasi dan cerita kepada pembaca.</div>
     </div>
   </div>
 
@@ -172,10 +180,10 @@
 
     <div class="w-100 h-100 fw-bold pt-5 mb-5 pb-5 position-relative" id="formdaftar">
       <div class="position-relative d-flex justify-content-center align-items-center flex-column">
-        <img class="mw-100 px-4" style="width: 600px;" src="{{ asset('/images/workshop/registration/cloud-registrasi-workshop.png') }}" alt="">
+        <img class="mw-100 px-4" style="width: 45rem;" src="{{ asset('/images/workshop/registration/cloud-registrasi-workshop.png') }}" alt="">
         <div class="position-absolute start-50 top-50 translate-middle">
-          <div class = "font-bazinga text-info" style="font-size:3rem;">REGISTRASI:</div>
-          <div class = "font-bazinga text-warning" style="font-size:4rem;">WORKSHOP</div>
+          <div class = "font-bazinga text-info title3" style="font-size:3rem;">REGISTRASI:</div>
+          <div class = "font-bazinga text-warning title4" style="font-size:4rem;">WORKSHOP</div>
         </div>
       </div>
 
@@ -205,7 +213,7 @@
           @error('asal-universitas')
             <div style="padding: .5rem;" class="alert alert-danger form-control px-3">{{ $message }}</div>
           @enderror
-          <div class="input-form-workshop mb-4">
+          <div class="input-form-workshop mb-4 mt-4">
             <label style="display: none" id="prodilabel" for="program-studi" class="judul-list text-white">Program Studi</label>
             <select style="display: none" name="program-studi" id="program-studi" class="form-control px-3" value="{{ @old('program-studi') }}">
                 <option value="" disabled selected>Select an option</option>
@@ -374,14 +382,6 @@
         emaillabel.style.display = "none";
         emailinput.style.display = "none";
 
-      }
-
-
-      if (value == "Lainnya") {
-        inputOther.style.display = "inline";
-
-      } else {
-        inputOther.style.display = "none";
       }
     }
 

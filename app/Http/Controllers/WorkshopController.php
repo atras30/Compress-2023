@@ -83,12 +83,14 @@ class WorkshopController extends Controller
             WorkshopRegistration::create([
                 "full_name" => $validated['nama-lengkap'],
                 "nim" => $validated['nim'],
-                'asal-universitas'=> $validated['asal-universitas'],
+                'asal_universitas'=> $validated['asal-universitas'],
                 "major" => $validated['program-studi'] ?? null,
                 "angkatan" => $validated["angkatan"] ?? null,
                 "email" => $validated['email'],
                 "line_id_or_whatsapp_number" => $validated['line-whatsapp'],
                 "know_commpress_from" => $validated['know-commpress-from'],
+                "alasan" => $validated['alasan'],
+
             ]);
 
             session()->flash("flash_message", "Yeay, Pendaftaran Workshop Sukses!");

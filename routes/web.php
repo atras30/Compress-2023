@@ -47,6 +47,7 @@ Route::prefix('/admin')->group(function () {
 
 Route::prefix('/ruangindependen')->group(function () {
     Route::get('/', [RuangIndependenController::class, "ruangindependen"])->name('ruangindependen');
+    Route::get('/pameran', [RuangIndependenController::class, 'pameran'])->name('pameran');
     Route::prefix(('/daftar'))->group(function(){
         Route::get('', [RuangIndependenController::class, "daftarruangindependen"])->name('daftarruangindependen');
 
@@ -58,6 +59,8 @@ Route::prefix('/ruangindependen')->group(function () {
 
         Route::get('/news-infographic', [RuangIndependenController::class, "news_infographic"])->name('news_infographic');
         Route::post('/news-infographic', [RuangIndependenController::class, "formValidateNI"])->name('validateNI');
+
+        
 
         Route::get('/terimakasih', [RuangIndependenController::class, "akhirruangindependen"])->name('akhirruangindependen');
     });
