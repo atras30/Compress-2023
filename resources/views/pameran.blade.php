@@ -746,19 +746,15 @@
         <div id="carouselExample2" class="carousel">
           <div class="carousel-inner carousel-inner3 gap-5">
             @foreach ($video_dokumenter as $video)
-              <form action="{{ route('karya.like') }}?id={{ $video->id }}" method="post">
-                @csrf
-                <div class="carousel-item carousel-item3 active">
-                  <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $video->nama_pembuat }}</h2>
-                  <a href="{{ $video->link }}" target="_blank"><img src="{{ $video->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
-                  <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
-                    <button class="btn">Like</button>
-                    <div>Total Likes: 4000</div>
-                  </div>
-                  <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $video->title }}"</h3>
-
+              <div class="carousel-item carousel-item3 active">
+                <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $video->nama_pembuat }}</h2>
+                <a href="{{ $video->link }}" target="_blank"><img src="{{ $video->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
+                <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                  <button onclick="likePost('{{ $video->id }}')" class="btn">Like</button>
+                  <div id="video_dokumenter_{{ $video->id }}">Total Likes: {{ $video->likes_count }}</div>
                 </div>
-              </form>
+                <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $video->title }}"</h3>
+              </div>
             @endforeach
 
 
@@ -874,24 +870,24 @@
             </div>
           </section>
           <!--<img class="position-absolute"style="width:60%;height:700px;z-index:1;"src="{{ asset('/images/ruangIndependen/pameran/Group 66.png') }}"></img>
-                      <img class="position-relative"style="margin-top:60px;margin-left:130px;width:15%; height:30%; z-index:2;"src="{{ asset('/images/ruangIndependen/pameran/Susu Tango Uk 1.png') }}"></img>
-                      <img class=" position-relative"style="margin-top:60px;margin-left:30px;z-index:2;width:7%; height:20%;"src="{{ asset('/images/ruangIndependen/pameran/Teh Gelas Uk 1.png') }}"></img>
-                      <img class=" position-relative"style="margin-top:60px;margin-left:30px;width:15%; height:30%;z-index:2;"src="{{ asset('/images/ruangIndependen/pameran/Crystalin Uk 1.png') }}"></img>-->
+                                            <img class="position-relative"style="margin-top:60px;margin-left:130px;width:15%; height:30%; z-index:2;"src="{{ asset('/images/ruangIndependen/pameran/Susu Tango Uk 1.png') }}"></img>
+                                            <img class=" position-relative"style="margin-top:60px;margin-left:30px;z-index:2;width:7%; height:20%;"src="{{ asset('/images/ruangIndependen/pameran/Teh Gelas Uk 1.png') }}"></img>
+                                            <img class=" position-relative"style="margin-top:60px;margin-left:30px;width:15%; height:30%;z-index:2;"src="{{ asset('/images/ruangIndependen/pameran/Crystalin Uk 1.png') }}"></img>-->
 
 
           <!--<h1 class="text-center">SPONSOR</h1>
-                  <div class="px-5 mb-5 position-absolute" style="left:20%; margin-left:-25px">
-                      <img class="w-100"src="{{ asset('/images/ruangIndependen/pameran/Group 66.png') }}"></img>
-                  </div>
-                  <div class=" position-relative gap-5 d-flex justify-content-center align-items-center">
-                      <img class=" sponsor-top"src="{{ asset('/images/ruangIndependen/pameran/Susu Tango Uk 1.png') }}"></img>
-                      <img class=" sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Teh Gelas Uk 1.png') }}"></img>
-                      <img class=" sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Crystalin Uk 1.png') }}"></img>
-                  </div>
-                  <div class=" position-relative gap-5 d-flex justify-content-center align-items-center mt-5">
-                      <img class=""src="{{ asset('/images/ruangIndependen/pameran/Hop Hop Uk 1.png') }}"></img>
-                      <img class=""src="{{ asset('/images/ruangIndependen/pameran/Pandaboo Uk 1.png') }}"></img>
-                  </div> -->
+                                        <div class="px-5 mb-5 position-absolute" style="left:20%; margin-left:-25px">
+                                            <img class="w-100"src="{{ asset('/images/ruangIndependen/pameran/Group 66.png') }}"></img>
+                                        </div>
+                                        <div class=" position-relative gap-5 d-flex justify-content-center align-items-center">
+                                            <img class=" sponsor-top"src="{{ asset('/images/ruangIndependen/pameran/Susu Tango Uk 1.png') }}"></img>
+                                            <img class=" sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Teh Gelas Uk 1.png') }}"></img>
+                                            <img class=" sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Crystalin Uk 1.png') }}"></img>
+                                        </div>
+                                        <div class=" position-relative gap-5 d-flex justify-content-center align-items-center mt-5">
+                                            <img class=""src="{{ asset('/images/ruangIndependen/pameran/Hop Hop Uk 1.png') }}"></img>
+                                            <img class=""src="{{ asset('/images/ruangIndependen/pameran/Pandaboo Uk 1.png') }}"></img>
+                                        </div> -->
 
 
 
@@ -904,6 +900,29 @@
 @section('scripts')
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script>
+    async function likePost(artId) {
+      let response = null;
+      const fpJs = await window.fp.load();
+      const {
+        visitorId
+      } = await fpJs.get();
+
+      try {
+        const response = await window.axios.post(`{{ route('karya.like') }}`, {
+          artId,
+          visitorId
+        });
+
+        const newTotalLike = response.data.new_total_like;
+
+        const relatedArtElement = document.querySelector(`#video_dokumenter_${artId}`);
+        relatedArtElement.textContent = `Total Likes: ${newTotalLike}`;
+      } catch (e) {
+        console.log("Error in like post API: ", e);
+        return;
+      }
+    }
+
     //CAROUSEL AUDIO
     var carouselWidth = $(".carousel-inner1")[0].scrollWidth;
     var cardWidth = $(".carousel-item1").width();

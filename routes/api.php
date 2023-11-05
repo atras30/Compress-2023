@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RuangIndependenController;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -19,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('ruangindependen/like', [RuangIndependenController::class, "like"])->name('karya.like');
+
 
 Route::get("/time/diff", function (Request $request) {
     $startDates = [];

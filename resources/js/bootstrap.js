@@ -5,7 +5,9 @@
  */
 
 import axios from 'axios';
+import fp from '@fingerprintjs/fingerprintjs';
 window.axios = axios;
+window.fp = fp;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 

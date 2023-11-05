@@ -10,32 +10,33 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  <link rel="icon" href="{{asset('images/home/components/logo.png')}}">
+  <link rel="icon" href="{{ asset('images/home/components/logo.png') }}">
   @yield('styles')
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
     @font-face {
-        font-family: 'Bazinga';
-        font-style: normal;
-        font-weight: 400;
-        src: url('fonts/Bazinga-Regular.ttf');
+      font-family: 'Bazinga';
+      font-style: normal;
+      font-weight: 400;
+      src: url('fonts/Bazinga-Regular.ttf');
     }
 
     .h-line-left {
       border-left: #000 2px solid;
     }
 
-    .nav-item{
+    .nav-item {
       font-family: Bazinga;
       margin: 1vh 1vw;
     }
 
-    .pleft-3{
+    .pleft-3 {
       margin-left: 3rem;
     }
-    
   </style>
+
+  @vite('resources/js/app.js')
 </head>
 
 <body>
@@ -67,7 +68,6 @@
     </div>
   </nav>
   @yield('contents')
-  @yield('scripts')
   <div>
     <!-- Footer -->
     <footer id="footer" class="text-center text-lg-start text-white" style="background-color: #BB181B">
@@ -80,10 +80,10 @@
             <div>GET READY FOR BIGGER CHANGE!</div>
             <div class="mb-4">- COMMPRESS 2023 -</div>
             <div class="d-inline-flex">
-                <a href="https://www.instagram.com/commpressumn/"><img style="width: 4rem;" src="{{asset('/images/logos/instagram.svg')}}" alt=""></a>
-                <a href="https://www.instagram.com/ruang.indiependen/"><img style="width: 4rem;" src="{{asset('/images/logos/instagram.svg')}}" alt=""></a>
-                <a href="https://www.tiktok.com/@commpressumn"><img style="width: 3rem;" src="{{asset('/images/logos/tiktok.png')}}" alt=""></a>
-                <a href="https://www.linkedin.com/company/commpress-umn/mycompany/"><img style="width: 3rem;" src="{{asset('/images/logos/linkedin.png')}}" alt=""></a>
+              <a href="https://www.instagram.com/commpressumn/"><img style="width: 4rem;" src="{{ asset('/images/logos/instagram.svg') }}" alt=""></a>
+              <a href="https://www.instagram.com/ruang.indiependen/"><img style="width: 4rem;" src="{{ asset('/images/logos/instagram.svg') }}" alt=""></a>
+              <a href="https://www.tiktok.com/@commpressumn"><img style="width: 3rem;" src="{{ asset('/images/logos/tiktok.png') }}" alt=""></a>
+              <a href="https://www.linkedin.com/company/commpress-umn/mycompany/"><img style="width: 3rem;" src="{{ asset('/images/logos/linkedin.png') }}" alt=""></a>
             </div>
           </div>
           <div class="h-line-left d-none d-md-block"></div>
@@ -100,7 +100,8 @@
     </footer>
     <!-- Footer -->
   </div>
-  <!-- End of .container -->
+
+  @yield('scripts')
 </body>
 
 </html>

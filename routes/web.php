@@ -60,8 +60,6 @@ Route::prefix('/ruangindependen')->group(function () {
         Route::get('/news-infographic', [RuangIndependenController::class, "news_infographic"])->name('news_infographic');
         Route::post('/news-infographic', [RuangIndependenController::class, "formValidateNI"])->name('validateNI');
 
-        Route::post('/like', [RuangIndependenController::class, "like"])->name('karya.like');
-
         Route::get('/terimakasih', [RuangIndependenController::class, "akhirruangindependen"])->name('akhirruangindependen');
     });
 });
