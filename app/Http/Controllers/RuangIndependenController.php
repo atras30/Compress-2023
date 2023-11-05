@@ -27,6 +27,7 @@ class RuangIndependenController extends Controller
         $artikelInteraktif = Art::where('tipe', 'artikel interaktif')->withCount('likes')->get();
         $videoDokumenter = Art::where('tipe', 'video dokumenter')->withCount('likes')->get();
         $audioDokumenter = Art::where('tipe', 'audio dokumenter')->withCount('likes')->get();
+
         return view('pameran',[
             'title' => "Pameran Commpress",
             'artikel_interaktif' => $artikelInteraktif,

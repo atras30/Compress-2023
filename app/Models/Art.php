@@ -13,7 +13,9 @@ class Art extends Model
     protected $guarded = [
         "id"
     ];
+    protected $with = ["likes"];
 
+    //Relationships
     public function likes()
     {
         return $this->hasMany(ArtLike::class, 'art_id');
