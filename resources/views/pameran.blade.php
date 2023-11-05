@@ -361,205 +361,25 @@
             {{-- Episodes --}}
             <div id="carouselExampleControls" class="carousel" >
                 <div class="carousel-inner carousel-inner1 mb-5">
-                    
+                    @foreach($audio_dokumenter as $audio)
                         <div class="carousel-item carousel-item1 active">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #1 - Cerita Anak Kampung (Kota) Tangerang Raya</h5>
-                                <p class="card-text">Tangerang Raya telah bertransformasi menjadi kawasan tinggal yang modern dan elit. Komplek perumahan menjamur, tetapi masih banyak juga kawasan kampung kota.<span id="dots1">...</span><span id="more1"> Sementara anak-anak komplek dapat menikmati fasilitas bermain seperti taman bermain dan kolam renang di dalam perumahan atau clubhouse, anak-anak yang tinggal di luar perumahan tidak bisa mengakses fasilitas yang sama secara leluasa. Di episode "Bahagianya Anak yang Tinggal di Kampung",  kami ikut bermain bersama anak-anak yang tinggal di kampung kota. Yuk ikuti keseruan kami bermain dengan mereka!</span></p>
-                                <button onclick="myFunction1()" class="btn btn-link"id="myBtn1">Read more</button>
-                                <a href="https://open.spotify.com/episode/2uRkpGD23svgSZF0yt78GY?si=mgMgvOCSSxycEqSs_1gfPA" target="_blank" class="btn btn-success">Dengar di Spotify</a>
+                            <div class="card">
+                                <div class="img-wrapper">
+                                    <img src="{{ $audio->image_path }}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$audio->title}}</h5>
+                                    <p class="card-text">{!! $audio->deskripsi !!}</p>
+                                    <button onclick="myFunction1()" class="btn btn-link"id="myBtn1">Read more</button>
+                                    <a href="{{$audio->link}}" target="_blank" class="btn btn-success">Dengar di Spotify</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                     
                     
-                    <div class="carousel-item carousel-item1">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #2 - Sepanjang Jalan Tangerang</h5>
-                                <p class="card-text">Kawasan Tangerang Raya berkembang pesat sebagai kawasan penyangga Jakarta. Di banyak area tertentu, kita bisa menemukan banyak jalanan lebar yang dilengkapi trotoar. Kerapihan yang tak merata<span id="dots2">...</span><span id="more2"> ini cukup memberi kesan modern seperti kota-kota di negara maju. Sayangnya, perkembangan transportasi publik tidak sama pesatnya. 
-                                <br><br>
-                                Di episode 'Sepanjang Jalan Tangerang' ini, kami mencari jawaban dari pertanyaan kenapa sih tidak semua kawasan di Tangerang Raya  terhubung oleh angkutan umum? Kira-kira transportasi umum mana yang cenderung lebih nyaman, cepat, dan harganya yang ramah di kantong? Untuk mengetahui jawabannya, yuk ikuti perjalanan reporter kami berjalan-jalan dengan angkutan umum lalu membandingkannya dengan taksi daring.</span></p>
-                                <button onclick="myFunction2()" class="btn btn-link"id="myBtn2">Read more</button>
-                                <a href="https://open.spotify.com/episode/4idfSxBjkqH7EsxXkn0PFz?si=2ykiWQeCScqkVVlCH7Azvw" target="_blank" class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #3 - SKKM: Sirkel dan Kasta Kehidupan Mahasiswa</h5>
-                                <p class="card-text">Ada mahasiswa yang memiliki kehidupan mewah dan serba ada. Ada mahasiswa yang harus berhemat untuk memenuhi kebutuhan ngekos dan kuliah.<span id="dots3">...</span><span id="more3"> Kok bisa beda banget ya kehidupan mahasiswa dan mahasiswi ini? Nah, episode kali ini akan membahas mengenai gaya hidup mahasiswa dan mahasiswi di perguruan tinggi swasta daerah Tangerang Raya.
-                                <br><br>
-                                Apakah benar gaya hidup yang berbeda tersebut menciptakan strata pergaulan di antara mereka? Yuk, dengerin episode “SKKM: Sirkel dan Kasta Kehidupan Mahasiswa” untuk mencari tahu ceritanya!<span></p>
-                                <button onclick="myFunction3()" class="btn btn-link"id="myBtn3">Read more</button>
-                                <a href="https://open.spotify.com/episode/5UgJTFsTzdbTLWuV07M44Q?si=e98beef5ee5f44fb" target="_blank" class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1 ">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #4 - Sebulan Hidup di Tangerang Raya, Berapa Sih Pengeluarannya?</h5>
-                                <p class="card-text">Episode kali ini berbicara tentang seberapa besar perbedaan biaya hidup bulanan warga klaster dengan warga kampung, dan apa saja<span id="dots4">...</span><span id="more4"> yang mempengaruhinya. Kami mewawancarai berbagai narasumber untuk membandingkan berapa pengeluaran dan pemasukan mereka serta apakah sebanding dengan UMR wilayah Tangerang.</span></p>
-                                <button onclick="myFunction4()" class="btn btn-link"id="myBtn4">Read more</button>
-                                <a href="https://open.spotify.com/episode/2Eq4d9pfRDai4lMi5Xihkx?si=cc6z5PdhTQiHTIPS2THVrQ" targer="_blank" class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #5 - Dompet Terkuras, Timbangkan Kualitas</h5>
-                                <p class="card-text">Perguruan Tinggi Swasta atau PTS bergengsi yang ada di sekitaran Tangerang raya, dengan “harga” yang ditawarkan, apakah imbang dengan<span id="dots5">...</span><span id="more5"> “kualitas yang diberikan? Episode kali ini menghadirkan perspektif mahasiswa dari PTS yang bersangkutan dan juga Pengamat pendidikan untuk meninjau lebih lanjut.</span></p>
-                                <button onclick="myFunction5()" class="btn btn-link"id="myBtn5">Read more</button>
-                                <a href="https://open.spotify.com/episode/3XxftCjpZfySvOJvtHayIQ?si=40dfe31292c64010" target="_blank" class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #6 - AADC: Ada Apa di Cluster?</h5>
-                                <p class="card-text">Komplek perumahan identik dengan pemagaran dan akses yang terbatas. Kenyamanan dan keamanan yang ditawarkan komplek perumahan menarik minat warga dengan ekonomi<span id="dots6">...</span><span id="more6"> menengah atas untuk tinggal di sana.
-                                <br><br>
-                                Lalu, bagaimana perkembangan gated housing yang sangat pesat ini memengaruhi gaya hidup penduduk urban? Di episode “AADC: Ada Apa di Cluster?”, kami mengulas gaya hidup di gated housing yang semakin menjamur di Tangerang Raya. Apa sih yang membuat tinggal di komplek itu berbeda?</span></p>
-                                <button onclick="myFunction6()" class="btn btn-link"id="myBtn6">Read more</button>
-                                <a href="https://open.spotify.com/episode/7319ldH9aCHEANcMZ09NSV?si=KZJg28LyRoGq0CLv00qusg" target="_blank" class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1 ">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #7 - Kita yang Tak Setara</h5>
-                                <p class="card-text">Masih adakah di antara kita yang menganggap kalau kualitas sekolah dasar negeri ketinggalan dari sekolah dasar swasta? Di kawasan Tangerang Raya - yang mencakup Kota Tangerang Selatan<span id="dots7">...</span><span id="more7">, Kota Tangerang, Kabupaten Tangerang — pertumbuhan sekolah dasar swasta terlihat pesat. Gedungnya mentereng, reputasinya bagus, dan tentunya: mahal-mahal. Lalu, bagaimana nasib sekolah dasar negeri di kawasan ini? Temukan dan dengarkan, “Kita yang Tak Setara”, dokumenter audio tentang sekolah dasar negeri di Tangerang Raya.</span></p>
-                                <button onclick="myFunction7()" class="btn btn-link"id="myBtn7">Read more</button>
-                                <a href="https://open.spotify.com/episode/3OuJmJYG9sr1Qs6rrfVzwU?si=0611dd2195d54a92" target="_blank" class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #8 - Kehidupan Kampung Kota Tangerang (Bagian 1): Semarak Hajatan</h5>
-                                <p class="card-text">Mari sejenak kita melihat ke realita kehidupan yang berbeda dari biasanya. Dalam part pertama dari episode “Kehidupan Kampung-Kota Tangerang”,<span id="dots81">...</span><span id="more81"> kita akan mengenal budaya gotong royong dan keramahan dari masyarakat desa Curug Sangereng yang berada di jantung dari Gading Serpong lewat nikahan dari Teh Dewi. Seru? Pasti! Dramatis? Yuk, dengarkan sendiri rasanya mengikuti hajatan ini.</span></p>
-                                <button onclick="myFunction81()" class="btn btn-link"id="myBtn81">Read more</button>
-                                <a href="https://open.spotify.com/episode/6ugYdT6IWa1sBjlqiakpQu?si=cb2d9bcbb4e84c31" target="_blank"class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                            <h5 class="card-title">CETAR #8 - Kehidupan Kampung Kota Tangerang (Bagian 2): Tong Tong Tong</h5>
-                                <p class="card-text">Pada part kedua dari episode “Kehidupan Kampung-Kota Tangerang”, kita akan melihat kehidupan masyarakat di Gading Serpong. Bukan, bukan kehidupan<span id="dots82">...</span><span id="more82"> yang terjadi di balik gerbang-gerbang cluster perumahan mewah. Ini cerita tentang mereka yang hidup dan mencari penghidupan di desa Curug Sangereng, di tengah gemerlapnya Gading Serpong yang tampak sangat modern.</span></p>
-                                <button onclick="myFunction82()" class="btn btn-link"id="myBtn82">Read more</button>
-                                <a href="https://open.spotify.com/episode/7LSXRwvx0Ry8V4C6gHnn9H?si=8bdda6f4d4c84e49" target="_blank"class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1 ">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                            <h5 class="card-title">CETAR #8 - Kehidupan Kampung Kota Tangerang (Bagian 3): Tanah Semen</h5>
-                                <p class="card-text">Enak ya rasanya tinggal di BSD dan area dari Gading Serpong ini. Namun, hal berbeda terjadi dengan kampung-kampung<span id="dots83">...</span><span id="more83"> yang ada di sekelilingnya. Part ketiga dari episode Kehidupan Kampung Kota Tangerang kali ini akan mengulik terkait hal tersebut. Selengkapnya dapat teman-teman dengarkan dalam episode ini.</span></p>
-                                <button onclick="myFunction83()" class="btn btn-link"id="myBtn83">Read more</button>
-                                <a href="https://open.spotify.com/episode/5JHftxh1YnXFSMe7DJF46U?si=6074a59327b441dc" target="_blank"class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #9 - The Astonishing Intermoda Terminal</h5>
-                                <p class="card-text">Terminal termodern yang terintegrasi dengan berbagai transportasi umum ini bernama terminal Intermoda. Dalam episode ini, tim Jelajah<span id="dots9">...</span><span id="more9"> berhasil mengelilingi Stasiun Cisauk, Intermoda. Suasana stasiun masih terasa sepi karena mayoritas masyarakat di Tangerang Selatan memiliki kebiasaan car-oriented. Padahal, stasiun ini dinobatkan sebagai stasiun paling maju yang menyediakan berbagai fasilitas apik. Mengejutkannya, hanya di Cisauk, terminal bus dan stasiun KRL berada dalam lokasi yang sama. Namun, mengapa banyak orang lebih memilih menggunakan transportasi pribadi? Stasiun ini sebenarnya hadir untuk memudahkan masyarakat Gading Serpong dan BSD bepergian jarak jauh menggunakan transportasi umum dengan harga yang terjangkau.</span></p>
-                                <button onclick="myFunction9()" class="btn btn-link"id="myBtn9">Read more</button>
-                                <a href="https://open.spotify.com/episode/0FgKPzXRNvJAftysVqR5la?si=a8fd48ce857b4115" target="_blank"class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #10 - The Truth Behind: Property Invesment Owner</h5>
-                                <p class="card-text">Ingin terjun ke investasi properti tapi belum tahu caranya gimana? Udah lama mau main investasi properti tapi gatau peluang kedepannya seperti apa? Bisa jadi<span id="dots10">...</span><span id="more10"> sekarang adalah waktunya mimpi kamu terwujud nih, karena investasi properti sekarang lagi naik daun dan banyak yang menekuni bidang tersebut!
-                                <br><br>
-                                Audio Dokumenter "The Truth Behind: Property Investment Owner" akan menjawab semua pertanyaan kalian. Kali ini Jovita, ditemani dengan dua pakar properti yaitu Virlando dan Dion selaku pemilik properti awam akan membahas tentang investasi properti yang cocok untuk pemula, khususnya properti di bidang kos-kosan dan apartemen di daerah Jakarta dan Tangerang, serta tips-tips menarik untuk pemula, lengkap dengan risikonya. Mau tau lebih lanjut? Langsung dengerin aja The Truth Behind episode spesial ini.</span></p>
-                                <button onclick="myFunction10()" class="btn btn-link"id="myBtn10">Read more</button>
-                                <a href="https://open.spotify.com/episode/6cYDazJEHSwpJE8W0oambP?si=f0a4c5633ba2454f" target="_blank"class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #11 - Sengitnya Memiliki Rumah di Atas Sempitnya Tanah</h5>
-                                <p class="card-text">Pada 2014 Menteri Perumahan Rakyat, Djan Faridz, melaporkan 60 perusahaan pengembang properti besar, seperti Grup Ciputra, Alam Sutera, dan Sinarmas<span id="dots11">...</span><span id="more11"> Land yang melanggar pasal-pasal dalam Undang-Undang Nomor 1 Tahun 2011 tentang Pembangunan Hunian Berimbang bagi Masyarakat Berpenghasilan Rendah. Namun, sampai 2022 ini perusahaan-perusahaan tersebut tetap membangun properti mahal sehingga terkesan tidak mematuhi undang-undang. Akibatnya, semakin banyak masyarakat, khususnya kaum milenial, yang kesulitan mencari rumah terjangkau dan layak huni sehingga dikhawatirkan pada masa depan, akan tumbuh banyak kawasan kumuh.
-                                <br><br>
-                                "Mereka berumah tangga, mereka can not afford untuk mendapatkan rumah karena mereka butuh, tapi can not afford purchasing power mereka dibandingkan harga rumahnya lebih tinggi sehingga mereka end up either tinggal di rumah mertua atau dia nyewa,” pernyataan Sri Mulyani pada pertemuan G20 ini mendukung kekhawatiran generasi milenial akan melambungnya harga rumah yang naik setiap tahun. Episode perdana ini diharapkan menjadi cahaya yang dapat menjawab keresahan masyarakat, meredakan asumsi, memotivasi tiap insan, dan berdampak baik bagi khalayak ramai.</span></p>
-                                <button onclick="myFunction11()" class="btn btn-link"id="myBtn11">Read more</button>
-                                <a href="https://open.spotify.com/episode/3vCXl94uqZx1SNGCKoUKfv?si=sLtLh_iqRluRmagJ0WaULg" target="_blank"class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item carousel-item1">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="{{ asset('/images/ruangIndependen/pameran/coveraudio.png') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">CETAR #12 - Aksi Kucing-kucingan PKL dan Satpol PP</h5>
-                                <p class="card-text">
-                                Sesuai dengan undang undang Lalu Lintas dan Angkutan Jalan UU LAJ : Pasal 28 ayat (2) jo. Pasal 25 ayat (1), ”Setiap orang dilarang melakukan perbuatan<span id="dots12">...</span><span id="more12"> yang mengakibatkan gangguan pada fungsi perlengkapan Jalan. Dalam konteks ini yang dimaksud adalah trotoar sebagai fasilitas untuk pejalan kaki yang terganggu fungsinya menjadi tempat berdagang,” bunyinya. Undang-undang tentang lalu lintas dan angkutan jalan ini menjelaskan tentang trotoar sebagai fasilitas pejalan kaki terganggu fungsinya, maka sesuai tugasnya satpol pp melakukan aksinya. Namun, kenyataan dari aksi kejar - kejaran ini tak sekejam seperti yang diceritakan televisi.Adanya perjanjian kedua belah pihak ikut menjadi sumber utama kejar - kejaran ini sudah tak terlihat.
-                               <br><br>
-                                Seperti yang terjadi di Tangerang yang melibatkan aparat keamanan Gading Serpong dan PKL. undang-undang mengenai lalu lintas dan angkutan jalan ini tidak diikuti oleh kedua belah pihak, baik aparat keamanan Gading Serpong maupun pedagang kaki lima (PKL). Penertiban PKL sampai saat ini masih terjadi. Perbedaannya ialah seperti yang kita tahu, dahulu kejar-kejaran tersebut tidak dapat dihindari dikarenakan PKL yang takut dagangan yang ia jual di ambil oleh pihak yang melakukan penertiban dan tidak jarang juga kejadian pemaksaan dalam melakukan penertiban. Akan tetapi, situasi saat ini berbeda. Kedua pihak tersebut tidak lagi melakukan aksi kejar-kejaran karena saat ini mereka saling membantu satu sama lain dengan membayar iuran. Para pedagang mengatakan bahwa aparat keamanan hanya mengikuti apa kata atasannya.
-                                </span></p>
-                                <button onclick="myFunction12()" class="btn btn-link"id="myBtn12">Read more</button>
-                                <a href="https://open.spotify.com/episode/4YIK97wdoxDOuD4QojRyen?si=95127591290242e4" target="_blank"class="btn btn-success">Dengar di Spotify</a>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    
                 </div>
                 <button class="carousel-control-prev carousel-control-prev1" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

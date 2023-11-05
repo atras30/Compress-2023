@@ -21,12 +21,14 @@ class RuangIndependenController extends Controller
     }
 
     public function pameran(){
-        $artikelInteraktif = Art::where('tipe', 'artikel interaktif')->get();        
-        $videoDokumenter = Art::where('tipe', 'video dokumenter')->get();        
+        $artikelInteraktif = Art::where('tipe', 'artikel interaktif')->withCount('likes')->get();        
+        $videoDokumenter = Art::where('tipe', 'video dokumenter')->withCount('likes')->get();
+        $audioDokumenter = Art::where('tipe', 'audio dokumenter')->withCount('likes')->get();        
         return view('pameran',[
             'title' => "Pameran Commpress",
             'artikel_interaktif' => $artikelInteraktif,
             'video_dokumenter' => $videoDokumenter,
+            'audio_dokumenter' => $audioDokumenter,
         ]);
     }
 

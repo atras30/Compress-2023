@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Art extends Model
 {
@@ -12,4 +13,8 @@ class Art extends Model
     protected $guarded = [
         "id"
     ];
+
+    public function likes(): HasMany{
+        return $this->hasMany(ArtLikes::class);
+    }
 }
