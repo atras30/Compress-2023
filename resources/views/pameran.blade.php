@@ -971,7 +971,7 @@
       }
     });
     var multipleCardCarousel4 = document.querySelector(
-      "#carouselExample2"
+      "#carouselExample3"
     );
     if (window.matchMedia("(min-width: 768px)").matches) {
       //rest of the code
@@ -1010,7 +1010,7 @@
       }
     });
     var multipleCardCarousel5 = document.querySelector(
-      "#carouselExample2"
+      "#carouselExample4"
     );
     if (window.matchMedia("(min-width: 768px)").matches) {
       //rest of the code
