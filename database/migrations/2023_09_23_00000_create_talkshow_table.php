@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->text('namalengkap');
             $table->text('universitas');
-            $table->text('nim')->unique();
+            $table->string('nim')->unique();
             $table->text('prodi');
-            $table->text('email')->unique();
-            $table->text('medsos')->unique();
-            $table->text('asal')->unique();
+            $table->string('email')->unique();
+            $table->string('medsos')->unique();
+            $table->string('asal')->unique();
             $table->timestamps();
         });
     }

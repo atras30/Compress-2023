@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('forms', function (Blueprint $table) {
-            $table->text('nim')->unique(false)->change();
-            $table->text('email')->unique(false)->change();
-            $table->text('medsos')->unique(false)->change();
-            $table->text('instagram')->unique(false)->nullable()->change();
-            $table->text('linkkaryaig')->unique()->nullable()->change();
+            $table->string('nim')->unique(false)->change();
+            $table->string('email')->unique(false)->change();
+            $table->string('medsos')->unique(false)->change();
+            $table->string('instagram')->unique(false)->nullable()->change();
+            $table->string('linkkaryaig')->unique()->nullable()->change();
         });
     }
 

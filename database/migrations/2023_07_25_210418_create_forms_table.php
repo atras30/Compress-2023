@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->text('namalengkap');
             $table->text('universitas');
-            $table->text('nim')->unique();
-            $table->text('email')->unique();
-            $table->text('medsos')->unique();
+            $table->string('nim')->unique();
+            $table->string('email')->unique();
+            $table->string('medsos')->unique();
             $table->text('bukti');
-            $table->text('instagram')->unique()->nullable();
+            $table->string('instagram')->unique()->nullable();
             $table->text('linkkaryaig')->nullable();
             $table->text('pathfilehasilkarya')->nullable();
             $table->enum('type', ['Mobile Journalism', 'Long-Form Article', 'News Infographic']);
