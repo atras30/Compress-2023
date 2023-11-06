@@ -239,12 +239,10 @@
 
       .medpar-top {
         width: 22% !important;
-        ;
       }
 
       .medpar-bottom {
         width: 20% !important;
-        ;
       }
 
     }
@@ -254,7 +252,13 @@
         margin-left: 60px !important;
 
       }
+      .medpar-top {
+        width: 30% !important;
+      }
 
+      .medpar-bottom {
+        width: 30% !important;
+      }
 
     }
 
@@ -736,11 +740,13 @@
             <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Medio By KG Media [horizontal]-black copy 1.png') }}"></img>
             <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Logo radio untar 2.png') }}"></img>
             <img class="medpar-top ms-5 edaran"src="{{ asset('/images/ruangIndependen/pameran/Edaran event 1.png') }}"></img>
-            <img class="medpar-top ms-5 ultimagz"src="{{ asset('/images/ruangIndependen/pameran/ULTIMAGZ copy 1.png') }}"></img>
           </div>
           <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-5">
+            <img class="medpar-top ms-5 ultimagz"src="{{ asset('/images/ruangIndependen/pameran/ULTIMAGZ copy 1.png') }}"></img>
             <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Sigma TV 2.png') }}"></img>
             <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/BFAST MEDIA 1.png') }}"></img>
+          </div>
+          <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-5">
             <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/ALIVE 1.png') }}"></img>
             <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Logo_1-100-removebg-preview 1.png') }}"></img>
             <img class="medpar-bottom2"src="{{ asset('/images/ruangIndependen/pameran/Radio Mercu Buana_ 2.png') }}"></img>
@@ -778,6 +784,10 @@
 
       const documenterElements3 = document.querySelectorAll(".magazine-like-button");
       defineLikeUnlikeButtons(documenterElements3, visitorId);
+
+      const documenterElements3 = document.querySelectorAll(".indepth-like-button");
+      defineLikeUnlikeButtons(documenterElements3, visitorId);
+      
     }
 
     function defineLikeUnlikeButtons(elements, ip) {
