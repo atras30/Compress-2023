@@ -106,7 +106,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "11",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 1.jpg",
             "title" => "CETAR #1 - Cerita Anak Kampung (Kota) Tangerang Raya",
             "deskripsi" => "Tangerang Raya telah bertransformasi menjadi kawasan tinggal yang modern dan elit. Komplek perumahan menjamur, tetapi masih banyak juga kawasan kampung kota.<span id=\"dots1\">...</span><span id=\"more1\"> Sementara anak-anak komplek dapat menikmati fasilitas bermain seperti taman bermain dan kolam renang di dalam perumahan atau clubhouse, anak-anak yang tinggal di luar perumahan tidak bisa mengakses fasilitas yang sama secara leluasa. Di episode \"Bahagianya Anak yang Tinggal di Kampung\",  kami ikut bermain bersama anak-anak yang tinggal di kampung kota. Yuk ikuti keseruan kami bermain dengan mereka!</span>",
             "link" => "https://open.spotify.com/episode/4idfSxBjkqH7EsxXkn0PFz?si=a8caed7cf2f544df",
@@ -115,7 +115,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "12",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 2.png",
             "title" => "CETAR #2 - Sepanjang Jalan Tangerang",
             "deskripsi" => "Kawasan Tangerang Raya berkembang pesat sebagai kawasan penyangga Jakarta. Di banyak area tertentu, kita bisa menemukan banyak jalanan lebar yang dilengkapi trotoar. Kerapihan yang tak merata<span id=\"dots1\">...</span><span id=\"more1\"> ini cukup memberi kesan modern seperti kota-kota di negara maju. Sayangnya, perkembangan transportasi publik tidak sama pesatnya. 
             <br><br>
@@ -126,7 +126,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "13",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 3.png",
             "title" => "CETAR #3 - SKKM: Sirkel dan Kasta Kehidupan Mahasiswa",
             "deskripsi" => "Ada mahasiswa yang memiliki kehidupan mewah dan serba ada. Ada mahasiswa yang harus berhemat untuk memenuhi kebutuhan ngekos dan kuliah.<span id=\"dots3\">...</span><span id=\"more3\"> Kok bisa beda banget ya kehidupan mahasiswa dan mahasiswi ini? Nah, episode kali ini akan membahas mengenai gaya hidup mahasiswa dan mahasiswi di perguruan tinggi swasta daerah Tangerang Raya.
             <br><br>
@@ -137,7 +137,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "14",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 4.png",
             "title" => "CETAR #4 - Sebulan Hidup di Tangerang Raya, Berapa Sih Pengeluarannya?",
             "deskripsi" => "Episode kali ini berbicara tentang seberapa besar perbedaan biaya hidup bulanan warga klaster dengan warga kampung, dan apa saja<span id=\"dots4\">...</span><span id=\"more4\"> yang mempengaruhinya. Kami mewawancarai berbagai narasumber untuk membandingkan berapa pengeluaran dan pemasukan mereka serta apakah sebanding dengan UMR wilayah Tangerang.</span>",
             "link" => "https://open.spotify.com/episode/2Eq4d9pfRDai4lMi5Xihkx?si=a19ec793239b4387",
@@ -146,7 +146,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "15",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 5.jpg",
             "title" => "CETAR #5 - Dompet Terkuras, Timbangkan Kualitas",
             "deskripsi" => "Perguruan Tinggi Swasta atau PTS bergengsi yang ada di sekitaran Tangerang raya, dengan “harga” yang ditawarkan, apakah imbang dengan<span id=\"dots5\">...</span><span id=\"more5\"> “kualitas yang diberikan? Episode kali ini menghadirkan perspektif mahasiswa dari PTS yang bersangkutan dan juga Pengamat pendidikan untuk meninjau lebih lanjut.</span>",
             "link" => "https://open.spotify.com/episode/3XxftCjpZfySvOJvtHayIQ?si=969fe0ca0c074009",
@@ -155,7 +155,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "16",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 6.png",
             "title" => "CETAR #6 - AADC: Ada Apa di Cluster?",
             "deskripsi" => "Komplek perumahan identik dengan pemagaran dan akses yang terbatas. Kenyamanan dan keamanan yang ditawarkan komplek perumahan menarik minat warga dengan ekonomi<span id=\"dots6\">...</span><span id=\"more6\"> menengah atas untuk tinggal di sana.
             <br><br>
@@ -166,7 +166,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "17",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 7.png",
             "title" => "CETAR #7 - Kita yang Tak Setara",
             "deskripsi" => "Masih adakah di antara kita yang menganggap kalau kualitas sekolah dasar negeri ketinggalan dari sekolah dasar swasta? Di kawasan Tangerang Raya - yang mencakup Kota Tangerang Selatan<span id=\"dots7\">...</span><span id=\"more7\">, Kota Tangerang, Kabupaten Tangerang — pertumbuhan sekolah dasar swasta terlihat pesat. Gedungnya mentereng, reputasinya bagus, dan tentunya: mahal-mahal. Lalu, bagaimana nasib sekolah dasar negeri di kawasan ini? Temukan dan dengarkan, “Kita yang Tak Setara”, dokumenter audio tentang sekolah dasar negeri di Tangerang Raya.</span>",
             "link" => "https://open.spotify.com/episode/3OuJmJYG9sr1Qs6rrfVzwU?si=107209d5076c4eb0",
@@ -175,7 +175,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "18",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 81.png",
             "title" => "CETAR #8 - Kehidupan Kampung Kota Tangerang (Bagian 1): Semarak Hajatan",
             "deskripsi" => "Mari sejenak kita melihat ke realita kehidupan yang berbeda dari biasanya. Dalam part pertama dari episode “Kehidupan Kampung-Kota Tangerang”,<span id=\"dots81\">...</span><span id=\"more81\"> kita akan mengenal budaya gotong royong dan keramahan dari masyarakat desa Curug Sangereng yang berada di jantung dari Gading Serpong lewat nikahan dari Teh Dewi. Seru? Pasti! Dramatis? Yuk, dengarkan sendiri rasanya mengikuti hajatan ini.</span>",
             "link" => "https://open.spotify.com/episode/6ugYdT6IWa1sBjlqiakpQu?si=fe197d8d737b489b",
@@ -184,7 +184,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "19",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 82.png",
             "title" => "CETAR #8 - Kehidupan Kampung Kota Tangerang (Bagian 2): Tong Tong Tong",
             "deskripsi" => "Pada part kedua dari episode “Kehidupan Kampung-Kota Tangerang”, kita akan melihat kehidupan masyarakat di Gading Serpong. Bukan, bukan kehidupan<span id=\"dots82\">...</span><span id=\"more82\"> yang terjadi di balik gerbang-gerbang cluster perumahan mewah. Ini cerita tentang mereka yang hidup dan mencari penghidupan di desa Curug Sangereng, di tengah gemerlapnya Gading Serpong yang tampak sangat modern.</span>",
             "link" => "https://open.spotify.com/episode/7LSXRwvx0Ry8V4C6gHnn9H?si=14c519f1b28a48cc",
@@ -193,7 +193,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "20",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 83.png",
             "title" => "CETAR #8 - Kehidupan Kampung Kota Tangerang (Bagian 3): Tanah Semen",
             "deskripsi" => "Enak ya rasanya tinggal di BSD dan area dari Gading Serpong ini. Namun, hal berbeda terjadi dengan kampung-kampung<span id=\"dots83\">...</span><span id=\"more83\"> yang ada di sekelilingnya. Part ketiga dari episode Kehidupan Kampung Kota Tangerang kali ini akan mengulik terkait hal tersebut. Selengkapnya dapat teman-teman dengarkan dalam episode ini.</span>",
             "link" => "https://open.spotify.com/episode/5JHftxh1YnXFSMe7DJF46U?si=a43e04ab87cf460c",
@@ -202,7 +202,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "21",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 9.png",
             "title" => "CETAR #9 - The Astonishing Intermoda Terminal",
             "deskripsi" => "Terminal termodern yang terintegrasi dengan berbagai transportasi umum ini bernama terminal Intermoda. Dalam episode ini, tim Jelajah<span id=\"dots9\">...</span><span id=\"more9\"> berhasil mengelilingi Stasiun Cisauk, Intermoda. Suasana stasiun masih terasa sepi karena mayoritas masyarakat di Tangerang Selatan memiliki kebiasaan car-oriented. Padahal, stasiun ini dinobatkan sebagai stasiun paling maju yang menyediakan berbagai fasilitas apik. Mengejutkannya, hanya di Cisauk, terminal bus dan stasiun KRL berada dalam lokasi yang sama. Namun, mengapa banyak orang lebih memilih menggunakan transportasi pribadi? Stasiun ini sebenarnya hadir untuk memudahkan masyarakat Gading Serpong dan BSD bepergian jarak jauh menggunakan transportasi umum dengan harga yang terjangkau.</span>",
             "link" => "https://open.spotify.com/episode/6cYDazJEHSwpJE8W0oambP?si=2a3c0e5c76f24c22",
@@ -211,7 +211,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "22",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 10.png",
             "title" => "CETAR #10 - The Truth Behind: Property Invesment Owner",
             "deskripsi" => "Ingin terjun ke investasi properti tapi belum tahu caranya gimana? Udah lama mau main investasi properti tapi gatau peluang kedepannya seperti apa? Bisa jadi<span id=\"dots10\">...</span><span id=\"more10\"> sekarang adalah waktunya mimpi kamu terwujud nih, karena investasi properti sekarang lagi naik daun dan banyak yang menekuni bidang tersebut!
             <br><br>
@@ -222,7 +222,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "23",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 11.png",
             "title" => "CETAR #11 - Sengitnya Memiliki Rumah di Atas Sempitnya Tanah",
             "deskripsi" => "Pada 2014 Menteri Perumahan Rakyat, Djan Faridz, melaporkan 60 perusahaan pengembang properti besar, seperti Grup Ciputra, Alam Sutera, dan Sinarmas<span id=\"dots11\">...</span><span id=\"more11\"> Land yang melanggar pasal-pasal dalam Undang-Undang Nomor 1 Tahun 2011 tentang Pembangunan Hunian Berimbang bagi Masyarakat Berpenghasilan Rendah. Namun, sampai 2022 ini perusahaan-perusahaan tersebut tetap membangun properti mahal sehingga terkesan tidak mematuhi undang-undang. Akibatnya, semakin banyak masyarakat, khususnya kaum milenial, yang kesulitan mencari rumah terjangkau dan layak huni sehingga dikhawatirkan pada masa depan, akan tumbuh banyak kawasan kumuh.
             <br><br>
@@ -233,7 +233,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "24",
-            "image_path" => "/images/ruangIndependen/pameran/coveraudio.png",
+            "image_path" => "/images/ruangIndependen/pameran/CETAR 12.png",
             "title" => "CETAR #12 - Aksi Kucing-kucingan PKL dan Satpol PP",
             "deskripsi" => "Sesuai dengan undang undang Lalu Lintas dan Angkutan Jalan UU LAJ : Pasal 28 ayat (2) jo. Pasal 25 ayat (1), ”Setiap orang dilarang melakukan perbuatan<span id=\"dots12\">...</span><span id=\"more12\"> yang mengakibatkan gangguan pada fungsi perlengkapan Jalan. Dalam konteks ini yang dimaksud adalah trotoar sebagai fasilitas untuk pejalan kaki yang terganggu fungsinya menjadi tempat berdagang,” bunyinya. Undang-undang tentang lalu lintas dan angkutan jalan ini menjelaskan tentang trotoar sebagai fasilitas pejalan kaki terganggu fungsinya, maka sesuai tugasnya satpol pp melakukan aksinya. Namun, kenyataan dari aksi kejar - kejaran ini tak sekejam seperti yang diceritakan televisi.Adanya perjanjian kedua belah pihak ikut menjadi sumber utama kejar - kejaran ini sudah tak terlihat.
             <br><br>
@@ -241,6 +241,56 @@ class KaryaSeeder extends Seeder
              </span>",
             "link" => "https://open.spotify.com/episode/4YIK97wdoxDOuD4QojRyen?si=875e8030bd8945f4",
             "tipe" => "audio dokumenter",
+        ]);
+
+        Art::create([
+            "id" => "25",
+            "image_path" => "/images/ruangIndependen/pameran/lookalike.png",
+            "title" => "LOOKALIKE",
+            "deskripsi" => "It's not about brand, it's about style",
+            "link" => "https://issuu.com/lookalikedcp/docs/fauget_1_",
+            "tipe" => "e-magazine",
+        ]);
+
+        Art::create([
+            "id" => "26",
+            "image_path" => "/images/ruangIndependen/pameran/attention.png",
+            "title" => "Attention!",
+            "deskripsi" => "a reference for your preferences",
+            "link" => "https://heyzine.com/flip-book/6d9e44e0c1.html",
+            "tipe" => "e-magazine",
+        ]);
+
+        Art::create([
+            "id" => "31",
+            "image_path" => "/images/ruangIndependen/pameran/foodwaste.jpeg",
+            "title" => "Meningkatnya Sampah Makanan di Tengah Ancaman Krisis Pangan: KetidakacuhanHotel dalam Mengelola Sampah Makanan",
+            "link" => "https://drive.google.com/file/d/1tRHMQkfnlsUiXcyyHgKv1Sq1RJUJLQBP/view?usp=sharing",
+            "tipe" => "indepth artikel",
+        ]);
+
+        Art::create([
+            "id" => "32",
+            "image_path" => "/images/ruangIndependen/pameran/goverment.jpeg",
+            "title" => "Indonesian gov't turn to companies to handle plastic waste",
+            "link" => "https://drive.google.com/file/d/14JUL-bNLiXlNcdU2aL6LxZqNqwpfjNt_/view?usp=sharing",
+            "tipe" => "indepth artikel",
+        ]);
+
+        Art::create([
+            "id" => "33",
+            "image_path" => "/images/ruangIndependen/pameran/harassment.jpeg",
+            "title" => "Kekerasan Seksual di UMN: Tak Ada Laporan, Bukan Berarti Tak Ada Kejadian",
+            "link" => "https://drive.google.com/file/d/1x5y8XsKhuDW46Cab8zGUQgHP1_6GsxhD/view?usp=sharing",
+            "tipe" => "indepth artikel",
+        ]);
+
+        Art::create([
+            "id" => "34",
+            "image_path" => "/images/ruangIndependen/pameran/dosbing.jpeg",
+            "title" => "Efektifkah Dosen Pembimbing Akademik Membantu Mahasiswa?",
+            "link" => "https://drive.google.com/file/d/1u4JLwlRyipGXxryYUOPF4euUsZRz-0LA/view?usp=sharing",
+            "tipe" => "indepth artikel",
         ]);
     }
 }
