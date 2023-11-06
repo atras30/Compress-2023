@@ -252,6 +252,7 @@
         margin-left: 60px !important;
 
       }
+
       .medpar-top {
         width: 30% !important;
       }
@@ -438,11 +439,18 @@
     }
 
     .margin-mp {
-      margin-left:800px;
+      margin-left: 800px;
     }
 
     .text-sponsor {
       text-align: left;
+    }
+
+    .text-truncate-container p {
+      -webkit-line-clamp: 3;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     @media(max-width:450px) {
@@ -451,9 +459,9 @@
       }
 
       .margin-mp {
-        margin-left:0px !important;
+        margin-left: 0px !important;
       }
-    }    
+    }
   </style>
 @endsection
 
@@ -483,8 +491,10 @@
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">{{ $audio->title }}</h5>
-                    <p class="card-text">{!! $audio->deskripsi !!}</p>
-                    <button onclick="myFunction1()" class="btn btn-link"id="myBtn1">Read more</button>
+                    <div class="text-truncate-container mb-4">
+                      <p class="card-text" style="text-align: justify;">{{$audio->deskripsi}}</p>
+                    </div>
+                    <button onclick="showFullDescription(this)" class="btn btn-link"id="myBtn1">Read more</button>
                     <a href="{{ $audio->link }}" target="_blank" class="btn btn-success">Dengar di Spotify</a>
                     <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
                       <button onclick="likePost('{{ $audio->id }}')" class="btn audio-like-button" data-likes="{!! str_replace('"', '\'', $audio->likes()->pluck('ip')) !!}">
@@ -530,15 +540,15 @@
               <div class="carousel-item carousel-item4 active" style="max-height:70vh;">
                 <a href="{{ $magazine->link }}" target="_blank"><img src="{{ $magazine->image_path }}" class="d-block w-100 cover-artikel" style="height:60%;" alt="..."></a>
                 <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
-                <button onclick="likePost('{{ $magazine->id }}')" class="btn magazine-like-button" data-likes="{!! str_replace('"', '\'', $magazine->likes()->pluck('ip')) !!}">
-                  <i class="bi bi-heart"></i>
-                  Like
-                </button>
-                <div id="magazine_dokumenter_{{ $magazine->id }}">Total Likes: {{ $magazine->likes_count }}</div>
+                  <button onclick="likePost('{{ $magazine->id }}')" class="btn magazine-like-button" data-likes="{!! str_replace('"', '\'', $magazine->likes()->pluck('ip')) !!}">
+                    <i class="bi bi-heart"></i>
+                    Like
+                  </button>
+                  <div id="magazine_dokumenter_{{ $magazine->id }}">Total Likes: {{ $magazine->likes_count }}</div>
                 </div>
                 <h2 class="font-bazinga text-white fs-1 text-center mt-3 mb-3 pembuat-artikel">{{ $magazine->title }}</h2>
                 <h3 class="font-bazinga text-white fs-2 text-center judul-artikel">"{{ $magazine->deskripsi }}"</h3>
-                
+
               </div>
             @endforeach
           </div>
@@ -555,12 +565,12 @@
       </div>
     </div>
 
-  <div class="main-content mh-85vh position-relative bg-blue">
-    <img class="position-absolute object-fit-cover w-100 h-100 red-stripes" src="{{ asset('/images/home/bg/Frame.png') }}">
+    <div class="main-content mh-85vh position-relative bg-blue">
+      <img class="position-absolute object-fit-cover w-100 h-100 red-stripes" src="{{ asset('/images/home/bg/Frame.png') }}">
 
-    <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
+      <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
 
-    <div class="position-relative">
+      <div class="position-relative">
         {{-- Title --}}
         <section class="text-center ptop-5">
           <div class="hero-title px-5 mb-5 font-bazinga text-white" style="font-size:4rem;">
@@ -598,656 +608,433 @@
       </div>
     </div>
 
-  <div class="main-content position-relative bg-purple" style="min-height:115vh;">
-    <img class="position-absolute object-fit-cover w-100 h-100 red-stripes" src="{{ asset('/images/yja/background/flakes.png') }}" alt="Flakes">
+    <div class="main-content position-relative bg-purple" style="min-height:115vh;">
+      <img class="position-absolute object-fit-cover w-100 h-100 red-stripes" src="{{ asset('/images/yja/background/flakes.png') }}" alt="Flakes">
 
-    <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
+      <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
 
-    <div class="position-relative">
-      {{-- Title --}}
-      <section class="text-center ptop-5">
-        <div class="hero-title px-5 mb-5 font-bazinga text-white" style="font-size:4rem;">
-          PAMERAN VIDEO DOKUMENTER
-        </div>
-      </section>
+      <div class="position-relative">
+        {{-- Title --}}
+        <section class="text-center ptop-5">
+          <div class="hero-title px-5 mb-5 font-bazinga text-white" style="font-size:4rem;">
+            PAMERAN VIDEO DOKUMENTER
+          </div>
+        </section>
 
-      {{-- Episodes --}}
-      <div id="carouselExample2" class="carousel">
-        <div class="carousel-inner carousel-inner3 gap-5">
-          @foreach ($video_dokumenter as $video)
-            <div class="carousel-item carousel-item3 active">
-              <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $video->nama_pembuat }}</h2>
-              <a href="{{ $video->link }}" target="_blank"><img src="{{ $video->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
-              <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
-                <button onclick="likePost('{{ $video->id }}')" class="btn video-like-button" data-likes="{!! str_replace('"', '\'', $video->likes()->pluck('ip')) !!}">
-                  <i class="bi bi-heart"></i>
-                  Like
-                </button>
-                <div id="video_dokumenter_{{ $video->id }}">Total Likes: {{ $video->likes_count }}</div>
+        {{-- Episodes --}}
+        <div id="carouselExample2" class="carousel">
+          <div class="carousel-inner carousel-inner3 gap-5">
+            @foreach ($video_dokumenter as $video)
+              <div class="carousel-item carousel-item3 active">
+                <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $video->nama_pembuat }}</h2>
+                <a href="{{ $video->link }}" target="_blank"><img src="{{ $video->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
+                <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                  <button onclick="likePost('{{ $video->id }}')" class="btn video-like-button" data-likes="{!! str_replace('"', '\'', $video->likes()->pluck('ip')) !!}">
+                    <i class="bi bi-heart"></i>
+                    Like
+                  </button>
+                  <div id="video_dokumenter_{{ $video->id }}">Total Likes: {{ $video->likes_count }}</div>
+                </div>
+                <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $video->title }}"</h3>
               </div>
-              <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $video->title }}"</h3>
-            </div>
-          @endforeach
+            @endforeach
 
 
+          </div>
+          <button class="carousel-control-prev carousel-control-prev3" style="top:40%!important;" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next carousel-control-next3" style="top:40%!important;" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev carousel-control-prev3" style="top:40%!important;" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next carousel-control-next3" style="top:40%!important;" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="fs-2 text-center font-bazinga text-white pt-5">Tekan Poster Untuk Melihat Video</div>
       </div>
-      <div class="fs-2 text-center font-bazinga text-white pt-5">Tekan Poster Untuk Melihat Video</div>
     </div>
-  </div>
 
-  <div class="main-content position-relative bg-red artikel-interaktif">
-    <img class="position-absolute object-fit-cover w-100 h-100 red-stripes" src="{{ asset('/images/ruangIndependen/background/flakes.png') }}" alt="Flakes">
+    <div class="main-content position-relative bg-red artikel-interaktif">
+      <img class="position-absolute object-fit-cover w-100 h-100 red-stripes" src="{{ asset('/images/ruangIndependen/background/flakes.png') }}" alt="Flakes">
 
-    <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
+      <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
 
-    <div class="position-relative">
-      {{-- Title --}}
-      <section class="text-center ptop-5">
-        <div class="hero-title px-5 mb-5 font-bazinga text-white" style="font-size:4rem;">
-          ARTIKEL INTERAKTIF
-        </div>
-      </section>
+      <div class="position-relative">
+        {{-- Title --}}
+        <section class="text-center ptop-5">
+          <div class="hero-title px-5 mb-5 font-bazinga text-white" style="font-size:4rem;">
+            ARTIKEL INTERAKTIF
+          </div>
+        </section>
 
-      {{-- Episodes --}}
-      <div id="carouselExample" class="carousel">
-        <div class="carousel-inner carousel-inner2 gap-5">
-          @foreach ($artikel_interaktif as $karya)
-            <div class="carousel-item carousel-item2 active">
-              <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $karya->nama_pembuat }}</h2>
-              <a href="{{ $karya->link }}" target="_blank"><img src="{{ $karya->image_path }}" class="d-block w-100 cover-artikel" style="height:60%;" alt="..."></a>
-              <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
-                <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
-                  <i class="bi bi-heart"></i>
-                  Like
-                </button>
-                <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+        {{-- Episodes --}}
+        <div id="carouselExample" class="carousel">
+          <div class="carousel-inner carousel-inner2 gap-5">
+            @foreach ($artikel_interaktif as $karya)
+              <div class="carousel-item carousel-item2 active">
+                <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $karya->nama_pembuat }}</h2>
+                <a href="{{ $karya->link }}" target="_blank"><img src="{{ $karya->image_path }}" class="d-block w-100 cover-artikel" style="height:60%;" alt="..."></a>
+                <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                  <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
+                    <i class="bi bi-heart"></i>
+                    Like
+                  </button>
+                  <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+                </div>
+                <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $karya->title }}"</h3>
               </div>
-              <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $karya->title }}"</h3>
-            </div>
-          @endforeach
+            @endforeach
 
 
+          </div>
+          <button class="carousel-control-prev carousel-control-prev2" style="top:40%!important;" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next carousel-control-next2" style="top:40%!important;" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev carousel-control-prev2" style="top:40%!important;" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next carousel-control-next2" style="top:40%!important;" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="fs-2 text-center font-bazinga text-black">Tekan HP untuk melihat artikel</div>
       </div>
-      <div class="fs-2 text-center font-bazinga text-black">Tekan HP untuk melihat artikel</div>
     </div>
-  </div>
 
-  <div class="main-content mh-85vh position-relative bg-yellow">
-    <img class="position-absolute object-fit-cover w-100 h-100 red-stripes" src="{{ asset('/images/ruangIndependen/pameran/yellow-stripes.png') }}" alt="Flakes">
+    <div class="main-content mh-85vh position-relative bg-yellow">
+      <img class="position-absolute object-fit-cover w-100 h-100 red-stripes" src="{{ asset('/images/ruangIndependen/pameran/yellow-stripes.png') }}" alt="Flakes">
 
-    <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
+      <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
 
-    <div class="position-relative">
-      {{-- Title --}}
-      <section class="text-center ptop-5">
-        <div class="hero-title px-5 mb-5 font-bazinga text-white" style="font-size:4rem;">
-          PAMERAN PHOTOSTORY
-        </div>
-      </section>
+      <div class="position-relative">
+        {{-- Title --}}
+        <section class="text-center ptop-5">
+          <div class="hero-title px-5 mb-5 font-bazinga text-white" style="font-size:4rem;">
+            PAMERAN PHOTOSTORY
+          </div>
+        </section>
 
-      {{-- Episodes --}}
-      <section class="d-flex justify-content-evenly align-items-center flex-column flex-lg-row gap-4">
-        <div class="flex-item position-relative" style="max-width: 70%">
-          <img class="mw-100" src="{{ asset('/images/components/buttons/button-container-2.png') }}" alt="Button Container">
-        </div>
-      </section>
+        {{-- Episodes --}}
+        <section class="d-flex justify-content-evenly align-items-center flex-column flex-lg-row gap-4">
+          <div class="flex-item position-relative" style="max-width: 70%">
+            <img class="mw-100" src="{{ asset('/images/components/buttons/button-container-2.png') }}" alt="Button Container">
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
 
-  <div class="main-content position-relative bg-purple2" style="min-height:110vh;">
-    <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
+    <div class="main-content position-relative bg-purple2" style="min-height:110vh;">
+      <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
 
-    <div class="position-relative">
-      {{-- Title --}}
-      <section class="ptop-5">
-        <div class="px-5 mb-5 img-thumbnail sponsor" style="border: 4px solid black; max-width:50%; margin-left:100px;">
-          <h1 class="font-bazinga text-black fw-bold mt-3 text-sponsor">Sponsor</h1>
-          <div class=" position-relative gap-4 d-flex justify-content-center align-items-center">
-            <img class="sponsor-top"src="{{ asset('/images/ruangIndependen/pameran/Susu Tango Uk 1.png') }}"></img>
-            <img class="sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Teh Gelas Uk 1.png') }}"></img>
-            <img class="sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Crystalin Uk 1.png') }}"></img>
+      <div class="position-relative">
+        {{-- Title --}}
+        <section class="ptop-5">
+          <div class="px-5 mb-5 img-thumbnail sponsor" style="border: 4px solid black; max-width:50%; margin-left:100px;">
+            <h1 class="font-bazinga text-black fw-bold mt-3 text-sponsor">Sponsor</h1>
+            <div class=" position-relative gap-4 d-flex justify-content-center align-items-center">
+              <img class="sponsor-top"src="{{ asset('/images/ruangIndependen/pameran/Susu Tango Uk 1.png') }}"></img>
+              <img class="sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Teh Gelas Uk 1.png') }}"></img>
+              <img class="sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Crystalin Uk 1.png') }}"></img>
+            </div>
+            <div class=" position-relative gap-5 d-flex justify-content-center align-items-center mt-5">
+              <img class="sponsor-bottom mb-3"src="{{ asset('/images/ruangIndependen/pameran/Hop Hop Uk 1.png') }}"></img>
+              <img class="sponsor-bottom mb-3"src="{{ asset('/images/ruangIndependen/pameran/Pandaboo Uk 1.png') }}"></img>
+            </div>
           </div>
-          <div class=" position-relative gap-5 d-flex justify-content-center align-items-center mt-5">
-            <img class="sponsor-bottom mb-3"src="{{ asset('/images/ruangIndependen/pameran/Hop Hop Uk 1.png') }}"></img>
-            <img class="sponsor-bottom mb-3"src="{{ asset('/images/ruangIndependen/pameran/Pandaboo Uk 1.png') }}"></img>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="pb-5">
-        <div class="px-5  img-thumbnail medparbg" style="border: 4px solid black; max-width:70%; margin-left:400px;">
-          <h1 class="font-bazinga text-black fw-bold mt-3 medpar text-center margin-mp">Media Partner</h1>
-          <div class=" position-relative d-flex justify-content-center align-items-center mt-3">
-            <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Mading Event 1.png') }}"></img>
-            <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Medio By KG Media [horizontal]-black copy 1.png') }}"></img>
-            <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Logo radio untar 2.png') }}"></img>
-            <img class="medpar-top ms-5 edaran"src="{{ asset('/images/ruangIndependen/pameran/Edaran event 1.png') }}"></img>
+        <section class="pb-5">
+          <div class="px-5  img-thumbnail medparbg" style="border: 4px solid black; max-width:70%; margin-left:400px;">
+            <h1 class="font-bazinga text-black fw-bold mt-3 medpar text-center margin-mp">Media Partner</h1>
+            <div class=" position-relative d-flex justify-content-center align-items-center mt-3">
+              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Mading Event 1.png') }}"></img>
+              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Medio By KG Media [horizontal]-black copy 1.png') }}"></img>
+              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Logo radio untar 2.png') }}"></img>
+              <img class="medpar-top ms-5 edaran"src="{{ asset('/images/ruangIndependen/pameran/Edaran event 1.png') }}"></img>
+            </div>
+            <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-5">
+              <img class="medpar-top ms-5 ultimagz"src="{{ asset('/images/ruangIndependen/pameran/ULTIMAGZ copy 1.png') }}"></img>
+              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Sigma TV 2.png') }}"></img>
+              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/BFAST MEDIA 1.png') }}"></img>
+            </div>
+            <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-5">
+              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/ALIVE 1.png') }}"></img>
+              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Logo_1-100-removebg-preview 1.png') }}"></img>
+              <img class="medpar-bottom2"src="{{ asset('/images/ruangIndependen/pameran/Radio Mercu Buana_ 2.png') }}"></img>
+            </div>
           </div>
-          <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-5">
-            <img class="medpar-top ms-5 ultimagz"src="{{ asset('/images/ruangIndependen/pameran/ULTIMAGZ copy 1.png') }}"></img>
-            <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Sigma TV 2.png') }}"></img>
-            <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/BFAST MEDIA 1.png') }}"></img>
-          </div>
-          <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-5">
-            <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/ALIVE 1.png') }}"></img>
-            <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Logo_1-100-removebg-preview 1.png') }}"></img>
-            <img class="medpar-bottom2"src="{{ asset('/images/ruangIndependen/pameran/Radio Mercu Buana_ 2.png') }}"></img>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
-  </div>
-@endsection
+  @endsection
 
-@section('scripts')
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script>
-    let visitorId = null;
+  @section('scripts')
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+      let visitorId = null;
 
-    //on document ready
-    document.addEventListener('DOMContentLoaded', function() {
-      getVisitorId();
-    }, false);
+      //on document ready
+      document.addEventListener('DOMContentLoaded', function() {
+        getVisitorId();
+      }, false);
 
-    async function getVisitorId() {
-      const fpJs = await window.fp.load();
-      const response = await fpJs.get();
-      visitorId = response.visitorId;
+      async function getVisitorId() {
+        const fpJs = await window.fp.load();
+        const response = await fpJs.get();
+        visitorId = response.visitorId;
 
-      //Pameran Dokumenter
-      const documenterElements = document.querySelectorAll(".video-like-button");
-      defineLikeUnlikeButtons(documenterElements, visitorId);
+        //Pameran Dokumenter
+        const documenterElements = document.querySelectorAll(".video-like-button");
+        defineLikeUnlikeButtons(documenterElements, visitorId);
 
-      const documenterElements2 = document.querySelectorAll(".audio-like-button");
-      defineLikeUnlikeButtons(documenterElements2, visitorId);
+        const documenterElements2 = document.querySelectorAll(".audio-like-button");
+        defineLikeUnlikeButtons(documenterElements2, visitorId);
 
-      const documenterElements3 = document.querySelectorAll(".artikelinteraktif-like-button");
-      defineLikeUnlikeButtons(documenterElements3, visitorId);
+        const documenterElements3 = document.querySelectorAll(".artikelinteraktif-like-button");
+        defineLikeUnlikeButtons(documenterElements3, visitorId);
 
-      const documenterElements3 = document.querySelectorAll(".magazine-like-button");
-      defineLikeUnlikeButtons(documenterElements3, visitorId);
+        const documenterElements4 = document.querySelectorAll(".magazine-like-button");
+        defineLikeUnlikeButtons(documenterElements4, visitorId);
 
-      const documenterElements3 = document.querySelectorAll(".indepth-like-button");
-      defineLikeUnlikeButtons(documenterElements3, visitorId);
-      
-    }
+        const documenterElements5 = document.querySelectorAll(".indepth-like-button");
+        defineLikeUnlikeButtons(documenterElements5, visitorId);
 
-    function defineLikeUnlikeButtons(elements, ip) {
-      const likeElementString = `
+      }
+
+      function defineLikeUnlikeButtons(elements, ip) {
+        const likeElementString = `
         <i class="bi bi-heart"></i> <a class='fw-bold' href="javascript:void(0)">Like</a>
       `;
 
-      const unlikeElementString = `
+        const unlikeElementString = `
         <i class="bi bi-heart-fill"></i> <a class='fw-bold' href="javascript:void(0)">Unlike</a>
       `;
 
-      [...elements].forEach(element => {
-        let likes = `${element.dataset.likes}`;
-        const cleanedString = likes.replace(/[\[\]']+/g, '');
-        likes = cleanedString.split(',');
+        [...elements].forEach(element => {
+          let likes = `${element.dataset.likes}`;
+          const cleanedString = likes.replace(/[\[\]']+/g, '');
+          likes = cleanedString.split(',');
 
-        if (likes.includes(ip)) element.innerHTML = unlikeElementString;
-        else element.innerHTML = likeElementString;
-      });
-    }
-
-    async function likePost(artId) {
-      if (visitorId == null) return;
-      let response = null;
-
-      try {
-        const response = await window.axios.post(`{{ route('karya.like') }}`, {
-          artId,
-          visitorId
+          if (likes.includes(ip)) element.innerHTML = unlikeElementString;
+          else element.innerHTML = likeElementString;
         });
-
-        // const newTotalLike = response.data.new_total_like;
-
-        // const relatedArtElement = document.querySelector(`#video_dokumenter_${artId}`);
-        // relatedArtElement.textContent = `Total Likes: ${newTotalLike}`;
-
-        //refresh
-        window.location.reload();
-      } catch (e) {
-        console.log("Error in like post API: ", e);
-        return;
       }
-    }
 
-    //CAROUSEL AUDIO
-    var carouselWidth = $(".carousel-inner1")[0].scrollWidth;
-    var cardWidth = $(".carousel-item1").width();
-    var scrollPosition = 0;
-    $(".carousel-control-next1").on("click", function() {
-      if (scrollPosition < (carouselWidth - cardWidth * 4)) { //check if you can go any further
-        scrollPosition += cardWidth * 3; //update scroll position
-        $(".carousel-inner1").animate({
-          scrollLeft: scrollPosition
-        }, 400); //scroll left
+      async function likePost(artId) {
+        if (visitorId == null) return;
+        let response = null;
+
+        try {
+          const response = await window.axios.post(`{{ route('karya.like') }}`, {
+            artId,
+            visitorId
+          });
+
+          //refresh
+          window.location.reload();
+        } catch (e) {
+          console.log("Error in like post API: ", e);
+          return;
+        }
       }
-    });
-    $(".carousel-control-prev1").on("click", function() {
-      if (scrollPosition > 0) {
-        scrollPosition -= cardWidth * 3;
-        $(".carousel-inner1").animate({
+
+      //CAROUSEL AUDIO
+      var carouselWidth = $(".carousel-inner1")[0].scrollWidth;
+      var cardWidth = $(".carousel-item1").width();
+      var scrollPosition = 0;
+      $(".carousel-control-next1").on("click", function() {
+        if (scrollPosition < (carouselWidth - cardWidth * 4)) { //check if you can go any further
+          scrollPosition += cardWidth * 3; //update scroll position
+          $(".carousel-inner1").animate({
             scrollLeft: scrollPosition
-          },
-          400
-        );
+          }, 400); //scroll left
+        }
+      });
+      $(".carousel-control-prev1").on("click", function() {
+        if (scrollPosition > 0) {
+          scrollPosition -= cardWidth * 3;
+          $(".carousel-inner1").animate({
+              scrollLeft: scrollPosition
+            },
+            400
+          );
+        }
+      });
+      var multipleCardCarousel = document.querySelector(
+        "#carouselExampleControls"
+      );
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        //rest of the code
+        var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+          interval: false
+        });
+      } else {
+        $(multipleCardCarousel).addClass("slide");
       }
-    });
-    var multipleCardCarousel = document.querySelector(
-      "#carouselExampleControls"
-    );
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      //rest of the code
       var carousel = new bootstrap.Carousel(multipleCardCarousel, {
-        interval: false
+        interval: false,
+        wrap: false,
       });
-    } else {
-      $(multipleCardCarousel).addClass("slide");
-    }
-    var carousel = new bootstrap.Carousel(multipleCardCarousel, {
-      interval: false,
-      wrap: false,
-    });
 
-    //CAROUSEL Artikel
-    var carouselWidth2 = $(".carousel-inner2")[0].scrollWidth;
-    var cardWidth2 = $(".carousel-item2").width();
-    var scrollPosition2 = 0;
-    $(".carousel-control-next2").on("click", function() {
-      if (scrollPosition2 < (carouselWidth2 - cardWidth2 * 4)) { //check if you can go any further
-        scrollPosition2 += cardWidth2; //update scroll position
-        $(".carousel-inner2").animate({
-          scrollLeft: scrollPosition2
-        }, 400); //scroll left
-      }
-    });
-    $(".carousel-control-prev2").on("click", function() {
-      if (scrollPosition2 > 0) {
-        scrollPosition2 -= cardWidth2;
-        $(".carousel-inner2").animate({
+      //CAROUSEL Artikel
+      var carouselWidth2 = $(".carousel-inner2")[0].scrollWidth;
+      var cardWidth2 = $(".carousel-item2").width();
+      var scrollPosition2 = 0;
+      $(".carousel-control-next2").on("click", function() {
+        if (scrollPosition2 < (carouselWidth2 - cardWidth2 * 4)) { //check if you can go any further
+          scrollPosition2 += cardWidth2; //update scroll position
+          $(".carousel-inner2").animate({
             scrollLeft: scrollPosition2
-          },
-          400
-        );
+          }, 400); //scroll left
+        }
+      });
+      $(".carousel-control-prev2").on("click", function() {
+        if (scrollPosition2 > 0) {
+          scrollPosition2 -= cardWidth2;
+          $(".carousel-inner2").animate({
+              scrollLeft: scrollPosition2
+            },
+            400
+          );
+        }
+      });
+      var multipleCardCarousel2 = document.querySelector(
+        "#carouselExample"
+      );
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        //rest of the code
+        var carousel2 = new bootstrap.Carousel(multipleCardCarousel2, {
+          interval2: false
+        });
+      } else {
+        $(multipleCardCarousel2).addClass("slide");
       }
-    });
-    var multipleCardCarousel2 = document.querySelector(
-      "#carouselExample"
-    );
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      //rest of the code
       var carousel2 = new bootstrap.Carousel(multipleCardCarousel2, {
-        interval2: false
+        interval2: false,
+        wrap2: false,
       });
-    } else {
-      $(multipleCardCarousel2).addClass("slide");
-    }
-    var carousel2 = new bootstrap.Carousel(multipleCardCarousel2, {
-      interval2: false,
-      wrap2: false,
-    });
 
 
-    //CAROUSEL VIDEO
-    var carouselWidth3 = $(".carousel-inner3")[0].scrollWidth;
-    var cardWidth3 = $(".carousel-item3").width();
-    var scrollPosition3 = 0;
-    $(".carousel-control-next3").on("click", function() {
-      if (scrollPosition3 < (carouselWidth3 - cardWidth3 * 4)) { //check if you can go any further
-        scrollPosition3 += cardWidth3; //update scroll position
-        $(".carousel-inner3").animate({
-          scrollLeft: scrollPosition3
-        }, 400); //scroll left
-      }
-    });
-    $(".carousel-control-prev3").on("click", function() {
-      if (scrollPosition3 > 0) {
-        scrollPosition3 -= cardWidth3;
-        $(".carousel-inner3").animate({
+      //CAROUSEL VIDEO
+      var carouselWidth3 = $(".carousel-inner3")[0].scrollWidth;
+      var cardWidth3 = $(".carousel-item3").width();
+      var scrollPosition3 = 0;
+      $(".carousel-control-next3").on("click", function() {
+        if (scrollPosition3 < (carouselWidth3 - cardWidth3 * 4)) { //check if you can go any further
+          scrollPosition3 += cardWidth3; //update scroll position
+          $(".carousel-inner3").animate({
             scrollLeft: scrollPosition3
-          },
-          400
-        );
+          }, 400); //scroll left
+        }
+      });
+      $(".carousel-control-prev3").on("click", function() {
+        if (scrollPosition3 > 0) {
+          scrollPosition3 -= cardWidth3;
+          $(".carousel-inner3").animate({
+              scrollLeft: scrollPosition3
+            },
+            400
+          );
+        }
+      });
+      var multipleCardCarousel3 = document.querySelector(
+        "#carouselExample2"
+      );
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        //rest of the code
+        var carousel3 = new bootstrap.Carousel(multipleCardCarousel3, {
+          interval3: false
+        });
+      } else {
+        $(multipleCardCarousel3).addClass("slide");
       }
-    });
-    var multipleCardCarousel3 = document.querySelector(
-      "#carouselExample2"
-    );
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      //rest of the code
       var carousel3 = new bootstrap.Carousel(multipleCardCarousel3, {
-        interval3: false
+        interval3: false,
+        wrap3: false,
       });
-    } else {
-      $(multipleCardCarousel3).addClass("slide");
-    }
-    var carousel3 = new bootstrap.Carousel(multipleCardCarousel3, {
-      interval3: false,
-      wrap3: false,
-    });
 
 
-    //CAROUSEL magazine
-    var carouselWidth4 = $(".carousel-inner4")[0].scrollWidth;
-    var cardWidth4 = $(".carousel-item4").width();
-    var scrollPosition4 = 0;
-    $(".carousel-control-next4").on("click", function() {
-      if (scrollPosition4 < (carouselWidth4 - cardWidth4 * 4)) { //check if you can go any further
-        scrollPosition4 += cardWidth4; //update scroll position
-        $(".carousel-inner4").animate({
-          scrollLeft: scrollPosition4
-        }, 400); //scroll left
-      }
-    });
-    $(".carousel-control-prev4").on("click", function() {
-      if (scrollPosition4 > 0) {
-        scrollPosition4 -= cardWidth4;
-        $(".carousel-inner4").animate({
+      //CAROUSEL magazine
+      var carouselWidth4 = $(".carousel-inner4")[0].scrollWidth;
+      var cardWidth4 = $(".carousel-item4").width();
+      var scrollPosition4 = 0;
+      $(".carousel-control-next4").on("click", function() {
+        if (scrollPosition4 < (carouselWidth4 - cardWidth4 * 4)) { //check if you can go any further
+          scrollPosition4 += cardWidth4; //update scroll position
+          $(".carousel-inner4").animate({
             scrollLeft: scrollPosition4
-          },
-          400
-        );
+          }, 400); //scroll left
+        }
+      });
+      $(".carousel-control-prev4").on("click", function() {
+        if (scrollPosition4 > 0) {
+          scrollPosition4 -= cardWidth4;
+          $(".carousel-inner4").animate({
+              scrollLeft: scrollPosition4
+            },
+            400
+          );
+        }
+      });
+      var multipleCardCarousel4 = document.querySelector(
+        "#carouselExample3"
+      );
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        //rest of the code
+        var carousel4 = new bootstrap.Carousel(multipleCardCarousel4, {
+          interval4: false
+        });
+      } else {
+        $(multipleCardCarousel4).addClass("slide");
       }
-    });
-    var multipleCardCarousel4 = document.querySelector(
-      "#carouselExample3"
-    );
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      //rest of the code
       var carousel4 = new bootstrap.Carousel(multipleCardCarousel4, {
-        interval4: false
+        interval4: false,
+        wrap4: false,
       });
-    } else {
-      $(multipleCardCarousel4).addClass("slide");
-    }
-    var carousel4 = new bootstrap.Carousel(multipleCardCarousel4, {
-      interval4: false,
-      wrap4: false,
-    });
 
 
-    //CAROUSEL indepth
-    var carouselWidth5 = $(".carousel-inner5")[0].scrollWidth;
-    var cardWidth5 = $(".carousel-item5").width();
-    var scrollPosition5 = 0;
-    $(".carousel-control-next5").on("click", function() {
-      if (scrollPosition5 < (carouselWidth5 - cardWidth5 * 4)) { //check if you can go any further
-        scrollPosition5 += cardWidth5; //update scroll position
-        $(".carousel-inner5").animate({
-          scrollLeft: scrollPosition5
-        }, 400); //scroll left
-      }
-    });
-    $(".carousel-control-prev5").on("click", function() {
-      if (scrollPosition5 > 0) {
-        scrollPosition5 -= cardWidth5;
-        $(".carousel-inner5").animate({
+      //CAROUSEL indepth
+      var carouselWidth5 = $(".carousel-inner5")[0].scrollWidth;
+      var cardWidth5 = $(".carousel-item5").width();
+      var scrollPosition5 = 0;
+      $(".carousel-control-next5").on("click", function() {
+        if (scrollPosition5 < (carouselWidth5 - cardWidth5 * 4)) { //check if you can go any further
+          scrollPosition5 += cardWidth5; //update scroll position
+          $(".carousel-inner5").animate({
             scrollLeft: scrollPosition5
-          },
-          400
-        );
-      }
-    });
-    var multipleCardCarousel5 = document.querySelector(
-      "#carouselExample4"
-    );
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      //rest of the code
-      var carousel5 = new bootstrap.Carousel(multipleCardCarousel5, {
-        interval5: false
+          }, 400); //scroll left
+        }
       });
-    } else {
-      $(multipleCardCarousel5).addClass("slide");
-    }
-    var carousel5 = new bootstrap.Carousel(multipleCardCarousel5, {
-      interval5: false,
-      wrap5: false,
-    });
-
-    function myFunction1() {
-      var dots = document.getElementById("dots1");
-      var moreText = document.getElementById("more1");
-      var btnText = document.getElementById("myBtn1");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
+      $(".carousel-control-prev5").on("click", function() {
+        if (scrollPosition5 > 0) {
+          scrollPosition5 -= cardWidth5;
+          $(".carousel-inner5").animate({
+              scrollLeft: scrollPosition5
+            },
+            400
+          );
+        }
+      });
+      var multipleCardCarousel5 = document.querySelector(
+        "#carouselExample4"
+      );
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        //rest of the code
+        var carousel5 = new bootstrap.Carousel(multipleCardCarousel5, {
+          interval5: false
+        });
       } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
+        $(multipleCardCarousel5).addClass("slide");
       }
-    }
+      var carousel5 = new bootstrap.Carousel(multipleCardCarousel5, {
+        interval5: false,
+        wrap5: false,
+      });
 
-    function myFunction2() {
-      var dots = document.getElementById("dots2");
-      var moreText = document.getElementById("more2");
-      var btnText = document.getElementById("myBtn2");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
+      function showFullDescription(e) {
+        const parent = e.parentElement;
+        const cardDescriptionElement = parent.querySelector(".card-text");
+        const descriptionContainer = cardDescriptionElement.parentElement;
+        descriptionContainer.classList.toggle("text-truncate-container");
       }
-    }
-
-    function myFunction3() {
-      var dots = document.getElementById("dots3");
-      var moreText = document.getElementById("more3");
-      var btnText = document.getElementById("myBtn3");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-    function myFunction4() {
-      var dots = document.getElementById("dots4");
-      var moreText = document.getElementById("more4");
-      var btnText = document.getElementById("myBtn4");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-    function myFunction5() {
-      var dots = document.getElementById("dots5");
-      var moreText = document.getElementById("more5");
-      var btnText = document.getElementById("myBtn5");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-    function myFunction6() {
-      var dots = document.getElementById("dots6");
-      var moreText = document.getElementById("more6");
-      var btnText = document.getElementById("myBtn6");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-    function myFunction7() {
-      var dots = document.getElementById("dots7");
-      var moreText = document.getElementById("more7");
-      var btnText = document.getElementById("myBtn7");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-    function myFunction81() {
-      var dots = document.getElementById("dots81");
-      var moreText = document.getElementById("more81");
-      var btnText = document.getElementById("myBtn81");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-    function myFunction82() {
-      var dots = document.getElementById("dots82");
-      var moreText = document.getElementById("more82");
-      var btnText = document.getElementById("myBtn82");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-    function myFunction83() {
-      var dots = document.getElementById("dots83");
-      var moreText = document.getElementById("more83");
-      var btnText = document.getElementById("myBtn83");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-    function myFunction9() {
-      var dots = document.getElementById("dots9");
-      var moreText = document.getElementById("more9");
-      var btnText = document.getElementById("myBtn9");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-    function myFunction10() {
-      var dots = document.getElementById("dots10");
-      var moreText = document.getElementById("more10");
-      var btnText = document.getElementById("myBtn10");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-    function myFunction11() {
-      var dots = document.getElementById("dots11");
-      var moreText = document.getElementById("more11");
-      var btnText = document.getElementById("myBtn11");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-
-    function myFunction12() {
-      var dots = document.getElementById("dots12");
-      var moreText = document.getElementById("more12");
-      var btnText = document.getElementById("myBtn12");
-
-      if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.innerHTML = "Read more";
-        moreText.style.display = "none";
-      } else {
-        dots.style.display = "none";
-        btnText.innerHTML = "Read less";
-        moreText.style.display = "inline";
-      }
-    }
-    //{{ route('daftarTalkshow') }}
-  </script>
-@endsection
+    </script>
+  @endsection
