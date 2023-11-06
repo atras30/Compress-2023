@@ -142,8 +142,7 @@
       }
 
       .sponsor-bottom {
-        width: 35%;
-        height: 50%;
+        width: 25%;
       }
 
       .sponsor {
@@ -402,12 +401,12 @@
     }
 
     .sponsor-top {
-      height: 150px;
+      width: 30%;
       margin-top: 1rem;
     }
 
     .sponsor-top2 {
-      height: 120px;
+      width: 30%;
       margin-top: 1rem;
     }
 
@@ -433,6 +432,24 @@
       max-height: 90vh;
       min-height: 60vh;
     }
+
+    .margin-mp {
+      margin-left:800px;
+    }
+
+    .text-sponsor {
+      text-align: left;
+    }
+
+    @media(max-width:450px) {
+      .text-sponsor {
+        text-align: center;
+      }
+
+      .margin-mp {
+        margin-left:0px !important;
+      }
+    }    
   </style>
 @endsection
 
@@ -698,7 +715,7 @@
       {{-- Title --}}
       <section class="ptop-5">
         <div class="px-5 mb-5 img-thumbnail sponsor" style="border: 4px solid black; max-width:50%; margin-left:100px;">
-          <h1 class="font-bazinga text-black fw-bold mt-3">Sponsor</h1>
+          <h1 class="font-bazinga text-black fw-bold mt-3 text-sponsor">Sponsor</h1>
           <div class=" position-relative gap-4 d-flex justify-content-center align-items-center">
             <img class="sponsor-top"src="{{ asset('/images/ruangIndependen/pameran/Susu Tango Uk 1.png') }}"></img>
             <img class="sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Teh Gelas Uk 1.png') }}"></img>
@@ -711,25 +728,25 @@
         </div>
       </section>
 
-        <section class="ptop-5">
-          <div class="px-5  img-thumbnail medparbg" style="border: 4px solid black; max-width:70%; margin-left:400px;">
-            <h1 class="font-bazinga text-black fw-bold mt-3 medpar"style="margin-left:800px;">Media Partner</h1>
-            <div class=" position-relative d-flex justify-content-center align-items-center mt-3">
-              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Mading Event 1.png') }}"></img>
-              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Medio By KG Media [horizontal]-black copy 1.png') }}"></img>
-              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Logo radio untar 2.png') }}"></img>
-              <img class="medpar-top ms-5 edaran"src="{{ asset('/images/ruangIndependen/pameran/Edaran event 1.png') }}"></img>
-              <img class="medpar-top ms-5 ultimagz"src="{{ asset('/images/ruangIndependen/pameran/ULTIMAGZ copy 1.png') }}"></img>
-            </div>
-            <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-5">
-              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Sigma TV 2.png') }}"></img>
-              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/BFAST MEDIA 1.png') }}"></img>
-              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/ALIVE 1.png') }}"></img>
-              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Logo_1-100-removebg-preview 1.png') }}"></img>
-              <img class="medpar-bottom2"src="{{ asset('/images/ruangIndependen/pameran/Radio Mercu Buana_ 2.png') }}"></img>
-            </div>
+      <section class="pb-5">
+        <div class="px-5  img-thumbnail medparbg" style="border: 4px solid black; max-width:70%; margin-left:400px;">
+          <h1 class="font-bazinga text-black fw-bold mt-3 medpar text-center margin-mp">Media Partner</h1>
+          <div class=" position-relative d-flex justify-content-center align-items-center mt-3">
+            <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Mading Event 1.png') }}"></img>
+            <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Medio By KG Media [horizontal]-black copy 1.png') }}"></img>
+            <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Logo radio untar 2.png') }}"></img>
+            <img class="medpar-top ms-5 edaran"src="{{ asset('/images/ruangIndependen/pameran/Edaran event 1.png') }}"></img>
+            <img class="medpar-top ms-5 ultimagz"src="{{ asset('/images/ruangIndependen/pameran/ULTIMAGZ copy 1.png') }}"></img>
           </div>
-        </section>
+          <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-5">
+            <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Sigma TV 2.png') }}"></img>
+            <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/BFAST MEDIA 1.png') }}"></img>
+            <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/ALIVE 1.png') }}"></img>
+            <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Logo_1-100-removebg-preview 1.png') }}"></img>
+            <img class="medpar-bottom2"src="{{ asset('/images/ruangIndependen/pameran/Radio Mercu Buana_ 2.png') }}"></img>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 @endsection
