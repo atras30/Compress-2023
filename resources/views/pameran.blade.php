@@ -102,6 +102,12 @@
         margin: auto;
       }
 
+      .like-artikel{
+        width: 80% !important;
+        margin: auto;
+        font-size: 0.8rem !important;
+      }
+
       .hero-title {
         font-size: 2.5rem !important;
       }
@@ -532,7 +538,7 @@
                   <div class="card-body">
                     <h5 class="card-title">{{ $audio->title }}</h5>
                     <div class="text-truncate-container mb-4">
-                      <p class="card-text" style="text-align: justify;">{{$audio->deskripsi}}</p>
+                      <p class="card-text" style="text-align: justify;">{{ $audio->deskripsi }}</p>
                     </div>
                     <button onclick="showFullDescription(this)" class="btn btn-link"id="myBtn1">Read more</button>
                     <a href="{{ $audio->link }}" target="_blank" class="btn btn-success">Dengar di Spotify</a>
@@ -577,10 +583,10 @@
         <div id="carouselExample3" class="carousel">
           <div class="carousel-inner carousel-inner4 carousel-inner-magazine gap-5">
             @foreach ($e_magazine as $magazine)
-              <div class="carousel-item carousel-item3 carousel-item-magazine active ps-4">
+              <div class="carousel-item carousel-item3 carousel-item-magazine @if($loop->first) active @endif ps-4">
               <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $magazine->title }}</h2>
                 <a href="{{ $magazine->link }}" target="_blank"><img src="{{ $magazine->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
-                <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
                   <button onclick="likePost('{{ $magazine->id }}')" class="btn magazine-like-button" data-likes="{!! str_replace('"', '\'', $magazine->likes()->pluck('ip')) !!}">
                     <i class="bi bi-heart"></i>
                     Like
@@ -621,9 +627,9 @@
         <div id="carouselExample4" class="carousel">
           <div class="carousel-inner carousel-inner5 carousel-inner-indepth gap-5">
             @foreach ($indepth_artikel as $indepth)
-              <div class="carousel-item carousel-item5 carousel-item-indepth active ps-4">
-                <a href="{{ $indepth->link }}" target="_blank"><img src="{{ $indepth->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
-                <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+              <div class="carousel-item carousel-item5 carousel-item-indepth @if($loop->first) active ps-4 @endif">
+                <a href="{{ $indepth->link }}" target="_blank"><img src="{{ $indepth->image_path }}" class="d-block w-100 cover-artikel rounded-top" style="height:60%;" alt="..."></a>
+                <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
                   <button onclick="likePost('{{ $indepth->id }}')" class="btn indepth-like-button" data-likes="{!! str_replace('"', '\'', $indepth->likes()->pluck('ip')) !!}">
                     <i class="bi bi-heart"></i>
                     Like
@@ -664,10 +670,10 @@
         <div id="carouselExample2" class="carousel">
           <div class="carousel-inner carousel-inner3 carousel-inner-video gap-5">
             @foreach ($video_dokumenter as $video)
-              <div class="carousel-item carousel-item3 carousel-item-video active ps-4">
+              <div class="carousel-item carousel-item3 carousel-item-video @if($loop->first) active ps-4 @endif">
                 <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $video->nama_pembuat }}</h2>
-                <a href="{{ $video->link }}" target="_blank"><img src="{{ $video->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
-                <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                <a href="{{ $video->link }}" target="_blank"><img src="{{ $video->image_path }}" class="d-block w-100 cover-artikel rounded-top" style="height:60%;" alt="..."></a>
+                <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
                   <button onclick="likePost('{{ $video->id }}')" class="btn video-like-button" data-likes="{!! str_replace('"', '\'', $video->likes()->pluck('ip')) !!}">
                     <i class="bi bi-heart"></i>
                     Like
@@ -710,10 +716,10 @@
         <div id="carouselExample" class="carousel">
           <div class="carousel-inner carousel-inner2 carousel-inner-artikel gap-5">
             @foreach ($artikel_interaktif as $karya)
-              <div class="carousel-item carousel-item2 carousel-item-artikel active">
+              <div class="carousel-item carousel-item2 carousel-item-artikel @if($loop->first) active @endif">
                 <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $karya->nama_pembuat }}</h2>
                 <a href="{{ $karya->link }}" target="_blank"><img src="{{ $karya->image_path }}" class="d-block w-100 cover-artikel" style="height:60%;" alt="..."></a>
-                <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
                   <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
                     <i class="bi bi-heart"></i>
                     Like
