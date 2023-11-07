@@ -552,9 +552,9 @@
 
         {{-- Episodes --}}
         <div id="carouselExampleControls" class="carousel">
-          <div class="carousel-inner carousel-inner1 carousel-inner-audio mb-5 " style="padding-bottom: 3rem">
+          <div class="carousel-inner carousel-inner1 carousel-inner-audio">
             @foreach ($audio_dokumenter as $audio)
-              <div class="carousel-item carousel-item1 carousel-item-audio @if($loop->first) active @endif">
+              <div class="carousel-item carousel-item1 carousel-item-audio @if($loop->first) active @endif mb-5 p-3">
                 <div class="card">
                   <div class="img-wrapper">
                     <img src="{{ $audio->image_path }}" class="d-block w-100" alt="...">
@@ -608,7 +608,7 @@
           <div class="carousel-inner carousel-inner4 carousel-inner-magazine gap-5">
             @foreach ($e_magazine as $magazine)
               <div class="carousel-item carousel-item4 carousel-item-magazine @if($loop->first) active @endif ps-4">
-              <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $magazine->title }}</h2>
+              <h2 class="font-bazinga text-black fs-2 text-center mb-5 pembuat-artikel">{{ $magazine->title }}</h2>
                 <a href="{{ $magazine->link }}" target="_blank"><img src="{{ $magazine->image_path }}" class="d-block w-100 cover-artikel rounded-top" style="height:60%;" alt="..."></a>
                 <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
                   <button onclick="likePost('{{ $magazine->id }}')" class="btn magazine-like-button" data-likes="{!! str_replace('"', '\'', $magazine->likes()->pluck('ip')) !!}">
@@ -617,7 +617,7 @@
                   </button>
                   <div id="magazine_dokumenter_{{ $magazine->id }}">Total Likes: {{ $magazine->likes_count }}</div>
                 </div>
-                <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $magazine->deskripsi }}"</h3>
+                <h3 class="font-bazinga text-black fs-2 text-center mt-5 judul-artikel">"{{ $magazine->deskripsi }}"</h3>
               </div>
             @endforeach
           </div>
@@ -629,8 +629,8 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
+          <div class="fs-2 text-center font-bazinga text-black p-5">Tekan Poster untuk Melihat Majalah</div>
         </div>
-        <div class="fs-2 text-center font-bazinga text-black">Tekan Poster untuk Melihat Majalah</div>
       </div>
     </div>
 
@@ -652,7 +652,7 @@
           <div class="carousel-inner carousel-inner5 carousel-inner-indepth gap-5">
             @foreach ($indepth_artikel as $indepth)
               <div class="carousel-item carousel-item5 carousel-item-indepth @if($loop->first) active @endif ps-4">
-                  <a href="{{ $indepth->link }}" target="_blank"><img src="{{ $indepth->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
+                  <a href="{{ $indepth->link }}" target="_blank"><img src="{{ $indepth->image_path }}" class="d-block w-100 cover-artikel rounded-top" style="height:60%;" alt="..."></a>
                   <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
                     <button onclick="likePost('{{ $indepth->id }}')" class="btn indepth-like-button" data-likes="{!! str_replace('"', '\'', $indepth->likes()->pluck('ip')) !!}">
                       <i class="bi bi-heart"></i>
@@ -660,7 +660,7 @@
                     </button>
                   <div id="indepth_dokumenter_{{ $indepth->id }}">Total Likes: {{ $indepth->likes_count }}</div>
                 </div>
-                <h2 class="font-bazinga text-white fs-2 text-center mb-5 mt-5 pembuat-artikel">{{ $indepth->title }}</h2>
+                <h2 class="font-bazinga text-white fs-3 text-center mt-5 pembuat-artikel">{{ $indepth->title }}</h2>
               </div>
             @endforeach
           </div>
@@ -672,8 +672,8 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
+          <div class="fs-2 text-center font-bazinga text-white p-5 mt-5">Tekan Poster Untuk Melihat Video</div>
         </div>
-        <div class="fs-2 text-center font-bazinga text-white pt-5" style="padding-bottom:65px;">Tekan Poster Untuk Melihat Video</div>
       </div>
     </div>
 
@@ -704,7 +704,7 @@
                   </button>
                   <div id="video_dokumenter_{{ $video->id }}">Total Likes: {{ $video->likes_count }}</div>
                 </div>
-                <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $video->title }}"</h3>
+                <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel pb-2">"{{ $video->title }}"</h3>
               </div>
             @endforeach
 
@@ -719,7 +719,7 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <div class="fs-2 text-center font-bazinga text-white pt-5">Tekan Poster Untuk Melihat Video</div>
+        <div class="fs-2 text-center font-bazinga text-white p-5 mt-5">Tekan Poster Untuk Melihat Video</div>
       </div>
     </div>
 
@@ -765,7 +765,7 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <div class="fs-2 text-center font-bazinga text-black">Tekan HP untuk melihat artikel</div>
+        <div class="fs-2 text-center font-bazinga text-white mt-5 p-5">Tekan HP untuk melihat artikel</div>
       </div>
     </div>
 
@@ -829,13 +829,13 @@
           <div class="px-5 mb-5 img-thumbnail sponsor" style="border: 4px solid black; max-width:50%; margin-left:100px;">
             <h1 class="font-bazinga text-black fw-bold mt-3 text-sponsor">Sponsor</h1>
             <div class=" position-relative gap-4 d-flex justify-content-center align-items-center">
-              <img class="sponsor-top"src="{{ asset('/images/ruangIndependen/pameran/Susu Tango Uk 1.png') }}"></img>
-              <img class="sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Teh Gelas Uk 1.png') }}"></img>
-              <img class="sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Crystalin Uk 1.png') }}"></img>
+              <img class="sponsor-top"src="{{ asset('/images/ruangIndependen/pameran/Susu Tango Uk 1.png') }}"/>
+              <img class="sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Teh Gelas Uk 1.png') }}"/>
+              <img class="sponsor-top2"src="{{ asset('/images/ruangIndependen/pameran/Crystalin Uk 1.png') }}"/>
             </div>
             <div class=" position-relative gap-5 d-flex justify-content-center align-items-center mt-5">
-              <img class="sponsor-bottom mb-3"src="{{ asset('/images/ruangIndependen/pameran/Hop Hop Uk 1.png') }}"></img>
-              <img class="sponsor-bottom mb-3"src="{{ asset('/images/ruangIndependen/pameran/Pandaboo Uk 1.png') }}"></img>
+              <img class="sponsor-bottom mb-3"src="{{ asset('/images/ruangIndependen/pameran/Hop Hop Uk 1.png') }}"/>
+              <img class="sponsor-bottom mb-3"src="{{ asset('/images/ruangIndependen/pameran/Pandaboo Uk 1.png') }}"/>
             </div>
           </div>
         </section>
@@ -844,20 +844,20 @@
           <div class="px-5  img-thumbnail medparbg" style="border: 4px solid black; max-width:70%; margin-left:400px;">
             <h1 class="font-bazinga text-black fw-bold mt-3 medpar text-center margin-mp">Media Partner</h1>
             <div class=" position-relative d-flex justify-content-center align-items-center mt-3">
-              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Mading Event 1.png') }}"></img>
-              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Medio By KG Media [horizontal]-black copy 1.png') }}"></img>
-              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Logo radio untar 2.png') }}"></img>
-              <img class="medpar-top ms-5 edaran"src="{{ asset('/images/ruangIndependen/pameran/Edaran event 1.png') }}"></img>
+              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Mading Event 1.png') }}"/>
+              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Medio By KG Media [horizontal]-black copy 1.png') }}"/>
+              <img class="medpar-top"src="{{ asset('/images/ruangIndependen/pameran/Logo radio untar 2.png') }}"/>
+              <img class="medpar-top ms-5 edaran"src="{{ asset('/images/ruangIndependen/pameran/Edaran event 1.png') }}"/>
             </div>
             <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-5">
-              <img class="medpar-top ms-5 ultimagz"src="{{ asset('/images/ruangIndependen/pameran/ULTIMAGZ copy 1.png') }}"></img>
-              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Sigma TV 2.png') }}"></img>
-              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/BFAST MEDIA 1.png') }}"></img>
+              <img class="medpar-top ms-5 ultimagz"src="{{ asset('/images/ruangIndependen/pameran/ULTIMAGZ copy 1.png') }}"/>
+              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Sigma TV 2.png') }}"/>
+              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/BFAST MEDIA 1.png') }}"/>
             </div>
             <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-3">
-              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/ALIVE 1.png') }}"></img>
-              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Logo_1-100-removebg-preview 1.png') }}"></img>
-              <img class="medpar-bottom2"src="{{ asset('/images/ruangIndependen/pameran/Radio Mercu Buana_ 2.png') }}"></img>
+              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/ALIVE 1.png') }}"/>
+              <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Logo_1-100-removebg-preview 1.png') }}"/>
+              <img class="medpar-bottom2"src="{{ asset('/images/ruangIndependen/pameran/Radio Mercu Buana_ 2.png') }}"/>
             </div>
           </div>
         </section>
@@ -1135,7 +1135,14 @@
         const parent = e.parentElement;
         const cardDescriptionElement = parent.querySelector(".card-text");
         const descriptionContainer = cardDescriptionElement.parentElement;
-        descriptionContainer.classList.toggle("text-truncate-container");
+
+        if (parent.querySelector("#myBtn1").textContent === "Read more") {
+            descriptionContainer.classList.remove("text-truncate-container");
+            parent.querySelector("#myBtn1").textContent = "Read Less";
+        } else {
+            descriptionContainer.classList.add("text-truncate-container");
+            parent.querySelector("#myBtn1").textContent = "Read more";
+        }
       }
 
       $('.owl-carousel').owlCarousel({
