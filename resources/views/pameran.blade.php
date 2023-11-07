@@ -64,6 +64,10 @@
 
     }
 
+    .photo-hero img{
+        width: 50%;
+    }
+
     @media(max-width:1000px) {
       .pembuat-artikel {
         font-size: 1.5rem !important;
@@ -72,7 +76,10 @@
       .judul-artikel {
         font-size: 1.5rem !important;
       }
-
+      
+      .photo-hero img{
+        width: 50%;
+      }
     }
 
     @media(max-width:808px) {
@@ -86,6 +93,10 @@
 
       .judul-artikel {
         font-size: 1rem !important;
+      }
+
+      .photo-hero img{
+        width: 80%;
       }
     }
 
@@ -118,6 +129,10 @@
 
       .card-text {
         font-size: 0.85rem !important;
+      }
+
+      .photo-hero img{
+        width: 90%;
       }
     }
 
@@ -218,6 +233,22 @@
         width: 20% !important;
         ;
       }
+
+      .item{
+        width: 450px !important; 
+        height: 450px !important; 
+        overflow: hidden;
+      }
+
+      .item h4{
+        width: 350px;
+        font-size: 1rem !important;
+      }
+
+      .item img{
+        width: 350px !important;
+        height: 350px !important;
+      }
     }
 
     @media(max-width:1352px) {
@@ -262,6 +293,23 @@
       .medpar {
         margin-left: 200px !important;
       }
+
+      .item{
+        width: 250px !important; 
+        height: 350px !important; 
+        overflow: hidden;
+        margin: auto;
+      }
+
+      .item h4{
+        width: 180px;
+        font-size: 1rem !important;
+      }
+
+      .item img{
+        width: 180px !important;
+        height: 180px !important;
+      }
     }
 
     @media(max-width:758px) {
@@ -302,7 +350,6 @@
       .medpar-bottom {
         width: 20% !important;
       }
-
     }
 
     @media(max-width:450px) {
@@ -319,11 +366,29 @@
         width: 30% !important;
       }
 
+      .item{
+        width: 250px !important; 
+        height: 350px !important; 
+        overflow: hidden;
+        margin: auto;
+      }
+
+      .item h4{
+        width: 250px;
+        font-size: 1rem !important;
+      }
+
+      .item img{
+        width: 250px !important;
+        height: 250px !important;
+      }
     }
 
     .carousel-inner-audio {
       padding: 1em;
     }
+
+   
 
     .card {
       margin: 0 .5em;
@@ -565,7 +630,10 @@
                       <p class="card-text" style="text-align: justify;">{{ $audio->deskripsi }}</p>
                     </div>
                     <button onclick="showFullDescription(this)" class="btn btn-link"id="myBtn1">Read more</button>
-                    <a href="{{ $audio->link }}" target="_blank" class="btn btn-success">Dengar di Spotify</a>
+                    <a href="{{ $audio->link }}" target="_blank" class="btn btn-success">
+                      <i class="fab fa-spotify mr-2"></i>
+                       Dengar di Spotify
+                    </a>
                     <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
                       <button onclick="likePost('{{ $audio->id }}')" class="btn audio-like-button" data-likes="{!! str_replace('"', '\'', $audio->likes()->pluck('ip')) !!}">
                         <i class="bi bi-heart"></i>
@@ -743,12 +811,14 @@
               <div class="carousel-item carousel-item2 carousel-item-artikel @if($loop->first) active @endif">
                 <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $karya->nama_pembuat }}</h2>
                 <a href="{{ $karya->link }}" target="_blank"><img src="{{ $karya->image_path }}" class="d-block w-100 cover-artikel" style="height:60%;" alt="..."></a>
-                <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
-                  <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
-                    <i class="bi bi-heart"></i>
-                    Like
-                  </button>
-                  <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+                <div class="d-flex mt-2 like-artikel justify-content-center align-items-center">
+                  <div class="d-flex justify-content-center align-items-center px-3 py-1 rounded bg-light">
+                    <button onclick="likePost('{{ $karya->id }}')" class="btn px-2 artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
+                      <i class="bi bi-heart"></i>
+                      Like
+                    </button>
+                    <div class="px-2" id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+                  </div>
                 </div>
                 <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $karya->title }}"</h3>
               </div>
@@ -792,12 +862,14 @@
               <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
               @foreach($photostory_feed_biara as $biara)
                 <div class="item">
-                  <img class="feed"src="{{ $biara->image_path }}" style="width:350px; height:350px;">
-                  <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$biara->deskripsi}}<h4>
+                    <img class="feed" src="{{ $biara->image_path }}">
+                    <h4 class="font-bazinga text-center text-black deskripsi-feed fs-5">{{$biara->deskripsi}}<h4>
                 </div>
               @endforeach
               </div>
-              <img src="{{ $photo->image_path }}" class="d-block w-50" style="margin:0 auto;" alt="...">
+              <div class="photo-hero">
+                <img src="{{ $photo->image_path }}" class="d-block" style="margin:0 auto;" alt="...">
+              </div>
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
               <div class="d-flex text-center like-artikel justify-content-center align-items-center">
                 <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
@@ -818,7 +890,9 @@
                   </div>
                 @endforeach
               </div>
-              <img src="{{ $photo->image_path }}" class="d-block w-50" style=" margin:0 auto;" alt="...">
+              <div class="photo-hero">
+                <img src="{{ $photo->image_path }}" class="d-block" style=" margin:0 auto;" alt="...">
+              </div>
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
               <div class="d-flex text-center like-artikel justify-content-center align-items-center">
                 <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
@@ -839,7 +913,9 @@
                   </div>
                 @endforeach
               </div>
-              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <div class="photo-hero">
+                <img src="{{ $photo->image_path }}" class="d-block" style="margin:0 auto;" alt="...">
+              </div>
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
               <div class="d-flex text-center like-artikel justify-content-center align-items-center">
                 <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
@@ -860,7 +936,9 @@
                   </div>
                 @endforeach
               </div>
-              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <div class="photo-hero">
+                <img src="{{ $photo->image_path }}" class="d-block" style="margin:0 auto;" alt="...">
+              </div>
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
               <div class="d-flex text-center like-artikel justify-content-center align-items-center">
                 <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
@@ -882,7 +960,9 @@
                   </div>
                 @endforeach
               </div>
-              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <div class="photo-hero">
+                <img src="{{ $photo->image_path }}" class="d-block" style="margin:0 auto;" alt="...">
+              </div>
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
               <div class="d-flex text-center like-artikel justify-content-center align-items-center">
                 <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
@@ -904,7 +984,9 @@
                   </div>
                 @endforeach
               </div>
-              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <div class="photo-hero">
+                <img src="{{ $photo->image_path }}" class="d-block" style="margin:0 auto;" alt="...">
+              </div>
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
               <div class="d-flex text-center like-artikel justify-content-center align-items-center">
                 <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
@@ -926,7 +1008,9 @@
                   </div>
                 @endforeach
               </div>
-              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <div class="photo-hero">
+                <img src="{{ $photo->image_path }}" class="d-block" style="margin:0 auto;" alt="...">
+              </div>
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
               <div class="d-flex text-center like-artikel justify-content-center align-items-center">
                 <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
@@ -948,7 +1032,9 @@
                   </div>
                 @endforeach
               </div>
-              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <div class="photo-hero">
+                <img src="{{ $photo->image_path }}" class="d-block" style="margin:0 auto;" alt="...">
+              </div>
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
               <div class="d-flex text-center like-artikel justify-content-center align-items-center">
                 <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
@@ -1323,4 +1409,5 @@
 
 
     </script>
+      <script src="https://kit.fontawesome.com/61f2e03fd8.js" crossorigin="anonymous"></script>
   @endsection
