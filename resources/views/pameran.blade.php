@@ -265,6 +265,22 @@
         margin-left: 300px !important;
         ;
       }
+
+      .item{
+        width: 450px !important; 
+        height: 450px !important; 
+        overflow: hidden;
+      }
+
+      .item h4{
+        width: 250px;
+        font-size: 1rem !important;
+      }
+
+      .item img{
+        width: 250px !important;
+        height: 250px !important;
+      }
     }
 
     @media(max-width:1141px) {
