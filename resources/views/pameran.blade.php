@@ -524,7 +524,7 @@
         <div id="carouselExampleControls" class="carousel">
           <div class="carousel-inner carousel-inner1 carousel-inner-audio mb-5 " style="padding-bottom: 3rem">
             @foreach ($audio_dokumenter as $audio)
-              <div class="carousel-item carousel-item1 @if($loop->first) active @endif">
+              <div class="carousel-item carousel-item1 carousel-item-audio @if($loop->first) active @endif">
                 <div class="card">
                   <div class="img-wrapper">
                     <img src="{{ $audio->image_path }}" class="d-block w-100" alt="...">
