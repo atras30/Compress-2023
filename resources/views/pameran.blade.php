@@ -585,7 +585,7 @@
             @foreach ($e_magazine as $magazine)
               <div class="carousel-item carousel-item3 carousel-item-magazine @if($loop->first) active @endif ps-4">
               <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $magazine->title }}</h2>
-                <a href="{{ $magazine->link }}" target="_blank"><img src="{{ $magazine->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
+                <a href="{{ $magazine->link }}" target="_blank"><img src="{{ $magazine->image_path }}" class="d-block w-100 cover-artikel rounded-top" style="height:60%;" alt="..."></a>
                 <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
                   <button onclick="likePost('{{ $magazine->id }}')" class="btn magazine-like-button" data-likes="{!! str_replace('"', '\'', $magazine->likes()->pluck('ip')) !!}">
                     <i class="bi bi-heart"></i>
