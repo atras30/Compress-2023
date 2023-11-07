@@ -127,7 +127,7 @@
       }
 
       .card-title {
-        font-size: 1rem !important;
+        font-size: 5vw !important;
       }
 
       .card-text {
@@ -356,6 +356,10 @@
         font-size: 1.5rem !important;
       }
 
+      .card-title {
+        height: 15vh !important;
+      }
+
       .medpar-top {
         width: 22% !important;
       }
@@ -426,6 +430,20 @@
       justify-content: center;
       align-items: center;
     }
+
+    .card-title {
+        display:flex;
+        justify-items: center;
+        justify-content: center;
+        justify-self: center;
+        flex-direction: column;
+        font-weight: bold;
+        height: 8vh;
+      }
+
+      .card-text {
+        font-size: 1rem !important;
+      }
 
     img {
       max-height: 100%;
@@ -635,11 +653,11 @@
               <div class="carousel-item carousel-item1 carousel-item-audio @if($loop->first) active @endif mb-5 p-3">
                 <div class="card">
                   <div class="img-wrapper">
-                    <img src="{{ $audio->image_path }}" class="d-block w-100" alt="...">
+                    <img src="{{ $audio->image_path }}" class="d-block w-100 h-full" alt="...">
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">{{ $audio->title }}</h5>
-                    <div class="text-truncate-container mb-4">
+                    <div class="text-truncate-container mb-4 pt-sm-4">
                       <p class="card-text" style="text-align: justify;">{{ $audio->deskripsi }}</p>
                     </div>
                     <button onclick="showFullDescription(this)" class="btn btn-link"id="myBtn1">Read more</button>
