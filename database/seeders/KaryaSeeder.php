@@ -274,7 +274,7 @@ class KaryaSeeder extends Seeder
         Art::create([
             "id" => "31",
             "image_path" => "/images/ruangIndependen/pameran/foodwaste.jpeg",
-            "title" => "Meningkatnya Sampah Makanan di Tengah Ancaman Krisis Pangan: KetidakacuhanHotel dalam Mengelola Sampah Makanan",
+            "title" => "Meningkatnya Sampah Makanan di Tengah Ancaman Krisis Pangan: Ketidakacuhan Hotel dalam Mengelola Sampah Makanan",
             "link" => "https://drive.google.com/file/d/1tRHMQkfnlsUiXcyyHgKv1Sq1RJUJLQBP/view?usp=sharing",
             "tipe" => "indepth artikel",
         ]);
@@ -305,7 +305,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "35",
-            "image_path" => "/images/ruangIndependen/pameran/dosbing.jpeg",
+            "image_path" => "/images/ruangIndependen/pameran/dropout.jpeg",
             "title" => "Fenomena Putus Kuliah: Salah Pemerintah, Kampus, atau Mahasiswanya?",
             "link" => "https://drive.google.com/file/d/1u4JLwlRyipGXxryYUOPF4euUsZRz-0LA/view?usp=sharing",
             "tipe" => "indepth artikel",
@@ -634,5 +634,204 @@ class KaryaSeeder extends Seeder
             "deskripsi"=> "Berbagai alat potong dan raut yang digunakan dalam proses pembuatan wayang golek.",
             "tipe" => "photostory feed wayanggolek",
         ]);
+
+        Art::create([
+            "id" => "41",
+            "image_path" => "/images/ruangIndependen/pameran/cilik.png",
+            "title" => "BELAJAR JADI JURNALIS DARI CILIK",
+            "deskripsi"=> "Belajar merupakan sebuah kegiatan yang bisa
+            dilakukan dimana saja, kapan saja, dan oleh siapa
+            saja. Salah satunya seperti Kelas Jurnalis Cilik yang
+            diadakan di daerah pesisir ibukota, tepatnya Cilincing,
+            Jakarta Utara untuk anak-anak sekolah dasar. Sesuai
+            dengan namanya, secara khusus kelas ini
+            mengajarkan tentang keterampilan jurnalistik yang
+            sesuai dengan kode etik.
+            <br><br>
+            Sabtu (29/05/22) lalu, Kelas Jurnalis Cilik (angkatan) V mengadakan pertemuannya seperti biasa di pesisir. Kali ini
+            pemateri yang diundang membagikan tentang sejarah jurnalisme dan juga foto jurnalistik.
+            “Menurut kalian apa yang menarik dari foto ini?” tanya sang pembawa materi.
+            Anak-anak terlihat sangat antusias mengikuti kelas dari awal hingga akhir. Pada pertemuan yang terakhir nanti,
+            beberapa anak yang terpilih akan menampilkan dan mempresentasikan hasil karya mereka di pameran fotografi.
+            Dengan sengaja pula, inisiatornya mengadakan kelas ini di ruangan yang terbuka. “Supaya anak-anak bisa tahu dan
+            benar-benar merasakan bagaimana seorang jurnalis bekerja di lapangan,” jelas Syamsudin Ilyas (38).
+            <br><br>
+            Sabtu (29/05/22) lalu, Kelas Jurnalis Cilik (angkatan) V mengadakan pertemuannya seperti biasa di pesisir. Kali ini
+            pemateri yang diundang membagikan tentang sejarah jurnalisme dan juga foto jurnalistik.
+            <br><br>
+            “Menurut kalian apa yang menarik dari foto ini?” tanya sang pembawa materi.
+            Anak-anak terlihat sangat antusias mengikuti kelas dari awal hingga akhir. Pada pertemuan yang terakhir nanti,
+            beberapa anak yang terpilih akan menampilkan dan mempresentasikan hasil karya mereka di pameran fotografi.",
+            "tipe" => "photostory",
+        ]);
+
+        Art::create([
+            "id" => "71",
+            "image_path" => "/images/ruangIndependen/pameran/cilik_feed1.png",
+            "deskripsi"=> "Peserta KJC antusias menunjukkan contoh hasil foto pembawa materi.",
+            "tipe" => "photostory feed cilik",
+        ]);
+
+        Art::create([
+            "id" => "72",
+            "image_path" => "/images/ruangIndependen/pameran/cilik_feed2.png",
+            "deskripsi"=> "Pemateri sedang berinteraksi dengan anak-anak KJC.",
+            "tipe" => "photostory feed cilik",
+        ]);
+
+        Art::create([
+            "id" => "73",
+            "image_path" => "/images/ruangIndependen/pameran/cilik_feed3.png",
+            "deskripsi"=> "Seorang anak sedang fokus mencatat materi yang dibawakan.",
+            "tipe" => "photostory feed cilik",
+        ]);
+
+        Art::create([
+            "id" => "74",
+            "image_path" => "/images/ruangIndependen/pameran/cilik_feed4.png",
+            "deskripsi"=> "Syamsudin Ilyas (38), orang di
+            balik Kelas Jurnalis Cilik sejak
+            tahun 2018.",
+            "tipe" => "photostory feed cilik",
+        ]);
+
+        Art::create([
+            "id" => "75",
+            "image_path" => "/images/ruangIndependen/pameran/cilik_feed5.png",
+            "deskripsi"=> "Salah satu peserta KJC (angkatan)
+            III yang sudah lulus sedang
+            melakukan praktik fotografi.",
+            "tipe" => "photostory feed cilik",
+        ]);
+
+        Art::create([
+            "id" => "42",
+            "image_path" => "/images/ruangIndependen/pameran/catcafe.jpg",
+            "title" => "THE CAT CABIN: FOOD KULINER",
+            "deskripsi"=> "Cafe yang buka di Kemang, Jakarta Selatan pada 14 Februari
+            2015 ini menjadi awal mula inspirasi cat cafe ada di Indonesia. Cafe ini
+            memiliki nuansa seperti di rumah, tidak terlalu kecil ataupun besar.
+            Keunikannya bisa kita lihat disini kapan lagi kita bisa bersantai sambil
+            bermain bersama kucing-kucing yang lucu. Menjual berbagai macam
+            snack dan minuman. Pemilik dari cafe ini, ibu Siti Fatimah Ayuningdyah
+            memiliki ide untuk membuat cafe ini dari awalnya iya sangat suka
+            kucing, tetapi tidak diizinkan oleh ibunya memelihara kucing, jadilah ia
+            buat tempat seperti ini, cafe dengan nuansa rumah dengan para
+            kucing.
+            <br><br>
+            Total ada 15 kucing di cafe ini, beragam kepribadian kucing yang
+            ada. Ada yang suka langsung menghampiri pengunjung, ada juga yang
+            suka menyendiri, dan ada juga yang menghabiskan waktunya dengan
+            tidur. Cocok sekali untuk menemani mengerjakan pekerjaan ataupun
+            untuk main bersama keluarga. Untuk para penggemar kucing wajib
+            untuk berkunjung ke cat cabin ini!!",
+            "tipe" => "photostory",
+        ]);
+
+        Art::create([
+            "id" => "76",
+            "image_path" => "/images/ruangIndependen/pameran/catcafe_feed1.jpg",
+            "deskripsi"=> "Ada papan nama semua kucing yang ada di cafe pada pintu masuk.",
+            "tipe" => "photostory feed catcafe",
+        ]);
+
+        Art::create([
+            "id" => "77",
+            "image_path" => "/images/ruangIndependen/pameran/catcafe_feed2.jpg",
+            "deskripsi"=> "Suasana terasa seperti di rumah sendiri.",
+            "tipe" => "photostory feed catcafe",
+        ]);
+
+        Art::create([
+            "id" => "78",
+            "image_path" => "/images/ruangIndependen/pameran/catcafe_feed3.jpg",
+            "deskripsi"=> "Makan minum bersama
+            kucing lucu.",
+            "tipe" => "photostory feed catcafe",
+        ]);
+
+        Art::create([
+            "id" => "79",
+            "image_path" => "/images/ruangIndependen/pameran/catcafe_feed4.jpg",
+            "deskripsi"=> "Semua kucing disini terawat dan cakep-cakep.",
+            "tipe" => "photostory feed catcafe",
+        ]);
+
+        Art::create([
+            "id" => "43",
+            "image_path" => "/images/ruangIndependen/pameran/pvc.JPG",
+            "title" => "PRODUKSI PVC COMPOUND: BAHAN DASAR KABEL",
+            "deskripsi"=> "PVC Compound merupakan bahan dasar
+            pembuatan kabel, outsol sepatu, pipa, karet seal, door rubber, selang infus, selang kendaraan, plastik, traffic cone,
+            dan botol. Pembuatan PVC Compound sendiri menggunakan bahan dasar bubuk dan cairan, seperti PVC resin,
+            plastik Caesar (TOTM, DIMP, DOP, epoxy), stabilizer, dan calcium carbonate.
+            Warna dari hasil produksinya pun bervariasi, seperti merah, kuning, hitam,
+            biru, putih, dan lainnya.
+            <br><br>
+            PT Setia Kawan Plastik Indah berdiri sejak 1989, terletak di Jalan Raya Otonom Cikupa,
+            Tangerang, Banten. Pabrik yang tergolong cukup lama ini memiliki 150 lebih tenaga kerjapabrik dan 6 tenaga kerja
+            kantor. Atmosfer pabrik dipenuhi dengan bubuk dan
+            terlihat seperti kabut sehingga tidak heran jika
+            banyak tenaga kerja yang menggunakan penutup
+            hidung. Suhu dari tiap bubuk berbeda-beda sehingga ada
+            beberapa tenaga kerja yang
+            membutuhkan sarung tangan.
+            <br><br>
+            Kebanyakan orang hanya mengetahui proses
+            produksi sebuah barang sekunder dan tersier,
+            seperti baju, sendal, gelas, dan lainnya. Namun,
+            masih sedikit yang mengetahui proses produksi
+            bahan baku atau bahan dasarnya. Perusahaan Setia
+            Kawan Plastik Indah merupakan salah satu
+            perusahaan yang bergerak dibidang bahan baku
+            utama utama pembuatan
+            kabel yang bernama
+            PVC Compound.
+            Senyawa kimia yang
+            banyak digunakan ini
+            memiliki nama
+            panjang Polyvinyl
+            Chloride.",
+            "tipe" => "photostory",
+        ]);
+
+        Art::create([
+            "id" => "80",
+            "image_path" => "/images/ruangIndependen/pameran/pvc_feed1.JPG",
+            "deskripsi"=> "Pengangkatan bahan baku ke tempat penyimpanan.",
+            "tipe" => "photostory feed pvc",
+        ]);
+
+        Art::create([
+            "id" => "81",
+            "image_path" => "/images/ruangIndependen/pameran/pvc_feed2.JPG",
+            "deskripsi"=> "Pengangkatan bahan baku ke tempat penyimpanan.",
+            "tipe" => "photostory feed pvc",
+        ]);
+
+        Art::create([
+            "id" => "82",
+            "image_path" => "/images/ruangIndependen/pameran/pvc_feed3.jpg",
+            "deskripsi"=> "Budiman Homar Wijaya
+            (71), Pemilik Perusahaan
+            Setia Kawan Plastik Indah.",
+            "tipe" => "photostory feed pvc",
+        ]);
+
+        Art::create([
+            "id" => "83",
+            "image_path" => "/images/ruangIndependen/pameran/pvc_feed4.JPG",
+            "deskripsi"=> "Hasil produksi PVC Compund yang sudah masuk mesin cetak.",
+            "tipe" => "photostory feed pvc",
+        ]);
+
+        Art::create([
+            "id" => "84",
+            "image_path" => "/images/ruangIndependen/pameran/pvc_feed5.JPG",
+            "deskripsi"=> "Pengeluaran bahan yang sudah tercampur dari mesin mixer.",
+            "tipe" => "photostory feed pvc",
+        ]);
+
+        
     }
 }

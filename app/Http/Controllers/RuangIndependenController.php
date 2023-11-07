@@ -35,6 +35,9 @@ class RuangIndependenController extends Controller
         $photostoryFeedDifabel = Art::where('tipe','photostory feed difabel')->withCount('likes')->get();
         $photostoryFeedYayasan = Art::where('tipe','photostory feed yayasan')->withCount('likes')->get();
         $photostoryFeedWayangGolek = Art::where('tipe','photostory feed wayanggolek')->withCount('likes')->get();
+        $photostoryFeedCilik = Art::where('tipe','photostory feed cilik')->withCount('likes')->get();
+        $photostoryFeedCatCafe = Art::where('tipe','photostory feed catcafe')->withCount('likes')->get();
+        $photostoryFeedPVC = Art::where('tipe','photostory feed pvc')->withCount('likes')->get();
         return view('pameran',[
             'title' => "Pameran Commpress",
             'artikel_interaktif' => $artikelInteraktif,
@@ -48,6 +51,9 @@ class RuangIndependenController extends Controller
             'photostory_feed_difabel'=> $photostoryFeedDifabel,
             'photostory_feed_yayasan'=> $photostoryFeedYayasan,
             'photostory_feed_wayanggolek'=> $photostoryFeedWayangGolek,
+            'photostory_feed_cilik'=> $photostoryFeedCilik,
+            'photostory_feed_catcafe'=> $photostoryFeedCatCafe,
+            'photostory_feed_pvc'=> $photostoryFeedPVC
         ]);
     }
 

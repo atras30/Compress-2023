@@ -799,12 +799,14 @@
               </div>
               <img src="{{ $photo->image_path }}" class="d-block w-50" style="margin:0 auto;" alt="...">
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
-              <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
-                  <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
+              <div class="d-flex text-center like-artikel justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
+                  <button onclick="likePost('{{ $photo->id }}')" class="btn photostory-like-button px-2" data-likes="{!! str_replace('"', '\'', $photo->likes()->pluck('ip')) !!}">
                     <i class="bi bi-heart"></i>
                     Like
                   </button>
-                  <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+                  <div class="px-2" id="photostory_dokumenter_{{ $photo->id }}">Total Likes: {{ $photo->likes_count }}</div>
+                </div>
                 </div>
             </div>
             @elseif($photo->title == "BARTENDER ALSO AN ARTIST")
@@ -818,12 +820,14 @@
               </div>
               <img src="{{ $photo->image_path }}" class="d-block w-50" style=" margin:0 auto;" alt="...">
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
-              <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
-                <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
-                  <i class="bi bi-heart"></i>
-                  Like
-                </button>
-                <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+              <div class="d-flex text-center like-artikel justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
+                  <button onclick="likePost('{{ $photo->id }}')" class="btn photostory-like-button px-2" data-likes="{!! str_replace('"', '\'', $photo->likes()->pluck('ip')) !!}">
+                    <i class="bi bi-heart"></i>
+                    Like
+                  </button>
+                  <div class="px-2" id="photostory_dokumenter_{{ $photo->id }}">Total Likes: {{ $photo->likes_count }}</div>
+                </div>
               </div>
             </div>
             @elseif($photo->title == "BURUH DIFABEL: DIBAYAR MURAH, SAYA TAK MASALAH")
@@ -837,12 +841,14 @@
               </div>
               <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
-              <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
-                <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
-                  <i class="bi bi-heart"></i>
-                  Like
-                </button>
-                <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+              <div class="d-flex text-center like-artikel justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
+                  <button onclick="likePost('{{ $photo->id }}')" class="btn photostory-like-button px-2" data-likes="{!! str_replace('"', '\'', $photo->likes()->pluck('ip')) !!}">
+                    <i class="bi bi-heart"></i>
+                    Like
+                  </button>
+                  <div class="px-2" id="photostory_dokumenter_{{ $photo->id }}">Total Likes: {{ $photo->likes_count }}</div>
+                </div>
               </div>
             </div>
             @elseif($photo->title == "UNTAIAN KARSA DI UJUNG JEMARI")
@@ -856,12 +862,14 @@
               </div>
               <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
-              <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
-                <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
-                  <i class="bi bi-heart"></i>
-                  Like
-                </button>
-                <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+              <div class="d-flex text-center like-artikel justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
+                  <button onclick="likePost('{{ $photo->id }}')" class="btn photostory-like-button px-2" data-likes="{!! str_replace('"', '\'', $photo->likes()->pluck('ip')) !!}">
+                    <i class="bi bi-heart"></i>
+                    Like
+                  </button>
+                  <div class="px-2" id="photostory_dokumenter_{{ $photo->id }}">Total Likes: {{ $photo->likes_count }}</div>
+                </div>
               </div>
             </div>
             
@@ -876,12 +884,80 @@
               </div>
               <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
               <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
-              <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
-                <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
-                  <i class="bi bi-heart"></i>
-                  Like
-                </button>
-                <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+              <div class="d-flex text-center like-artikel justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
+                  <button onclick="likePost('{{ $photo->id }}')" class="btn photostory-like-button px-2" data-likes="{!! str_replace('"', '\'', $photo->likes()->pluck('ip')) !!}">
+                    <i class="bi bi-heart"></i>
+                    Like
+                  </button>
+                  <div class="px-2" id="photostory_dokumenter_{{ $photo->id }}">Total Likes: {{ $photo->likes_count }}</div>
+                </div>
+              </div>
+            </div>
+
+            @elseif($photo->title == "BELAJAR JADI JURNALIS DARI CILIK")
+              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+                @foreach($photostory_feed_cilik as $cilik)
+                  <div class="item">
+                    <img class="feed"src="{{ $cilik->image_path }}" style="width:350px; height:350px;">
+                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$cilik->deskripsi}}<h4>
+                  </div>
+                @endforeach
+              </div>
+              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
+              <div class="d-flex text-center like-artikel justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
+                  <button onclick="likePost('{{ $photo->id }}')" class="btn photostory-like-button px-2" data-likes="{!! str_replace('"', '\'', $photo->likes()->pluck('ip')) !!}">
+                    <i class="bi bi-heart"></i>
+                    Like
+                  </button>
+                  <div class="px-2" id="photostory_dokumenter_{{ $photo->id }}">Total Likes: {{ $photo->likes_count }}</div>
+                </div>
+              </div>
+            </div>
+
+            @elseif($photo->title == "THE CAT CABIN: FOOD KULINER")
+              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+                @foreach($photostory_feed_catcafe as $catcafe)
+                  <div class="item">
+                    <img class="feed rounded"src="{{ $catcafe->image_path }}" style="width:350px; height:350px;">
+                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$catcafe->deskripsi}}<h4>
+                  </div>
+                @endforeach
+              </div>
+              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
+              <div class="d-flex text-center like-artikel justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
+                  <button onclick="likePost('{{ $photo->id }}')" class="btn photostory-like-button px-2" data-likes="{!! str_replace('"', '\'', $photo->likes()->pluck('ip')) !!}">
+                    <i class="bi bi-heart"></i>
+                    Like
+                  </button>
+                  <div class="px-2" id="photostory_dokumenter_{{ $photo->id }}">Total Likes: {{ $photo->likes_count }}</div>
+                </div>
+              </div>
+            </div>
+
+            @elseif($photo->title == "PRODUKSI PVC COMPOUND: BAHAN DASAR KABEL")
+              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+                @foreach($photostory_feed_pvc as $pvc)
+                  <div class="item">
+                    <img class="feed rounded"src="{{ $pvc->image_path }}" style="width:350px; height:350px;">
+                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$pvc->deskripsi}}<h4>
+                  </div>
+                @endforeach
+              </div>
+              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
+              <div class="d-flex text-center like-artikel justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center px-3 py-1" style="border-radius: 12px; background-color: rgba(255, 255, 255, 0.75);">
+                  <button onclick="likePost('{{ $photo->id }}')" class="btn photostory-like-button px-2" data-likes="{!! str_replace('"', '\'', $photo->likes()->pluck('ip')) !!}">
+                    <i class="bi bi-heart"></i>
+                    Like
+                  </button>
+                  <div class="px-2" id="photostory_dokumenter_{{ $photo->id }}">Total Likes: {{ $photo->likes_count }}</div>
+                </div>
               </div>
             </div>
             @endif
@@ -978,6 +1054,9 @@
 
         const documenterElements5 = document.querySelectorAll(".indepth-like-button");
         defineLikeUnlikeButtons(documenterElements5, visitorId);
+
+        const documenterElements6 = document.querySelectorAll(".photostory-like-button");
+        defineLikeUnlikeButtons(documenterElements6, visitorId);
 
       }
 
