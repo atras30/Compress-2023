@@ -127,7 +127,7 @@
       }
 
       .card-title {
-        font-size: 1rem !important;
+        font-size: 5vw !important;
       }
 
       .card-text {
@@ -362,6 +362,10 @@
         font-size: 1.5rem !important;
       }
 
+      .card-title {
+        height: 15vh !important;
+      }
+
       .medpar-top {
         width: 22% !important;
       }
@@ -439,9 +443,8 @@
         justify-content: center;
         justify-self: center;
         flex-direction: column;
-        font-size: 1.5vw !important;
         font-weight: bold;
-        height: 8vh !important;
+        height: 8vh;
       }
 
       .card-text {
@@ -660,7 +663,7 @@
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">{{ $audio->title }}</h5>
-                    <div class="text-truncate-container mb-4">
+                    <div class="text-truncate-container mb-4 pt-sm-4">
                       <p class="card-text" style="text-align: justify;">{{ $audio->deskripsi }}</p>
                     </div>
                     <button onclick="showFullDescription(this)" class="btn btn-link"id="myBtn1">Read more</button>
