@@ -789,20 +789,100 @@
             <div class="carousel-item @if($loop->first) active @endif pb-5">
               <h2 class="font-bazinga text-black fs-2 text-center mx-5 mb-5">{{ $photo->title }}</h2>
             @if($photo->title == "Hidup Membiara Bukanlah Hal yang Mudah")
-            <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
               @foreach($photostory_feed_biara as $biara)
                 <div class="item">
                   <img class="feed"src="{{ $biara->image_path }}" style="width:350px; height:350px;">
-                  <h4 class="font-bazinga text-black text-center deskripsi-feed" style="max-width:20rem;">{{$biara->deskripsi}}<h4>
+                  <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$biara->deskripsi}}<h4>
                 </div>
               @endforeach
-            </div>
+              </div>
               <img src="{{ $photo->image_path }}" class="d-block w-50" style="margin:0 auto;" alt="...">
-              <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{{ $photo->deskripsi }}</h2>
+              <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
+              <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                  <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
+                    <i class="bi bi-heart"></i>
+                    Like
+                  </button>
+                  <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+                </div>
             </div>
             @elseif($photo->title == "BARTENDER ALSO AN ARTIST")
+              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+                @foreach($photostory_feed_bartender as $bartender)
+                  <div class="item">
+                    <img class="feed"src="{{ $bartender->image_path }}" style="width:350px; height:350px;">
+                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$bartender->deskripsi}}<h4>
+                  </div>
+                @endforeach
+              </div>
               <img src="{{ $photo->image_path }}" class="d-block w-50" style=" margin:0 auto;" alt="...">
-              <h2 class="font-bazinga text-black fs-5 text-center mb-5 mt-5" style="max-width:60%;margin:0 auto;">{{ $photo->deskripsi }}</h2>
+              <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
+              <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
+                  <i class="bi bi-heart"></i>
+                  Like
+                </button>
+                <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+              </div>
+            </div>
+            @elseif($photo->title == "BURUH DIFABEL: DIBAYAR MURAH, SAYA TAK MASALAH")
+              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+                @foreach($photostory_feed_difabel as $difabel)
+                  <div class="item">
+                    <img class="feed"src="{{ $difabel->image_path }}" style="width:350px; height:350px;">
+                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$difabel->deskripsi}}<h4>
+                  </div>
+                @endforeach
+              </div>
+              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
+              <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
+                  <i class="bi bi-heart"></i>
+                  Like
+                </button>
+                <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+              </div>
+            </div>
+            @elseif($photo->title == "UNTAIAN KARSA DI UJUNG JEMARI")
+              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+                @foreach($photostory_feed_yayasan as $yayasan)
+                  <div class="item">
+                    <img class="feed"src="{{ $yayasan->image_path }}" style="width:350px; height:350px;">
+                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$yayasan->deskripsi}}<h4>
+                  </div>
+                @endforeach
+              </div>
+              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
+              <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
+                  <i class="bi bi-heart"></i>
+                  Like
+                </button>
+                <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+              </div>
+            </div>
+            
+            @elseif($photo->title == "WAYANG GOLEK PENOPANG HIDUP")
+              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+                @foreach($photostory_feed_wayanggolek as $wayanggolek)
+                  <div class="item">
+                    <img class="feed"src="{{ $wayanggolek->image_path }}" style="width:350px; height:350px;">
+                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$wayanggolek->deskripsi}}<h4>
+                  </div>
+                @endforeach
+              </div>
+              <img src="{{ $photo->image_path }}" class="d-block w-50" style="width:400px; height:600px; margin:0 auto;" alt="...">
+              <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{!! $photo->deskripsi !!}</h2>
+              <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                <button onclick="likePost('{{ $karya->id }}')" class="btn artikelinteraktif-like-button" data-likes="{!! str_replace('"', '\'', $karya->likes()->pluck('ip')) !!}">
+                  <i class="bi bi-heart"></i>
+                  Like
+                </button>
+                <div id="artikelinteraktif_dokumenter_{{ $karya->id }}">Total Likes: {{ $karya->likes_count }}</div>
+              </div>
             </div>
             @endif
             
@@ -1151,7 +1231,7 @@
         nav:false,
         dots:false,
         autoplay:true,
-        autoplayTimeout: 1500,
+        autoplayTimeout: 2000,
         responsive:{
             0:{
                 items:1
@@ -1161,5 +1241,7 @@
             },
         }
     })
+
+
     </script>
   @endsection

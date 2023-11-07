@@ -261,6 +261,17 @@ class KaryaSeeder extends Seeder
         ]);
 
         Art::create([
+            "id" => "27",
+            "image_path" => "/images/ruangIndependen/pameran/e-sport.jpg",
+            "title" => "E-SPOT",
+            "deskripsi" => "The Spotlight for E-Sports",
+            "link" => "https://heyzine.com/flip-book/b18123c743.html",
+            "tipe" => "e-magazine",
+        ]);
+
+        
+
+        Art::create([
             "id" => "31",
             "image_path" => "/images/ruangIndependen/pameran/foodwaste.jpeg",
             "title" => "Meningkatnya Sampah Makanan di Tengah Ancaman Krisis Pangan: KetidakacuhanHotel dalam Mengelola Sampah Makanan",
@@ -288,6 +299,14 @@ class KaryaSeeder extends Seeder
             "id" => "34",
             "image_path" => "/images/ruangIndependen/pameran/dosbing.jpeg",
             "title" => "Efektifkah Dosen Pembimbing Akademik Membantu Mahasiswa?",
+            "link" => "https://drive.google.com/file/d/19gvEb2XrtzvEOibHeo2oBkXZHnOjO0zi/view?usp=sharing",
+            "tipe" => "indepth artikel",
+        ]);
+
+        Art::create([
+            "id" => "35",
+            "image_path" => "/images/ruangIndependen/pameran/dosbing.jpeg",
+            "title" => "Fenomena Putus Kuliah: Salah Pemerintah, Kampus, atau Mahasiswanya?",
             "link" => "https://drive.google.com/file/d/1u4JLwlRyipGXxryYUOPF4euUsZRz-0LA/view?usp=sharing",
             "tipe" => "indepth artikel",
         ]);
@@ -303,7 +322,7 @@ class KaryaSeeder extends Seeder
             ini yang dilakukan oleh Suster Maria Gabriela SFS
             (Gebi) dalam meneruskan cinta kasih di dalam
             sebuah panti jompo WIsma Asisi Kota Sukabumi.
-            
+            <br><br>
             Dalam menjalankan tugasnya tentu banyak sekali
             masalah yang timbul dalam sebuah panti jompo
             terlebih karena sifat orang tua yang kembali memiliki
@@ -315,35 +334,35 @@ class KaryaSeeder extends Seeder
         ]);
 
         Art::create([
-            "id" => "40",
+            "id" => "46",
             "image_path" => "/images/ruangIndependen/pameran/biara_feed1.png",
             "deskripsi"=> "Suster Gebi menenangkan Oma",
             "tipe" => "photostory feed biara",
         ]);
 
         Art::create([
-            "id" => "41",
+            "id" => "47",
             "image_path" => "/images/ruangIndependen/pameran/biara_feed2.png",
             "deskripsi"=> "Suster Gebi sedang memasak untuk opa dan oma",
             "tipe" => "photostory feed biara",
         ]);
 
         Art::create([
-            "id" => "42",
+            "id" => "48",
             "image_path" => "/images/ruangIndependen/pameran/biara_feed3.png",
             "deskripsi"=> "Suster Gebi melakukan pencatatan administrasi",
             "tipe" => "photostory feed biara",
         ]);
 
         Art::create([
-            "id" => "43",
+            "id" => "49",
             "image_path" => "/images/ruangIndependen/pameran/biara_feed4.png",
             "deskripsi"=> "Oma Vince atau sering disapa Oma Pipin",
             "tipe" => "photostory feed biara",
         ]);
 
         Art::create([
-            "id" => "44",
+            "id" => "50",
             "image_path" => "/images/ruangIndependen/pameran/biara_feed5.png",
             "deskripsi"=> "Opa oma sedang bekumpul dan berbincang",
             "tipe" => "photostory feed biara",
@@ -358,13 +377,262 @@ class KaryaSeeder extends Seeder
             memiliki tujuan utama yaitu untuk mencicipi racikan signature dari para
             bartender, seperti Old Fashion Cocktailed, Blue Havana's, ataupun Tom
             Collins. Membuat setiap minuman dari banyaknya deretan botol yang sudah
-            
             tersusun sesuai kategori adalah kemampuan mereka.
-            
+            <br><br>
             Bartender juga seorang seniman, bartender menuangkan seni mereka ke
-            
             dalam setiap minuman yang mereka racik.",
             "tipe" => "photostory",
+        ]);
+
+        Art::create([
+            "id" => "38",
+            "image_path" => "/images/ruangIndependen/pameran/difabel.png",
+            "title" => "BURUH DIFABEL: DIBAYAR MURAH, SAYA TAK MASALAH",
+            "deskripsi"=> "\"Setiap 50 gram dijual sepuluh ribu, setiap
+            50 gram saya dibayar 500 rupiah,\" <br>Itulah yang diucapkan Dadang (53), seorang
+            buruh difabel di industri ikan petek krispi di
+            Cipeyeum, Cianjur, Jawa Barat.
+            <br><br>
+            Setelah kehilangan kedua kakinya akibat
+            tetanus pada 2018 silam, tidak ada tempat
+            yang menerima kondisinya selain pabrik ikan
+            petek krispi. Terhitung lima tahun Dadang
+            menggantungkan nasib diri dan keluarganya
+            di tempat tersebut.
+            <br><br>
+            Meskipun kondisi fisiknya berbeda dengan pegawai lain, Dadang lebih senang
+            diperlakukan dan diperintahkan untuk mengerjakan tugas yang sama seperti
+            yang lainnya. Baginya, keterbatasan bukan batasan, melainkan peluang untuk
+            menunjukkan kehebatan. Oleh karena itu, tak jarang ia menawarkan diri
+            untuk mengantarkan sekarung bumbu dari gudang ke pabrik menggunakan
+            skateboardnya.
+            <br><br>
+            “Dengan kondisi saya, saya tidak mengharapkan upah besar. Dibayar sangat
+            murah pun sudah alhamdulillah.” tutup Dadang.",
+            "tipe" => "photostory",
+        ]);
+
+        Art::create([
+            "id" => "51",
+            "image_path" => "/images/ruangIndependen/pameran/bartender_feed1.png",
+            "deskripsi"=> "Rabu (17/5/2023) Kumpulan pria berusia sekitar 42-47 tahun
+            berkumpul, duduk santai di Bar Tiga Puluh. Berbincang
+            membahas kehidupan sehari-hari hingga bisnis sambil
+            memesan Beer Draught, Tom Collins, dan lain-lain",
+            "tipe" => "photostory feed bartender",
+        ]);
+
+        Art::create([
+            "id" => "52",
+            "image_path" => "/images/ruangIndependen/pameran/bartender_feed2.png",
+            "deskripsi"=> "Bartender melayani
+            dan menyajikan
+            minuman kepada
+            tamu sesuai dengan
+            pesanan yaitu
+            Orange Margarita.
+            Tamu dapat dengan
+            
+            bebas
+            menyampaikan
+            request untuk
+            minuman yang akan
+            dipesan",
+            "tipe" => "photostory feed bartender",
+        ]);
+
+        Art::create([
+            "id" => "53",
+            "image_path" => "/images/ruangIndependen/pameran/bartender_feed3.png",
+            "deskripsi"=> "Customer menikmati Old Fashion Cocktailed. Salah satu
+            classic cocktail di tahun '80-an, pertama kali dibuat oleh
+            Jerry Thomas di Amerika",
+            "tipe" => "photostory feed bartender",
+        ]);
+
+        Art::create([
+            "id" => "54",
+            "image_path" => "/images/ruangIndependen/pameran/bartender_feed4.png",
+            "deskripsi"=> "Bartender
+            menaruh Gin di rak
+            penyimpanan
+            khusus kategori
+            Gin. Peletakan
+            botol dikategorikan
+            sesuai dengan
+            jenis-jenisnya.",
+            "tipe" => "photostory feed bartender",
+        ]);
+
+        Art::create([
+            "id" => "55",
+            "image_path" => "/images/ruangIndependen/pameran/bartender_feed5.png",
+            "deskripsi"=> "Sederet susunan botol Tequila",
+            "tipe" => "photostory feed bartender",
+        ]);
+
+        Art::create([
+            "id" => "56",
+            "image_path" => "/images/ruangIndependen/pameran/difabel_feed1.png",
+            "deskripsi"=> "Dadang mengolah ikan petek bersama buruh lainnya.",
+            "tipe" => "photostory feed difabel",
+        ]);
+
+        Art::create([
+            "id" => "60",
+            "image_path" => "/images/ruangIndependen/pameran/difabel_feed5.png",
+            "deskripsi"=> "Produk ikan petek krispi kiloan siap jual.",
+            "tipe" => "photostory feed difabel",
+        ]);
+
+        Art::create([
+            "id" => "57",
+            "image_path" => "/images/ruangIndependen/pameran/difabel_feed2.png",
+            "deskripsi"=> "Ikan petek mentah.",
+            "tipe" => "photostory feed difabel",
+        ]);
+
+        Art::create([
+            "id" => "58",
+            "image_path" => "/images/ruangIndependen/pameran/difabel_feed3.png",
+            "deskripsi"=> "Di jam istirahat, Dadang bersantai bersama tetangganya.",
+            "tipe" => "photostory feed difabel",
+        ]);
+
+        Art::create([
+            "id" => "59",
+            "image_path" => "/images/ruangIndependen/pameran/difabel_feed4.png",
+            "deskripsi"=> "Dadang melayani pembeli ikan petek krispi.",
+            "tipe" => "photostory feed difabel",
+        ]);
+
+        Art::create([
+            "id" => "39",
+            "image_path" => "/images/ruangIndependen/pameran/yayasan.png",
+            "title" => "UNTAIAN KARSA DI UJUNG JEMARI",
+            "deskripsi"=> "Yayasan Raudlatul Makfufin merupakan lembaga sosial yang bergerak dalam
+            bidang pembinaan agama, mental, dan kesejahteraan sosial bagi tunanetra
+            Muslim. Salah satu unit kegiatan yayasan ini adalah Unit Percetakan Braille
+            (UPB) yang mencetak Al-Qur'an braille dan buku-buku braille Islami lainnya.
+            UPB ini menjadi standar nasional bagi percetakan Al-Qur'an braille di
+            Indonesia. 
+            <br><br>
+            Pencetakan Al-Qur'an braille melewati beberapa tahap. Pertama-tama, huruf braille dicetak di kertas BC 150
+            menggunakan mesin pencetak braille. Setelah dicetak, pinggiran kertas braille dipotong menggunakan mesin pemotong.
+            Kemudian, sisi kiri kertas braille dibolongkan. Berikutnya, spiral kawat dipotong sesuai dengan ukuran sisi kiri kertas
+            braille yang telah dibolongkan. Setelah itu, spiral kawat dimasukkan ke bolongan yang ada di sisi kiri kertas braille.
+            <br><br>
+            Selain unit percetakan, Yayasan Raudlatul Makfufin juga memiliki pesantren khusus tunanetra Muslim yang dikepalai
+            oleh Ustadz Muhammad Wijaya. Pada mulanya, pesantren ini berada di gedung yang sama dengan UPB. Namun, sejak
+            2021, pesantren ini berpindah ke gedung baru. Pesantren ini memiliki 26 santri. Dari 26 santri tersebut, 25 santri tinggal
+            di asrama, sedangkan 1 santri pulang pergi karena telah berkeluarga. Para ustadz dan santri pesantren ini menggunakan
+            Al-Qur'an braille yang telah dicetak UPB. Di balik keistimewaan, niat dan keimanan mereka dalam mendekatkan diri
+            kepada Sang Pencipta sungguh luar biasa.",
+            "tipe" => "photostory",
+        ]);
+
+        Art::create([
+            "id" => "61",
+            "image_path" => "/images/ruangIndependen/pameran/yayasan_feed1.png",
+            "deskripsi"=> "Tumpukan kertas Al-Qur'an braille.",
+            "tipe" => "photostory feed yayasan",
+        ]);
+
+        Art::create([
+            "id" => "62",
+            "image_path" => "/images/ruangIndependen/pameran/yayasan_feed2.png",
+            "deskripsi"=> "Mata seorang santri tunanetra di Pesantren Raudlatul Makfufin, Tangerang Selatan.",
+            "tipe" => "photostory feed yayasan",
+        ]);
+
+        Art::create([
+            "id" => "63",
+            "image_path" => "/images/ruangIndependen/pameran/yayasan_feed3.png",
+            "deskripsi"=> "Pemotongan spiral kawat disesuaikan
+            dengan ukuran Al-Qur'an braille yang telah
+            dicetak",
+            "tipe" => "photostory feed yayasan",
+        ]);
+
+        Art::create([
+            "id" => "64",
+            "image_path" => "/images/ruangIndependen/pameran/yayasan_feed4.png",
+            "deskripsi"=> "Ustadz Muhammad Wijaya (33) mengajari
+            santri tunanetra cara melafalkan Al-Qur'an
+            di Pesantren Raudlatul Makfufin, Tangerang
+            Selatan, Kamis (11/5/2023).",
+            "tipe" => "photostory feed yayasan",
+        ]);
+
+        Art::create([
+            "id" => "65",
+            "image_path" => "/images/ruangIndependen/pameran/yayasan_feed5.png",
+            "deskripsi"=> "Kertas panduan abjad braille latin, Arab, angka,
+            syakl/harakat, tanda operasional dasar
+            matematika, dan tanda baca.",
+            "tipe" => "photostory feed yayasan",
+        ]);
+
+        Art::create([
+            "id" => "40",
+            "image_path" => "/images/ruangIndependen/pameran/wayanggolek.jpg",
+            "title" => "WAYANG GOLEK PENOPANG HIDUP",
+            "deskripsi"=> "Budaya tak pernah ada habisnya. Tak pernah mati terkekang waktu. Begitulah budaya terus berjalan.
+            Besarnya gempuran teknologi yang terus berjalan bagai ombak besar, terus menyelimuti banyak bidang dan terus berubah
+            mengikuti zaman hingga nyaris budaya bangsa tak lagi dilirik mata. Namun, berbeda dengan Iman, seorang pengrajin wayang
+            Golek kelahiran Bandung ini.<br><br>
+            Tumbuh di lingkungan Sunda yang kental akan nilai budaya dan adat, pria kelahiran 1974 ini, memiliki tekat yang kuat bahwa
+            warisan budaya bangsa yang ada sejak zaman nenek moyang harus tetap dipertahankan. Bagai batu besar di tenah gempuran
+            ombak laut.<br><br>
+            Hal ini tercermin melalui karya seni budaya yang ditekuni, yakni wayang golek. Ia berhasil menciptakan peluang bagi dirinya
+            berkreasi dengan budaya, berbarengan dengan nilai mata uang untuk menyandarkan hidup. Melalui tangan yang terbiasa
+            menari dengan parutan pisau kayunya, ia berhasil menorehkan hasil karyanya dalam wayang golek hingga ke berbagai pelosok
+            nusantara bahkan negara.<br><br>
+            Bali, Sulawesi, dan Lampung menjadi daerah yang pernah terjamah hasil tangannya. Jepang, Korea, India pun tak luput dari
+            pandangan menjadi bagian negara tak terlupakan bagi dirinya yang telah menerima karya jemari tangannya.
+            Walaupun banyaknya wayang golek buatannya melintas ke banyak pulau dan negara, keuntungan yang didapat sebagai
+            pengrajin tak sebanding dengan distributor. Penjualan pihak penyalur bisa hingga tiga kali lipat banyaknya dari harga
+            penjualan pengrajin. Meski begitu, dirinya tetap teguh melestarikan budaya bangsa satu ini, agar tak luntur dan tetap berdiri
+            tegak.",
+            "tipe" => "photostory",
+        ]);
+
+        Art::create([
+            "id" => "66",
+            "image_path" => "/images/ruangIndependen/pameran/wayanggolek_feed1.jpg",
+            "deskripsi"=> "Proses meraut bahan kayu mentah untuk
+            dibentuk sesuai dengan karakter yang dibuat.",
+            "tipe" => "photostory feed wayanggolek",
+        ]);
+
+        Art::create([
+            "id" => "67",
+            "image_path" => "/images/ruangIndependen/pameran/wayanggolek_feed2.jpg",
+            "deskripsi"=> "Pengamplasan bagian tubuh wayang golek.",
+            "tipe" => "photostory feed wayanggolek",
+        ]);
+
+        Art::create([
+            "id" => "68",
+            "image_path" => "/images/ruangIndependen/pameran/wayanggolek_feed3.jpg",
+            "deskripsi"=> "Potongan bagian-bagian tubuh wayang golek
+            setelah melewati proses pengecatan warna
+            dasar.",
+            "tipe" => "photostory feed wayanggolek",
+        ]);
+
+        Art::create([
+            "id" => "69",
+            "image_path" => "/images/ruangIndependen/pameran/wayanggolek_feed4.jpg",
+            "deskripsi"=> "Hasil wayang golek buatan tangan Iman.",
+            "tipe" => "photostory feed wayanggolek",
+        ]);
+
+        Art::create([
+            "id" => "70",
+            "image_path" => "/images/ruangIndependen/pameran/wayanggolek_feed5.jpg",
+            "deskripsi"=> "Berbagai alat potong dan raut yang digunakan dalam proses pembuatan wayang golek.",
+            "tipe" => "photostory feed wayanggolek",
         ]);
     }
 }
