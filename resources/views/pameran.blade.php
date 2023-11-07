@@ -101,6 +101,9 @@
     }
 
     @media(max-width:450px) {
+      .judul-artikel {
+        font-size: 1.3rem !important;
+      }
       .artikel-interaktif {
         min-height: 10vh;
         "
