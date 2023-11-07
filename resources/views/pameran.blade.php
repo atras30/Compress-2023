@@ -224,7 +224,7 @@
       }
     }
 
-    @media(max-width:1700px) {
+    @media(max-width:2000px) {
       .medpar {
         margin-left: 600px !important;
       }
