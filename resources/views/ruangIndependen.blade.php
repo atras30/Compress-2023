@@ -33,6 +33,12 @@
       }
     }
 
+    @media(max-width: 450px){
+      .textfoto{
+        width:300px;
+      }
+    }
+
 
     .font-bazinga {
       font-family: Bazinga;
@@ -130,7 +136,7 @@
         <div class="text-center fs-2 fw-bold text-black position-relative">
           <section class="d-flex justify-content-evenly align-items-center mb-5" style="margin-top:10rem;">
             <img class="img-thumbnail img-fluid p-3 position-relative" src="{{ asset('/images/ruangIndependen/fotoatas.png') }}" style="z-index: 2; border: 4px solid black"/>
-            <img class="textfoto position-absolute top-0 start-0" style="z-index: 3; margin-top:2rem; margin-left:6rem;" src="{{ asset('/images/ruangIndependen/textRI.png') }}" alt="bottom">
+            <img class="textfoto position-absolute top-0 start-0" style="z-index: 3; margin-top:2rem;" src="{{ asset('/images/ruangIndependen/textRI.png') }}" alt="bottom">
 
           </section>
           <section class="d-flex flex-column flex-xl-row gap-5" style="margin-bottom:5rem;">
