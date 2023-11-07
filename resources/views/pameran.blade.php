@@ -12,11 +12,51 @@
     }
 
     @media (min-width: 450px) {
-      .carousel-inner {
+      .carousel-inner-audio {
         display: flex;
       }
 
-      .carousel-item {
+      .carousel-item-audio {
+        margin-right: 0;
+        flex: 0 0 33.333333%;
+        display: block;
+      }
+
+      .carousel-inner-magazine {
+        display: flex;
+      }
+
+      .carousel-item-magazine {
+        margin-right: 0;
+        flex: 0 0 33.333333%;
+        display: block;
+      }
+
+      .carousel-inner-indepth {
+        display: flex;
+      }
+
+      .carousel-item-indepth {
+        margin-right: 0;
+        flex: 0 0 33.333333%;
+        display: block;
+      }
+
+      .carousel-inner-video {
+        display: flex;
+      }
+
+      .carousel-item-video {
+        margin-right: 0;
+        flex: 0 0 33.333333%;
+        display: block;
+      }
+
+      .carousel-inner-artikel {
+        display: flex;
+      }
+
+      .carousel-item-artikel {
         margin-right: 0;
         flex: 0 0 33.333333%;
         display: block;
@@ -263,7 +303,7 @@
 
     }
 
-    .carousel-inner {
+    .carousel-inner-audio {
       padding: 1em;
     }
 
@@ -482,9 +522,9 @@
 
         {{-- Episodes --}}
         <div id="carouselExampleControls" class="carousel">
-          <div class="carousel-inner carousel-inner1 mb-5 " style="padding-bottom: 3rem">
+          <div class="carousel-inner carousel-inner1 carousel-inner-audio mb-5 " style="padding-bottom: 3rem">
             @foreach ($audio_dokumenter as $audio)
-              <div class="carousel-item carousel-item1 active">
+               <div class="carousel-item carousel-item1 carousel-item-audio active">
                 <div class="card">
                   <div class="img-wrapper">
                     <img src="{{ $audio->image_path }}" class="d-block w-100" alt="...">
@@ -535,10 +575,11 @@
 
         {{-- Episodes --}}
         <div id="carouselExample3" class="carousel">
-          <div class="carousel-inner carousel-inner4 gap-5">
+          <div class="carousel-inner carousel-inner4 carousel-inner-magazine gap-5">
             @foreach ($e_magazine as $magazine)
-              <div class="carousel-item carousel-item4 active" style="max-height:70vh;">
-                <a href="{{ $magazine->link }}" target="_blank"><img src="{{ $magazine->image_path }}" class="d-block w-100 cover-artikel" style="height:60%;" alt="..."></a>
+              <div class="carousel-item carousel-item3 carousel-item-magazine active ps-4">
+              <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $magazine->title }}</h2>
+                <a href="{{ $magazine->link }}" target="_blank"><img src="{{ $magazine->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
                 <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
                   <button onclick="likePost('{{ $magazine->id }}')" class="btn magazine-like-button" data-likes="{!! str_replace('"', '\'', $magazine->likes()->pluck('ip')) !!}">
                     <i class="bi bi-heart"></i>
@@ -546,9 +587,7 @@
                   </button>
                   <div id="magazine_dokumenter_{{ $magazine->id }}">Total Likes: {{ $magazine->likes_count }}</div>
                 </div>
-                <h2 class="font-bazinga text-white fs-1 text-center mt-3 mb-3 pembuat-artikel">{{ $magazine->title }}</h2>
-                <h3 class="font-bazinga text-white fs-2 text-center judul-artikel">"{{ $magazine->deskripsi }}"</h3>
-
+                <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $magazine->deskripsi }}"</h3>
               </div>
             @endforeach
           </div>
@@ -565,7 +604,7 @@
       </div>
     </div>
 
-    <div class="main-content mh-85vh position-relative bg-blue">
+    <div class="main-content position-relative bg-blue" style="min-height:105vh;">
       <img class="position-absolute object-fit-cover w-100 h-100 red-stripes" src="{{ asset('/images/home/bg/Frame.png') }}">
 
       <img class="position-absolute bottom-0 w-100 h-2" src="{{ asset('/images/workshop/base/bottom.png') }}" alt="bottom">
@@ -580,9 +619,9 @@
 
         {{-- Episodes --}}
         <div id="carouselExample4" class="carousel">
-          <div class="carousel-inner carousel-inner5 gap-5">
+          <div class="carousel-inner carousel-inner5 carousel-inner-indepth gap-5">
             @foreach ($indepth_artikel as $indepth)
-              <div class="carousel-item carousel-item5 active">
+              <div class="carousel-item carousel-item5 carousel-item-indepth active ps-4">
                 <a href="{{ $indepth->link }}" target="_blank"><img src="{{ $indepth->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
                 <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
                   <button onclick="likePost('{{ $indepth->id }}')" class="btn indepth-like-button" data-likes="{!! str_replace('"', '\'', $indepth->likes()->pluck('ip')) !!}">
@@ -591,20 +630,20 @@
                   </button>
                   <div id="indepth_dokumenter_{{ $indepth->id }}">Total Likes: {{ $indepth->likes_count }}</div>
                 </div>
-                <h2 class="font-bazinga text-white fs-2 text-center mt-4 pembuat-artikel">{{ $indepth->title }}</h2>
+                <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $indepth->title }}"</h3>
               </div>
             @endforeach
           </div>
-          <button class="carousel-control-prev carousel-control-prev5" style="top:40%!important;" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+          <button class="carousel-control-prev carousel-control-prev5" style="top:40%!important;" type="button" data-bs-target="#carouselExample4" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next carousel-control-next5" style="top:40%!important;" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+          <button class="carousel-control-next carousel-control-next5" style="top:40%!important;" type="button" data-bs-target="#carouselExample4" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <div class="fs-2 text-center font-bazinga text-white pb-5">Tekan Poster Untuk Melihat Video</div>
+        <div class="fs-2 text-center font-bazinga text-white" style="padding-bottom:65px;">Tekan Poster Untuk Melihat Video</div>
       </div>
     </div>
 
@@ -623,9 +662,9 @@
 
         {{-- Episodes --}}
         <div id="carouselExample2" class="carousel">
-          <div class="carousel-inner carousel-inner3 gap-5">
+          <div class="carousel-inner carousel-inner3 carousel-inner-video gap-5">
             @foreach ($video_dokumenter as $video)
-              <div class="carousel-item carousel-item3 active">
+              <div class="carousel-item carousel-item3 carousel-item-video active ps-4">
                 <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $video->nama_pembuat }}</h2>
                 <a href="{{ $video->link }}" target="_blank"><img src="{{ $video->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
                 <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
@@ -669,9 +708,9 @@
 
         {{-- Episodes --}}
         <div id="carouselExample" class="carousel">
-          <div class="carousel-inner carousel-inner2 gap-5">
+          <div class="carousel-inner carousel-inner2 carousel-inner-artikel gap-5">
             @foreach ($artikel_interaktif as $karya)
-              <div class="carousel-item carousel-item2 active">
+              <div class="carousel-item carousel-item2 carousel-item-artikel active">
                 <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $karya->nama_pembuat }}</h2>
                 <a href="{{ $karya->link }}" target="_blank"><img src="{{ $karya->image_path }}" class="d-block w-100 cover-artikel" style="height:60%;" alt="..."></a>
                 <div class="d-flex justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
@@ -714,11 +753,25 @@
         </section>
 
         {{-- Episodes --}}
-        <section class="d-flex justify-content-evenly align-items-center flex-column flex-lg-row gap-4">
-          <div class="flex-item position-relative" style="max-width: 70%">
-            <img class="mw-100" src="{{ asset('/images/components/buttons/button-container-2.png') }}" alt="Button Container">
+        <div id="carouselExample5" class="carousel slide">
+          <div class="carousel-inner carousel-inner6">
+            <div class="carousel-item active">
+              <img src="{{ asset('/images/ruangIndependen/pameran/biara.png') }}" class="d-block w-100" style="height:60%;" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="{{ asset('/images/ruangIndependen/pameran/bartender.png') }}" class="d-block w-100" style="height:60%;" alt="...">
+              
+            </div>
+            <button class="carousel-control-prev carousel-control-prev6" type="button" data-bs-target="#carouselExample5" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next carousel-control-next6" type="button" data-bs-target="#carouselExample5" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-        </section>
+        </div>
       </div>
     </div>
 
@@ -756,7 +809,7 @@
               <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Sigma TV 2.png') }}"></img>
               <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/BFAST MEDIA 1.png') }}"></img>
             </div>
-            <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-5">
+            <div class=" position-relative gap-3 d-flex justify-content-center align-items-center mt-3">
               <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/ALIVE 1.png') }}"></img>
               <img class="medpar-bottom"src="{{ asset('/images/ruangIndependen/pameran/Logo_1-100-removebg-preview 1.png') }}"></img>
               <img class="medpar-bottom2"src="{{ asset('/images/ruangIndependen/pameran/Radio Mercu Buana_ 2.png') }}"></img>
@@ -765,6 +818,7 @@
         </section>
       </div>
     </div>
+  </div>
   @endsection
 
   @section('scripts')
