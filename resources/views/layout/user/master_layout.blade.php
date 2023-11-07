@@ -83,8 +83,8 @@
             <div>GET READY FOR BIGGER CHANGE!</div>
             <div class="mb-4">- COMMPRESS 2023 -</div>
             <div class="d-inline-flex">
-              <a href="https://www.instagram.com/commpressumn/"><img style="width: 4rem;" src="{{ asset('/images/logos/instagram.svg') }}" alt=""></a>
-              <a href="https://www.instagram.com/ruang.indiependen/"><img style="width: 4rem;" src="{{ asset('/images/logos/instagram.svg') }}" alt=""></a>
+              <a href="https://www.instagram.com/commpressumn/"><img style="width: 4rem;" src="{{ asset('/images/logos/instagram.svg') }}" alt="" title="Instagram Commpress"></a>
+              <a href="https://www.instagram.com/ruang.indiependen/"><img style="width: 4rem;" src="{{ asset('/images/logos/instagram.svg') }}" alt="" title="Instagram Ruang Indi(e)penden"></a>
               <a href="https://www.tiktok.com/@commpressumn"><img style="width: 3rem;" src="{{ asset('/images/logos/tiktok.png') }}" alt=""></a>
               <a href="https://www.linkedin.com/company/commpress-umn/mycompany/"><img style="width: 3rem;" src="{{ asset('/images/logos/linkedin.png') }}" alt=""></a>
             </div>
