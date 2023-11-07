@@ -269,6 +269,24 @@ class KaryaSeeder extends Seeder
             "tipe" => "e-magazine",
         ]);
 
+        Art::create([
+            "id" => "28",
+            "image_path" => "/images/ruangIndependen/pameran/clbk.jpg",
+            "title" => "CLBK",
+            "deskripsi" => "Cerita Lama Bangkit Kembali",
+            "link" => "https://heyzine.com/flip-book/b18123c743.html",
+            "tipe" => "e-magazine",
+        ]);
+
+        Art::create([
+            "id" => "29",
+            "image_path" => "/images/ruangIndependen/pameran/makanan.jpg",
+            "title" => "DARURAT SAMPAH MAKANAN",
+            "deskripsi" => "Sampah Makanan Indonesia Keempat di Dunia & Pertama di Asia Tengara",
+            "link" => "https://heyzine.com/flip-book/b18123c743.html",
+            "tipe" => "e-magazine",
+        ]);
+
         
 
         Art::create([
