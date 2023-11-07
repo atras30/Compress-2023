@@ -433,6 +433,21 @@
       align-items: center;
     }
 
+    .card-title {
+        display:flex;
+        justify-items: center;
+        justify-content: center;
+        justify-self: center;
+        flex-direction: column;
+        font-size: 1.5vw !important;
+        font-weight: bold;
+        height: 8vh !important;
+      }
+
+      .card-text {
+        font-size: 1rem !important;
+      }
+
     img {
       max-height: 100%;
     }
@@ -641,7 +656,7 @@
               <div class="carousel-item carousel-item1 carousel-item-audio @if($loop->first) active @endif mb-5 p-3">
                 <div class="card">
                   <div class="img-wrapper">
-                    <img src="{{ $audio->image_path }}" class="d-block w-100" alt="...">
+                    <img src="{{ $audio->image_path }}" class="d-block w-100 h-full" alt="...">
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">{{ $audio->title }}</h5>
