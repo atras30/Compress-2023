@@ -213,13 +213,8 @@
         max-width: 70% !important;
         margin-left: 60px !important;
       }
-
-      .feed{
-        width:200px;
-        height:200px;
-      }
       .deskripsi-feed{
-        font-size:1rem;
+        font-size:1rem!important;
       }
       .deskripsi-foto{
         font-size: 1rem !important;
@@ -234,7 +229,6 @@
 
       .medpar-top {
         width: 20% !important;
-        ;
       }
 
       .item{
@@ -878,11 +872,11 @@
             <div class="carousel-item @if($loop->first) active @endif pb-5">
               <h2 class="font-bazinga text-black fs-2 text-center mx-5 mb-5">{{ $photo->title }}</h2>
             @if($photo->title == "Hidup Membiara Bukanlah Hal yang Mudah")
-              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+              <div class="owl-carousel owl-theme mb-5" style="max-width:130vh; margin: 0 auto;">
               @foreach($photostory_feed_biara as $biara)
                 <div class="item">
-                    <img class="feed" src="{{ $biara->image_path }}">
-                    <h4 class="font-bazinga text-center text-black deskripsi-feed fs-5">{{$biara->deskripsi}}<h4>
+                    <img class="feed" src="{{ $biara->image_path }}" style="width:300px; height:300px;margin: 0 auto;">
+                    <p class="font-bazinga text-center text-black deskripsi-feed" style="font-size:1.2rem;max-width:20rem;margin: 0 auto;">{{$biara->deskripsi}}<p>
                 </div>
               @endforeach
               </div>
@@ -901,11 +895,11 @@
                 </div>
             </div>
             @elseif($photo->title == "BARTENDER ALSO AN ARTIST")
-              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+              <div class="owl-carousel owl-theme mb-5" style="max-width:130vh; margin: 0 auto;">
                 @foreach($photostory_feed_bartender as $bartender)
                   <div class="item">
-                    <img class="feed"src="{{ $bartender->image_path }}" style="width:350px; height:350px;">
-                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$bartender->deskripsi}}<h4>
+                    <img class="feed"src="{{ $bartender->image_path }}" style="width:300px; height:300px;margin: 0 auto;">
+                    <p class="font-bazinga text-black text-center deskripsi-feed" style="font-size:1rem;max-width:27rem;margin: 0 auto;">{{$bartender->deskripsi}}<p>
                   </div>
                 @endforeach
               </div>
@@ -924,11 +918,11 @@
               </div>
             </div>
             @elseif($photo->title == "BURUH DIFABEL: DIBAYAR MURAH, SAYA TAK MASALAH")
-              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+              <div class="owl-carousel owl-theme mb-5" style="max-width:130vh; margin: 0 auto;">
                 @foreach($photostory_feed_difabel as $difabel)
                   <div class="item">
-                    <img class="feed"src="{{ $difabel->image_path }}" style="width:350px; height:350px;">
-                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$difabel->deskripsi}}<h4>
+                    <img class="feed"src="{{ $difabel->image_path }}" style="width:300px; height:300px;margin: 0 auto;">
+                    <p class="font-bazinga text-black text-center deskripsi-feed" style="font-size:1.2rem;max-width:20rem;margin: 0 auto;">{{$difabel->deskripsi}}<p>
                   </div>
                 @endforeach
               </div>
@@ -947,11 +941,11 @@
               </div>
             </div>
             @elseif($photo->title == "UNTAIAN KARSA DI UJUNG JEMARI")
-              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+              <div class="owl-carousel owl-theme mb-5" style="max-width:130vh; margin: 0 auto;">
                 @foreach($photostory_feed_yayasan as $yayasan)
                   <div class="item">
-                    <img class="feed"src="{{ $yayasan->image_path }}" style="width:350px; height:350px;">
-                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$yayasan->deskripsi}}<h4>
+                    <img class="feed"src="{{ $yayasan->image_path }}" style="width:300px; height:300px;margin: 0 auto;">
+                    <p class="font-bazinga text-black text-center deskripsi-feed" style="font-size:1rem;max-width:23rem;margin: 0 auto;">{{$yayasan->deskripsi}}<p>
                   </div>
                 @endforeach
               </div>
@@ -971,11 +965,11 @@
             </div>
             
             @elseif($photo->title == "WAYANG GOLEK PENOPANG HIDUP")
-              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+              <div class="owl-carousel owl-theme mb-5" style="max-width:130vh; margin: 0 auto;">
                 @foreach($photostory_feed_wayanggolek as $wayanggolek)
                   <div class="item">
-                    <img class="feed"src="{{ $wayanggolek->image_path }}" style="width:350px; height:350px;">
-                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$wayanggolek->deskripsi}}<h4>
+                    <img class="feed"src="{{ $wayanggolek->image_path }}" style="width:300px; height:300px;margin: 0 auto;">
+                    <p class="font-bazinga text-black text-center deskripsi-feed" style="font-size:1.2rem;max-width:20rem;margin: 0 auto;">{{$wayanggolek->deskripsi}}<p>
                   </div>
                 @endforeach
               </div>
@@ -995,11 +989,11 @@
             </div>
 
             @elseif($photo->title == "BELAJAR JADI JURNALIS DARI CILIK")
-              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+              <div class="owl-carousel owl-theme mb-5" style="max-width:130vh; margin: 0 auto;">
                 @foreach($photostory_feed_cilik as $cilik)
                   <div class="item">
-                    <img class="feed"src="{{ $cilik->image_path }}" style="width:350px; height:350px;">
-                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$cilik->deskripsi}}<h4>
+                    <img class="feed"src="{{ $cilik->image_path }}" style="width:300px; height:300px;margin: 0 auto;">
+                    <p class="font-bazinga text-black text-center deskripsi-feed" style="font-size:1.2rem;max-width:20rem;margin: 0 auto;">{{$cilik->deskripsi}}<p>
                   </div>
                 @endforeach
               </div>
@@ -1019,11 +1013,11 @@
             </div>
 
             @elseif($photo->title == "THE CAT CABIN: FOOD KULINER")
-              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+              <div class="owl-carousel owl-theme mb-5" style="max-width:130vh; margin: 0 auto;">
                 @foreach($photostory_feed_catcafe as $catcafe)
                   <div class="item">
-                    <img class="feed rounded"src="{{ $catcafe->image_path }}" style="width:350px; height:350px;">
-                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$catcafe->deskripsi}}<h4>
+                    <img class="feed rounded"src="{{ $catcafe->image_path }}" style="width:300px; height:300px;margin: 0 auto;">
+                    <p class="font-bazinga text-black text-center deskripsi-feed" style="font-size:1.2rem;max-width:20rem;margin: 0 auto;">{{$catcafe->deskripsi}}<p>
                   </div>
                 @endforeach
               </div>
@@ -1043,11 +1037,11 @@
             </div>
 
             @elseif($photo->title == "PRODUKSI PVC COMPOUND: BAHAN DASAR KABEL")
-              <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+              <div class="owl-carousel owl-theme mb-5" style="max-width:130vh; margin: 0 auto;">
                 @foreach($photostory_feed_pvc as $pvc)
                   <div class="item">
-                    <img class="feed rounded"src="{{ $pvc->image_path }}" style="width:350px; height:350px;">
-                    <h4 class="font-bazinga text-black text-center deskripsi-feed fs-5" style="max-width:20rem;">{{$pvc->deskripsi}}<h4>
+                    <img class="feed rounded"src="{{ $pvc->image_path }}" style="width:300px; height:300px;margin: 0 auto;">
+                    <p class="font-bazinga text-black text-center deskripsi-feed" style="font-size:1.2rem;max-width:20rem;margin: 0 auto;">{{$pvc->deskripsi}}<p>
                   </div>
                 @endforeach
               </div>

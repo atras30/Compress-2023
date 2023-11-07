@@ -404,7 +404,7 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "38",
-            "image_path" => "/images/ruangIndependen/pameran/difabel.png",
+            "image_path" => "/images/ruangIndependen/pameran/difabel_feed4.png",
             "title" => "BURUH DIFABEL: DIBAYAR MURAH, SAYA TAK MASALAH",
             "deskripsi"=> "\"Setiap 50 gram dijual sepuluh ribu, setiap
             50 gram saya dibayar 500 rupiah,\" <br>Itulah yang diucapkan Dadang (53), seorang
@@ -519,8 +519,8 @@ class KaryaSeeder extends Seeder
 
         Art::create([
             "id" => "59",
-            "image_path" => "/images/ruangIndependen/pameran/difabel_feed4.png",
-            "deskripsi"=> "Dadang melayani pembeli ikan petek krispi.",
+            "image_path" => "/images/ruangIndependen/pameran/difabel.png",
+            "deskripsi"=> "Dadang (53) sedang bersiap mengangkut bawang menuju.",
             "tipe" => "photostory feed difabel",
         ]);
 
