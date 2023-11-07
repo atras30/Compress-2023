@@ -195,6 +195,18 @@
         max-width: 70% !important;
         margin-left: 60px !important;
       }
+
+      .feed{
+        width:200px;
+        height:200px;
+      }
+      .deskripsi-feed{
+        font-size:1rem;
+      }
+      .deskripsi-foto{
+        font-size: 1rem !important;
+        max-width: 80%!important;
+      }
     }
 
     @media(max-width:1700px) {
@@ -484,6 +496,18 @@
       min-height: 60vh;
     }
 
+    .carousel-item4 {
+      max-width: 26rem;
+      max-height: 90vh;
+      min-height: 60vh;
+    }
+
+    .carousel-item5 {
+      max-width: 26rem;
+      max-height: 90vh;
+      min-height: 60vh;
+    }
+
     .margin-mp {
       margin-left: 800px;
     }
@@ -583,7 +607,7 @@
         <div id="carouselExample3" class="carousel">
           <div class="carousel-inner carousel-inner4 carousel-inner-magazine gap-5">
             @foreach ($e_magazine as $magazine)
-              <div class="carousel-item carousel-item3 carousel-item-magazine @if($loop->first) active @endif ps-4">
+              <div class="carousel-item carousel-item4 carousel-item-magazine @if($loop->first) active @endif ps-4">
               <h2 class="font-bazinga text-white fs-2 text-center mb-5 pembuat-artikel">{{ $magazine->title }}</h2>
                 <a href="{{ $magazine->link }}" target="_blank"><img src="{{ $magazine->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
                 <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
@@ -627,16 +651,16 @@
         <div id="carouselExample4" class="carousel">
           <div class="carousel-inner carousel-inner5 carousel-inner-indepth gap-5">
             @foreach ($indepth_artikel as $indepth)
-              <div class="carousel-item carousel-item5 carousel-item-indepth @if($loop->first) active ps-4 @endif">
-                <a href="{{ $indepth->link }}" target="_blank"><img src="{{ $indepth->image_path }}" class="d-block w-100 cover-artikel rounded-top" style="height:60%;" alt="..."></a>
-                <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
-                  <button onclick="likePost('{{ $indepth->id }}')" class="btn indepth-like-button" data-likes="{!! str_replace('"', '\'', $indepth->likes()->pluck('ip')) !!}">
-                    <i class="bi bi-heart"></i>
-                    Like
-                  </button>
+              <div class="carousel-item carousel-item5 carousel-item-indepth @if($loop->first) active @endif ps-4">
+                  <a href="{{ $indepth->link }}" target="_blank"><img src="{{ $indepth->image_path }}" class="d-block w-100 cover-artikel rounded" style="height:60%;" alt="..."></a>
+                  <div class="d-flex like-artikel justify-content-between align-items-center px-2 py-1 bg-light rounded-bottom">
+                    <button onclick="likePost('{{ $indepth->id }}')" class="btn indepth-like-button" data-likes="{!! str_replace('"', '\'', $indepth->likes()->pluck('ip')) !!}">
+                      <i class="bi bi-heart"></i>
+                      Like
+                    </button>
                   <div id="indepth_dokumenter_{{ $indepth->id }}">Total Likes: {{ $indepth->likes_count }}</div>
                 </div>
-                <h3 class="font-bazinga text-white fs-2 text-center mt-5 judul-artikel">"{{ $indepth->title }}"</h3>
+                <h2 class="font-bazinga text-white fs-2 text-center mb-5 mt-5 pembuat-artikel">{{ $indepth->title }}</h2>
               </div>
             @endforeach
           </div>
@@ -649,7 +673,7 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <div class="fs-2 text-center font-bazinga text-white" style="padding-bottom:65px;">Tekan Poster Untuk Melihat Video</div>
+        <div class="fs-2 text-center font-bazinga text-white pt-5" style="padding-bottom:65px;">Tekan Poster Untuk Melihat Video</div>
       </div>
     </div>
 
@@ -760,23 +784,38 @@
 
         {{-- Episodes --}}
         <div id="carouselExample5" class="carousel slide">
-          <div class="carousel-inner carousel-inner6">
-            <div class="carousel-item active">
-              <img src="{{ asset('/images/ruangIndependen/pameran/biara.png') }}" class="d-block w-100" style="height:60%;" alt="...">
+          <div class="carousel-inner">
+          @foreach ($photostory as $photo)
+            <div class="carousel-item @if($loop->first) active @endif pb-5">
+              <h2 class="font-bazinga text-black fs-2 text-center mx-5 mb-5">{{ $photo->title }}</h2>
+            @if($photo->title == "Hidup Membiara Bukanlah Hal yang Mudah")
+            <div class="owl-carousel owl-theme mb-5" style="max-width:70%; margin: 0 auto;">
+              @foreach($photostory_feed_biara as $biara)
+                <div class="item">
+                  <img class="feed"src="{{ $biara->image_path }}" style="width:350px; height:350px;">
+                  <h4 class="font-bazinga text-black text-center deskripsi-feed" style="max-width:20rem;">{{$biara->deskripsi}}<h4>
+                </div>
+              @endforeach
             </div>
-            <div class="carousel-item">
-            <img src="{{ asset('/images/ruangIndependen/pameran/bartender.png') }}" class="d-block w-100" style="height:60%;" alt="...">
-              
+              <img src="{{ $photo->image_path }}" class="d-block w-50" style="margin:0 auto;" alt="...">
+              <h2 class="font-bazinga text-black fs-4 text-center mb-5 mt-5 deskripsi-foto" style="max-width:70%;margin:0 auto;">{{ $photo->deskripsi }}</h2>
             </div>
-            <button class="carousel-control-prev carousel-control-prev6" type="button" data-bs-target="#carouselExample5" data-bs-slide="prev">
+            @elseif($photo->title == "BARTENDER ALSO AN ARTIST")
+              <img src="{{ $photo->image_path }}" class="d-block w-50" style=" margin:0 auto;" alt="...">
+              <h2 class="font-bazinga text-black fs-5 text-center mb-5 mt-5" style="max-width:60%;margin:0 auto;">{{ $photo->deskripsi }}</h2>
+            </div>
+            @endif
+            
+          @endforeach
+          </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample5" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next carousel-control-next6" type="button" data-bs-target="#carouselExample5" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample5" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
         </div>
       </div>
     </div>
@@ -829,6 +868,8 @@
 
   @section('scripts')
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
       let visitorId = null;
 
@@ -1096,5 +1137,22 @@
         const descriptionContainer = cardDescriptionElement.parentElement;
         descriptionContainer.classList.toggle("text-truncate-container");
       }
+
+      $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        dots:false,
+        autoplay:true,
+        autoplayTimeout: 1500,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+        }
+    })
     </script>
   @endsection

@@ -315,6 +315,41 @@ class KaryaSeeder extends Seeder
         ]);
 
         Art::create([
+            "id" => "40",
+            "image_path" => "/images/ruangIndependen/pameran/biara_feed1.png",
+            "deskripsi"=> "Suster Gebi menenangkan Oma",
+            "tipe" => "photostory feed biara",
+        ]);
+
+        Art::create([
+            "id" => "41",
+            "image_path" => "/images/ruangIndependen/pameran/biara_feed2.png",
+            "deskripsi"=> "Suster Gebi sedang memasak untuk opa dan oma",
+            "tipe" => "photostory feed biara",
+        ]);
+
+        Art::create([
+            "id" => "42",
+            "image_path" => "/images/ruangIndependen/pameran/biara_feed3.png",
+            "deskripsi"=> "Suster Gebi melakukan pencatatan administrasi",
+            "tipe" => "photostory feed biara",
+        ]);
+
+        Art::create([
+            "id" => "43",
+            "image_path" => "/images/ruangIndependen/pameran/biara_feed4.png",
+            "deskripsi"=> "Oma Vince atau sering disapa Oma Pipin",
+            "tipe" => "photostory feed biara",
+        ]);
+
+        Art::create([
+            "id" => "44",
+            "image_path" => "/images/ruangIndependen/pameran/biara_feed5.png",
+            "deskripsi"=> "Opa oma sedang bekumpul dan berbincang",
+            "tipe" => "photostory feed biara",
+        ]);
+
+        Art::create([
             "id" => "37",
             "image_path" => "/images/ruangIndependen/pameran/bartender.png",
             "title" => "BARTENDER ALSO AN ARTIST",

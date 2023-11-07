@@ -30,6 +30,7 @@ class RuangIndependenController extends Controller
         $e_magazine =  Art::where('tipe','e-magazine')->withCount('likes')->get();
         $indepthArtikel = Art::where('tipe','indepth artikel')->withCount('likes')->get();
         $photostory =  Art::where('tipe','photostory')->withCount('likes')->get();
+        $photostoryFeedBiara = Art::where('tipe','photostory feed biara')->withCount('likes')->get();
         return view('pameran',[
             'title' => "Pameran Commpress",
             'artikel_interaktif' => $artikelInteraktif,
@@ -37,7 +38,8 @@ class RuangIndependenController extends Controller
             'audio_dokumenter' => $audioDokumenter,
             'e_magazine' => $e_magazine,
             'indepth_artikel' => $indepthArtikel,
-            'photostory'=> $photostory
+            'photostory'=> $photostory,
+            'photostory_feed_biara' => $photostoryFeedBiara
         ]);
     }
 
